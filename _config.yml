@@ -1,18 +1,34 @@
+# Site settings
 title: eDNA Expeditions Phase II
-description: eDNA Expeditions Phase II
-url: ""
-baseurl: ""
-theme: null
-markdown: kramdown
+description: "eDNA Expeditions Phase II"
+url: ""          # e.g. https://yourusername.github.io
+baseurl: ""      # e.g. /your-repo-name if not a user/org site
 
 # Build settings
-destination: _site
-incremental: false
+theme: none
+markdown: kramdown
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Include custom folders (important so CSS, JS, etc. aren't ignored)
 include:
   - assets
   - css
+  - js
+
+# Exclude unnecessary stuff from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Optional: set output folder (default is _site)
+destination: _site
+
+# Markdown / kramdown config
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Permalinks (optional)
+permalink: pretty

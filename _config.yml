@@ -1,7 +1,7 @@
 title: eDNA Expeditions Phase II
 description: "eDNA Expeditions Phase II"
-url: ""
-baseurl: ""
+url: "https://iobis.github.io"
+baseurl: "/ednaexpeditions2"
 
 # Do NOT specify a theme, this disables default themes
 theme:

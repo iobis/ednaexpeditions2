@@ -4,6 +4,15 @@ url: ""
 baseurl: ""
 theme: null
 markdown: kramdown
+
+# Build settings
+destination: _site
+incremental: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 include:
   - assets
   - css

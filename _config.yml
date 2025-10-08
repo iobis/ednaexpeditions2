@@ -2,10 +2,8 @@ title: eDNA Expeditions Phase II
 description: eDNA Expeditions Phase II
 url: ""
 baseurl: ""
-theme: none
+theme: null
 markdown: kramdown
-
-# Ensure your CSS and JS folders are included
 include:
   - assets
   - css

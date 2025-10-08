@@ -1,0 +1,90 @@
+:root {
+    --page-background: rgb(249, 249, 249);
+    --primary-black: rgb(51, 51, 51);
+    --dark-blue: rgb(3, 3, 129);
+    --light-blue: rgb(194, 231, 255);
+    --accent-color: rgb(204, 120, 92);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "BBH Sans Hegarty", sans-serif;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    background-color: var(--page-background);
+    color: var(--primary-black);
+    padding-bottom: 50px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 2px;
+    background-color: var(--primary-black);
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    margin-top: 20px;
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+    backdrop-filter: none;
+}
+
+.navbar-transparent .navbar-brand,
+.navbar-transparent .nav-link {
+    color: #333 !important;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.btn {
+    border-color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
+}

@@ -24,6 +24,7 @@ jobs:
       - name: Build site with config
         run: |
           bundle exec jekyll build --config _config.yml
+          touch _site/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

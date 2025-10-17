@@ -35,6 +35,7 @@ h2 {
 .mission {
     font-weight: 500;
     font-size: 1.8em;
+    line-height: 1.2em;
 }
 
 a {
@@ -108,4 +109,29 @@ a {
 
 #join h2 {
     font-size: 2em;
+}
+
+.pt-6, .py-6 {
+  padding-top: 5rem !important;
+}
+
+.pr-6, .px-6 {
+  padding-right: 5rem !important;
+}
+
+.pb-6, .py-6 {
+  padding-bottom: 5rem !important;
+}
+
+.pl-6, .px-6 {
+  padding-left: 5rem !important;
+}
+
+.timeline-section {
+  position: relative;
+  background-image: url('../05_timeline.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+  min-height: 200px;
 }

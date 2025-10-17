@@ -1,90 +1,113 @@
 :root {
-    --page-background: rgb(249, 249, 249);
-    --primary-black: rgb(51, 51, 51);
-    --dark-blue: rgb(3, 3, 129);
-    --light-blue: rgb(194, 231, 255);
-    --accent-color: rgb(204, 120, 92);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "BBH Sans Hegarty", sans-serif;
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    --bg-light: #e5f4ff;
+    --bg-mid: #c1e5ff;
+    --bg-dark: #020283;
+    --text-blue: #020283;
+    --highlight-yellow: #fff500;
+    --highlight-pink: #ff00e2;
 }
 
 body {
-    font-family: "Source Serif 4", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.1em;
-    background-color: var(--page-background);
-    color: var(--primary-black);
-    padding-bottom: 50px;
+    font-family: "Inter", sans-serif;
+    color: var(--text-blue);
 }
 
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: all 0.2s ease;
+.navbar {
+    background-color: var(--bg-mid);
 }
 
-a:hover {
-    color: var(--accent-color);
-    opacity: 0.8;
-    text-decoration: underline;
+h1, h2, h3, h4, h5 {
+    font-family: "Barlow", sans-serif;
 }
 
-section {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-h2::before {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 2px;
-    background-color: var(--primary-black);
-    margin-bottom: 15px;
-    margin-top: 40px;
+h1 {
+    font-weight: 800;
+    font-size: 3.5em;
+    text-transform: uppercase;
 }
 
 h2 {
-    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 3em;
+    text-transform: uppercase;
 }
 
-.subtitle {
-    margin-top: 20px;
+.mission {
+    font-weight: 500;
+    font-size: 1.8em;
 }
 
-.navbar-transparent {
-    background-color: transparent !important;
-    backdrop-filter: none;
+a {
+    font-weight: bold;
+    color: var(--text-blue);
 }
 
-.navbar-transparent .navbar-brand,
-.navbar-transparent .nav-link {
-    color: #333 !important;
+.card a {
+  text-decoration: none; 
+  padding-bottom: 5px; 
+  border-bottom: 3px solid var(--highlight-pink);
 }
 
 .container {
     max-width: 800px;
 }
 
-.btn {
-    border-color: var(--accent-color) !important;
-    color: var(--accent-color) !important;
-    background-color: transparent !important;
-    border-radius: 0 !important;
-    text-decoration: none !important;
+.container-wide {
+    max-width: 1000px;
 }
 
-.btn:hover {
-    background-color: var(--accent-color) !important;
-    color: white !important;
-    border-color: var(--accent-color) !important;
-    text-decoration: none !important;
-    opacity: 1 !important;
+.row {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.row-light {
+    background-color: var(--bg-light);
+    color: var(--text-blue);
+}
+
+.row-mid {
+    background-color: var(--bg-mid);
+    color: var(--text-blue);
+}
+
+.row-dark {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.row-dark a {
+    color: white;
+}
+
+.row-highlight {
+    background-color: var(--highlight-yellow);
+    color: var(--text-blue);
+}
+
+.card, .card-body {
+    background-color: transparent;
+    border: 0px;
+    color: var(--text-blue);
+}
+
+.card-body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.newsletter {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.logos .card-img-top {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#join h2 {
+    font-size: 2em;
 }

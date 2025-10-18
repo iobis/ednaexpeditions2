@@ -160,3 +160,93 @@ a {
         padding-right: 80px;
     }    
 }
+
+.flip-cards-container {
+    margin-top: 2rem;
+}
+
+.fish-card {
+    perspective: 1000px;
+    margin-bottom: 0.7rem;
+    height: 140px;
+}
+
+.fish-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.fish-card.flipped .fish-card-inner {
+    transform: rotateY(180deg);
+}
+
+.fish-card-front, .fish-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.fish-card-back {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.fish-card-front {
+    background: var(--bg-light);
+}
+
+.fish-card-back {
+    background: var(--bg-dark);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.fish-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-bottom: 0.2rem;
+}
+
+.fish-card-back p {
+    margin: 0.4rem 0;
+    font-size: 0.75em;
+    line-height: 1.3;
+    color: white;
+}
+
+.fish-card-back strong {
+    font-weight: bold;
+    color: white;
+}
+
+.fish-card-back a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.fish-card-back a:hover {
+    color: white;
+    opacity: 0.8;
+}
+
+.flip-cards-container .row {
+    margin: 0 -0.35rem;
+}
+
+.flip-cards-container .row > [class*="col-"] {
+    padding: 0 0.35rem;
+}

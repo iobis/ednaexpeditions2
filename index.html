@@ -130,12 +130,14 @@
         <div class="container container-wide">
             <div class="row">
                 <div class="col-md-7">
-                    <img src="assets/03_Mission_01.png" class="img-fluid w-100" alt="">
+                    <img src="assets/08_LD20205.png" class="img-fluid w-100" alt="">
                 </div>
                 <div class="col-md-5">
-                    <p>The eDNA Expeditions (Phase II) is a global effort to explore the life of our oceans through environmental DNA. Over the next three years (2026-2028), the project will build capacity in eDNA sampling and enable operational, standardized data collection across marine sites worldwide. Around 25 marine sites will receive sampling kits, training, and support to help uncover the hidden biodiversity of their waters. Together, we'll create a living, open dataset that connects local discovery to our shared global Ocean story—empowering communities to see and listen to the Ocean in new ways.</p>
-                    <p>The first phase of eDNA Expeditions was a global citizen science initiative that engaged 250 citizen scientists, as young as 6 years old, across 19 countries, who identified over 4,000 species through eDNA sampling. Building on this experience, we now want to continue to include and inspire communities to discover their biodiversity, while also providing scientific insights with repeated samplings at the sites!</p>
-                    <p><a href="#" class="card-link">Explore Phase I &gt;</a></p>
+                    <h3>Explore the eDNA Expeditions booth to discover the power of biomolecular marine observations</h3>
+                    <p>Have you ever wanted to learn more about biomolecular marine observations? Welcome to the eDNA Exepditions booth! Come to meet Emilie Boulanger and Saara Suominen, the OBIS eDNA experts, and Pieter Provoost, OBIS data manager and bioinformatics expert.</p>
+                    <p>Every day, join our free, hop-on-hop-off lunch talks to ask anything you ever wanted to know about eDNA sampling, bioinformatics, standardization of DNA-derived data, and how to publish eDNA data into OBIS.</p>
+                    <p>At the booth, you can also dive into our dashboards to explore biodiversity at UNESCO World Heritage marine sites! You can also try your luck at our interactive eDNA game for a chance to win a real marine sampling kit from Wilderlab!</p>
+                    <p><b>Join the marine observation revolution! Booth #6, in the main conference hall!</b></p>
                 </div>
             </div>
         </div>
@@ -146,6 +148,11 @@
                 <div class="col-12">
                     <h3>Can you guess which species are featured on the eDNA Expeditions material?</h3>
                     <p>We have rounded up here all the species that are featured on the eDNA Expeditions material. Can you identify some of them? Click on a silhouette to get the species' common name, its scientific name, and access to the species page on OBIS!</p>
+                </div>
+                <div class="flip-cards-container">
+                    <div class="row" id="fish-cards">
+                        <!-- Fish cards will be dynamically loaded here -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -380,6 +387,103 @@
     </div>
 
 </div>
+
+<script>
+// Fish Cards JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const fishCardsContainer = document.getElementById('fish-cards');
+    
+    // Load fish data and create cards
+    fetch('assets/fish-data.json')
+        .then(response => response.json())
+        .then(fishData => {
+            fishData.forEach(fish => {
+                const cardElement = createFishCard(fish);
+                fishCardsContainer.appendChild(cardElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading fish data:', error);
+            // Fallback: create cards with placeholder data
+            createFallbackCards();
+        });
+    
+    function createFishCard(fish) {
+        const col = document.createElement('div');
+        col.className = 'col-6 col-md-4';
+        
+        const card = document.createElement('div');
+        card.className = 'fish-card';
+        card.setAttribute('data-fish-id', fish.id);
+        
+        const cardInner = document.createElement('div');
+        cardInner.className = 'fish-card-inner';
+        
+        const front = document.createElement('div');
+        front.className = 'fish-card-front';
+        
+        const fishImage = document.createElement('img');
+        fishImage.className = 'fish-image';
+        fishImage.src = fish.image;
+        fishImage.alt = fish.commonName;
+        
+        front.appendChild(fishImage);
+        
+        const back = document.createElement('div');
+        back.className = 'fish-card-back';
+        
+        const commonNamePara = document.createElement('p');
+        commonNamePara.innerHTML = 'Common name<br/><strong>' + fish.commonName + '</strong>';
+        
+        const scientificNamePara = document.createElement('p');
+        scientificNamePara.innerHTML = 'Scientific name<br/><strong>' + fish.scientificName + '</strong>';
+        
+        const obisPara = document.createElement('p');
+        const obisLink = document.createElement('a');
+        obisLink.href = fish.obisUrl;
+        obisLink.target = '_blank';
+        obisLink.textContent = 'OBIS page';
+        obisPara.appendChild(obisLink);
+        
+        back.appendChild(commonNamePara);
+        back.appendChild(scientificNamePara);
+        back.appendChild(obisPara);
+        
+        cardInner.appendChild(front);
+        cardInner.appendChild(back);
+        card.appendChild(cardInner);
+        col.appendChild(card);
+        
+        card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+        });
+        
+        return col;
+    }
+    
+    function createFallbackCards() {
+        const fallbackData = [
+            { id: 1, commonName: "Clownfish", scientificName: "Amphiprion ocellatus", description: "A small, brightly colored fish known for its symbiotic relationship with sea anemones." },
+            { id: 2, commonName: "Blue Tang", scientificName: "Paracanthurus hepatus", description: "A vibrant blue fish with a distinctive shape, popularized by the movie 'Finding Nemo'." },
+            { id: 3, commonName: "Yellow Tang", scientificName: "Zebrasoma flavescens", description: "A bright yellow fish commonly found in Hawaiian waters." },
+            { id: 4, commonName: "Moorish Idol", scientificName: "Zanclus cornutus", description: "A distinctive fish with a long dorsal fin and black, white, and yellow coloration." },
+            { id: 5, commonName: "Regal Angelfish", scientificName: "Pygoplites diacanthus", description: "A beautiful angelfish with alternating blue and yellow stripes." },
+            { id: 6, commonName: "Emperor Angelfish", scientificName: "Pomacanthus imperator", description: "A large, colorful angelfish with distinctive blue and yellow patterns." },
+            { id: 7, commonName: "Lionfish", scientificName: "Pterois volitans", description: "A venomous fish with striking red, white, and black stripes." },
+            { id: 8, commonName: "Triggerfish", scientificName: "Balistoides conspicillum", description: "A colorful fish with a distinctive shape and strong jaws." },
+            { id: 9, commonName: "Parrotfish", scientificName: "Scarus psittacus", description: "A colorful fish with beak-like teeth used to scrape algae from coral." },
+            { id: 10, commonName: "Butterflyfish", scientificName: "Chaetodon auriga", description: "A small, colorful fish with a distinctive black spot on its dorsal fin." },
+            { id: 11, commonName: "Wrasse", scientificName: "Thalassoma lunare", description: "A colorful fish that changes sex during its lifetime." },
+            { id: 12, commonName: "Grouper", scientificName: "Epinephelus fuscoguttatus", description: "A large, predatory fish found in coral reefs." }
+        ];
+        
+        fallbackData.forEach(fish => {
+            const cardElement = createFishCard(fish);
+            fishCardsContainer.appendChild(cardElement);
+        });
+    }
+});
+</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

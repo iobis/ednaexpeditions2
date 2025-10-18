@@ -140,12 +140,18 @@ a {
   position: relative;
   background-image: url('../05_timeline.svg');
   background-repeat: no-repeat;
-  background-position: -70px center;
+  background-position: 0px center;
   background-size: auto 100%;
   min-height: 200px;
 }
 
 .timeline-item {
-    padding-left: 100px;
     padding-bottom: 30px;
+}    
+
+@media (min-width: 768px) {
+    .timeline-item {
+        padding-left: 200px;
+        padding-right: 80px;
+    }    
 }

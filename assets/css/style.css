@@ -10,6 +10,15 @@
 body {
     font-family: "Inter", sans-serif;
     color: var(--text-blue);
+    overflow-x: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-inner {
+    overflow: hidden;
 }
 
 .navbar {

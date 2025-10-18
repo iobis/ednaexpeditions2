@@ -1,98 +1,79 @@
 [
   {
     "id": 1,
-    "commonName": "Clownfish",
-    "scientificName": "Amphiprion ocellatus",
+    "commonName": "Grouper",
+    "scientificName": "Epinephelus sp.",
     "image": "assets/cards/card_01.svg",
-    "description": "A small, brightly colored fish known for its symbiotic relationship with sea anemones. Found in warm waters of the Indo-Pacific region.",
-    "obisUrl": "https://obis.org/taxon/217175"
+    "obisUrl": "https://obis.org/taxon/126068"
   },
   {
     "id": 2,
-    "commonName": "Blue Tang",
-    "scientificName": "Paracanthurus hepatus",
+    "commonName": "Great cormorant",
+    "scientificName": "Phalacrocorax carbo",
     "image": "assets/cards/card_02.svg",
-    "description": "A vibrant blue fish with a distinctive shape, popularized by the movie 'Finding Nemo'. Found in coral reefs of the Indo-Pacific.",
-    "obisUrl": "https://obis.org/taxon/219279"
+    "obisUrl": "https://obis.org/taxon/137179"
   },
   {
     "id": 3,
-    "commonName": "Yellow Tang",
-    "scientificName": "Zebrasoma flavescens",
+    "commonName": "Knotted thread hydroid",
+    "scientificName": "Obelia geniculata",
     "image": "assets/cards/card_03.svg",
-    "description": "A bright yellow fish commonly found in Hawaiian waters. Important for coral reef health as it feeds on algae.",
-    "obisUrl": "https://obis.org/taxon/219280"
+    "obisUrl": "https://obis.org/taxon/117388"
   },
   {
     "id": 4,
-    "commonName": "Moorish Idol",
-    "scientificName": "Zanclus cornutus",
+    "commonName": "Ragworm or clam worm",
+    "scientificName": "Perinereis sp.",
     "image": "assets/cards/card_04.svg",
-    "description": "A distinctive fish with a long dorsal fin and black, white, and yellow coloration. Found in tropical waters worldwide.",
-    "obisUrl": "https://obis.org/taxon/219281"
+    "obisUrl": "https://obis.org/taxon/129380"
   },
   {
     "id": 5,
-    "commonName": "Regal Angelfish",
-    "scientificName": "Pygoplites diacanthus",
+    "commonName": "Australian anchovy",
+    "scientificName": "Engraulis australis",
     "image": "assets/cards/card_05.svg",
-    "description": "A beautiful angelfish with alternating blue and yellow stripes. Found in coral reefs of the Indo-Pacific region.",
-    "obisUrl": "https://obis.org/taxon/219282"
+    "obisUrl": "https://obis.org/taxon/272285"
   },
   {
     "id": 6,
-    "commonName": "Emperor Angelfish",
-    "scientificName": "Pomacanthus imperator",
+    "commonName": "Ocellated wrasse",
+    "scientificName": "Symphodus ocellatus",
     "image": "assets/cards/card_06.svg",
-    "description": "A large, colorful angelfish with distinctive blue and yellow patterns. Juveniles have different coloration than adults.",
-    "obisUrl": "https://obis.org/taxon/219283"
+    "obisUrl": "https://obis.org/taxon/273572"
   },
   {
     "id": 7,
-    "commonName": "Lionfish",
-    "scientificName": "Pterois volitans",
+    "commonName": "Prawn or shrimp",
+    "scientificName": "Penaeus sp.",
     "image": "assets/cards/card_07.svg",
-    "description": "A venomous fish with striking red, white, and black stripes. Native to the Indo-Pacific but invasive in the Atlantic.",
-    "obisUrl": "https://obis.org/taxon/219284"
+    "obisUrl": "https://obis.org/taxon/1809225"
   },
   {
     "id": 8,
-    "commonName": "Triggerfish",
-    "scientificName": "Balistoides conspicillum",
+    "commonName": "Copepod",
+    "scientificName": "Acartiella",
     "image": "assets/cards/card_08.svg",
-    "description": "A colorful fish with a distinctive shape and strong jaws. Known for its territorial behavior and ability to change color.",
-    "obisUrl": "https://obis.org/taxon/219285"
+    "obisUrl": "https://obis.org/taxon/423915"
   },
   {
     "id": 9,
-    "commonName": "Parrotfish",
-    "scientificName": "Scarus psittacus",
+    "commonName": "Freshwater jellyfish",
+    "scientificName": "Craspedacusta sowerbii",
     "image": "assets/cards/card_09.svg",
-    "description": "A colorful fish with beak-like teeth used to scrape algae from coral. Plays a crucial role in coral reef health.",
-    "obisUrl": "https://obis.org/taxon/219286"
+    "obisUrl": "https://obis.org/taxon/117767"
   },
   {
     "id": 10,
-    "commonName": "Butterflyfish",
-    "scientificName": "Chaetodon auriga",
+    "commonName": "Common pill bug or roly-poly",
+    "scientificName": "Armadillidium vulgare",
     "image": "assets/cards/card_10.svg",
-    "description": "A small, colorful fish with a distinctive black spot on its dorsal fin. Found in coral reefs worldwide.",
-    "obisUrl": "https://obis.org/taxon/219287"
+    "obisUrl": "https://obis.org/taxon/257832"
   },
   {
     "id": 11,
-    "commonName": "Wrasse",
-    "scientificName": "Thalassoma lunare",
+    "commonName": "Black-necked doto",
+    "scientificName": "Doto cervicenigra",
     "image": "assets/cards/card_11.svg",
-    "description": "A colorful fish that changes sex during its lifetime. Important for reef health as it feeds on parasites.",
-    "obisUrl": "https://obis.org/taxon/219288"
-  },
-  {
-    "id": 12,
-    "commonName": "Grouper",
-    "scientificName": "Epinephelus fuscoguttatus",
-    "image": "assets/cards/card_01.svg",
-    "description": "A large, predatory fish found in coral reefs. Important for maintaining the balance of reef ecosystems.",
-    "obisUrl": "https://obis.org/taxon/219289"
+    "obisUrl": "https://obis.org/taxon/139628"
   }
 ]

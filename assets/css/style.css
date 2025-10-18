@@ -41,6 +41,11 @@ h2 {
     text-transform: uppercase;
 }
 
+.carousel h2 {
+    text-transform: none;
+    font-size: 2.8em;
+}
+
 .mission {
     font-weight: 500;
     font-size: 1.8em;

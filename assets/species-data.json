@@ -64,10 +64,10 @@
   },
   {
     "id": 10,
-    "commonName": "Common pill bug or roly-poly",
-    "scientificName": "Armadillidium vulgare",
-    "image": "assets/cards/card_10.svg",
-    "obisUrl": "https://obis.org/taxon/257832"
+    "commonName": "Athecate hydroid",
+    "scientificName": "Coryne eximia",
+    "image": "assets/cards/Coryne_eximia_dk.svg",
+    "obisUrl": "https://obis.org/taxon/151860"
   },
   {
     "id": 11,
@@ -75,5 +75,12 @@
     "scientificName": "Doto cervicenigra",
     "image": "assets/cards/card_11.svg",
     "obisUrl": "https://obis.org/taxon/139628"
+  },
+  {
+    "id": 12,
+    "commonName": "Orange-striped anemone",
+    "scientificName": "Diadumene lineata",
+    "image": "assets/cards/diadumene_lineata_dk.svg",
+    "obisUrl": "https://obis.org/taxon/395099"
   }
 ]

@@ -389,12 +389,10 @@
 </div>
 
 <script>
-// Fish Cards JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const fishCardsContainer = document.getElementById('fish-cards');
     
-    // Load fish data and create cards
-    fetch('assets/fish-data.json')
+    fetch('assets/speeecies-data.json')
         .then(response => response.json())
         .then(fishData => {
             fishData.forEach(fish => {
@@ -404,7 +402,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error loading fish data:', error);
-            // Fallback: create cards with placeholder data
             createFallbackCards();
         });
     

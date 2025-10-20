@@ -116,6 +116,43 @@ a {
     font-weight: bold;
 }
 
+.btn-newsletter, .btn-newsletter:hover {
+    background-color: var(--highlight-yellow);
+    color: var(--text-blue) !important;
+    border-radius: 0px;
+}
+
+.form-group.required {
+    display: flex;
+    gap: 0;
+}
+
+.form-group.required input[type="email"] {
+    flex: 1;
+    border-radius: 0;
+    border-right: none;
+    border: 0px;
+    width: 240px;
+    background-color: var(--bg-light);
+}
+
+.form-group.required button {
+    flex: 0 0 auto;
+    border-radius: 0;
+    border: 0px;
+    border-left: none;
+    background-color: var(--highlight-yellow);
+    color: var(--text-blue);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 150px;
+}
+
+.form-group.required button:hover {
+    background-color: var(--highlight-yellow);
+}
+
 .logos .card-img-top {
     display: block;
     margin-left: 0;
@@ -250,4 +287,9 @@ a {
 
 .flip-cards-container .row > [class*="col-"] {
     padding: 0 0.35rem;
+}
+
+button {
+    background-color: var(--highlight-yellow);
+    color: var(--text-blue);
 }

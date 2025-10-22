@@ -298,3 +298,7 @@ button {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
+.nav-link {
+    color: var(--text-blue);
+}

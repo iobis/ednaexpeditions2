@@ -122,6 +122,16 @@ a {
     border-radius: 0px;
 }
 
+.btn-cta, .btn-cta:hover {
+    display: inline-block;
+    background-color: var(--bg-dark);
+    color: #ffffff !important;
+    border-radius: 0px;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .form-group.required {
     display: flex;
     gap: 0;

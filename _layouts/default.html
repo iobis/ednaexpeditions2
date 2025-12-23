@@ -17,25 +17,31 @@
     <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% endif %}">
         <div class="container container-wide">
             <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 60px;">
+                <img src="{{ '/assets/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-                        
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ '/whoweare' | relative_url }}">Who we are</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ '/resources' | relative_url }}">Resources</a>
-                    </li>
-                </ul>
-            </div>
-           
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ '/' | relative_url }}#propose-site">Join us!</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ '/whoweare' | relative_url }}">Who we are</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ '/' | relative_url }}#mission">The project</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ '/resources' | relative_url }}">Resources</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="mailto:edna@ioc-unesco.org">Contact</a>
+    </li>
+  </ul>
+</div>                    
     </nav>
 
     {{ content }}

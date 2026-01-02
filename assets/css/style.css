@@ -202,7 +202,7 @@ a {
 }
 
 .pt-6, .py-6 {
-    padding-top: 5rem !important;
+    padding-top: 6rem !important;
 }
 
 .pr-6, .px-6 {
@@ -215,6 +215,39 @@ a {
 
 .pl-6, .px-6 {
     padding-left: 5rem !important;
+}
+
+.pt-7, .py-7 {
+    padding-top: 7rem !important;
+}
+
+.pr-7, .px-7 {
+    padding-right: 7rem !important;
+}
+
+.pb-7, .py-7 {
+    padding-bottom: 7rem !important;
+}
+
+.pl-7, .px-7 {
+    padding-left: 7rem !important;
+}
+
+
+.pt-8, .py-8 {
+    padding-top: 8rem !important;
+}
+
+.pr-8, .px-8 {
+    padding-right: 8rem !important;
+}
+
+.pb-8, .py-8 {
+    padding-bottom: 8rem !important;
+}
+
+.pl-8, .px-8 {
+    padding-left: 8rem !important;
 }
 
 .timeline-section {
@@ -491,3 +524,141 @@ button {
     align-items: flex-start;
     margin-bottom: 1.25rem;
 }
+
+.team-photo {
+  max-width: 140px;
+}
+
+.edna-footer{
+  background:#eaf4ff;
+}
+
+.edna-footer__grid{
+  display:grid;
+  grid-template-columns: 1fr 1.6fr;
+  column-gap: 4rem;
+  align-items:start;
+}
+
+.edna-footer__logo{
+  width:100%;
+  max-width:560px;
+  height:auto;
+  display:block;
+}
+
+.edna-footer__right{
+  display:grid;
+  row-gap: 1.4rem;
+}
+
+.edna-footer__top{
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+}
+
+.edna-footer__kicker{
+  font-family:"Barlow",sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:1;
+  font-size:1.5rem;
+}
+
+.edna-footer__input-group{
+  display:flex;
+  width:100%;
+}
+
+.edna-footer__input{
+  flex:1;
+  height:56px;
+  border:2px solid rgba(11,31,106,.15);
+  border-right:0;
+  border-radius:0;
+  background:#fff;
+  padding:0 .9rem;
+  font-size:1rem;
+}
+
+.edna-footer__button{
+  height:56px;
+  border:2px solid #ffeb3b;
+  border-radius:0;
+  background:#ffeb3b;
+  font-weight:700;
+  padding:0 2rem;
+  color:var(--text-blue);
+  cursor:pointer;
+  transition:none;
+}
+
+.edna-footer__button:hover,
+.edna-footer__button:focus,
+.edna-footer__button:active{
+  background:#ffeb3b;
+  border-color:#ffeb3b;
+  color:var(--text-blue);
+}
+
+.edna-footer__desc{
+  max-width: 90ch;
+  font-size:0.7rem;
+  line-height:1.45;
+  font-weight:500;
+}
+
+.edna-footer__logos3{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+}
+
+.edna-footer__footer-logo{
+  max-height:70px;
+  width:auto;
+  object-fit:contain;
+  display:block;
+}
+
+.edna-footer__footer-logo--powered{
+  max-height:64px;
+}
+
+.edna-footer__footer-logo--decade{
+  max-height: 100px;
+}
+
+.edna-footer__bottom{
+  margin-top:.25rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem;
+  align-items:start;
+}
+
+@media (max-width: 991.98px){
+  .edna-footer__grid{
+    grid-template-columns:1fr;
+    row-gap:2rem;
+  }
+
+  .edna-footer__logos3{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.25rem;
+  }
+
+  .edna-footer__bottom{
+    grid-template-columns:1fr;
+    row-gap:1rem;
+  }
+}
+
+
+
+
+
+

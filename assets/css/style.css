@@ -49,7 +49,7 @@ h2 {
 
 h4 {
     font-weight: 750;
-    font-size: 1,5em;
+    font-size: 1.5em;
     text-transform: uppercase;
 }
 
@@ -87,9 +87,6 @@ a {
 
 .container-wide {
     max-width: 1000px;
-}
-
-.row {
 }
 
 .row-light {
@@ -206,15 +203,15 @@ a {
 }
 
 .pr-6, .px-6 {
-    padding-right: 5rem !important;
+    padding-right: 6rem !important;
 }
 
 .pb-6, .py-6 {
-    padding-bottom: 5rem !important;
+    padding-bottom: 6rem !important;
 }
 
 .pl-6, .px-6 {
-    padding-left: 5rem !important;
+    padding-left: 6rem !important;
 }
 
 .pt-7, .py-7 {
@@ -629,14 +626,6 @@ button {
 
 .edna-footer__footer-logo--decade{
   max-height: 100px;
-}
-
-.edna-footer__bottom{
-  margin-top:.25rem;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2.5rem;
-  align-items:start;
 }
 
 @media (max-width: 991.98px){

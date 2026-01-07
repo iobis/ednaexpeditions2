@@ -473,11 +473,15 @@ button {
 .hero-logos {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     margin: 1rem 0 0.5rem;
 }
 
 .hero-logo-item {
-    flex: 1;
+    flex: 0 1 auto;
+    min-width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;

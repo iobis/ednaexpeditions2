@@ -129,6 +129,11 @@ a {
     padding-right: 0px;
 }
 
+.arrow-down {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
 .newsletter {
     text-transform: uppercase;
     font-size: 1.3em;
@@ -139,6 +144,25 @@ a {
     background-color: var(--highlight-yellow);
     color: var(--text-blue) !important;
     border-radius: 0px;
+}
+
+.cta-link__lead {
+    color: var(--highlight-yellow);
+    font-weight: 700;
+}
+
+.cta-link__anchor {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--text-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 1s ease;
+}
+
+.cta-link__anchor:hover,
+.cta-link__anchor:focus {
+    color: var(--bg-mid);
 }
 
 .btn-cta {

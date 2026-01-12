@@ -499,8 +499,12 @@ button {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 5rem;
     margin: 1rem 0 0.5rem;
+}
+
+.hero-logos--decade {
+    margin-top: 0.05rem; 
 }
 
 .hero-logo-item {
@@ -520,7 +524,7 @@ button {
     line-height: 1.4;
     font-weight: 500;
     padding-top: 3%;
-    padding-bottom: 1%;
+    padding-bottom: 0%;
 }
 
 .benefits-list {

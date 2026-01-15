@@ -82,12 +82,13 @@ def translate_file(translator: deepl.Translator, source_path: Path, target_path:
     try:
         translated_body = translate_html_content(translator, body, target_lang)
         
-        # Update front matter lang
+        # Update front matter lang (use lowercase language code)
         if front_matter:
-            front_matter = re.sub(r'^lang:\s*en\s*$', f'lang: {target_lang}', front_matter, flags=re.MULTILINE)
+            lang_code_lower = target_lang.lower()  # Convert FR->fr, ES->es
+            front_matter = re.sub(r'^lang:\s*[a-zA-Z]+\s*$', f'lang: {lang_code_lower}', front_matter, flags=re.MULTILINE)
             if 'lang:' not in front_matter:
                 # Add lang if it doesn't exist
-                front_matter = front_matter.rstrip() + f'\nlang: {target_lang}'
+                front_matter = front_matter.rstrip() + f'\nlang: {lang_code_lower}'
             front_matter_block = '---\n' + front_matter + '\n---\n'
         
         # Combine front matter and translated body

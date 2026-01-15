@@ -11,3 +11,10 @@ lang:
   fr: "Français"
   es: "Español"
 
+footer:
+  newsletter_kicker: "Restez informé,<br>abonnez-vous à notre newsletter"
+  subscribe: "S'abonner"
+  email_label: "Adresse e-mail"
+  description: "eDNA Expeditions est un projet de la Commission océanographique intergouvernementale (COI) de l'UNESCO, soutenu par la Fondation Minderoo, dirigé par OBIS, avec la collaboration technique de WilderLabs."
+  decade_description: "eDNA Expeditions est un projet approuvé par la Décennie des Nations Unies pour les sciences océaniques au service du développement durable 2021–2030."
+

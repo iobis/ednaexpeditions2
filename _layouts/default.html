@@ -96,7 +96,7 @@
 
         <div class="edna-footer__top">
           <div class="edna-footer__kicker">
-            Stay informed,<br>join our newsletter
+            {{ t.footer.newsletter_kicker }}
           </div>
 
           <form
@@ -111,7 +111,7 @@
                         name="EMAIL"
                         id="mce-EMAIL"
                         class="form-control edna-footer__input required email"
-                        aria-label="Email address"
+                        aria-label="{{ t.footer.email_label }}"
                         required>
 
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -119,7 +119,7 @@
                 </div>
 
                 <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
-                Subscribe
+                {{ t.footer.subscribe }}
                 </button>
                 </div>
             </form>
@@ -127,7 +127,7 @@
 
         <div class="edna-footer__middle">
           <div class="edna-footer__desc pt-3 pb-3">
-            eDNA Expeditions is a project under the Intergovernmental Oceanographic Commission (IOC) of UNESCO, supported by Minderoo Foundation, led by OBIS, with the technical collaboration of WilderLabs.
+            {{ t.footer.description }}
           </div>
 
           <div class="edna-footer__logos3">
@@ -151,7 +151,7 @@
 
         <div class="edna-footer__middle pt-4">
             <div class="edna-footer__desc pb-3">
-            eDNA Expeditions is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            {{ t.footer.decade_description }}
             </div>
 
             <div class="edna-footer__logos3 pb-2">

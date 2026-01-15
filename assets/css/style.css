@@ -129,11 +129,6 @@ a {
     padding-right: 0px;
 }
 
-.arrow-down {
-  display: inline-block;
-  transform: rotate(90deg);
-}
-
 .newsletter {
     text-transform: uppercase;
     font-size: 1.3em;
@@ -144,25 +139,6 @@ a {
     background-color: var(--highlight-yellow);
     color: var(--text-blue) !important;
     border-radius: 0px;
-}
-
-.cta-link__lead {
-    color: var(--highlight-yellow);
-    font-weight: 700;
-}
-
-.cta-link__anchor {
-    display: inline-block;
-    margin-top: 2rem;
-    color: var(--text-blue);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 1s ease;
-}
-
-.cta-link__anchor:hover,
-.cta-link__anchor:focus {
-    color: var(--bg-mid);
 }
 
 .btn-cta {
@@ -273,7 +249,7 @@ a {
 
 .timeline-section {
     position: relative;
-    background-image: url('../05_timeline.svg');
+    background-image: url('../images/05_timeline.svg');
     background-repeat: no-repeat;
     background-position: 0px center;
     background-size: auto 100%;
@@ -468,7 +444,7 @@ button {
     text-decoration: none;
 }
 
-.navbar .nav-link::after {
+.navbar .nav-link:not(.dropdown-toggle)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -481,12 +457,22 @@ button {
     transition: transform 0.2s ease;
 }
 
-.navbar .nav-link:hover::after {
+.navbar .nav-link:not(.dropdown-toggle):hover::after {
     transform: scaleX(1);
 }
 
-.navbar .nav-link:not(:hover)::after {
+.navbar .nav-link:not(.dropdown-toggle):not(:hover)::after {
     transition: none;
+}
+
+/* Remove blue border/outline on dropdown toggle */
+.navbar .nav-link.dropdown-toggle:focus,
+.navbar .nav-link.dropdown-toggle:active,
+.navbar .nav-link.dropdown-toggle:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    text-decoration: none !important;
 }
 
 .hero-inner {
@@ -497,19 +483,11 @@ button {
 .hero-logos {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5rem;
     margin: 1rem 0 0.5rem;
 }
 
-.hero-logos--decade {
-    margin-top: 0.05rem; 
-}
-
 .hero-logo-item {
-    flex: 0 1 auto;
-    min-width: 150px;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -524,7 +502,7 @@ button {
     line-height: 1.4;
     font-weight: 500;
     padding-top: 3%;
-    padding-bottom: 0%;
+    padding-bottom: 1%;
 }
 
 .benefits-list {
@@ -678,7 +656,9 @@ button {
   }
 }
 
-
+input {
+    border: 0px !important;
+}
 
 
 

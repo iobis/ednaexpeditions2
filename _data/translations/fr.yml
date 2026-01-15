@@ -1,0 +1,13 @@
+# French translations
+nav:
+  join_project: "Rejoindre le projet"
+  who_we_are: "Qui nous sommes"
+  resources: "Ressources"
+  contact: "Contact"
+  home: "Accueil"
+
+lang:
+  en: "English"
+  fr: "Français"
+  es: "Español"
+

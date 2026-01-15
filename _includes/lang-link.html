@@ -1,0 +1,9 @@
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign lang_prefix = '' %}
+{% if current_lang == 'fr' %}
+  {% assign lang_prefix = '/fr' %}
+{% elsif current_lang == 'es' %}
+  {% assign lang_prefix = '/es' %}
+{% endif %}
+{{ lang_prefix }}{{ include.path }}
+

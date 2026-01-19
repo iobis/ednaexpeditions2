@@ -584,16 +584,16 @@ button {
 
 .edna-faq .accordion-button::after{
   background-image: none !important;
-  content: "+";
-  font-size: 1.6rem;
-  font-weight: 500;
+  content: "";
+  font-size: 1.5rem;
+  font-weight: 300;
   line-height: 1;
   color: var(--text-blue);
   transform: none !important;
 }
 
 .edna-faq .accordion-button:not(.collapsed)::after{
-  content: "−";
+  content: "";
 }
 
 .edna-faq .accordion-body{

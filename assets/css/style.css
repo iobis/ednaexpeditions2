@@ -536,6 +536,65 @@ button {
   max-width: 140px;
 }
 
+.edna-faq .accordion-item{
+  background: var(--bg-light);
+  border: 1px solid var(--text-blue); 
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.edna-faq .accordion-button{
+  background: transparent;      
+  color: var(--text-blue);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  line-height: 1.25rem;
+  padding: 1.25rem 1.25rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+.edna-faq .accordion-button:hover{
+  background: rgba(153, 209, 255, 0.5);
+}
+
+.edna-faq .accordion-button:focus{
+  box-shadow: none !important;
+}
+
+.edna-faq .accordion-button::after{
+  background-image: none !important;
+  content: "";
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-blue);
+  transform: none !important;
+}
+
+.edna-faq .accordion-button:not(.collapsed)::after{
+  content: "";
+}
+
+.edna-faq .accordion-body{
+  background: transparent;     
+  color: var(--text-blue);
+  padding: 0 1.25rem 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 576px){
+  .edna-faq .accordion-button{
+    padding: 1rem 1rem;
+  }
+  .edna-faq .accordion-body{
+    padding: 0 1rem 1rem;
+  }
+}
+
 .edna-footer{
   background:#eaf4ff;
 }

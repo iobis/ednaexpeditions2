@@ -1,10 +1,30 @@
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign lang_prefix = '' %}
+{% if current_lang == 'fr' %}
+  {% assign lang_prefix = '/fr' %}
+{% elsif current_lang == 'es' %}
+  {% assign lang_prefix = '/es' %}
+{% endif %}
+{% assign t = site.data.translations[current_lang] %}
+{% comment %} Generate hreflang URLs {% endcomment %}
+{% assign base_path = page.url | remove_first: '/fr' | remove_first: '/es' %}
+{% assign base_url = site.url | append: site.baseurl %}
+{% assign url_en = base_url | append: base_path %}
+{% assign url_fr = base_url | append: '/fr' | append: base_path %}
+{% assign url_es = base_url | append: '/es' | append: base_path %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ current_lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    {% comment %} hreflang tags for SEO {% endcomment %}
+    <link rel="alternate" hreflang="en" href="{{ url_en }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url_fr }}" />
+    <link rel="alternate" hreflang="es" href="{{ url_es }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ url_en }}" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +36,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% endif %}">
         <div class="container container-wide">
-            <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
+            <a class="navbar-brand fw-bold" href="{{ lang_prefix | relative_url }}">
+                <img src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,22 +46,34 @@
     <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
     <li class="nav-item">
-      <a class="nav-link" href="{{ '/jointheproject' | relative_url }}">Join the project</a>
+      <a class="nav-link" href="{{ lang_prefix }}/jointheproject">{{ t.nav.join_project }}</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ '/whoweare' | relative_url }}">Who we are</a>
+      <a class="nav-link" href="{{ lang_prefix }}/whoweare">{{ t.nav.who_we_are }}</a>
     <!--</li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ '/' | relative_url }}#mission">The project</a>
+      <a class="nav-link" href="{{ lang_prefix | relative_url }}#mission">The project</a>
     </li>-->
     <li class="nav-item">
-      <a class="nav-link" href="{{ '/resources' | relative_url }}">Resources</a>
+      <a class="nav-link" href="{{ lang_prefix }}/resources">{{ t.nav.resources }}</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ '/faq' | relative_url }}">FAQ</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ '/contact' | relative_url }}">Contact</a>
+      <a class="nav-link" href="{{ lang_prefix }}/contact">{{ t.nav.contact }}</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ t.lang[current_lang] }}
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+        {% assign base_url = page.url | remove_first: '/fr' | remove_first: '/es' %}
+        <li><a class="dropdown-item{% if current_lang == 'en' %} active{% endif %}" href="{{ base_url }}">{{ site.data.translations.en.lang.en }}</a></li>
+        <li><a class="dropdown-item{% if current_lang == 'fr' %} active{% endif %}" href="/fr{{ base_url }}">{{ site.data.translations.fr.lang.fr }}</a></li>
+        <li><a class="dropdown-item{% if current_lang == 'es' %} active{% endif %}" href="/es{{ base_url }}">{{ site.data.translations.es.lang.es }}</a></li>
+      </ul>
     </li>
   </ul>
 </div>                    
@@ -55,9 +87,9 @@
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <a href="{{ '/' | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+        <a href="{{ lang_prefix | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
           <img
-            src="{{ '/assets/00_eDNA logo.svg' | relative_url }}"
+            src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}"
             alt="eDNA Expeditions"
             class="edna-footer__logo img-fluid"
           >
@@ -68,7 +100,7 @@
 
         <div class="edna-footer__top">
           <div class="edna-footer__kicker">
-            Stay informed,<br>join our newsletter
+            {{ t.footer.newsletter_kicker }}
           </div>
 
           <form
@@ -83,7 +115,7 @@
                         name="EMAIL"
                         id="mce-EMAIL"
                         class="form-control edna-footer__input required email"
-                        aria-label="Email address"
+                        aria-label="{{ t.footer.email_label }}"
                         required>
 
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -91,7 +123,7 @@
                 </div>
 
                 <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
-                Subscribe
+                {{ t.footer.subscribe }}
                 </button>
                 </div>
             </form>
@@ -100,21 +132,22 @@
         <div class="edna-footer__middle">
           <div class="edna-footer__desc pt-3 pb-3">
             eDNA Expeditions 2026-2028 is a project under the Intergovernmental Oceanographic Commission (IOC) of UNESCO, supported by Minderoo Foundation, led by OBIS, with the technical collaboration of WilderLabs.
+            {{ t.footer.description }}
           </div>
 
           <div class="edna-footer__logos3">
             <img
-              src="{{ '/assets/00_logo_MF.svg' | relative_url }}"
+              src="{{ '/assets/images/00_logo_MF.svg' | relative_url }}"
               alt="Minderoo Foundation"
               class="edna-footer__footer-logo edna-footer__footer-logo--mf"
             >
             <img
-              src="{{ '/assets/00_logo_IOC+OBIS.svg' | relative_url }}"
+              src="{{ '/assets/images/00_logo_IOC+OBIS.svg' | relative_url }}"
               alt="IOC and OBIS"
               class="edna-footer__footer-logo edna-footer__footer-logo--powered"
             >
             <img
-              src="{{ '/assets/00_logo_Wilderlab.png' | relative_url }}"
+              src="{{ '/assets/images/00_logo_Wilderlab.png' | relative_url }}"
               alt="WilderLabs"
               class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
             >
@@ -124,11 +157,12 @@
         <div class="edna-footer__middle pt-4">
             <div class="edna-footer__desc pb-3">
             eDNA Expeditions 2026-2028 is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            {{ t.footer.decade_description }}
             </div>
 
             <div class="edna-footer__logos3 pb-2">
             <img
-            src="{{ '/assets/decade-logo.png' | relative_url }}"
+            src="{{ '/assets/images/decade-logo.png' | relative_url }}"
             alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
             class="edna-footer__footer-logo edna-footer__footer-logo--decade">
             </div>

@@ -3,84 +3,84 @@
     "id": 1,
     "commonName": "Grouper",
     "scientificName": "Epinephelus sp.",
-    "image": "assets/cards/card_01.svg",
+    "image": "assets/images/cards/card_01.svg",
     "obisUrl": "https://obis.org/taxon/126068"
   },
   {
     "id": 2,
     "commonName": "Great cormorant",
     "scientificName": "Phalacrocorax carbo",
-    "image": "assets/cards/card_02.svg",
+    "image": "assets/images/cards/card_02.svg",
     "obisUrl": "https://obis.org/taxon/137179"
   },
   {
     "id": 3,
     "commonName": "Knotted thread hydroid",
     "scientificName": "Obelia geniculata",
-    "image": "assets/cards/card_03.svg",
+    "image": "assets/images/cards/card_03.svg",
     "obisUrl": "https://obis.org/taxon/117388"
   },
   {
     "id": 4,
     "commonName": "Ragworm or clam worm",
     "scientificName": "Perinereis sp.",
-    "image": "assets/cards/card_04.svg",
+    "image": "assets/images/cards/card_04.svg",
     "obisUrl": "https://obis.org/taxon/129380"
   },
   {
     "id": 5,
     "commonName": "Australian anchovy",
     "scientificName": "Engraulis australis",
-    "image": "assets/cards/card_05.svg",
+    "image": "assets/images/cards/card_05.svg",
     "obisUrl": "https://obis.org/taxon/272285"
   },
   {
     "id": 6,
     "commonName": "Ocellated wrasse",
     "scientificName": "Symphodus ocellatus",
-    "image": "assets/cards/card_06.svg",
+    "image": "assets/images/cards/card_06.svg",
     "obisUrl": "https://obis.org/taxon/273572"
   },
   {
     "id": 7,
     "commonName": "Prawn or shrimp",
     "scientificName": "Penaeus sp.",
-    "image": "assets/cards/card_07.svg",
+    "image": "assets/images/cards/card_07.svg",
     "obisUrl": "https://obis.org/taxon/106822"
   },
   {
     "id": 8,
     "commonName": "Copepod",
     "scientificName": "Acartiella",
-    "image": "assets/cards/card_08.svg",
+    "image": "assets/images/cards/card_08.svg",
     "obisUrl": "https://obis.org/taxon/423915"
   },
   {
     "id": 9,
     "commonName": "Freshwater jellyfish",
     "scientificName": "Craspedacusta sowerbii",
-    "image": "assets/cards/card_09.svg",
+    "image": "assets/images/cards/card_09.svg",
     "obisUrl": "https://obis.org/taxon/117767"
   },
   {
     "id": 10,
     "commonName": "Athecate hydroid",
     "scientificName": "Coryne eximia",
-    "image": "assets/cards/Coryne_eximia_dk.svg",
+    "image": "assets/images/cards/Coryne_eximia_dk.svg",
     "obisUrl": "https://obis.org/taxon/151860"
   },
   {
     "id": 11,
     "commonName": "Black-necked doto",
     "scientificName": "Doto cervicenigra",
-    "image": "assets/cards/card_11.svg",
+    "image": "assets/images/cards/card_11.svg",
     "obisUrl": "https://obis.org/taxon/139628"
   },
   {
     "id": 12,
     "commonName": "Orange-striped anemone",
     "scientificName": "Diadumene lineata",
-    "image": "assets/cards/diadumene_lineata_dk.svg",
+    "image": "assets/images/cards/diadumene_lineata_dk.svg",
     "obisUrl": "https://obis.org/taxon/395099"
   }
 ]

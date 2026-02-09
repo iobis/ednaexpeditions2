@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who we are</title>
     <meta name="description" content="eDNA Expeditions Phase II">
+    
+    
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/faq/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/faq/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/faq/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/faq/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +32,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-transparent row-light">
         <div class="container container-wide">
-            <a class="navbar-brand fw-bold" href="/">
-                <img src="/assets/00_eDNA%20logo.svg" class="img-fluid" alt="" style="height: 48px;">
+            <a class="navbar-brand fw-bold" href="">
+                <img src="/assets/images/00_eDNA%20logo.svg" class="img-fluid" alt="" style="height: 48px;">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,7 +48,7 @@
       <a class="nav-link" href="/whoweare">Who we are</a>
     <!--</li>
     <li class="nav-item">
-      <a class="nav-link" href="/#mission">The project</a>
+      <a class="nav-link" href="#mission">The project</a>
     </li>-->
     <li class="nav-item">
       <a class="nav-link" href="/resources">Resources</a>
@@ -42,6 +58,17 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/contact">Contact</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        English
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+        
+        <li><a class="dropdown-item active" href="/faq/">English</a></li>
+        <li><a class="dropdown-item" href="/fr/faq/">Français</a></li>
+        <li><a class="dropdown-item" href="/es/faq/">Español</a></li>
+      </ul>
     </li>
   </ul>
 </div>                    
@@ -479,9 +506,9 @@
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+        <a href="" class="edna-footer__brand" aria-label="eDNA Expeditions home">
           <img
-            src="/assets/00_eDNA%20logo.svg"
+            src="/assets/images/00_eDNA%20logo.svg"
             alt="eDNA Expeditions"
             class="edna-footer__logo img-fluid"
           >
@@ -523,22 +550,22 @@
 
         <div class="edna-footer__middle">
           <div class="edna-footer__desc pt-3 pb-3">
-            eDNA Expeditions 2026-2028 is a project under the Intergovernmental Oceanographic Commission (IOC) of UNESCO, supported by Minderoo Foundation, led by OBIS, with the technical collaboration of WilderLabs.
+            eDNA Expeditions 2026-2028 is a project under the Intergovernmental Oceanographic Commission (IOC) of UNESCO, supported by Minderoo Foundation, led by OBIS, with the technical collaboration of WilderLab.
           </div>
 
           <div class="edna-footer__logos3">
             <img
-              src="/assets/00_logo_MF.svg"
+              src="/assets/images/00_logo_MF.svg"
               alt="Minderoo Foundation"
               class="edna-footer__footer-logo edna-footer__footer-logo--mf"
             >
             <img
-              src="/assets/00_logo_IOC+OBIS.svg"
+              src="/assets/images/00_logo_IOC+OBIS.svg"
               alt="IOC and OBIS"
               class="edna-footer__footer-logo edna-footer__footer-logo--powered"
             >
             <img
-              src="/assets/00_logo_Wilderlab.png"
+              src="/assets/images/00_logo_Wilderlab.png"
               alt="WilderLabs"
               class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
             >
@@ -552,7 +579,7 @@
 
             <div class="edna-footer__logos3 pb-2">
             <img
-            src="/assets/decade-logo.png"
+            src="/assets/images/decade-logo.png"
             alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
             class="edna-footer__footer-logo edna-footer__footer-logo--decade">
             </div>

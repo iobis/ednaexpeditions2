@@ -1,14 +1,4 @@
-{% assign current_lang = page.lang | default: nil %}
-
-{% if current_lang == nil %}
-  {% if page.url contains '/fr/' or page.url == '/fr' %}
-    {% assign current_lang = 'fr' %}
-  {% elsif page.url contains '/es/' or page.url == '/es' %}
-    {% assign current_lang = 'es' %}
-  {% else %}
-    {% assign current_lang = 'en' %}
-  {% endif %}
-{% endif %}
+{% assign current_lang = page.lang | default: 'en' %}
 
 {% assign lang_prefix = '' %}
 {% if current_lang == 'fr' %}
@@ -17,15 +7,7 @@
   {% assign lang_prefix = '/es' %}
 {% endif %}
 
-{% assign home_url = '/' %}
-{% if current_lang == 'fr' %}
-  {% assign home_url = '/fr/' %}
-{% elsif current_lang == 'es' %}
-  {% assign home_url = '/es/' %}
-{% endif %}
-
 {% assign t = site.data.translations[current_lang] %}
-
 {% comment %} Generate hreflang URLs {% endcomment %}
 {% assign base_path = page.url | remove_first: '/fr' | remove_first: '/es' %}
 {% assign base_url = site.url | append: site.baseurl %}
@@ -40,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
-
+    
     {% comment %} hreflang tags for SEO {% endcomment %}
     <link rel="alternate" hreflang="en" href="{{ url_en }}" />
     <link rel="alternate" hreflang="fr" href="{{ url_fr }}" />
@@ -54,97 +36,141 @@
     <link href="{{ '/assets/bootstrap.min.css' | relative_url }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-
 <body>
+    <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% endif %}">
+        <div class="container container-wide">
+            <a class="navbar-brand fw-bold" href="{{ lang_prefix | relative_url }}">
+                <img src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!--<li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/jointheproject">{{ t.nav.join_project }}</a>
+    </li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/whoweare">{{ t.nav.who_we_are }}</a>
+    <!--</li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix | relative_url }}#mission">The project</a>
+    </li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/resources">{{ t.nav.resources }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ '/faq' | relative_url }}">FAQ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/contact">{{ t.nav.contact }}</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ t.lang[current_lang] }}
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+        {% assign base_url = page.url | remove_first: '/fr' | remove_first: '/es' %}
+        <li><a class="dropdown-item{% if current_lang == 'en' %} active{% endif %}" href="{{ base_url }}">{{ site.data.translations.en.lang.en }}</a></li>
+        <li><a class="dropdown-item{% if current_lang == 'fr' %} active{% endif %}" href="/fr{{ base_url }}">{{ site.data.translations.fr.lang.fr }}</a></li>
+        <li><a class="dropdown-item{% if current_lang == 'es' %} active{% endif %}" href="/es{{ base_url }}">{{ site.data.translations.es.lang.es }}</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>                    
+    </nav>
 
-<nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% endif %}">
-    <div class="container container-wide">
-
-        <!-- LOGO: FIXED -->
-        <a class="navbar-brand fw-bold" href="{{ home_url | relative_url }}">
-            <img src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ lang_prefix }}/jointheproject">{{ t.nav.join_project }}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ lang_prefix }}/whoweare">{{ t.nav.who_we_are }}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ lang_prefix }}/resources">{{ t.nav.resources }}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ '/faq' | relative_url }}">FAQ</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ lang_prefix }}/contact">{{ t.nav.contact }}</a>
-                </li>
-
-                <!-- LANGUAGE DROPDOWN: OG BEHAVIOUR -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ t.lang[current_lang] }}
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        {% assign base_url = page.url | remove_first: '/fr' | remove_first: '/es' %}
-                        <li>
-                          <a class="dropdown-item{% if current_lang == 'en' %} active{% endif %}" href="{{ base_url }}">
-                            {{ site.data.translations.en.lang.en }}
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item{% if current_lang == 'fr' %} active{% endif %}" href="/fr{{ base_url }}">
-                            {{ site.data.translations.fr.lang.fr }}
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item{% if current_lang == 'es' %} active{% endif %}" href="/es{{ base_url }}">
-                            {{ site.data.translations.es.lang.es }}
-                          </a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-{{ content }}
+    {{ content }}
 
 <footer class="edna-footer" role="contentinfo">
   <div class="container container-wide py-5">
+
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <!-- FOOTER LOGO: FIXED -->
-        <a href="{{ home_url | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+        <a href="{{ lang_prefix | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
           <img
             src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}"
             alt="eDNA Expeditions"
-            class="edna-footer__logo img-fluid">
+            class="edna-footer__logo img-fluid"
+          >
         </a>
       </div>
 
       <div class="edna-footer__right">
-        {{ t.footer.description }}
-      </div>
 
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            {{ t.footer.newsletter_kicker }}
+          </div>
+
+          <form
+            class="edna-footer__newsletter"
+            action="https://ioc-cd.us13.list-manage.com/subscribe/post?u=ab89e583ff8a6a2e366e1fdcf&amp;id=88a980b5f9&amp;f_id=009751eaf0"
+            method="post"
+            target="_blank"
+            novalidate>
+                <div class="input-group edna-footer__input-group">
+                    <input
+                        type="email"
+                        name="EMAIL"
+                        id="mce-EMAIL"
+                        class="form-control edna-footer__input required email"
+                        aria-label="{{ t.footer.email_label }}"
+                        required>
+
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_ab89e583ff8a6a2e366e1fdcf_88a980b5f9" tabindex="-1" value="">
+                </div>
+
+                <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+                {{ t.footer.subscribe }}
+                </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            {{ t.footer.description }}
+          </div>
+
+          <div class="edna-footer__logos3">
+            <img
+              src="{{ '/assets/images/00_logo_MF.svg' | relative_url }}"
+              alt="Minderoo Foundation"
+              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+            >
+            <img
+              src="{{ '/assets/images/00_logo_IOC+OBIS.svg' | relative_url }}"
+              alt="IOC and OBIS"
+              class="edna-footer__footer-logo edna-footer__footer-logo--powered"
+            >
+            <img
+              src="{{ '/assets/images/00_logo_Wilderlab.png' | relative_url }}"
+              alt="WilderLabs"
+              class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+            >
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            {{ t.footer.decade_description }}
+            </div>
+
+            <div class="edna-footer__logos3 pb-2">
+            <img
+            src="{{ '/assets/images/decade-logo.png' | relative_url }}"
+            alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+            class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </div>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+</footer>    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

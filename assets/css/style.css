@@ -465,7 +465,6 @@ button {
     transition: none;
 }
 
-/* Remove blue border/outline on dropdown toggle */
 .navbar .nav-link.dropdown-toggle:focus,
 .navbar .nav-link.dropdown-toggle:active,
 .navbar .nav-link.dropdown-toggle:focus-visible {
@@ -474,6 +473,71 @@ button {
     border: none !important;
     text-decoration: none !important;
 }
+
+.navbar .nav-item.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-link.dropdown-toggle#languageDropdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--text-blue) !important; 
+  border-radius: 999px;
+  background: transparent !important;
+  line-height: 1;
+}
+
+.navbar .nav-link.dropdown-toggle#languageDropdown:focus,
+.navbar .nav-link.dropdown-toggle#languageDropdown:active,
+.navbar .nav-link.dropdown-toggle#languageDropdown:focus-visible,
+.navbar .nav-item.dropdown.show > .nav-link.dropdown-toggle#languageDropdown,
+.navbar .nav-link.dropdown-toggle#languageDropdown[aria-expanded="true"] {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid var(--text-blue) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+.navbar .nav-link.dropdown-toggle#languageDropdown::after {
+  border: none;
+  content: "▾";
+  font-size: 0.75rem;
+  margin-left: 0.45rem;
+  vertical-align: middle;
+}
+
+.navbar .dropdown-menu[aria-labelledby="languageDropdown"] {
+  background: var(--bg-light);
+  border: none;
+  border-radius: 0;
+  padding: 6px 0;
+  margin-top: 10px;
+  box-shadow: 0 8px 20px rgba(2, 2, 131, 0.08);
+}
+
+.navbar .dropdown-item {
+  font-size: 0.8rem; 
+  font-weight: 600;
+  color: var(--text-blue);
+  padding: 6px 16px;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background: transparent;
+  color: var(--text-blue);
+  text-decoration: underline;
+}
+
+.navbar .dropdown-item.active {
+  background: transparent;
+  font-weight: 700;
+}
+
 
 .hero-inner {
     padding-top: 70px;

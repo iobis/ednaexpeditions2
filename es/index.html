@@ -11,12 +11,6 @@
 
 
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the eDNA Expeditions!</title>
     <meta name="description" content="eDNA Expeditions Phase II">
-
+    
     
     <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/" />
     <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/" />
@@ -38,75 +32,52 @@
     <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-
 <body>
+    <nav class="navbar navbar-expand-lg navbar-transparent row-mid">
+        <div class="container container-wide">
+            <a class="navbar-brand fw-bold" href="/es">
+                <img src="/assets/images/00_eDNA%20logo.svg" class="img-fluid" alt="" style="height: 48px;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!--<li class="nav-item">
+      <a class="nav-link" href="/es/jointheproject">Únete al proyecto</a>
+    </li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="/es/whoweare">Quiénes somos</a>
+    <!--</li>
+    <li class="nav-item">
+      <a class="nav-link" href="/es#mission">The project</a>
+    </li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="/es/resources">Recursos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/faq">FAQ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/es/contact">Contacto</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Español
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+        
+        <li><a class="dropdown-item" href="/">English</a></li>
+        <li><a class="dropdown-item" href="/fr/">Français</a></li>
+        <li><a class="dropdown-item active" href="/es/">Español</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>                    
+    </nav>
 
-<nav class="navbar navbar-expand-lg navbar-transparent row-mid">
-    <div class="container container-wide">
-
-        <!-- LOGO: FIXED -->
-        <a class="navbar-brand fw-bold" href="/es/">
-            <img src="/assets/images/00_eDNA%20logo.svg" class="img-fluid" alt="" style="height: 48px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/es/jointheproject">Únete al proyecto</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/es/whoweare">Quiénes somos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/es/resources">Recursos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/faq">FAQ</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/es/contact">Contacto</a>
-                </li>
-
-                <!-- LANGUAGE DROPDOWN: OG BEHAVIOUR -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Español
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        
-                        <li>
-                          <a class="dropdown-item" href="/">
-                            English
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="/fr/">
-                            Français
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item active" href="/es/">
-                            Español
-                          </a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="container-fluid">
+    <div class="container-fluid">
 
     <div class="row row-mid pt-4 pb-4">
         <div class="container hero-inner">
@@ -347,25 +318,92 @@
 
 <footer class="edna-footer" role="contentinfo">
   <div class="container container-wide py-5">
+
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <!-- FOOTER LOGO: FIXED -->
-        <a href="/es/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+        <a href="/es" class="edna-footer__brand" aria-label="eDNA Expeditions home">
           <img
             src="/assets/images/00_eDNA%20logo.svg"
             alt="eDNA Expeditions"
-            class="edna-footer__logo img-fluid">
+            class="edna-footer__logo img-fluid"
+          >
         </a>
       </div>
 
       <div class="edna-footer__right">
-        eDNA Expeditions es un proyecto de la Comisión Oceanográfica Intergubernamental (COI) de la UNESCO, apoyado por la Fundación Minderoo, dirigido por OBIS, con la colaboración técnica de WilderLabs.
-      </div>
 
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            Mantente informado,<br>únete a nuestro boletín
+          </div>
+
+          <form
+            class="edna-footer__newsletter"
+            action="https://ioc-cd.us13.list-manage.com/subscribe/post?u=ab89e583ff8a6a2e366e1fdcf&amp;id=88a980b5f9&amp;f_id=009751eaf0"
+            method="post"
+            target="_blank"
+            novalidate>
+                <div class="input-group edna-footer__input-group">
+                    <input
+                        type="email"
+                        name="EMAIL"
+                        id="mce-EMAIL"
+                        class="form-control edna-footer__input required email"
+                        aria-label="Dirección de correo electrónico"
+                        required>
+
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_ab89e583ff8a6a2e366e1fdcf_88a980b5f9" tabindex="-1" value="">
+                </div>
+
+                <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+                Suscribirse
+                </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            eDNA Expeditions es un proyecto de la Comisión Oceanográfica Intergubernamental (COI) de la UNESCO, apoyado por la Fundación Minderoo, dirigido por OBIS, con la colaboración técnica de WilderLabs.
+          </div>
+
+          <div class="edna-footer__logos3">
+            <img
+              src="/assets/images/00_logo_MF.svg"
+              alt="Minderoo Foundation"
+              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+            >
+            <img
+              src="/assets/images/00_logo_IOC+OBIS.svg"
+              alt="IOC and OBIS"
+              class="edna-footer__footer-logo edna-footer__footer-logo--powered"
+            >
+            <img
+              src="/assets/images/00_logo_Wilderlab.png"
+              alt="WilderLabs"
+              class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+            >
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            eDNA Expeditions es un proyecto respaldado por el Decenio de las Naciones Unidas de las Ciencias Oceánicas para el Desarrollo Sostenible 2021–2030.
+            </div>
+
+            <div class="edna-footer__logos3 pb-2">
+            <img
+            src="/assets/images/decade-logo.png"
+            alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+            class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </div>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+</footer>    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

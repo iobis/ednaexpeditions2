@@ -1,0 +1,112 @@
+---
+layout: default
+navbar_class: row-light
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>{{ page.site_title }}</h2>
+      <p class="mission">{{ page.site_subtitle }}</p>
+    </div>
+  </div>
+
+  <div class="row row-light">
+    <div class="container container-wide">
+      <div class="site-hero-wrap">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.site_title }}" class="site-hero-image">
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="site-stats-panel">
+        <div class="site-stat">
+          <div class="site-stat-icon"><i class="fa-solid fa-vial"></i></div>
+          <div class="site-stat-label">Number of samples done</div>
+          <div class="site-stat-value">{{ page.samples_count }}</div>
+        </div>
+
+        <div class="site-stat">
+          <div class="site-stat-icon"><i class="fa-solid fa-fish"></i></div>
+          <div class="site-stat-label">Number of species identified</div>
+          <div class="site-stat-value">{{ page.species_count }}</div>
+        </div>
+
+        <div class="site-stat">
+          <div class="site-stat-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+          <div class="site-stat-label">Number of threatened species</div>
+          <div class="site-stat-value">{{ page.threatened_count }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="site-main-grid">
+
+        <div class="site-main-content">
+          <section class="site-copy-block">
+            <h3>About our site</h3>
+            <p>{{ page.about_site }}</p>
+          </section>
+
+          <section class="site-copy-block">
+            <h3>What we plan to achieve</h3>
+            <p>{{ page.what_we_plan }}</p>
+          </section>
+        </div>
+
+        <aside class="site-sidebar">
+          <div class="site-map-card">
+                <div class="site-map-frame">
+                <div id="site-map"></div>
+            </div>
+        </div>
+
+          <div class="site-team-card">
+            <h3>Meet our local team</h3>
+
+            <div class="site-team-list">
+              {% for member in page.team %}
+              <div class="site-team-member">
+                <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+                <div>
+                  <p class="site-team-name">{{ member.name }}</p>
+                  <p class="site-team-role">{{ member.role }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="site-contact-card">
+            <h3>Contact us</h3>
+            <div class="site-contact-item">
+              <a href="mailto:{{ page.contact_email }}" class="site-contact-email">{{ page.contact_email }}</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const siteMap = L.map('site-map').setView([{{ page.map_lat }}, {{ page.map_lon }}], {{ page.map_zoom | default: 5 }});
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(siteMap);
+
+  L.marker([{{ page.map_lat }}, {{ page.map_lon }}]).addTo(siteMap);
+</script>

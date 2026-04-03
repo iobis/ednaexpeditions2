@@ -1,0 +1,192 @@
+---
+layout: default
+title: Participating sites
+navbar_class: row-light
+lang: en
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>Participating sites</h2>
+      <p class="mission">Explore the sites taking part in eDNA Expeditions.</p>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="sites-map-panel">
+        <div id="sites-map"></div>
+        
+          <div class="sites-filters">
+
+          <fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Region</legend>
+  {% for item in site.data.site-filters.regions %}
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="{{ item }}">
+      <span>{{ item }}</span>
+    </label>
+  {% endfor %}
+</fieldset>
+
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Country type</legend>
+  {% for item in site.data.site-filters.country_types %}
+    <label class="sites-filter-option">
+      <input type="checkbox" name="country_type" value="{{ item }}">
+      <span>{{ item }}</span>
+    </label>
+  {% endfor %}
+</fieldset>
+
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Site type</legend>
+  {% for item in site.data.site-filters.site_types %}
+    <label class="sites-filter-option">
+      <input type="checkbox" name="site_type" value="{{ item }}">
+      <span>{{ item }}</span>
+    </label>
+  {% endfor %}
+</fieldset>
+
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Ecosystem type</legend>
+  {% for item in site.data.site-filters.ecosystem_types %}
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="{{ item }}">
+      <span>{{ item }}</span>
+    </label>
+  {% endfor %}
+</fieldset>
+
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Objectives</legend>
+  {% for item in site.data.site-filters.objectives %}
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="{{ item }}">
+      <span>{{ item }}</span>
+    </label>
+  {% endfor %}
+</fieldset>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="sites-grid">
+        {% assign sorted_sites = site.participating_sites | sort: "site_title" %}
+        {% for site_item in sorted_sites %}
+          <article class="site-card">
+            <a href="{{ site_item.url }}" class="site-card-link">
+
+              {% if site_item.hero_image %}
+              <div class="site-card-image-wrap">
+                <img src="{{ site_item.hero_image | relative_url }}" alt="{{ site_item.site_title }}" class="site-card-image">
+              </div>
+              {% endif %}
+
+              <div class="site-card-content">
+                <h3 class="site-card-title">{{ site_item.site_title }}</h3>
+                <p class="site-card-teaser">{{ site_item.listing_teaser }}</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const sitesData = [
+    {% assign sorted_sites = site.participating_sites | sort: "site_title" %}
+    {% for site_item in sorted_sites %}
+    {
+      title: {{ site_item.site_title | jsonify }},
+      url: {{ site_item.url | jsonify }},
+      lat: {{ site_item.map_lat | jsonify }},
+      lon: {{ site_item.map_lon | jsonify }},
+      region: {{ site_item.region | jsonify }},
+      country_type: {{ site_item.country_type | jsonify }},
+      site_type: {{ site_item.site_type | jsonify }},
+      objectives: {{ site_item.objectives | jsonify }},
+      ecosystem_type: {{ site_item.ecosystem_type | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  const map = L.map('sites-map').setView([20, 0], 2);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const markers = [];
+
+  function getCheckedValues(name) {
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+      .map(input => input.value);
+  }
+
+  function matchesGroup(siteValue, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    return selectedValues.includes(siteValue);
+  }
+
+  function matchesArray(siteValues, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    if (!siteValues || !Array.isArray(siteValues)) return false;
+    return selectedValues.some(value => siteValues.includes(value));
+  }
+
+  function matchesObjectives(siteObjectives, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    if (!siteObjectives || !Array.isArray(siteObjectives)) return false;
+    return selectedValues.some(value => siteObjectives.includes(value));
+  }
+
+  function matchesFilters(site) {
+    const selectedRegions = getCheckedValues('region');
+    const selectedCountryTypes = getCheckedValues('country_type');
+    const selectedSiteTypes = getCheckedValues('site_type');
+    const selectedObjectives = getCheckedValues('objectives');
+    const selectedEcosystems = getCheckedValues('ecosystem_type');
+
+    return (
+      matchesGroup(site.region, selectedRegions) &&
+      matchesGroup(site.country_type, selectedCountryTypes) &&
+      matchesGroup(site.site_type, selectedSiteTypes) &&
+      matchesObjectives(site.objectives, selectedObjectives) &&
+      matchesArray(site.ecosystem_type, selectedEcosystems)
+    );
+  }
+
+  function renderMarkers() {
+    markers.forEach(marker => map.removeLayer(marker));
+    markers.length = 0;
+
+    sitesData.forEach(site => {
+      if (site.lat && site.lon && matchesFilters(site)) {
+        const marker = L.marker([site.lat, site.lon]).addTo(map);
+        marker.bindPopup(`<strong><a href="${site.url}">${site.title}</a></strong>`);
+        markers.push(marker);
+      }
+    });
+  }
+
+  document.querySelectorAll('.sites-filters input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', renderMarkers);
+  });
+
+  renderMarkers();
+</script>

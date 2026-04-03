@@ -27,3 +27,8 @@ kramdown:
   hard_wrap: false
 
 permalink: pretty
+
+collections:
+  participating_sites:
+    output: true
+    permalink: /participating-sites/:name/

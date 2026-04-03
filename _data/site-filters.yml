@@ -1,0 +1,35 @@
+regions:
+  - Africa
+  - Pacific
+  - Caribbean
+  - Mediterranean
+  - Arctic
+  - South America
+
+country_types:
+  - LMIC
+  - LDC
+  - SIDS
+  - HIC
+
+site_types:
+  - World Heritage site
+  - Biosphere Reserve
+  - Marine Protected Area
+  - Coastal observatory
+
+objectives:
+  - Biodiversity knowledge
+  - Invasive species
+  - Biorisk detection
+  - Monitoring change
+  - Conservation support
+
+ecosystem_types:
+  - Coral reef
+  - Mangrove
+  - Estuary
+  - Seagrass
+  - Polar
+  - Open ocean
+  - Coastal area

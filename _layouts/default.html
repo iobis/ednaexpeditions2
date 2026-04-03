@@ -1,10 +1,10 @@
 {% assign current_lang = page.lang | default: 'en' %}
 
-{% assign lang_prefix = '' %}
+{% assign home_url = '' %}
 {% if current_lang == 'fr' %}
-  {% assign lang_prefix = '/fr' %}
+  {% assign home_url = '/fr' %}
 {% elsif current_lang == 'es' %}
-  {% assign lang_prefix = '/es' %}
+  {% assign home_url = '/es' %}
 {% endif %}
 
 {% assign t = site.data.translations[current_lang] %}
@@ -37,9 +37,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% endif %}">
+    <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% elsif layout.navbar_class %} {{ layout.navbar_class }}{% endif %}">
         <div class="container container-wide">
-            <a class="navbar-brand fw-bold" href="{{ lang_prefix | relative_url }}">
+            <a class="navbar-brand fw-bold" href="{{ home_url | append: '/' | relative_url }}">
                 <img src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}" class="img-fluid" alt="" style="height: 48px;">
             </a>
             
@@ -53,10 +53,17 @@
     </li>-->
     <li class="nav-item">
       <a class="nav-link" href="{{ lang_prefix }}/whoweare">{{ t.nav.who_we_are }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/participating-sites">{{ t.nav.sites | default: "Sites" }}</a>
+</li>  
     <!--</li>
     <li class="nav-item">
       <a class="nav-link" href="{{ lang_prefix | relative_url }}#mission">The project</a>
     </li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="{{ lang_prefix }}/news-stories">{{ t.nav.news_stories }}</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ lang_prefix }}/resources">{{ t.nav.resources }}</a>
     </li>
@@ -89,7 +96,7 @@
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <a href="{{ lang_prefix | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+        <a href="{{ home_url | append: '/' | relative_url }}" class="edna-footer__brand" aria-label="eDNA Expeditions home">
           <img
             src="{{ '/assets/images/00_eDNA logo.svg' | relative_url }}"
             alt="eDNA Expeditions"
@@ -105,30 +112,33 @@
             {{ t.footer.newsletter_kicker }}
           </div>
 
-          <form
-            class="edna-footer__newsletter"
-            action="https://ioc-cd.us13.list-manage.com/subscribe/post?u=ab89e583ff8a6a2e366e1fdcf&amp;id=88a980b5f9&amp;f_id=009751eaf0"
-            method="post"
-            target="_blank"
-            novalidate>
-                <div class="input-group edna-footer__input-group">
-                    <input
-                        type="email"
-                        name="EMAIL"
-                        id="mce-EMAIL"
-                        class="form-control edna-footer__input required email"
-                        aria-label="{{ t.footer.email_label }}"
-                        required>
+         <form
+  class="edna-footer__newsletter"
+  action="https://unesco.us15.list-manage.com/subscribe/post?u=75c69bf185fb2be069850f6ee&amp;id=6cf9d87141&amp;f_id=00ad0ae0f0"
+  method="post"
+  target="_blank"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="{{ t.footer.email_label }}"
+      required>
 
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_ab89e583ff8a6a2e366e1fdcf_88a980b5f9" tabindex="-1" value="">
-                </div>
+    <input type="hidden" name="tags" value="2806613">
 
-                <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
-                {{ t.footer.subscribe }}
-                </button>
-                </div>
-            </form>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      {{ t.footer.subscribe }}
+    </button>
+  </div>
+</form>
+
         </div>
 
         <div class="edna-footer__middle">

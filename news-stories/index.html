@@ -1,0 +1,46 @@
+---
+layout: default
+title: News & stories
+navbar_class: row-light
+lang: en
+---
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>News & stories</h2>
+      <p class="mission">
+        Latest updates, field stories and insights from eDNA Expeditions.
+      </p>
+    </div>
+  </div>
+
+  <div class="row row-light pt-4 pb-5">
+    <div class="container container-wide">
+
+      <div class="news-grid">
+        {% assign articles = site.posts | sort: "date" | reverse %}
+        {% for post in articles %}
+          <article class="news-card">
+            <a href="{{ post.url }}" class="news-card-link">
+              {% if post.hero_image %}
+              <div class="news-card-image-wrap">
+                <img src="{{ post.hero_image }}" alt="{{ post.title }}" class="news-card-image">
+              </div>
+              {% endif %}
+
+              <div class="news-card-content">
+                <h3 class="news-card-title">{{ post.title }}</h3>
+                <p class="news-card-teaser">{{ post.teaser }}</p>
+                <span class="news-card-readmore">Read more ➜</span>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -6,10 +6,11 @@
 {% elsif current_lang == 'es' %}
   {% assign home_url = '/es' %}
 {% endif %}
+{% assign lang_prefix = home_url %}
 
 {% assign t = site.data.translations[current_lang] %}
 {% comment %} Generate hreflang URLs {% endcomment %}
-{% assign base_path = page.url | remove_first: '/fr' | remove_first: '/es' %}
+{% assign base_path = page.url | remove_first: '/fr' | remove_first: '/es' | remove_first: '/en' %}
 {% assign base_url = site.url | append: site.baseurl %}
 {% assign url_en = base_url | append: base_path %}
 {% assign url_fr = base_url | append: '/fr' | append: base_path %}
@@ -68,22 +69,22 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ lang_prefix }}/whoweare">{{ t.nav.who_we_are }}</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/whoweare' | relative_url }}">{{ t.nav.who_we_are }}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ lang_prefix }}/participating-sites">{{ t.nav.sites | default: "Sites" }}</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/participating-sites' | relative_url }}">{{ t.nav.sites | default: "Sites" }}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ lang_prefix }}/news-stories">{{ t.nav.news_stories }}</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/news-stories' | relative_url }}">{{ t.nav.news_stories }}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ lang_prefix }}/resources">{{ t.nav.resources }}</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/resources' | relative_url }}">{{ t.nav.resources }}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ '/faq' | relative_url }}">FAQ</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/faq' | relative_url }}">FAQ</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ lang_prefix }}/contact">{{ t.nav.contact }}</a>
+            <a class="nav-link" href="{{ lang_prefix | append: '/contact' | relative_url }}">{{ t.nav.contact }}</a>
         </li>
     </ul>
 
@@ -93,10 +94,10 @@
                 {{ t.lang[current_lang] }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                {% assign base_url = page.url | remove_first: '/fr' | remove_first: '/es' %}
-                <li><a class="dropdown-item{% if current_lang == 'en' %} active{% endif %}" href="{{ base_url }}">{{ site.data.translations.en.lang.en }}</a></li>
-                <li><a class="dropdown-item{% if current_lang == 'fr' %} active{% endif %}" href="/fr{{ base_url }}">{{ site.data.translations.fr.lang.fr }}</a></li>
-                <li><a class="dropdown-item{% if current_lang == 'es' %} active{% endif %}" href="/es{{ base_url }}">{{ site.data.translations.es.lang.es }}</a></li>
+                {% assign base_langless_path = page.url | remove_first: '/fr' | remove_first: '/es' | remove_first: '/en' %}
+                <li><a class="dropdown-item{% if current_lang == 'en' %} active{% endif %}" href="{{ base_langless_path | relative_url }}">{{ site.data.translations.en.lang.en }}</a></li>
+                <li><a class="dropdown-item{% if current_lang == 'fr' %} active{% endif %}" href="{{ '/fr' | append: base_langless_path | relative_url }}">{{ site.data.translations.fr.lang.fr }}</a></li>
+                <li><a class="dropdown-item{% if current_lang == 'es' %} active{% endif %}" href="{{ '/es' | append: base_langless_path | relative_url }}">{{ site.data.translations.es.lang.es }}</a></li>
             </ul>
         </li>
     </ul>

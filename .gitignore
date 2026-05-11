@@ -2,3 +2,5 @@
 _site
 *.pub
 ssh-keygen*
+.claude/
+00_temp/

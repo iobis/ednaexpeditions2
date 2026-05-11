@@ -22,8 +22,8 @@ lang: en
       <div class="sites-map-panel">
         <div id="sites-map"></div>
         
+          <!-- Filters hidden for now
           <div class="sites-filters">
-
           <fieldset class="sites-filter-group">
   <legend class="sites-filter-title">Region</legend>
   {% for item in site.data.site-filters.regions %}
@@ -33,7 +33,6 @@ lang: en
     </label>
   {% endfor %}
 </fieldset>
-
 <fieldset class="sites-filter-group">
   <legend class="sites-filter-title">Country type</legend>
   {% for item in site.data.site-filters.country_types %}
@@ -43,7 +42,6 @@ lang: en
     </label>
   {% endfor %}
 </fieldset>
-
 <fieldset class="sites-filter-group">
   <legend class="sites-filter-title">Site type</legend>
   {% for item in site.data.site-filters.site_types %}
@@ -53,7 +51,6 @@ lang: en
     </label>
   {% endfor %}
 </fieldset>
-
 <fieldset class="sites-filter-group">
   <legend class="sites-filter-title">Ecosystem type</legend>
   {% for item in site.data.site-filters.ecosystem_types %}
@@ -63,7 +60,6 @@ lang: en
     </label>
   {% endfor %}
 </fieldset>
-
 <fieldset class="sites-filter-group">
   <legend class="sites-filter-title">Objectives</legend>
   {% for item in site.data.site-filters.objectives %}
@@ -73,8 +69,8 @@ lang: en
     </label>
   {% endfor %}
 </fieldset>
-
           </div>
+          -->
       </div>
     </div>
   </div>
@@ -82,7 +78,7 @@ lang: en
   <div class="row row-light pb-5">
     <div class="container container-wide">
       <div class="sites-grid">
-        {% assign sorted_sites = site.participating_sites | sort: "site_title" %}
+        {% assign sorted_sites = site.participating_sites | sort: "sort_name" %}
         {% for site_item in sorted_sites %}
           <article class="site-card">
             <a href="{{ site_item.url }}" class="site-card-link">
@@ -94,6 +90,7 @@ lang: en
               {% endif %}
 
               <div class="site-card-content">
+                {% if site_item.country %}<p class="site-card-country">{{ site_item.country }}</p>{% endif %}
                 <h3 class="site-card-title">{{ site_item.site_title }}</h3>
                 <p class="site-card-teaser">{{ site_item.listing_teaser }}</p>
                 <span class="site-card-readmore">Read more ➜</span>
@@ -109,11 +106,12 @@ lang: en
 
 <script>
   const sitesData = [
-    {% assign sorted_sites = site.participating_sites | sort: "site_title" %}
+    {% assign sorted_sites = site.participating_sites | sort: "sort_name" %}
     {% for site_item in sorted_sites %}
     {
       title: {{ site_item.site_title | jsonify }},
       url: {{ site_item.url | jsonify }},
+      hero_image: {{ site_item.hero_image | jsonify }},
       lat: {{ site_item.map_lat | jsonify }},
       lon: {{ site_item.map_lon | jsonify }},
       region: {{ site_item.region | jsonify }},
@@ -178,7 +176,12 @@ lang: en
     sitesData.forEach(site => {
       if (site.lat && site.lon && matchesFilters(site)) {
         const marker = L.marker([site.lat, site.lon]).addTo(map);
-        marker.bindPopup(`<strong><a href="${site.url}">${site.title}</a></strong>`);
+        const popupContent = `
+          <a href="${site.url}" class="site-map-popup">
+            ${site.hero_image ? `<img src="${site.hero_image}" alt="${site.title}" class="site-map-popup__image">` : ''}
+            <span class="site-map-popup__title">${site.title}</span>
+          </a>`;
+        marker.bindPopup(popupContent, { maxWidth: 220 });
         markers.push(marker);
       }
     });

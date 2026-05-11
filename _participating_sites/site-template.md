@@ -1,6 +1,7 @@
 ---
 layout: site-page
 title: Wonderful participating site
+published: false
 lang: en
 
 site_title: Wonderful participating site

@@ -1,0 +1,18 @@
+# Hero image library for the home page.
+# The FIRST entry is always the one displayed.
+# To rotate: move any entry to the top.
+# To reuse a past image: it stays here — just move it back to the top.
+# To add a new image: add a new entry at the top.
+
+heroes:
+  - image: /assets/images/01_Hero_main3.jpg
+    alt: Divers from a local club celebrating the end of a survey event at the Pulau Redang Marine Park, Terengganu, Malaysia. 
+    caption: Divers from a local club celebrating the end of a survey event at the Pulau Redang Marine Park, Terengganu, Malaysia.
+    credit: Pulau Redang Marine Park
+
+
+  - image: /assets/images/01_Hero_main2.jpg
+    alt: Students taking part in a sampling event at UNOC-3 in Nice, June 2025
+    caption: Students of the Catherine Ségurane high school, taking part in a sampling event at UNOC-3 in Nice, in June 2025.
+    credit: RR3-Films / Minderoo Foundation
+    

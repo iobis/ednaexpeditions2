@@ -351,7 +351,7 @@ a:hover {
 
 .edna-footer__nav a:hover {
     text-decoration: underline;
-    color: #E5F4FF;
+    color: #ffffff;
 }
 
 .row-highlight h3 {
@@ -561,6 +561,14 @@ button {
 .hero-inner {
     padding-top: 70px;
     padding-bottom: 60px;
+}
+
+.meet-sites-link {
+    color: inherit;
+    text-decoration: none;
+}
+.meet-sites-link:hover {
+    text-decoration: underline;
 }
 
 .hero-logos {
@@ -1247,14 +1255,15 @@ button {
 
 .edna-footer{
   background:#0075D6;
-  color:#E5F4FF;
+  color:#ffffff;
 }
 
 .edna-footer__brand-text,
 .edna-footer__kicker,
 .edna-footer__desc,
-.edna-footer a {
-  color:#E5F4FF;
+.edna-footer a,
+.edna-footer p {
+  color:#ffffff;
 }
 
 .edna-footer__grid{
@@ -1282,7 +1291,7 @@ button {
   font-size:4rem;
   line-height:.8;
   font-weight:800;
-  color:#E5F4FF;
+  color:#ffffff;
   text-align:left;
 }
 

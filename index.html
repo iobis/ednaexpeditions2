@@ -5,20 +5,22 @@ navbar_class: row-mid
 lang: en
 ---
 
+{% assign hero = site.data.home_hero.heroes | first %}
+
 <div class="container-fluid">
 
     <div class="row row-mid pb-4">
         <div class="container hero-inner">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <h2 style="text-transform: none; font-weight: 600;" class="mb-4">Applications to join are now closed</h2>
-                    <p>We received a record number of 699 applications from marine sites worldwide to join the project.</p> 
-                    <p>The eDNA Expeditions team is now reviewing all applications and will select the 25 participating sites in the coming weeks.</p>
-                    <p><strong>Stay tuned!</strong></p>
+                    <h2 style="text-transform: none; font-weight: 600;" class="mb-4">The first eDNA Expeditions sites are activated</h2>
+                    <p>Discover the first participating sites of eDNA Expeditions 2026-2028. Explore their unique marine biodiversity, learn about the environmental challenges they face, and see how they will use environmental DNA insights to support conservation, monitoring, and marine management.</p>
+                    <br>
+                    <p><strong><a href="/participating-sites/" class="meet-sites-link">Meet the sites</a> &gt;</strong></p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <img src="/assets/images/01_Hero_main2.jpg" class="img-fluid w-100" alt="" />
-                    <p class="site-hero-caption"><strong>Students of the Catherine Ségurane high school, taking part in a sampling event at UNOC-3 in Nice, in June 2025.</strong> <span class="site-hero-credit">Photo: RR3-Films / Minderoo Foundation</span></p>
+                    <img src="{{ hero.image }}" class="img-fluid w-100" alt="{{ hero.alt }}" />
+                    <p class="site-hero-caption"><strong>{{ hero.caption }}</strong> <span class="site-hero-credit">Photo: {{ hero.credit }}</span></p>
                 </div>
             </div>
         </div>

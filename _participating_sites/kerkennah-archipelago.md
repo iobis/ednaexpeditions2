@@ -4,11 +4,12 @@ title: "The northern islets of Kerkennah archipelago"
 lang: en
 
 site_title: "The northern islets of Kerkennah archipelago"
+map_label: "Kerkennah Archipelago"
 country: "Tunisia"
 sort_name: "Kerkennah"
 site_subtitle: "Together we will uncover the mystery puzzle of our marine ecosystem piece by piece!"
 
-hero_image: /assets/images/sites/kerkennah-archipelago-hero.jpg
+hero_image: /assets/images/sites/kerkennah-archipelago/hero.jpg
 # hero_image NOTE: original submitted as PDF (Site Picture AMCP-INK-18_57_34.pdf), convert to JPG
 hero_caption: "Two small traditional fishing boats floating in the shallow waters of Kerkennah, above distinctive tiger-pattern formations of Posidonia oceanica. of Posidonia oceanica.  Which is unique to Kerkennah archipelagos. These habitats sustain rich marine biodiversity and are closely linked to the daily artisanal fishing activities that shape life in the Kerkennah Islands."
 hero_credit: "Kareem Ben Cheikha - AKDDCL"
@@ -42,20 +43,20 @@ what_we_plan: |
 team:
   - name: "Ons Benzarti"
     role: "Sampling coordinator"
-    image: /assets/images/sites/kerkennah-archipelago-team-1.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-1.jpg
   - name: "Malek Soussi"
     role: "Community engagement lead"
-    image: /assets/images/sites/kerkennah-archipelago-team-2.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-2.jpg
   - name: "Charaf Mrabet"
     role: "Scientific lead"
-    image: /assets/images/sites/kerkennah-archipelago-team-3.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-3.jpg
   - name: "Ahmed Ben Hmida"
     role: "Site coordinator (Authority lead)"
-    image: /assets/images/sites/kerkennah-archipelago-team-4.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-4.jpg
   - name: "Hamed Mallat"
     role: "Sampling Ranger"
-    image: /assets/images/sites/kerkennah-archipelago-team-5.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-5.jpg
   - name: "Ines Chakroun"
     role: "Sampling Ranger"
-    image: /assets/images/sites/kerkennah-archipelago-team-6.jpg
+    image: /assets/images/sites/kerkennah-archipelago/team-6.jpg
 ---

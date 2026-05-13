@@ -18,11 +18,31 @@ navbar_class: row-light
 
   <div class="row row-light{% unless page.show_stats %} pb-5{% endunless %}">
     <div class="container container-wide">
-      <div class="site-hero-wrap">
-        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.site_title }}" class="site-hero-image">
-      </div>
-      {% if page.hero_caption %}
-      <p class="site-hero-caption"><strong>{{ page.hero_caption }}</strong>{% if page.hero_credit %} <span class="site-hero-credit">Photo: {{ page.hero_credit }}</span>{% endif %}</p>
+      {% if page.gallery %}
+        {% assign gallery_size = page.gallery | size %}
+        <div class="site-hero-wrap site-hero-gallery">
+          {% for slide in page.gallery %}
+          <div class="site-hero-slide{% if forloop.first %} is-active{% endif %}"
+               data-caption="{{ slide.caption | escape }}"
+               data-credit="{{ slide.credit | escape }}">
+            <img src="{{ slide.image | relative_url }}" alt="{{ slide.caption }}" class="site-hero-image">
+          </div>
+          {% endfor %}
+          {% if gallery_size > 1 %}
+          <button class="site-hero-arrow site-hero-arrow--prev" aria-label="Previous image">&#8592;</button>
+          <button class="site-hero-arrow site-hero-arrow--next" aria-label="Next image">&#8594;</button>
+          {% endif %}
+        </div>
+        <p class="site-hero-caption js-gallery-caption">
+          <strong>{{ page.gallery[0].caption }}</strong>{% if page.gallery[0].credit %} <span class="site-hero-credit">Photo: {{ page.gallery[0].credit }}</span>{% endif %}
+        </p>
+      {% else %}
+        <div class="site-hero-wrap">
+          <img src="{{ page.hero_image | relative_url }}" alt="{{ page.site_title }}" class="site-hero-image">
+        </div>
+        {% if page.hero_caption %}
+        <p class="site-hero-caption"><strong>{{ page.hero_caption }}</strong>{% if page.hero_credit %} <span class="site-hero-credit">Photo: {{ page.hero_credit }}</span>{% endif %}</p>
+        {% endif %}
       {% endif %}
     </div>
   </div>
@@ -115,4 +135,50 @@ navbar_class: row-light
   }).addTo(siteMap);
 
   L.marker([{{ page.map_lat }}, {{ page.map_lon }}]).addTo(siteMap);
+</script>
+
+<script>
+(function () {
+  var gallery = document.querySelector('.site-hero-gallery');
+  if (!gallery) return;
+
+  var slides = gallery.querySelectorAll('.site-hero-slide');
+  if (slides.length <= 1) return;
+
+  var caption = document.querySelector('.js-gallery-caption');
+  var current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+
+    if (caption) {
+      var slide = slides[current];
+      var cap = slide.dataset.caption || '';
+      var credit = slide.dataset.credit || '';
+
+      caption.innerHTML = '';
+      var strong = document.createElement('strong');
+      strong.textContent = cap;
+      caption.appendChild(strong);
+
+      if (credit) {
+        caption.appendChild(document.createTextNode(' '));
+        var span = document.createElement('span');
+        span.className = 'site-hero-credit';
+        span.textContent = 'Photo: ' + credit;
+        caption.appendChild(span);
+      }
+    }
+  }
+
+  gallery.querySelector('.site-hero-arrow--prev').addEventListener('click', function () {
+    goTo(current - 1);
+  });
+
+  gallery.querySelector('.site-hero-arrow--next').addEventListener('click', function () {
+    goTo(current + 1);
+  });
+}());
 </script>

@@ -4,11 +4,12 @@ title: "Cananéia–Iguape–Peruíbe Environmental Protection Area"
 lang: en
 
 site_title: "Cananéia–Iguape–Peruíbe Environmental Protection Area"
+map_label: "Cananéia–Iguape–Peruíbe"
 country: "Brazil"
 sort_name: "Cananeia"
 site_subtitle: "Together, we will monitor biodiversity and provide early detection of rare and invasive species to support conservation and management."
 
-hero_image: /assets/images/sites/cananeia-iguape-peruibe-hero.jpg
+hero_image: /assets/images/sites/cananeia-iguape-peruibe/hero.jpg
 hero_caption: "Rio Batista flowing into the Atlantic Ocean near Barra do Una, Iguape (São Paulo, Brazil), within the Cananéia–Iguape–Peruíbe Environmental Protection Area."
 hero_credit: "Otto Hartung"
 
@@ -39,20 +40,20 @@ what_we_plan: |
 team:
   - name: "Jeniffer Teles"
     role: "Scientific Lead / Site Coordinator"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-1.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-1.jpeg
   - name: "Giovana Bertini"
     role: "Co-Lead / Local Scientific Coordinator"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-2.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-2.jpeg
   - name: "Fabiana da Silva"
     role: "Data Analysis Lead / Scientific team"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-3.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-3.jpeg
   - name: "Patrícia Santiago"
     role: "Environmental Data Lead"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-4.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-4.jpeg
   - name: "Otto Hartung"
     role: "Protected Area (Prelado State Park) Manager"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-5.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-5.jpeg
   - name: "Maria Fernanda de Carvalho"
     role: "Community engagement lead"
-    image: /assets/images/sites/cananeia-iguape-peruibe-team-6.jpeg
+    image: /assets/images/sites/cananeia-iguape-peruibe/team-6.jpeg
 ---

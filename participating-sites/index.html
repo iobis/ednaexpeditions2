@@ -19,8 +19,9 @@ lang: en
 
   <div class="row row-light pb-5">
     <div class="container container-wide">
-      <div class="sites-map-panel">
+      <div class="sites-map-panel" id="sites-map-panel">
         <div id="sites-map"></div>
+        <button class="sites-map-fullscreen-btn" id="sites-map-fullscreen-btn" aria-label="Toggle fullscreen">&#x26F6;</button>
         
           <!-- Filters hidden for now
           <div class="sites-filters">
@@ -109,7 +110,7 @@ lang: en
     {% assign sorted_sites = site.participating_sites | sort: "sort_name" %}
     {% for site_item in sorted_sites %}
     {
-      title: {{ site_item.site_title | jsonify }},
+      title: {{ site_item.map_label | default: site_item.site_title | jsonify }},
       url: {{ site_item.url | jsonify }},
       hero_image: {{ site_item.hero_image | jsonify }},
       lat: {{ site_item.map_lat | jsonify }},
@@ -123,7 +124,18 @@ lang: en
     {% endfor %}
   ];
 
-  const map = L.map('sites-map').setView([20, 0], 2);
+  const map = L.map('sites-map');
+
+  const allCoords = sitesData.filter(s => s.lat && s.lon).map(s => [s.lat, s.lon]);
+  if (allCoords.length) {
+    const bounds = L.latLngBounds(allCoords);
+    map.fitBounds(bounds, { padding: [40, 40] });
+    map.once('moveend', function () {
+      map.setMinZoom(map.getZoom());
+    });
+  } else {
+    map.setView([20, 0], 2);
+  }
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
@@ -169,19 +181,38 @@ lang: en
     );
   }
 
+  const pinIcon = L.divIcon({
+    className: '',
+    html: '<div class="site-pin"><div class="site-pin__dot"></div></div>',
+    iconSize: [10, 10],
+    iconAnchor: [5, 5],
+  });
+
   function renderMarkers() {
     markers.forEach(marker => map.removeLayer(marker));
     markers.length = 0;
 
     sitesData.forEach(site => {
       if (site.lat && site.lon && matchesFilters(site)) {
-        const marker = L.marker([site.lat, site.lon]).addTo(map);
-        const popupContent = `
-          <a href="${site.url}" class="site-map-popup">
-            ${site.hero_image ? `<img src="${site.hero_image}" alt="${site.title}" class="site-map-popup__image">` : ''}
-            <span class="site-map-popup__title">${site.title}</span>
-          </a>`;
-        marker.bindPopup(popupContent, { maxWidth: 220 });
+        const marker = L.marker([site.lat, site.lon], { icon: pinIcon }).addTo(map);
+        marker.bindTooltip(site.title, {
+          permanent: true,
+          direction: 'right',
+          className: 'site-pin-label',
+          offset: [3, 0],
+        });
+
+        marker.on('click', function () {
+          window.location.href = site.url;
+        });
+
+        const tooltipEl = marker.getTooltip() && marker.getTooltip().getElement();
+        if (tooltipEl) {
+          tooltipEl.addEventListener('click', function (evt) {
+            evt.stopPropagation();
+            window.location.href = site.url;
+          });
+        }
         markers.push(marker);
       }
     });
@@ -192,4 +223,14 @@ lang: en
   });
 
   renderMarkers();
+
+  const mapPanel = document.getElementById('sites-map-panel');
+  const fullscreenBtn = document.getElementById('sites-map-fullscreen-btn');
+
+  fullscreenBtn.addEventListener('click', function () {
+    const isFullscreen = mapPanel.classList.toggle('sites-map-panel--fullscreen');
+    fullscreenBtn.innerHTML = isFullscreen ? '&#x2715;' : '&#x26F6;';
+    fullscreenBtn.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Toggle fullscreen');
+    map.invalidateSize();
+  });
 </script>

@@ -4,11 +4,12 @@ title: "Sundarbans World Heritage Site"
 lang: en
 
 site_title: "Sundarbans World Heritage Site"
+map_label: "Sundarbans"
 country: "Bangladesh"
 sort_name: "Sundarbans"
 site_subtitle: "Together, we will establish eDNA-based monitoring to track aquatic biodiversity changes in the climate-vulnerable Sundarbans and support science-based conservation."
 
-hero_image: /assets/images/sites/sundarbans-hero.jpg
+hero_image: /assets/images/sites/sundarbans/hero.jpg
 hero_caption: "Sundarbans"
 hero_credit: "Sakib"
 
@@ -39,14 +40,14 @@ what_we_plan: |
 team:
   - name: "Kazi Ahsan Habib"
     role: "Scientific Lead"
-    image: /assets/images/sites/sundarbans-team-1.jpg
+    image: /assets/images/sites/sundarbans/team-1.jpg
   - name: "Ireen Parvin"
     role: "Data Analyzing coordinator"
-    image: /assets/images/sites/sundarbans-team-2.jpg
+    image: /assets/images/sites/sundarbans/team-2.jpg
   - name: "Md. Nazmus Sakib"
     role: "Sampling and Planning coordinator"
-    image: /assets/images/sites/sundarbans-team-3.jpg
+    image: /assets/images/sites/sundarbans/team-3.jpg
   - name: "Farhan Bin Habib"
     role: "Data management coordinator"
-    image: /assets/images/sites/sundarbans-team-4.jpg
+    image: /assets/images/sites/sundarbans/team-4.jpg
 ---

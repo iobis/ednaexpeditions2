@@ -1,14 +1,14 @@
 ---
 layout: site-page
-title: "Bootless Bay, Central Province, Papua New Guinea"
+title: "Bootless Bay"
 lang: en
 
-site_title: "Bootless Bay, Central Province, Papua New Guinea"
+site_title: "Bootless Bay"
 country: "Papua New Guinea"
 sort_name: "Bootless Bay"
 site_subtitle: "To establish and compare biodiversity detected by eDNA sampling in and around Bootless Bay, Central Province, Papua New Guinea."
 
-hero_image: /assets/images/sites/bootless-bay-papua-new-guinea-hero.jpg
+hero_image: /assets/images/sites/bootless-bay-papua-new-guinea/hero.jpg
 hero_caption: "Bootless Bay, Central Province, Papua New Guinea"
 hero_credit: "MIRC"
 

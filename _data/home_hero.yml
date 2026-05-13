@@ -3,16 +3,13 @@
 # To rotate: move any entry to the top.
 # To reuse a past image: it stays here — just move it back to the top.
 # To add a new image: add a new entry at the top.
+# Note: caption is also used as the image alt text automatically.
 
 heroes:
   - image: /assets/images/01_Hero_main3.jpg
-    alt: Divers from a local club celebrating the end of a survey event at the Pulau Redang Marine Park, Terengganu, Malaysia. 
-    caption: Divers from a local club celebrating the end of a survey event at the Pulau Redang Marine Park, Terengganu, Malaysia.
-    credit: Pulau Redang Marine Park
-
+    caption: Students from Universiti Malaysia Terengganu with volunteers from the National University of Singapore and the Sarawak Forestry Corporation deploying Autonomous Reef Monitoring Structures (ARMS) in Pulau Bidong, Malaysia, in April 2026.
+    credit: Sabrina Hilmy
 
   - image: /assets/images/01_Hero_main2.jpg
-    alt: Students taking part in a sampling event at UNOC-3 in Nice, June 2025
     caption: Students of the Catherine Ségurane high school, taking part in a sampling event at UNOC-3 in Nice, in June 2025.
     credit: RR3-Films / Minderoo Foundation
-    

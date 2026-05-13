@@ -8,7 +8,7 @@ country: "Norway"
 sort_name: "Saltstraumen"
 site_subtitle: "Environmental DNA will help us to reveal the biodiversity of one of the strongest tidal currents in the world."
 
-hero_image: /assets/images/sites/saltstraumen-hero.jpg
+hero_image: /assets/images/sites/saltstraumen/hero.jpg
 hero_caption: "When the tide turns and flows in and out between the fjords, spectacular whirlpools are created in Saltstraumen."
 hero_credit: "Joost Raeymaekers"
 
@@ -36,20 +36,20 @@ what_we_plan: |
 team:
   - name: "Joost Raeymaekers"
     role: "Coordinator"
-    image: /assets/images/sites/saltstraumen-team-1.jpg
+    image: /assets/images/sites/saltstraumen/team-1.jpg
   - name: "Rakel Blaalid"
     role: "Coordinator"
-    image: /assets/images/sites/saltstraumen-team-2.jpg
+    image: /assets/images/sites/saltstraumen/team-2.jpg
   - name: "Lauriane Ribas-Deulofeu"
     role: "Fieldwork and community engagement"
-    image: /assets/images/sites/saltstraumen-team-3.jpg
+    image: /assets/images/sites/saltstraumen/team-3.jpg
   - name: "Amy Mackintosh"
     role: "Fieldwork and community engagement"
-    image: /assets/images/sites/saltstraumen-team-4.jpg
+    image: /assets/images/sites/saltstraumen/team-4.jpg
   - name: "Amalia Mailli"
     role: "Fieldwork and community engagement"
-    image: /assets/images/sites/saltstraumen-team-5.jpg
+    image: /assets/images/sites/saltstraumen/team-5.jpg
   - name: "Loïc Sanchez"
     role: "Fieldwork and community engagement"
-    image: /assets/images/sites/saltstraumen-team-6.jpg
+    image: /assets/images/sites/saltstraumen/team-6.jpg
 ---

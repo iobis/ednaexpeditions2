@@ -1,14 +1,15 @@
 ---
 layout: site-page
-title: "Pulau Bidong & Pulau Yu, Terengganu"
+title: "Pulau Bidong and Pulau Yu, Terengganu"
 lang: en
 
-site_title: "Pulau Bidong & Pulau Yu, Terengganu"
+site_title: "Pulau Bidong and Pulau Yu, Terengganu"
+map_label: "Pulau Bidong and Pulau Yu"
 country: "Malaysia"
 sort_name: "Pulau Bidong"
 site_subtitle: "Revealing cryptic biodiversity in tropical, typhoon-impacted reefs across MPA and non-MPA systems using eDNA"
 
-hero_image: /assets/images/sites/pulau-bidong-pulau-yu-hero.jpg
+hero_image: /assets/images/sites/pulau-bidong-pulau-yu/hero.jpg
 hero_caption: "Pulau Bidong and surroundings"
 hero_credit: "Sabrina Mohd Hilmy"
 
@@ -35,17 +36,17 @@ what_we_plan: |
 team:
   - name: "Muhammad Hafiz Borkhanuddin"
     role: "Scientific Lead"
-    image: /assets/images/sites/pulau-bidong-pulau-yu-team-1.jpeg
+    image: /assets/images/sites/pulau-bidong-pulau-yu/team-1.jpeg
   - name: "Tan Chun Hong"
     role: "Sampling coordinator"
-    image: /assets/images/sites/pulau-bidong-pulau-yu-team-2.jpeg
+    image: /assets/images/sites/pulau-bidong-pulau-yu/team-2.jpeg
   - name: "Siti NurTahirah Jaafar"
     role: "Laboratory Coordinator"
-    image: /assets/images/sites/pulau-bidong-pulau-yu-team-3.jpeg
+    image: /assets/images/sites/pulau-bidong-pulau-yu/team-3.jpeg
   - name: "Roswati Md Amin"
     role: "Laboratory Coordinator"
-    image: /assets/images/sites/pulau-bidong-pulau-yu-team-4.jpg
+    image: /assets/images/sites/pulau-bidong-pulau-yu/team-4.jpg
   - name: "Mohd Safuan Che Din"
     role: "Sampling coordinator"
-    image: /assets/images/sites/pulau-bidong-pulau-yu-team-5.jpeg
+    image: /assets/images/sites/pulau-bidong-pulau-yu/team-5.jpeg
 ---

@@ -1,14 +1,15 @@
 ---
 layout: site-page
-title: "Natural Protected Area Península Valdés"
+title: "Península Valdés Natural Protected Area"
 lang: en
 
-site_title: "Natural Protected Area Península Valdés"
+site_title: "Península Valdés Natural Protected Area"
+map_label: "Península Valdés"
 country: "Argentina"
 sort_name: "Peninsula Valdes"
 site_subtitle: "We explore the genetic fingerprint of the ocean to protect the natural wealth of Península Valdés."
 
-hero_image: /assets/images/sites/peninsula-valdes-hero.jpg
+hero_image: /assets/images/sites/peninsula-valdes/hero.jpg
 # hero_image NOTE: original submitted as PDF (Caleta Valdés-16_37_21.pdf), convert to JPG
 hero_caption: "Caleta Valdés, Península Valdés"
 hero_credit: "Administración del Área Natural Protegida Península Valdés"
@@ -36,13 +37,13 @@ what_we_plan: |
 team:
   - name: "Cristian Alberto Durante"
     role: "Scientific lead"
-    image: /assets/images/sites/peninsula-valdes-team-1.jpg
+    image: /assets/images/sites/peninsula-valdes/team-1.jpg
   - name: "Rocio Loizaga De Castro"
     role: "Scientific lead"
-    image: /assets/images/sites/peninsula-valdes-team-2.jpg
+    image: /assets/images/sites/peninsula-valdes/team-2.jpg
   - name: "María Eugenia Vall"
     role: "Sampling coordinator"
-    image: /assets/images/sites/peninsula-valdes-team-3.jpg
+    image: /assets/images/sites/peninsula-valdes/team-3.jpg
   - name: "Micaela Lefinao Navarro"
     role: "Community engagement lead"
     image: /assets/images/team-placeholder.svg

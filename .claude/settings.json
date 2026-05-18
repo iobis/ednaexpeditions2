@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(mkdir -p /Users/laurentchmiel/Projects/ednaexpeditions2/assets/images/sites && echo \"created\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://eu.kobotoolbox.org/api/v2/assets/aSLfdFsoWSaGfgexKR84nZ/data/773195221/attachments/att5xAS7eb9jewbrQhQBSNZA/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://eu.kobotoolbox.org/api/v2/assets/aSLfdFsoWSaGfgexKR84nZ/data/773195221/attachments/att5xAS7eb9jewbrQhQBSNZA/WhatsApp%20Image%202026-05-02%20at%2012.58.45-10_38_42.jpeg\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://eu.kobotoolbox.org/api/v2/assets/aSLfdFsoWSaGfgexKR84nZ/data/773195221/attachments/?format=json\")",
+      "Bash(python3 00_temp/generate_sites.py)",
+      "Bash(KOBO_TOKEN=\"e297f3b6fc8aa6c44d27fb0902a0680068cf899b\" bash 00_temp/download_images.sh)",
+      "Bash(sips -s format jpeg assets/images/sites/kerkennah-archipelago-hero.pdf --out assets/images/sites/kerkennah-archipelago-hero.jpg)",
+      "Bash(sips -s format jpeg assets/images/sites/peninsula-valdes-hero.pdf --out assets/images/sites/peninsula-valdes-hero.jpg)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(bundle exec *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:4000)",
+      "Bash(ruby -ryaml -e 'YAML.load\\(File.read\\('\\\\''__TRACKED_VAR__'\\\\''\\)\\)')",
+      "Bash(grep -v \"^$\")",
+      "Bash(ruby -ryaml -e \"YAML.load\\(File.read\\('_participating_sites/peninsula-valdes.md'\\)\\)\")"
+    ],
+    "additionalDirectories": [
+      "/Users/laurentchmiel/Projects/ednaexpeditions2/assets/images"
+    ]
+  }
+}

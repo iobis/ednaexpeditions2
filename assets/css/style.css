@@ -407,7 +407,7 @@ a:hover {
     border-radius: 0;
     border-right: none;
     border: 0px;
-    width: 240px;
+    min-width: 0;
     background-color: var(--bg-light);
 }
 
@@ -421,7 +421,6 @@ a:hover {
     font-weight: bold;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    width: 150px;
 }
 
 .form-group.required button:hover {
@@ -1513,4 +1512,38 @@ input {
 .navbar .nav-link--home-icon::after,
 .navbar .nav-link--home-icon:hover::after {
     content: none;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .carousel h2 {
+        font-size: 1.8em;
+    }
+
+    .mission {
+        font-size: 1.3em;
+    }
+
+    .article-title {
+        font-size: 2em;
+    }
+
+    #sites-map {
+        height: 320px;
+    }
+
+    .site-hero-arrow {
+        opacity: 1;
+    }
 }

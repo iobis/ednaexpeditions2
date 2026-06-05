@@ -86,7 +86,7 @@ lang: en
 
               {% if site_item.hero_image %}
               <div class="site-card-image-wrap">
-                <img src="{{ site_item.hero_image | relative_url }}" alt="{{ site_item.site_title }}" class="site-card-image">
+                <img src="{{ site_item.hero_image | relative_url }}" alt="{{ site_item.site_title }}" class="site-card-image" loading="lazy">
               </div>
               {% endif %}
 

@@ -102,7 +102,7 @@ navbar_class: row-light
             <div class="site-team-list">
               {% for member in page.team %}
               <div class="site-team-member">
-                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}">
+                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}" loading="lazy">
                 <div>
                   <p class="site-team-name">{{ member.name }}</p>
                   <p class="site-team-role">{{ member.role }}</p>

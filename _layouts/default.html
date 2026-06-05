@@ -43,6 +43,9 @@
 
     <div class="ioc-top-banner">
         <div class="container container-wide ioc-top-banner__inner">
+            <a href="{{ home_url | append: '/' | relative_url }}" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
+            </a>
             <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
                 <img
                     src="{{ '/assets/images/00_logo_IOC_w.svg' | relative_url }}"
@@ -50,10 +53,10 @@
                     class="ioc-top-banner__logo"
                 >
             </a>
-            <a href="{{ home_url | append: '/' | relative_url }}" class="ioc-top-banner__title" style="text-decoration: none; color: #ffffff;">eDNA Expeditions 2026-2028</a>
         </div>
     </div>
 
+  <div class="page-body{% if page.hero_wallpaper %} page-body--wallpaper{% endif %}">
   <nav class="navbar navbar-expand-lg navbar-transparent{% if page.navbar_class %} {{ page.navbar_class }}{% elsif layout.navbar_class %} {{ layout.navbar_class }}{% endif %}">
     <div class="container container-wide">
 
@@ -63,12 +66,6 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
-        <li class="nav-item">
-            <a class="nav-link nav-link--home-icon" href="{{ home_url | append: '/' | relative_url }}" aria-label="{{ t.nav.home }}">
-                <i class="fa-regular fa-compass" aria-hidden="true" style="font-size: 2em;"></i>
-                <span class="visually-hidden">{{ t.nav.home }}</span>
-            </a>
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ lang_prefix | append: '/whoweare' | relative_url }}">{{ t.nav.who_we_are }}</a>
         </li>
@@ -109,6 +106,8 @@
 </nav>
 
     {{ content }}
+
+  </div><!-- /.page-body -->
 
 <footer class="edna-footer" role="contentinfo">
   <div class="container container-wide pb-5" style="padding-top: 100px;">
@@ -178,16 +177,19 @@
               src="{{ '/assets/images/00_logo_IOC-OBIS_w.svg' | relative_url }}"
               alt="IOC"
               class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+              loading="lazy"
             >
-<img
+            <img
               src="{{ '/assets/images/00_logo-mf-pin_w.svg' | relative_url }}"
               alt="Minderoo Foundation"
               class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+              loading="lazy"
             >
             <img
               src="{{ '/assets/images/00_logo_Wilderlab.png' | relative_url }}"
               alt="Wilderlab"
               class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+              loading="lazy"
             >
           </div>
         </div>

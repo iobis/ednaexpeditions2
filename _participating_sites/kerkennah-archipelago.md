@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "The northern islets of Kerkennah archipelago"
 lang: en
@@ -60,3 +61,4 @@ team:
     role: "Sampling Ranger"
     image: /assets/images/sites/kerkennah-archipelago/team-6.jpg
 ---
+published: false

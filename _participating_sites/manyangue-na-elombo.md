@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "Manyangue na Elombo-Campo Marine Park"
 lang: en
@@ -59,3 +60,4 @@ team:
     role: "Fieldwork & Community Engagement Officer"
     image: /assets/images/sites/manyangue-na-elombo/team-6.jpg
 ---
+published: false

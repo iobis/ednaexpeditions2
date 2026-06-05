@@ -86,7 +86,33 @@ For each image URL (hero + team members with consent=Yes):
    rm <dest>.pdf <dest>.pdf.png
    ```
 
-3. If the resulting `.jpg` is not a valid JPEG (check with `file` command), replace it with the placeholder:
+3. **Resize and compress** every resulting `.jpg` using `sips` to keep file sizes web-friendly (many site visitors have low bandwidth):
+   - **Hero images**: max 1920px on the longest side, JPEG quality 80
+     ```
+     w=$(sips -g pixelWidth <hero>.jpg | awk '/pixelWidth/{print $2}')
+     h=$(sips -g pixelHeight <hero>.jpg | awk '/pixelHeight/{print $2}')
+     if [ "$w" -gt "$h" ] && [ "$w" -gt 1920 ]; then
+       sips -s format jpeg -s formatOptions 80 --resampleWidth 1920 <hero>.jpg --out <hero>.jpg 2>/dev/null
+     elif [ "$h" -ge "$w" ] && [ "$h" -gt 1920 ]; then
+       sips -s format jpeg -s formatOptions 80 --resampleHeight 1920 <hero>.jpg --out <hero>.jpg 2>/dev/null
+     else
+       sips -s format jpeg -s formatOptions 80 <hero>.jpg --out <hero>.jpg 2>/dev/null
+     fi
+     ```
+   - **Team photos**: max 600px wide / 800px tall, JPEG quality 80
+     ```
+     w=$(sips -g pixelWidth <team>.jpg | awk '/pixelWidth/{print $2}')
+     h=$(sips -g pixelHeight <team>.jpg | awk '/pixelHeight/{print $2}')
+     if [ "$w" -gt "$h" ] && [ "$w" -gt 600 ]; then
+       sips -s format jpeg -s formatOptions 80 --resampleWidth 600 <team>.jpg --out <team>.jpg 2>/dev/null
+     elif [ "$h" -ge "$w" ] && [ "$h" -gt 800 ]; then
+       sips -s format jpeg -s formatOptions 80 --resampleHeight 800 <team>.jpg --out <team>.jpg 2>/dev/null
+     else
+       sips -s format jpeg -s formatOptions 80 <team>.jpg --out <team>.jpg 2>/dev/null
+     fi
+     ```
+
+4. If the resulting `.jpg` is not a valid JPEG (check with `file` command), replace it with the placeholder:
    ```
    cp assets/images/team-placeholder.svg <dest>.jpg
    ```

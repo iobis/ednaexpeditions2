@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "Galapagos Marine Reserve"
 lang: en
@@ -52,3 +53,4 @@ team:
     role: "Junior Scientist"
     image: /assets/images/team-placeholder.svg
 ---
+published: false

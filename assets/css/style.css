@@ -28,6 +28,7 @@ body {
 .ioc-top-banner__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.25rem;
     min-height: 84px;
     padding-top: 0.9rem;
@@ -41,14 +42,21 @@ body {
     flex-shrink: 0;
 }
 
-.ioc-top-banner__title {
-    color: #ffffff;
-    font-family: "DIN Pro", "DINPro", "Inter", Arial, sans-serif;
-    font-size: 1.8rem;
+.ioc-top-banner__brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.ioc-top-banner__brand-text {
+    display: block;
+    font-family: "DIN Pro","DINPro","DIN Alternate","Barlow",sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
     line-height: 1;
-    font-weight: 700;
-    letter-spacing: 0;
-    margin-left: auto;
+    color: #fff;
+    white-space: nowrap;
 }
 
 @media (max-width: 767px) {
@@ -63,9 +71,9 @@ body {
         height: 40px;
     }
 
-    .ioc-top-banner__title {
-        font-size: 1.35rem;
-        line-height: 1.1;
+    .ioc-top-banner__brand-text {
+        font-size: 1.2rem;
+        white-space: normal;
     }
 }
 
@@ -1486,4 +1494,76 @@ input {
     .site-hero-arrow {
         opacity: 1;
     }
+}
+
+/* ── Mobile navigation ─────────────────────────────────────── */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .navbar-nav--equal {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .navbar-nav--equal > .nav-item {
+        justify-content: flex-start;
+        width: 100%;
+        border-bottom: 1px solid rgba(2, 2, 131, 0.1);
+    }
+
+    .navbar-nav--equal > .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav--equal > .nav-item > .nav-link {
+        min-height: 48px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    /* Hide underline hover effect on touch */
+    .navbar .nav-link:not(.dropdown-toggle)::after {
+        display: none;
+    }
+
+    /* Wallpaper: reduce scale on small screens */
+    .page-body--wallpaper {
+        background-size: 300% auto;
+    }
+}
+
+/* Hero page wallpaper */
+.page-body {
+    position: relative;
+}
+
+.page-body--wallpaper {
+    background-color: var(--bg-mid);
+    background-image: url('/assets/images/site_banner_b_white.svg');
+    background-size: 200% auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.page-body--wallpaper .navbar {
+    background-color: rgba(193, 229, 255, 0.7);
+}
+
+.page-body--wallpaper .row-mid {
+    background-color: rgba(193, 229, 255, 0.7);
+}
+
+.page-body--wallpaper .row-light {
+    background-color: rgba(229, 244, 255, 0.7);
 }

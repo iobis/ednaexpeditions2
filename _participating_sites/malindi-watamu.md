@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "Malindi-Watamu-Arabuko Sokoke Biosphere Reserve"
 lang: en
@@ -53,3 +54,4 @@ team:
     role: "Bioinformatician"
     image: /assets/images/sites/malindi-watamu/team-4.jpg
 ---
+published: false

@@ -38,17 +38,17 @@ what_we_plan: |
 team:
   - name: "Inti Keith"
     role: "Principal Investigator"
-    image: /assets/images/sites/galapagos-marine-reserve/team-1.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "Wilson Iñiguez"
     role: "Junior Scientist"
-    image: /assets/images/sites/galapagos-marine-reserve/team-2.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "Rosita Calderon"
     role: "Junior Scientist"
-    image: /assets/images/sites/galapagos-marine-reserve/team-3.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "William Bensted-Smith"
     role: "Junior Scientist"
-    image: /assets/images/sites/galapagos-marine-reserve/team-4.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "Franklin Teran"
     role: "Junior Scientist"
-    image: /assets/images/sites/galapagos-marine-reserve/team-5.jpg
+    image: /assets/images/team-placeholder.svg
 ---

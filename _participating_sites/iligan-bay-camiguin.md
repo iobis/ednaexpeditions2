@@ -1,9 +1,9 @@
 ---
 layout: site-page
-title: "eDNA expedition 2026-2028 -Iligan Bay and Camiguin Island, Mindanao, Philippines"
+title: "Iligan Bay and Camiguin Island, Mindanao, Philippines"
 lang: en
 
-site_title: "eDNA expedition 2026-2028 -Iligan Bay and Camiguin Island, Mindanao, Philippines"
+site_title: "Iligan Bay and Camiguin Island, Mindanao, Philippines"
 map_label: "Iligan Bay and Camiguin Island"
 country: "Philippines"
 sort_name: "Iligan Bay Camiguin Island"

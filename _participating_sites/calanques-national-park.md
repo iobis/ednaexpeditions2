@@ -10,7 +10,7 @@ sort_name: "Calanques"
 site_subtitle: "Together to better understand ecosystem in a marine protected area."
 
 hero_image: /assets/images/sites/calanques-national-park/hero.jpg
-hero_caption: "The picture shows Calanques of the Mugel called the "children reserve". Through the council of their Marine Educative Area and the support of the local city (La Ciotat) they developed regulations specific to this site: anchoring is prohibited and fishing is partly forbidden. It's one of the area of the study."
+hero_caption: "The picture shows Calanques of the Mugel called the 'children reserve'. Through the council of their Marine Educative Area and the support of the local city (La Ciotat) they developed regulations specific to this site: anchoring is prohibited and fishing is partly forbidden. It's one of the area of the study."
 hero_credit: "Calanques National Park"
 
 listing_teaser: "A Mediterranean marine national park near Marseille, where eDNA will document biodiversity across Posidonia meadows, coralligenous reefs, and no-take zones under varying levels of human pressure."

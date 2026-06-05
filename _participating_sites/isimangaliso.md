@@ -6,7 +6,7 @@ lang: en
 site_title: "iSimangaliso Marine Protected Area"
 map_label: "iSimangaliso"
 country: "South Africa"
-sort_name: "iSimangaliso"
+sort_name: "Isimangaliso"
 site_subtitle: "Together, we will use eDNA and citizen science to monitor biodiversity across estuarine, coastal and marine ecosystems in iSimangaliso Wetland Park."
 
 hero_image: /assets/images/sites/isimangaliso/hero.jpg

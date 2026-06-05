@@ -36,13 +36,13 @@ what_we_plan: |
 team:
   - name: "Konomi Maeda"
     role: "Leader of the Education Consortium, Sampling coordinator"
-    image: /assets/images/sites/motobu-reef-watch/team-1.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "Yukio Hirakata"
     role: "Community engagement lead"
     image: /assets/images/sites/motobu-reef-watch/team-2.jpg
   - name: "Shinichirou Oka"
     role: "Scientific lead"
-    image: /assets/images/sites/motobu-reef-watch/team-3.jpg
+    image: /assets/images/team-placeholder.svg
   - name: "Takashi Hosono"
     role: "Data manager"
     image: /assets/images/sites/motobu-reef-watch/team-4.jpg

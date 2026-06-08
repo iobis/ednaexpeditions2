@@ -129,10 +129,8 @@ lang: en
   const allCoords = sitesData.filter(s => s.lat && s.lon).map(s => [s.lat, s.lon]);
   if (allCoords.length) {
     const bounds = L.latLngBounds(allCoords);
-    map.fitBounds(bounds, { padding: [40, 40] });
-    map.once('moveend', function () {
-      map.setMinZoom(map.getZoom());
-    });
+    map.fitBounds(bounds, { padding: [40, 40], animate: false });
+    map.setMinZoom(map.getZoom());
   } else {
     map.setView([20, 0], 2);
   }

@@ -1,0 +1,431 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDNA Expeditions 2026-2028</title>
+    <meta name="description" content="eDNA Expeditions Phase II">
+    
+    
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/participating-sites/sundarbans/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/participating-sites/sundarbans/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/participating-sites/sundarbans/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/participating-sites/sundarbans/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body>
+
+    <div class="ioc-top-banner">
+        <div class="container container-wide ioc-top-banner__inner">
+            <a href="/" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
+            </a>
+            <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
+                <img
+                    src="/assets/images/00_logo_IOC_w.svg"
+                    alt="IOC"
+                    class="ioc-top-banner__logo"
+                >
+            </a>
+        </div>
+    </div>
+
+  <div class="page-body">
+  <nav class="navbar navbar-expand-lg navbar-transparent row-light">
+    <div class="container container-wide">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/whoweare">Who we are</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/participating-sites">Sites</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="/news-stories">News & stories</a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Language switcher hidden: site English-only for now -->
+    <!-- <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                
+                <li><a class="dropdown-item active" href="/participating-sites/sundarbans/">English</a></li>
+                <li><a class="dropdown-item" href="/fr/participating-sites/sundarbans/">Français</a></li>
+                <li><a class="dropdown-item" href="/es/participating-sites/sundarbans/">Español</a></li>
+            </ul>
+        </li>
+    </ul> -->
+</div>
+
+    </div>
+</nav>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>Sundarbans World Heritage Site</h2>
+      <p class="mission site-page-subtitle">Together, we will establish eDNA-based monitoring to track aquatic biodiversity changes in the climate-vulnerable Sundarbans and support science-based conservation.</p>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      
+        <div class="site-hero-wrap">
+          <img src="/assets/images/sites/sundarbans/hero.jpg" alt="Sundarbans World Heritage Site" class="site-hero-image">
+        </div>
+        
+        <p class="site-hero-caption"><strong>Sundarbans</strong> <span class="site-hero-credit">Photo: Sakib</span></p>
+        
+      
+    </div>
+  </div>
+
+  
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="site-main-grid">
+
+        <div class="site-main-content">
+          <section class="site-copy-block">
+            <h3>About our site</h3>
+            <p>The Sundarbans World Heritage Site is the world’s largest contiguous mangrove forest, located in the delta formed by the Ganges, Brahmaputra, and Meghna rivers along the northern coast of the Bay of Bengal. Spanning parts of Bangladesh and India, this unique tidal ecosystem consists of dense mangrove forests, mudflats, tidal waterways, and estuaries that support exceptionally rich biodiversity.</p>
+
+<p>The Sundarbans is internationally recognized for its ecological importance as a nursery and feeding ground for numerous fish, crustaceans, and aquatic species, while also providing habitat for threatened wildlife such as the Royal Bengal Tiger, estuarine crocodile, dolphins, and migratory birds. Beyond its ecological value, the forest protects coastal communities from cyclones, storm surges, and erosion, while supporting the livelihoods and cultural heritage of millions of people dependent on fisheries and forest resources.</p>
+
+<p>Conservation and management activities include protected area management, wildlife sanctuaries, biodiversity monitoring, habitat restoration, anti-poaching initiatives, and community-based conservation programs. However, compared with terrestrial wildlife, relatively limited effort has been devoted to long-term and regular monitoring of aquatic biodiversity in the Sundarbans, despite its immense ecological and economic importance.</p>
+
+          </section>
+
+          <section class="site-copy-block">
+            <h3>What we plan to achieve</h3>
+            <p>Through eDNA Expeditions, our site aims to establish a long-term, non-invasive biodiversity monitoring framework for the Sundarbans World Heritage Site, with a particular focus on its aquatic ecosystems. By conducting repeated eDNA sampling during different seasons, we aim to generate baseline and temporal data that can support ecosystem-based management and conservation planning.</p>
+
+<p>A key management question we hope to address is how seasonal environmental variation and changing salinity regimes affect the distribution and diversity of fish, crustaceans, mollusks, and other estuarine and mangrove-associated organisms, including threatened and commercially important species. We are also interested in detecting rare or cryptic species and understanding shifts in species assemblages over time within this dynamic mangrove ecosystem, as well as how climate change, salinity intrusion, habitat degradation, and anthropogenic pressures are shaping aquatic biodiversity.</p>
+
+<p>This work directly supports local and national conservation objectives by strengthening biodiversity assessment capacity, improving scientific data availability for protected area management and Red List assessments, and promoting evidence-based decision-making for sustainable fisheries and ecosystem conservation.</p>
+
+<p>In addition, the project will engage students, researchers, local communities, and citizen scientists, helping build regional capacity in eDNA applications and increasing public awareness of the importance of conserving the Sundarbans. The initiative will also contribute to the doctoral research of a PhD student investigating long-term biodiversity dynamics and the application of eDNA as a transformative tool for monitoring mangrove ecosystems under climate change.</p>
+
+          </section>
+        </div>
+
+        <aside class="site-sidebar">
+          <div class="site-map-card">
+                <div class="site-map-frame">
+                <div id="site-map"></div>
+            </div>
+        </div>
+
+          <div class="site-team-card">
+            <h3>Meet our local team</h3>
+
+            <div class="site-team-list">
+              
+              <div class="site-team-member">
+                <img src="/assets/images/sites/sundarbans/team-1.jpg" alt="Kazi Ahsan Habib" loading="lazy">
+                <div>
+                  <p class="site-team-name">Kazi Ahsan Habib</p>
+                  <p class="site-team-role">Scientific Lead</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/sites/sundarbans/team-2.jpg" alt="Ireen Parvin" loading="lazy">
+                <div>
+                  <p class="site-team-name">Ireen Parvin</p>
+                  <p class="site-team-role">Data Analyzing coordinator</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/sites/sundarbans/team-3.jpg" alt="Md. Nazmus Sakib" loading="lazy">
+                <div>
+                  <p class="site-team-name">Md. Nazmus Sakib</p>
+                  <p class="site-team-role">Sampling and Planning coordinator</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/sites/sundarbans/team-4.jpg" alt="Farhan Bin Habib" loading="lazy">
+                <div>
+                  <p class="site-team-name">Farhan Bin Habib</p>
+                  <p class="site-team-role">Data management coordinator</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="site-contact-card">
+            <h3>Contact us</h3>
+            <div class="site-contact-item">
+              
+              <a href="mailto:habibka@sau.edu.bd" class="site-contact-email">habibka@sau.edu.bd</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const siteMap = L.map('site-map').setView([21.95, 89.18], 5);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(siteMap);
+
+  L.marker([21.95, 89.18]).addTo(siteMap);
+</script>
+
+<script>
+(function () {
+  var gallery = document.querySelector('.site-hero-gallery');
+  if (!gallery) return;
+
+  var slides = gallery.querySelectorAll('.site-hero-slide');
+  if (slides.length <= 1) return;
+
+  var caption = document.querySelector('.js-gallery-caption');
+  var current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+
+    if (caption) {
+      var slide = slides[current];
+      var cap = slide.dataset.caption || '';
+      var credit = slide.dataset.credit || '';
+
+      caption.innerHTML = '';
+      var strong = document.createElement('strong');
+      strong.textContent = cap;
+      caption.appendChild(strong);
+
+      if (credit) {
+        caption.appendChild(document.createTextNode(' '));
+        var span = document.createElement('span');
+        span.className = 'site-hero-credit';
+        span.textContent = 'Photo: ' + credit;
+        caption.appendChild(span);
+      }
+    }
+  }
+
+  gallery.querySelector('.site-hero-arrow--prev').addEventListener('click', function () {
+    goTo(current - 1);
+  });
+
+  gallery.querySelector('.site-hero-arrow--next').addEventListener('click', function () {
+    goTo(current + 1);
+  });
+}());
+</script>
+
+  </div><!-- /.page-body -->
+
+<footer class="edna-footer" role="contentinfo">
+  <div class="container container-wide pb-5" style="padding-top: 100px;">
+
+    <div class="edna-footer__grid">
+
+      <div class="edna-footer__left">
+        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+          <span class="edna-footer__brand-text">eDNA<br>Expeditions<br>2026-2028</span>
+        </a>
+        <nav class="edna-footer__nav" style="margin-top: 3rem;">
+          <a href="/" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Home</a>
+          <a href="/whoweare" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Who we are</a>
+          <a href="/participating-sites" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Sites</a>
+          <a href="/resources" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Resources</a>
+          <a href="/faq" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; FAQ</a>
+          <a href="/contact" style="color:#ffffff; display:block; font-weight:normal; font-size:0.85rem;">&gt; Contact</a>
+        </nav>
+      </div>
+
+      <div class="edna-footer__right">
+
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            Stay informed,<br>join our monthly newsletter
+          </div>
+
+         <form
+  class="edna-footer__newsletter validate"
+  action="https://unesco.us15.list-manage.com/subscribe/post-json?u=75c69bf185fb2be069850f6ee&id=6cf9d87141&f_id=005a0ae0f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  target="_self"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="Email address"
+      required>
+
+    <input type="hidden" name="tags" value="2806613">
+
+    <!-- Required hidden anti-bot field — do not remove -->
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      Subscribe
+    </button>
+  </div>
+</form>
+          
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            eDNA Expeditions 2026-2028 is powered by the Intergovernmental Oceanographic Commission (IOC) of UNESCO's Ocean Biodiversity Information System (OBIS), and supported by Minderoo Foundation, in collaboration with Wilderlab.
+          </div>
+
+          <div class="edna-footer__logos3">
+            <img
+              src="/assets/images/00_logo_IOC-OBIS_w.svg"
+              alt="IOC"
+              class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+              loading="lazy"
+            >
+            <img
+              src="/assets/images/00_logo-mf-pin_w.svg"
+              alt="Minderoo Foundation"
+              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+              loading="lazy"
+            >
+            <img
+              src="/assets/images/00_logo_Wilderlab.png"
+              alt="Wilderlab"
+              class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            eDNA Expeditions 2026-2028 is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            </div>
+
+            <div class="edna-footer__logos3 pb-2">
+            <img
+            src="/assets/images/00_logo_ioc_decade_EN_white.svg"
+            alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+            class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  var btn  = document.getElementById('mc-embedded-subscribe');
+  if (!form || !btn) return;
+
+  var originalLabel = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var params = new URLSearchParams(new FormData(form));
+    var cbName = 'mc_cb_' + Date.now();
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc-jsonp');
+      if (s) s.parentNode.removeChild(s);
+
+      if (data.result === 'success') {
+        btn.textContent = '✓';
+        document.getElementById('mce-EMAIL').value = '';
+        setTimeout(function () {
+          window.location.href = '/newsletter_sub';
+        }, 1000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+        setTimeout(function () { btn.textContent = originalLabel; }, 3000);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc-jsonp';
+    script.src = form.action + '&' + params.toString() + '&c=' + cbName;
+    document.body.appendChild(script);
+  });
+}());
+</script>
+
+</body>
+</html>

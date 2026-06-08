@@ -1,0 +1,910 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDNA Expeditions 2026-2028</title>
+    <meta name="description" content="eDNA Expeditions Phase II">
+    
+    
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/participating-sites/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/participating-sites/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/participating-sites/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/participating-sites/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body>
+
+    <div class="ioc-top-banner">
+        <div class="container container-wide ioc-top-banner__inner">
+            <a href="/" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
+            </a>
+            <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
+                <img
+                    src="/assets/images/00_logo_IOC_w.svg"
+                    alt="IOC"
+                    class="ioc-top-banner__logo"
+                >
+            </a>
+        </div>
+    </div>
+
+  <div class="page-body">
+  <nav class="navbar navbar-expand-lg navbar-transparent row-light">
+    <div class="container container-wide">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/whoweare">Who we are</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/participating-sites">Sites</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="/news-stories">News & stories</a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Language switcher hidden: site English-only for now -->
+    <!-- <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                
+                <li><a class="dropdown-item active" href="/participating-sites/">English</a></li>
+                <li><a class="dropdown-item" href="/fr/participating-sites/">Français</a></li>
+                <li><a class="dropdown-item" href="/es/participating-sites/">Español</a></li>
+            </ul>
+        </li>
+    </ul> -->
+</div>
+
+    </div>
+</nav>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>Participating sites</h2>
+      <p class="mission">Explore the sites taking part in eDNA Expeditions.</p>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="sites-map-panel" id="sites-map-panel">
+        <div id="sites-map"></div>
+        <button class="sites-map-fullscreen-btn" id="sites-map-fullscreen-btn" aria-label="Toggle fullscreen">&#x26F6;</button>
+        
+          <!-- Filters hidden for now
+          <div class="sites-filters">
+          <fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Region</legend>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="Africa">
+      <span>Africa</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="Pacific">
+      <span>Pacific</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="Caribbean">
+      <span>Caribbean</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="Mediterranean">
+      <span>Mediterranean</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="Arctic">
+      <span>Arctic</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="region" value="South America">
+      <span>South America</span>
+    </label>
+  
+</fieldset>
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Country type</legend>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="country_type" value="LMIC">
+      <span>LMIC</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="country_type" value="LDC">
+      <span>LDC</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="country_type" value="SIDS">
+      <span>SIDS</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="country_type" value="HIC">
+      <span>HIC</span>
+    </label>
+  
+</fieldset>
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Site type</legend>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="site_type" value="World Heritage site">
+      <span>World Heritage site</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="site_type" value="Biosphere Reserve">
+      <span>Biosphere Reserve</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="site_type" value="Marine Protected Area">
+      <span>Marine Protected Area</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="site_type" value="Coastal observatory">
+      <span>Coastal observatory</span>
+    </label>
+  
+</fieldset>
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Ecosystem type</legend>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Coral reef">
+      <span>Coral reef</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Mangrove">
+      <span>Mangrove</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Estuary">
+      <span>Estuary</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Seagrass">
+      <span>Seagrass</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Polar">
+      <span>Polar</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Open ocean">
+      <span>Open ocean</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="ecosystem_type" value="Coastal area">
+      <span>Coastal area</span>
+    </label>
+  
+</fieldset>
+<fieldset class="sites-filter-group">
+  <legend class="sites-filter-title">Objectives</legend>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="Biodiversity knowledge">
+      <span>Biodiversity knowledge</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="Invasive species">
+      <span>Invasive species</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="Biorisk detection">
+      <span>Biorisk detection</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="Monitoring change">
+      <span>Monitoring change</span>
+    </label>
+  
+    <label class="sites-filter-option">
+      <input type="checkbox" name="objectives" value="Conservation support">
+      <span>Conservation support</span>
+    </label>
+  
+</fieldset>
+          </div>
+          -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="sites-grid">
+        
+        
+          <article class="site-card">
+            <a href="/participating-sites/calanques-national-park/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/calanques-national-park/hero.jpg" alt="Calanques National Park" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">France</p>
+                <h3 class="site-card-title">Calanques National Park</h3>
+                <p class="site-card-teaser">A Mediterranean marine national park near Marseille, where eDNA will document biodiversity across Posidonia meadows, coralligenous reefs, and no-take zones under varying levels of human pressure.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/cananeia-iguape-peruibe/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/cananeia-iguape-peruibe/hero.jpg" alt="Cananéia–Iguape–Peruíbe Environmental Protection Area" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Brazil</p>
+                <h3 class="site-card-title">Cananéia–Iguape–Peruíbe Environmental Protection Area</h3>
+                <p class="site-card-teaser">A vital estuarine-lagoon-coastal system on the southern coast of São Paulo, Brazil, where we will establish the first molecular biodiversity baseline.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/christmas-island/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/christmas-island/hero.jpg" alt="Christmas Island, Indian Ocean Territories, Australia" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Australia</p>
+                <h3 class="site-card-title">Christmas Island, Indian Ocean Territories, Australia</h3>
+                <p class="site-card-teaser">A remote Australian territory in the Indian Ocean, where eDNA will build biodiversity baselines across coral reefs and deep ocean habitats and enable early detection of marine invasive species.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/huatulco-national-park/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/huatulco-national-park/hero.jpg" alt="Huatulco National Park" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Mexico</p>
+                <h3 class="site-card-title">Huatulco National Park</h3>
+                <p class="site-card-teaser">A mosaic of coral reefs, mangroves, and tropical bays on Mexico's Pacific coast, monitoring biodiversity responses to marine heatwaves.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/iligan-bay-camiguin/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/iligan-bay-camiguin/hero.jpg" alt="Iligan Bay and Camiguin Island, Mindanao, Philippines" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Philippines</p>
+                <h3 class="site-card-title">Iligan Bay and Camiguin Island, Mindanao, Philippines</h3>
+                <p class="site-card-teaser">Diverse coral reefs, seagrass beds, and mangroves off northern Mindanao, Philippines, where citizen science eDNA monitoring will build biodiversity baselines and detect rare and invasive species.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/isimangaliso/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/isimangaliso/hero.jpg" alt="iSimangaliso Marine Protected Area" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">South Africa</p>
+                <h3 class="site-card-title">iSimangaliso Marine Protected Area</h3>
+                <p class="site-card-teaser">A UNESCO World Heritage Site on South Africa's KwaZulu-Natal coast, where citizen science eDNA monitoring will track biodiversity across estuaries, beaches, and marine environments linked to Ramsar wetlands.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/motobu-reef-watch/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/motobu-reef-watch/hero.jpg" alt="Motobu Reef Watch Site, Okinawa" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Japan</p>
+                <h3 class="site-card-title">Motobu Reef Watch Site, Okinawa</h3>
+                <p class="site-card-teaser">A subtropical coral reef coast in northern Okinawa, where eDNA fish surveys will track biodiversity change over three years and link ocean warming to shifts in tropical species distributions.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/peninsula-valdes/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/peninsula-valdes/hero.jpg" alt="Península Valdés Natural Protected Area" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Argentina</p>
+                <h3 class="site-card-title">Península Valdés Natural Protected Area</h3>
+                <p class="site-card-teaser">A UNESCO World Natural Heritage site in Argentine Patagonia where eDNA will reveal the genetic fingerprint of the ocean to support long-term marine conservation.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/pulau-bidong-pulau-yu/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/pulau-bidong-pulau-yu/hero.jpg" alt="Pulau Bidong and Pulau Yu, Terengganu" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Malaysia</p>
+                <h3 class="site-card-title">Pulau Bidong and Pulau Yu, Terengganu</h3>
+                <p class="site-card-teaser">Two contrasting tropical reef systems off Malaysia's east coast offering a natural experiment in how MPA protection shapes marine biodiversity.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/saltstraumen/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/saltstraumen/hero.jpg" alt="Saltstraumen" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Norway</p>
+                <h3 class="site-card-title">Saltstraumen</h3>
+                <p class="site-card-teaser">One of the world's strongest tidal currents in Arctic Norway, where eDNA will reveal the remarkable biodiversity thriving in the whirlpools of Saltstraumen.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+          <article class="site-card">
+            <a href="/participating-sites/sundarbans/" class="site-card-link">
+
+              
+              <div class="site-card-image-wrap">
+                <img src="/assets/images/sites/sundarbans/hero.jpg" alt="Sundarbans World Heritage Site" class="site-card-image" loading="lazy">
+              </div>
+              
+
+              <div class="site-card-content">
+                <p class="site-card-country">Bangladesh</p>
+                <h3 class="site-card-title">Sundarbans World Heritage Site</h3>
+                <p class="site-card-teaser">The world's largest mangrove forest on the Bay of Bengal, where eDNA will track how climate change and salinity shifts are reshaping aquatic biodiversity.</p>
+                <span class="site-card-readmore">Read more ➜</span>
+              </div>
+
+            </a>
+          </article>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const sitesData = [
+    
+    
+    {
+      title: "Calanques National Park",
+      url: "/participating-sites/calanques-national-park/",
+      hero_image: "/assets/images/sites/calanques-national-park/hero.jpg",
+      lat: 43.2094,
+      lon: 5.4492,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Cananéia–Iguape–Peruíbe",
+      url: "/participating-sites/cananeia-iguape-peruibe/",
+      hero_image: "/assets/images/sites/cananeia-iguape-peruibe/hero.jpg",
+      lat: -24.8519,
+      lon: -47.8681,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Christmas Island",
+      url: "/participating-sites/christmas-island/",
+      hero_image: "/assets/images/sites/christmas-island/hero.jpg",
+      lat: -10.49142,
+      lon: 105.622937,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Huatulco National Park",
+      url: "/participating-sites/huatulco-national-park/",
+      hero_image: "/assets/images/sites/huatulco-national-park/hero.jpg",
+      lat: 15.76,
+      lon: -96.26,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Iligan Bay and Camiguin Island",
+      url: "/participating-sites/iligan-bay-camiguin/",
+      hero_image: "/assets/images/sites/iligan-bay-camiguin/hero.jpg",
+      lat: 8.25,
+      lon: 124.0833,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "iSimangaliso",
+      url: "/participating-sites/isimangaliso/",
+      hero_image: "/assets/images/sites/isimangaliso/hero.jpg",
+      lat: -27.67689,
+      lon: 32.62182,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Motobu Reef Watch Site",
+      url: "/participating-sites/motobu-reef-watch/",
+      hero_image: "/assets/images/sites/motobu-reef-watch/hero.jpg",
+      lat: 26.475,
+      lon: 127.835,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Península Valdés",
+      url: "/participating-sites/peninsula-valdes/",
+      hero_image: "/assets/images/sites/peninsula-valdes/hero.jpg",
+      lat: -42.5,
+      lon: -64.0,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Pulau Bidong and Pulau Yu",
+      url: "/participating-sites/pulau-bidong-pulau-yu/",
+      hero_image: "/assets/images/sites/pulau-bidong-pulau-yu/hero.jpg",
+      lat: 5.779594,
+      lon: 103.010448,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Saltstraumen",
+      url: "/participating-sites/saltstraumen/",
+      hero_image: "/assets/images/sites/saltstraumen/hero.jpg",
+      lat: 67.24,
+      lon: 14.41,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    },
+    
+    {
+      title: "Sundarbans",
+      url: "/participating-sites/sundarbans/",
+      hero_image: "/assets/images/sites/sundarbans/hero.jpg",
+      lat: 21.95,
+      lon: 89.18,
+      region: null,
+      country_type: null,
+      site_type: null,
+      objectives: null,
+      ecosystem_type: null
+    }
+    
+  ];
+
+  const map = L.map('sites-map');
+
+  const allCoords = sitesData.filter(s => s.lat && s.lon).map(s => [s.lat, s.lon]);
+  if (allCoords.length) {
+    const bounds = L.latLngBounds(allCoords);
+    map.fitBounds(bounds, { padding: [40, 40], animate: false });
+    map.setMinZoom(map.getZoom());
+  } else {
+    map.setView([20, 0], 2);
+  }
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const markers = [];
+
+  function getCheckedValues(name) {
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+      .map(input => input.value);
+  }
+
+  function matchesGroup(siteValue, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    return selectedValues.includes(siteValue);
+  }
+
+  function matchesArray(siteValues, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    if (!siteValues || !Array.isArray(siteValues)) return false;
+    return selectedValues.some(value => siteValues.includes(value));
+  }
+
+  function matchesObjectives(siteObjectives, selectedValues) {
+    if (selectedValues.length === 0) return true;
+    if (!siteObjectives || !Array.isArray(siteObjectives)) return false;
+    return selectedValues.some(value => siteObjectives.includes(value));
+  }
+
+  function matchesFilters(site) {
+    const selectedRegions = getCheckedValues('region');
+    const selectedCountryTypes = getCheckedValues('country_type');
+    const selectedSiteTypes = getCheckedValues('site_type');
+    const selectedObjectives = getCheckedValues('objectives');
+    const selectedEcosystems = getCheckedValues('ecosystem_type');
+
+    return (
+      matchesGroup(site.region, selectedRegions) &&
+      matchesGroup(site.country_type, selectedCountryTypes) &&
+      matchesGroup(site.site_type, selectedSiteTypes) &&
+      matchesObjectives(site.objectives, selectedObjectives) &&
+      matchesArray(site.ecosystem_type, selectedEcosystems)
+    );
+  }
+
+  const pinIcon = L.divIcon({
+    className: '',
+    html: '<div class="site-pin"><div class="site-pin__dot"></div></div>',
+    iconSize: [10, 10],
+    iconAnchor: [5, 5],
+  });
+
+  function renderMarkers() {
+    markers.forEach(marker => map.removeLayer(marker));
+    markers.length = 0;
+
+    sitesData.forEach(site => {
+      if (site.lat && site.lon && matchesFilters(site)) {
+        const marker = L.marker([site.lat, site.lon], { icon: pinIcon }).addTo(map);
+        marker.bindTooltip(site.title, {
+          permanent: true,
+          direction: 'right',
+          className: 'site-pin-label',
+          offset: [3, 0],
+        });
+
+        marker.on('click', function () {
+          window.location.href = site.url;
+        });
+
+        const tooltipEl = marker.getTooltip() && marker.getTooltip().getElement();
+        if (tooltipEl) {
+          tooltipEl.addEventListener('click', function (evt) {
+            evt.stopPropagation();
+            window.location.href = site.url;
+          });
+        }
+        markers.push(marker);
+      }
+    });
+  }
+
+  document.querySelectorAll('.sites-filters input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', renderMarkers);
+  });
+
+  renderMarkers();
+
+  const mapPanel = document.getElementById('sites-map-panel');
+  const fullscreenBtn = document.getElementById('sites-map-fullscreen-btn');
+
+  fullscreenBtn.addEventListener('click', function () {
+    const isFullscreen = mapPanel.classList.toggle('sites-map-panel--fullscreen');
+    fullscreenBtn.innerHTML = isFullscreen ? '&#x2715;' : '&#x26F6;';
+    fullscreenBtn.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Toggle fullscreen');
+    map.invalidateSize();
+  });
+</script>
+
+  </div><!-- /.page-body -->
+
+<footer class="edna-footer" role="contentinfo">
+  <div class="container container-wide pb-5" style="padding-top: 100px;">
+
+    <div class="edna-footer__grid">
+
+      <div class="edna-footer__left">
+        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+          <span class="edna-footer__brand-text">eDNA<br>Expeditions<br>2026-2028</span>
+        </a>
+        <nav class="edna-footer__nav" style="margin-top: 3rem;">
+          <a href="/" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Home</a>
+          <a href="/whoweare" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Who we are</a>
+          <a href="/participating-sites" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Sites</a>
+          <a href="/resources" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Resources</a>
+          <a href="/faq" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; FAQ</a>
+          <a href="/contact" style="color:#ffffff; display:block; font-weight:normal; font-size:0.85rem;">&gt; Contact</a>
+        </nav>
+      </div>
+
+      <div class="edna-footer__right">
+
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            Stay informed,<br>join our monthly newsletter
+          </div>
+
+         <form
+  class="edna-footer__newsletter validate"
+  action="https://unesco.us15.list-manage.com/subscribe/post-json?u=75c69bf185fb2be069850f6ee&id=6cf9d87141&f_id=005a0ae0f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  target="_self"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="Email address"
+      required>
+
+    <input type="hidden" name="tags" value="2806613">
+
+    <!-- Required hidden anti-bot field — do not remove -->
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      Subscribe
+    </button>
+  </div>
+</form>
+          
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            eDNA Expeditions 2026-2028 is powered by the Intergovernmental Oceanographic Commission (IOC) of UNESCO's Ocean Biodiversity Information System (OBIS), and supported by Minderoo Foundation, in collaboration with Wilderlab.
+          </div>
+
+          <div class="edna-footer__logos3">
+            <img
+              src="/assets/images/00_logo_IOC-OBIS_w.svg"
+              alt="IOC"
+              class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+              loading="lazy"
+            >
+            <img
+              src="/assets/images/00_logo-mf-pin_w.svg"
+              alt="Minderoo Foundation"
+              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+              loading="lazy"
+            >
+            <img
+              src="/assets/images/00_logo_Wilderlab.png"
+              alt="Wilderlab"
+              class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            eDNA Expeditions 2026-2028 is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            </div>
+
+            <div class="edna-footer__logos3 pb-2">
+            <img
+            src="/assets/images/00_logo_ioc_decade_EN_white.svg"
+            alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+            class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  var btn  = document.getElementById('mc-embedded-subscribe');
+  if (!form || !btn) return;
+
+  var originalLabel = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var params = new URLSearchParams(new FormData(form));
+    var cbName = 'mc_cb_' + Date.now();
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc-jsonp');
+      if (s) s.parentNode.removeChild(s);
+
+      if (data.result === 'success') {
+        btn.textContent = '✓';
+        document.getElementById('mce-EMAIL').value = '';
+        setTimeout(function () {
+          window.location.href = '/newsletter_sub';
+        }, 1000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+        setTimeout(function () { btn.textContent = originalLabel; }, 3000);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc-jsonp';
+    script.src = form.action + '&' + params.toString() + '&c=' + cbName;
+    document.body.appendChild(script);
+  });
+}());
+</script>
+
+</body>
+</html>

@@ -11,71 +11,95 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>eDNA Expeditions 2026-2028</title>
     <meta name="description" content="eDNA Expeditions Phase II">
     
     
-    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/en/contact/" />
-    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/en/contact/" />
-    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/en/contact/" />
-    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/en/contact/" />
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/contact/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/contact/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/contact/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/contact/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-transparent row-mid">
-        <div class="container container-wide">
-            <a class="navbar-brand fw-bold" href="">
-                <img src="/assets/images/00_eDNA%20logo.svg" class="img-fluid" alt="" style="height: 48px;">
+
+    <div class="ioc-top-banner">
+        <div class="container container-wide ioc-top-banner__inner">
+            <a href="/" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-    <!--<li class="nav-item">
-      <a class="nav-link" href="/jointheproject">Join the project</a>
-    </li>-->
-    <li class="nav-item">
-      <a class="nav-link" href="/whoweare">Who we are</a>
-    <!--</li>
-    <li class="nav-item">
-      <a class="nav-link" href="#mission">The project</a>
-    </li>-->
-    <li class="nav-item">
-      <a class="nav-link" href="/resources">Resources</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/faq">FAQ</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/contact">Contact</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        English
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-        
-        <li><a class="dropdown-item active" href="/en/contact/">English</a></li>
-        <li><a class="dropdown-item" href="/fr/en/contact/">Français</a></li>
-        <li><a class="dropdown-item" href="/es/en/contact/">Español</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>                    
-    </nav>
+            <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
+                <img
+                    src="/assets/images/00_logo_IOC_w.svg"
+                    alt="IOC"
+                    class="ioc-top-banner__logo"
+                >
+            </a>
+        </div>
+    </div>
+
+  <div class="page-body">
+  <nav class="navbar navbar-expand-lg navbar-transparent row-mid">
+    <div class="container container-wide">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/whoweare">Who we are</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/participating-sites">Sites</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="/news-stories">News & stories</a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Language switcher hidden: site English-only for now -->
+    <!-- <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                
+                <li><a class="dropdown-item active" href="/contact/">English</a></li>
+                <li><a class="dropdown-item" href="/fr/contact/">Français</a></li>
+                <li><a class="dropdown-item" href="/es/contact/">Español</a></li>
+            </ul>
+        </li>
+    </ul> -->
+</div>
+
+    </div>
+</nav>
 
     <div class="container-fluid">
 
@@ -83,7 +107,7 @@
     <div class="container">
       <h2 class="pb-5">Contact</h2>
       <p>Get in touch with the eDNA Expeditions team. We are happy to answer your questions and to hear your requests or feedback.
-        You can contact us at <a href="mailto:edna@ioc-unesco.org" class="card-link">edna@ioc-unesco.org &gt;</a>
+        You can contact us at <a href="mailto:edna@ioc-unesco.org" class="card-link">edna@ioc-unesco.org</a>
       </p>
     </div>
   </div>
@@ -100,8 +124,8 @@
 
             <div class="col-8">
               <p><strong>Saara Suominen</strong><br>
-              Lead Scientific Officer<br>
-              <a href="mailto:s.suominen@unesco.org" class="card-link">s.suominen@unesco.org &gt;</a></p>
+              Operations Officer<br>
+              <a href="mailto:s.suominen@unesco.org" class="card-link">s.suominen@unesco.org</a></p>
             </div>
           </div>
         </div>
@@ -114,7 +138,7 @@
             <div class="col-8">
               <p><strong>Pieter Provoost</strong><br>
               Lead Data Manager<br>
-              <a href="mailto:p.provoost@unesco.org" class="card-link">p.provoost@unesco.org &gt;</a></p>
+              <a href="mailto:p.provoost@unesco.org" class="card-link">p.provoost@unesco.org</a></p>
             </div>
           </div>
         </div>
@@ -127,7 +151,7 @@
             <div class="col-8">
               <p><strong>Emilie Boulanger</strong><br>
               Scientific Officer<br>
-              <a href="mailto:e.boulanger@unesco.org" class="card-link">e.boulanger@unesco.org &gt;</a></p>
+              <a href="mailto:e.boulanger@unesco.org" class="card-link">e.boulanger@unesco.org</a></p>
             </div>
           </div>
         </div>
@@ -140,7 +164,20 @@
             <div class="col-8">
               <p><strong>Laurent Chmiel</strong><br>
               Communication Officer<br>
-              <a href="mailto:l.chmiel@unesco.org" class="card-link">l.chmiel@unesco.org &gt;</a></p>
+              <a href="mailto:l.chmiel@unesco.org" class="card-link">l.chmiel@unesco.org</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 pt-5 pb-5">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="/assets/images/team_ward.png" class="img-fluid w-100" alt="Ward Appeltans">
+            </div>
+            <div class="col-8">
+              <p><strong>Ward Appeltans</strong><br>
+              Project Coordinator<br>
+              <a href="mailto:w.appeltans@unesco.org" class="card-link">w.appeltans@unesco.org</a></p>
             </div>
           </div>
         </div>
@@ -153,74 +190,89 @@
 </div>
 
 
+  </div><!-- /.page-body -->
+
 <footer class="edna-footer" role="contentinfo">
-  <div class="container container-wide py-5">
+  <div class="container container-wide pb-5" style="padding-top: 100px;">
 
     <div class="edna-footer__grid">
 
       <div class="edna-footer__left">
-        <a href="" class="edna-footer__brand" aria-label="eDNA Expeditions home">
-          <img
-            src="/assets/images/00_eDNA%20logo.svg"
-            alt="eDNA Expeditions"
-            class="edna-footer__logo img-fluid"
-          >
+        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+          <span class="edna-footer__brand-text">eDNA<br>Expeditions<br>2026-2028</span>
         </a>
+        <nav class="edna-footer__nav" style="margin-top: 3rem;">
+          <a href="/" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Home</a>
+          <a href="/whoweare" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Who we are</a>
+          <a href="/participating-sites" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Sites</a>
+          <a href="/resources" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Resources</a>
+          <a href="/faq" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; FAQ</a>
+          <a href="/contact" style="color:#ffffff; display:block; font-weight:normal; font-size:0.85rem;">&gt; Contact</a>
+        </nav>
       </div>
 
       <div class="edna-footer__right">
 
         <div class="edna-footer__top">
           <div class="edna-footer__kicker">
-            Stay informed,<br>join our newsletter
+            Stay informed,<br>join our monthly newsletter
           </div>
 
-          <form
-            class="edna-footer__newsletter"
-            action="https://ioc-cd.us13.list-manage.com/subscribe/post?u=ab89e583ff8a6a2e366e1fdcf&amp;id=88a980b5f9&amp;f_id=009751eaf0"
-            method="post"
-            target="_blank"
-            novalidate>
-                <div class="input-group edna-footer__input-group">
-                    <input
-                        type="email"
-                        name="EMAIL"
-                        id="mce-EMAIL"
-                        class="form-control edna-footer__input required email"
-                        aria-label="Email address"
-                        required>
+         <form
+  class="edna-footer__newsletter validate"
+  action="https://unesco.us15.list-manage.com/subscribe/post-json?u=75c69bf185fb2be069850f6ee&id=6cf9d87141&f_id=005a0ae0f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  target="_self"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="Email address"
+      required>
 
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_ab89e583ff8a6a2e366e1fdcf_88a980b5f9" tabindex="-1" value="">
-                </div>
+    <input type="hidden" name="tags" value="2806613">
 
-                <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
-                Subscribe
-                </button>
-                </div>
-            </form>
+    <!-- Required hidden anti-bot field — do not remove -->
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      Subscribe
+    </button>
+  </div>
+</form>
+          
         </div>
 
         <div class="edna-footer__middle">
           <div class="edna-footer__desc pt-3 pb-3">
-            eDNA Expeditions 2026-2028 is a project under the Intergovernmental Oceanographic Commission (IOC) of UNESCO, supported by Minderoo Foundation, led by OBIS, with the technical collaboration of WilderLab.
+            eDNA Expeditions 2026-2028 is powered by the Intergovernmental Oceanographic Commission (IOC) of UNESCO's Ocean Biodiversity Information System (OBIS), and supported by Minderoo Foundation, in collaboration with Wilderlab.
           </div>
 
           <div class="edna-footer__logos3">
             <img
-              src="/assets/images/00_logo_MF.svg"
-              alt="Minderoo Foundation"
-              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+              src="/assets/images/00_logo_IOC-OBIS_w.svg"
+              alt="IOC"
+              class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+              loading="lazy"
             >
             <img
-              src="/assets/images/00_logo_IOC+OBIS.svg"
-              alt="IOC and OBIS"
-              class="edna-footer__footer-logo edna-footer__footer-logo--powered"
+              src="/assets/images/00_logo-mf-pin_w.svg"
+              alt="Minderoo Foundation"
+              class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+              loading="lazy"
             >
             <img
               src="/assets/images/00_logo_Wilderlab.png"
-              alt="WilderLabs"
+              alt="Wilderlab"
               class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+              loading="lazy"
             >
           </div>
         </div>
@@ -232,7 +284,7 @@
 
             <div class="edna-footer__logos3 pb-2">
             <img
-            src="/assets/images/decade-logo.png"
+            src="/assets/images/00_logo_ioc_decade_EN_white.svg"
             alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
             class="edna-footer__footer-logo edna-footer__footer-logo--decade">
             </div>
@@ -243,6 +295,52 @@
 </footer>    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  var btn  = document.getElementById('mc-embedded-subscribe');
+  if (!form || !btn) return;
+
+  var originalLabel = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var params = new URLSearchParams(new FormData(form));
+    var cbName = 'mc_cb_' + Date.now();
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc-jsonp');
+      if (s) s.parentNode.removeChild(s);
+
+      if (data.result === 'success') {
+        btn.textContent = '✓';
+        document.getElementById('mce-EMAIL').value = '';
+        setTimeout(function () {
+          window.location.href = '/newsletter_sub';
+        }, 1000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+        setTimeout(function () { btn.textContent = originalLabel; }, 3000);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc-jsonp';
+    script.src = form.action + '&' + params.toString() + '&c=' + cbName;
+    document.body.appendChild(script);
+  });
+}());
+</script>
 
 </body>
 </html>

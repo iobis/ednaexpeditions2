@@ -40,4 +40,7 @@ team:
   - name: "Chris Chartres"
     role: "Park Manager"
     image: /assets/images/sites/christmas-island/team-2.jpg
+  - name: "Lin Gaff"
+    role: "Community Engagement Lead"
+    image: /assets/images/sites/christmas-island/team-3.jpg
 ---

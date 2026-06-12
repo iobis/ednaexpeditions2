@@ -1,5 +1,4 @@
 ---
-published: false
 layout: site-page
 title: "Ropotamo Marine Protected Area"
 lang: en
@@ -53,4 +52,3 @@ team:
     role: "Scientist"
     image: /assets/images/sites/ropotamo/team-5.jpg
 ---
-published: false

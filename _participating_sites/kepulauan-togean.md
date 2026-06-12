@@ -1,5 +1,4 @@
 ---
-published: false
 layout: site-page
 title: "Kepulauan Togean National Park"
 lang: en
@@ -51,4 +50,3 @@ team:
     role: "Project Manager"
     image: /assets/images/sites/kepulauan-togean/team-5.jpg
 ---
-published: false

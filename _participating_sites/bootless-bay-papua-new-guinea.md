@@ -1,5 +1,4 @@
 ---
-published: false
 layout: site-page
 title: "Bootless Bay"
 lang: en
@@ -48,4 +47,3 @@ team:
     role: "Scientific lead"
     image: /assets/images/team-placeholder.svg
 ---
-published: false

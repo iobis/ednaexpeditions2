@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "Manyangue na Elombo-Campo Marine Park"
 lang: en

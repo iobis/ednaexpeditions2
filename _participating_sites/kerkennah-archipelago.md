@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "The northern islets of Kerkennah archipelago"
 lang: en

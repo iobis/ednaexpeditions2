@@ -1,4 +1,5 @@
 ---
+published: false
 layout: site-page
 title: "Galapagos Marine Reserve"
 lang: en

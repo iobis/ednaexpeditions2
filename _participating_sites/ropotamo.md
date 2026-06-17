@@ -40,9 +40,6 @@ team:
   - name: "Stefania Klayn"
     role: "Scientific lead"
     image: /assets/images/sites/ropotamo/team-1.jpg
-  - name: "Darin Rusev"
-    role: "Sampling coordinator"
-    image: /assets/images/team-placeholder.svg
   - name: "Dimitar Berov"
     role: "Lab supervisor"
     image: /assets/images/sites/ropotamo/team-3.jpg

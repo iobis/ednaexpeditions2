@@ -1,9 +1,9 @@
 ---
 layout: site-page
-title: "Sundarbans World Heritage Site"
+title: "Sundarbans"
 lang: en
 
-site_title: "Sundarbans World Heritage Site"
+site_title: "Sundarbans"
 map_label: "Sundarbans"
 country: "Bangladesh"
 sort_name: "Sundarbans"

@@ -1414,6 +1414,10 @@ button {
   width:100%;
 }
 
+.edna-footer__logos3 a {
+  display: contents;
+}
+
 .edna-footer__footer-logo{
   max-height:70px;
   width:auto;

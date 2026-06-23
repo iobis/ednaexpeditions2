@@ -516,6 +516,10 @@ button {
     margin-bottom: 20px;
 }
 
+.resources-index h3 {
+    font-size: 3em;
+}
+
 .hero-inner {
     padding-top: 70px;
     padding-bottom: 60px;

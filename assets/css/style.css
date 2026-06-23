@@ -1575,3 +1575,219 @@ input {
 .page-body--wallpaper .row-light {
     background-color: rgba(229, 244, 255, 0.7);
 }
+
+/* ============================================================
+   UGC Photography Guide  —  /resources/ugc-guide/
+   ============================================================ */
+
+.ugc-s {
+    min-height: 100svh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem 4rem;
+    position: relative;
+    box-sizing: border-box;
+}
+.ugc-s:first-child {
+    min-height: calc(100svh - 155px);
+    min-height: calc(100vh - 155px);
+}
+@media (max-width: 767px) {
+    .ugc-s:first-child {
+        min-height: calc(100svh - 130px);
+        min-height: calc(100vh - 130px);
+    }
+}
+
+.ugc-ice   { background: var(--bg-light); color: var(--text-blue); }
+.ugc-white { background: #fff;            color: var(--text-blue); }
+
+.ugc-inner {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Ghost section counter (e.g. "0/7") */
+.ugc-num {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(3.5rem, 13vw, 10rem);
+    line-height: 0.82;
+    margin-bottom: 0.1em;
+    letter-spacing: -0.02em;
+    color: rgba(2, 2, 130, 0.07);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Category label */
+.ugc-label {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #0075d6;
+}
+
+/* Section heading */
+.ugc-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.9rem, 6.5vw, 3.5rem);
+    line-height: 0.95em;
+    text-transform: uppercase;
+    margin: 0 0 1.4rem;
+    color: var(--text-blue);
+}
+
+/* Page subtitle (hero) */
+.ugc-subtitle {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    color: var(--text-blue);
+    margin-bottom: 0.75rem;
+}
+
+/* Navigation instruction */
+.ugc-nav-hint {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    color: var(--text-blue);
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Body text */
+.ugc-body {
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    line-height: 1.65;
+    color: var(--text-blue);
+}
+.ugc-body p { margin-bottom: 0.85em; }
+.ugc-body p:last-child { margin-bottom: 0; }
+
+/* Inline highlight */
+.ugc-hi { color: #0075d6; font-weight: 700; }
+
+/* Numbered tips list */
+.ugc-tips {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+.ugc-tips li {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    padding: 0.8rem 0;
+    font-size: clamp(0.88rem, 2.4vw, 1rem);
+    line-height: 1.55;
+    color: var(--text-blue);
+}
+.ugc-tips li::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-blue);
+    flex-shrink: 0;
+    margin-top: 0.45em;
+}
+
+/* CTA button */
+.ugc-btn {
+    display: inline-block;
+    background: var(--text-blue);
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.96rem;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: none !important;
+    padding: 0.85rem 2rem;
+    margin-top: 1.75rem;
+    transition: background 0.15s;
+}
+.ugc-btn:hover { background: #0075d6; }
+
+/* Fixed arrows — yellow circle, navy icon, no animation */
+#ugc-arrow,
+#ugc-arrow-up {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 300;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff500;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+#ugc-arrow:hover,
+#ugc-arrow-up:hover  { opacity: 0.8; }
+#ugc-arrow.hidden,
+#ugc-arrow-up.hidden { opacity: 0; pointer-events: none; }
+
+#ugc-arrow     { bottom: 1.5rem; }
+#ugc-arrow-up  { top: 1.5rem; }
+
+#ugc-arrow svg,
+#ugc-arrow-up svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--text-blue);
+}
+
+/* Progress dots */
+#ugc-dots {
+    position: fixed;
+    right: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 0.4rem;
+}
+.ugc-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid rgba(2, 2, 130, 0.35);
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s;
+    flex-shrink: 0;
+}
+.ugc-dot.active {
+    background: var(--text-blue);
+    border-color: var(--text-blue);
+    transform: scale(1.5);
+}
+
+@media (min-width: 768px) {
+    .ugc-s     { padding: 4.5rem 4rem; }
+    .ugc-inner { max-width: 700px; }
+    #ugc-dots  { right: 1.25rem; }
+}
+@media (min-width: 1200px) {
+    .ugc-s     { padding: 4.5rem 6rem; }
+    .ugc-inner { max-width: 740px; }
+}

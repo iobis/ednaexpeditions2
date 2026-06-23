@@ -1,0 +1,442 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDNA Expeditions 2026-2028</title>
+    <meta name="description" content="eDNA Expeditions Phase II">
+    
+    
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/resources/ugc-guide/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/resources/ugc-guide/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/resources/ugc-guide/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/resources/ugc-guide/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body>
+
+    <div class="ioc-top-banner">
+        <div class="container container-wide ioc-top-banner__inner">
+            <a href="/" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
+            </a>
+            <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
+                <img
+                    src="/assets/images/00_logo_IOC_w.svg"
+                    alt="IOC"
+                    class="ioc-top-banner__logo"
+                >
+            </a>
+        </div>
+    </div>
+
+  <div class="page-body">
+  <nav class="navbar navbar-expand-lg navbar-transparent row-light">
+    <div class="container container-wide">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/whoweare">Who we are</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/participating-sites">Sites</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="/news-stories">News & stories</a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Language switcher hidden: site English-only for now -->
+    <!-- <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                
+                <li><a class="dropdown-item active" href="/resources/ugc-guide/">English</a></li>
+                <li><a class="dropdown-item" href="/fr/resources/ugc-guide/">Français</a></li>
+                <li><a class="dropdown-item" href="/es/resources/ugc-guide/">Español</a></li>
+            </ul>
+        </li>
+    </ul> -->
+</div>
+
+    </div>
+</nav>
+
+    <!-- Fixed down arrow -->
+<button id="ugc-arrow" aria-label="Next section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+    </svg>
+</button>
+
+<!-- Fixed up arrow (hidden on first section) -->
+<button id="ugc-arrow-up" class="hidden" aria-label="Previous section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+</button>
+
+<!-- Progress dots (populated by JS) -->
+<nav id="ugc-dots" aria-label="Guide navigation"></nav>
+
+<div id="ugc-guide">
+
+    <!-- 0 · HERO -------------------------------------------------->
+    <section class="ugc-s ugc-ice" data-index="0">
+        <div class="ugc-inner">
+            <span class="ugc-num">0/7</span>
+            <h1 class="ugc-title">Make your<br>site shine!</h1>
+            <p class="ugc-subtitle">Taking pictures during eDNA Expeditions</p>
+            <div class="ugc-body">
+                <p>Share photos and videos showing how you implement the eDNA Expeditions 2026-2028: Make your site, your community, your local team, and your actions more visible! We will publish and share your content through all the project channels. All you need is a phone, our advice below, and making sure you have the written consent of the people represented in your images.</p>
+                <p>This guide is made of two parts: what kind of photos we need, and how to make them. And remember: we prefer to have too many images than not enough.</p>
+            </div>
+            <p class="ugc-nav-hint">Use the up and down arrows to navigate this guide.</p>
+        </div>
+    </section>
+
+    <!-- 1 · LANDSCAPES ------------------------------------------->
+    <section class="ugc-s ugc-white" data-index="1">
+        <div class="ugc-inner">
+            <span class="ugc-num">1/7</span>
+            <h2 class="ugc-title">Landscapes:<br>set the scene!</h2>
+            <div class="ugc-body">
+                <p>Show what's special at your site! Share wide shots of the coastline, the water, the boats, the beach, the rocks, the sampling spot. If there is a landmark, an animal, a specific plant: capture it in an image! Snap a few pictures coming to the site and a few when leaving the site, with and without people.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 · PORTRAITS -------------------------------------------->
+    <section class="ugc-s ugc-ice" data-index="2">
+        <div class="ugc-inner">
+            <span class="ugc-num">2/7</span>
+            <h2 class="ugc-title">Portraits:<br>show us who<br>is doing the work!</h2>
+            <div class="ugc-body">
+                <p>Single portraits and group shots of your team and members of communities involved in the project: We want the audience to recognise the people behind the data. Don't overdo it: simple portraits with the person looking straight to the camera are perfect! And remember to get the consent of the people that you film and photograph (see below).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 · ACTION ----------------------------------------------->
+    <section class="ugc-s ugc-white" data-index="3">
+        <div class="ugc-inner">
+            <span class="ugc-num">3/7</span>
+            <h2 class="ugc-title">Action:<br>take us<br>with you!</h2>
+            <div class="ugc-body">
+                <p>Show us the sampling work, the trips to the sampling site, people filling their sample information sheets, filtering water, packing the kit, taking notes. It's all interesting! Take your images mid-action: don't ask for people to stop or pause. Authenticity makes it a perfect story. Show the human connection and happy faces in action. Remember to get the consent of the people that you film and photograph (see below).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 · DETAILS ---------------------------------------------->
+    <section class="ugc-s ugc-ice" data-index="4">
+        <div class="ugc-inner">
+            <span class="ugc-num">4/7</span>
+            <h2 class="ugc-title">Detail and<br>close-ups:</h2>
+            <div class="ugc-body">
+                <p>Remember to share tight shots: hands manipulating the filter, close-ups of the syringe, the label being written, the water going through. These images show "how it works" and add more to the story.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 · TECHNICAL TIPS -------------------------------------->
+    <section class="ugc-s ugc-white" data-index="5">
+        <div class="ugc-inner">
+            <span class="ugc-num">5/7</span>
+            <h2 class="ugc-title">A few<br>technical tips</h2>
+            <ul class="ugc-tips">
+                <li>Capture images horizontally and vertically. The best? Take a horizontal and a vertical picture of the same scene!</li>
+                <li>Don't be shy, move close to the action (it's ok, you're the photographer!)</li>
+                <li>When taking videos, keep the original sound.</li>
+                <li>Low light? Rest your camera on something to sharpen your images.</li>
+                <li>Send us original files: Don't use filters, don't retouch your images, don't compress files.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 6 · MODEL CONSENT --------------------------------------->
+    <section class="ugc-s ugc-ice" data-index="6">
+        <div class="ugc-inner">
+            <span class="ugc-num">6/7</span>
+            <h2 class="ugc-title">Model<br>consent</h2>
+            <div class="ugc-body">
+                <p>Anyone recognisable in your photos or videos must give written consent before you upload their image, by signing the project model release. For anyone under the age of majority, a parent or guardian must sign on their behalf. The release can be signed electronically. Keep the signed releases at your site and be ready to share them with the project team on request! For sampling events involving communities or school groups, circulate and collect the releases well ahead of the day: chasing signatures afterwards is much harder!</p>
+            </div>
+            <a href="/assets/documents/eDNA_Expeditions2026-2028_model_release.pdf" target="_blank" class="ugc-btn">Download the model release</a>
+        </div>
+    </section>
+
+    <!-- 7 · SEND ----------------------------------------------->
+    <section class="ugc-s ugc-white" data-index="7">
+        <div class="ugc-inner">
+            <span class="ugc-num">7/7</span>
+            <h2 class="ugc-title">How to send<br>the pictures?</h2>
+            <div class="ugc-body">
+                <p>Go to images.ednaexpeditions.org, choose your site, upload your first picture, write the caption and the name of the photographer, tick the consent box if there are people in the image, and send!</p>
+            </div>
+            <a href="https://images.ednaexpeditions.org" target="_blank" class="ugc-btn">Upload your photos</a>
+        </div>
+    </section>
+
+</div>
+
+<script>
+(function () {
+    var sections  = Array.from(document.querySelectorAll('.ugc-s'));
+    var arrow     = document.getElementById('ugc-arrow');
+    var arrowUp   = document.getElementById('ugc-arrow-up');
+    var dotsNav   = document.getElementById('ugc-dots');
+    var current   = 0;
+
+    /* Build progress dots */
+    var dots = sections.map(function (s, i) {
+        var btn = document.createElement('button');
+        btn.className = 'ugc-dot' + (i === 0 ? ' active' : '');
+        btn.setAttribute('aria-label', 'Go to section ' + (i + 1));
+        btn.addEventListener('click', function () { goTo(i); });
+        dotsNav.appendChild(btn);
+        return btn;
+    });
+
+    /* Scroll to section */
+    function goTo(idx) {
+        if (sections[idx]) {
+            sections[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    /* Arrow click handlers */
+    arrow.addEventListener('click',   function () { if (current < sections.length - 1) goTo(current + 1); });
+    arrowUp.addEventListener('click', function () {
+        var lastRect = sections[sections.length - 1].getBoundingClientRect();
+        if (lastRect.bottom < window.innerHeight * 0.5) {
+            goTo(sections.length - 1);
+        } else if (current > 0) {
+            goTo(current - 1);
+        }
+    });
+
+    /* IntersectionObserver — track current section */
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var idx = parseInt(entry.target.getAttribute('data-index'), 10);
+            current = idx;
+            dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+            arrow.classList.toggle('hidden',   idx >= sections.length - 1);
+            arrowUp.classList.toggle('hidden', idx === 0);
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(function (s) { io.observe(s); });
+
+    /* Keyboard navigation */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown' && current < sections.length - 1) goTo(current + 1);
+        if (e.key === 'ArrowUp'   && current > 0)                   goTo(current - 1);
+    });
+}());
+</script>
+
+
+  </div><!-- /.page-body -->
+
+<footer class="edna-footer" role="contentinfo">
+  <div class="container container-wide pb-5" style="padding-top: 100px;">
+
+    <div class="edna-footer__grid">
+
+      <div class="edna-footer__left">
+        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+          <span class="edna-footer__brand-text">eDNA<br>Expeditions<br>2026-2028</span>
+        </a>
+        <nav class="edna-footer__nav" style="margin-top: 3rem;">
+          <a href="/" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Home</a>
+          <a href="/whoweare" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Who we are</a>
+          <a href="/participating-sites" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Sites</a>
+          <a href="/resources" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Resources</a>
+          <a href="/faq" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; FAQ</a>
+          <a href="/contact" style="color:#ffffff; display:block; font-weight:normal; font-size:0.85rem;">&gt; Contact</a>
+        </nav>
+      </div>
+
+      <div class="edna-footer__right">
+
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            Stay informed,<br>join our monthly newsletter
+          </div>
+
+         <form
+  class="edna-footer__newsletter validate"
+  action="https://unesco.us15.list-manage.com/subscribe/post-json?u=75c69bf185fb2be069850f6ee&id=6cf9d87141&f_id=005a0ae0f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  target="_self"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="Email address"
+      required>
+
+    <input type="hidden" name="tags" value="2806613">
+
+    <!-- Required hidden anti-bot field — do not remove -->
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      Subscribe
+    </button>
+  </div>
+</form>
+          
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            eDNA Expeditions 2026-2028 is powered by the Intergovernmental Oceanographic Commission (IOC) of UNESCO's Ocean Biodiversity Information System (OBIS), and supported by Minderoo Foundation, in collaboration with Wilderlab.
+          </div>
+
+          <div class="edna-footer__logos3">
+            <a href="https://www.obis.org/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo_IOC-OBIS_w.svg"
+                alt="IOC-OBIS"
+                class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+                loading="lazy"
+              >
+            </a>
+            <a href="https://www.minderoo.org/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo-mf-pin_w.svg"
+                alt="Minderoo Foundation"
+                class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+                loading="lazy"
+              >
+            </a>
+            <a href="https://wilderlab.co/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo_Wilderlab.png"
+                alt="Wilderlab"
+                class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            eDNA Expeditions 2026-2028 is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            </div>
+
+            <div class="edna-footer__logos3 pb-5">
+            <a href="https://oceandecade.org/" target="_blank" rel="noopener noreferrer">
+              <img
+              src="/assets/images/00_logo_ioc_decade_EN_white.svg"
+              alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+              class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  var btn  = document.getElementById('mc-embedded-subscribe');
+  if (!form || !btn) return;
+
+  var originalLabel = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var params = new URLSearchParams(new FormData(form));
+    var cbName = 'mc_cb_' + Date.now();
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc-jsonp');
+      if (s) s.parentNode.removeChild(s);
+
+      if (data.result === 'success') {
+        btn.textContent = '✓';
+        document.getElementById('mce-EMAIL').value = '';
+        setTimeout(function () {
+          window.location.href = '/newsletter_sub';
+        }, 1000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+        setTimeout(function () { btn.textContent = originalLabel; }, 3000);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc-jsonp';
+    script.src = form.action + '&' + params.toString() + '&c=' + cbName;
+    document.body.appendChild(script);
+  });
+}());
+</script>
+
+</body>
+</html>

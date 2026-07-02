@@ -116,7 +116,7 @@ body {
 .nav-link {
     color: var(--text-blue);
     font-size: .9rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.01em;
     gap: 0.75rem;
     white-space: nowrap;
@@ -1704,7 +1704,7 @@ input {
 
 .page-body--wallpaper {
     background-color: var(--bg-mid);
-    background-image: url('/assets/images/site_banner_b_white.svg');
+    background-image: url('/assets/images/site_banner_b.svg');
     background-size: 200% auto;
     background-repeat: no-repeat;
     background-position: top left;

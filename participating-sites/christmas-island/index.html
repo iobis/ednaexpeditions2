@@ -196,7 +196,8 @@
             <h3>Contact us</h3>
             <div class="site-contact-item">
               
-              <a href="mailto:Laura.Smith@DCCEEW.gov.au" class="site-contact-email">Laura.Smith@DCCEEW.gov.au</a>
+              
+              <a href="#" class="site-contact-email protected-email" data-u="Laura.Smith" data-d="DCCEEW.gov.au">Email us</a>
             </div>
           </div>
         </aside>
@@ -206,6 +207,14 @@
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.protected-email').forEach(function(el) {
+    var email = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
 
 <script>
   const siteMap = L.map('site-map').setView([-10.49142, 105.622937], 5);

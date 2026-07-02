@@ -184,7 +184,8 @@
             <h3>Contact us</h3>
             <div class="site-contact-item">
               
-              <a href="mailto:contact@calanques-parcnational.fr" class="site-contact-email">contact@calanques-parcnational.fr</a>
+              
+              <a href="#" class="site-contact-email protected-email" data-u="contact" data-d="calanques-parcnational.fr">Email us</a>
             </div>
           </div>
         </aside>
@@ -194,6 +195,14 @@
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.protected-email').forEach(function(el) {
+    var email = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
 
 <script>
   const siteMap = L.map('site-map').setView([43.2094, 5.4492], 5);

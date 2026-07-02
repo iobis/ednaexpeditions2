@@ -208,7 +208,8 @@
             <h3>Contact us</h3>
             <div class="site-contact-item">
               
-              <a href="mailto:habibka@sau.edu.bd" class="site-contact-email">habibka@sau.edu.bd</a>
+              
+              <a href="#" class="site-contact-email protected-email" data-u="habibka" data-d="sau.edu.bd">Email us</a>
             </div>
           </div>
         </aside>
@@ -218,6 +219,14 @@
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.protected-email').forEach(function(el) {
+    var email = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
 
 <script>
   const siteMap = L.map('site-map').setView([21.95, 89.18], 5);

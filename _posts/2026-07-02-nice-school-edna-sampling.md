@@ -85,6 +85,11 @@ It is a little early to say, at their age. Let us say it may have planted a smal
 
 The club is a group of volunteer students recruited each year. The aim is to carry out concrete projects in the Mediterranean, because the sea is right next to us. We combine a science project and an art project. It started three years ago, when the students decided to create a superhero story based on Mediterranean species, a bit like Guardians of the Galaxy, but a Guardians of the Mediterranean Sea version. The students created four characters and a story. This year, we focused on the impact of sunscreen on microplankton. The students cultured brine shrimp and microalgae, following a strict scientific protocol, to study the impact of sunscreen on these organisms. In parallel, we took up drawing classes to observe and draw the plankton, in the naturalist style of the last century. Every year we take part in competitions. Last year, the club took part in UNOC by leading and running workshops. This year, we took part in Monaco's Océano pour tous competition, and we won the first prize. We have an Instagram account that has quite a lot of content about everything the students have done over the past three years.
 
+<figure>
+  <img src="/assets/images/news/nice-school-2025/guardians-of-the-mediterranean.jpg" alt="Illustrations of the five Guardians of the Mediterranean characters: The Sea, Big Grouper, Posidonia, The Great Nacre, and Diadem Urchin">
+  <figcaption>Meet the Guardians of the Mediterranean: The Sea, Big Grouper, Posidonia, The Great Nacre, and Diadem Urchin. <span class="caption-credit">© Club Océanographique Ségurane</span></figcaption>
+</figure>
+
 **If tomorrow we invite your class to another eDNA Expeditions sampling event, would you do it again?**
 
 Yes, 100 per cent! My recommendation to other teachers: overcome your initial apprehension and jump in when you have the opportunity. You will not regret it, and your students will love it! Prepare beforehand, take your participation as a serious game that will make complex concepts accessible.
@@ -97,5 +102,5 @@ Just a huge thank you to eDNA Expeditions. You brought the cherry on the cake: w
 
 <p class="article-section-kicker">Dive deeper</p>
 - Follow the Collège Catherine Ségurane Oceanographic Club on [Instagram](https://www.instagram.com/cluboceano_segurane/)
-- Access [*Mare Nostrum*](https://www.pearltrees.com/club_mare_nostrum_college_segurane_nice/item718041493), the audiobook recorded by Ludovic Perrochia's students, featuring the Guardians of the Mediterranean Sea
+- Access [*Mare Nostrum, le réveil des guardien*](https://www.pearltrees.com/club_mare_nostrum_college_segurane_nice/item718041493), the audiobook recorded by Ludovic Perrochia's students, featuring the Guardians of the Mediterranean Sea
 - Stay informed, join our newsletter (scroll below!)

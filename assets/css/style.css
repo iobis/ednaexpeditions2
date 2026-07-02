@@ -901,7 +901,7 @@ button {
     }
 
     .article-body p:has(> strong:only-child) {
-        margin-top: 2rem;
+        margin-top: 2.5rem;
     }
 
     .article-body figure {

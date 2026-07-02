@@ -53,7 +53,7 @@ title: "<Full article title>"
 date: YYYY-MM-DD
 category: story
 hero_image: /assets/images/news/<article-slug>/hero.jpg
-hero_caption: "<One sentence describing the scene, location, and date>.<br><span class='caption-credit'>© Credit Name / Organisation</span>"
+hero_caption: "<One sentence describing the scene, location, and date>. <span class='caption-credit'>© Credit Name / Organisation</span>"
 teaser: "<1–2 sentence teaser for the news card. Should stand alone.>"
 lang: en
 ---

@@ -102,5 +102,5 @@ Just a huge thank you to eDNA Expeditions. You brought the cherry on the cake: w
 
 <p class="article-section-kicker">Dive deeper</p>
 - Follow the Collège Catherine Ségurane Oceanographic Club on [Instagram](https://www.instagram.com/cluboceano_segurane/)
-- Access [*Mare Nostrum, le réveil des guardien*](https://www.pearltrees.com/club_mare_nostrum_college_segurane_nice/item718041493), the audiobook recorded by Ludovic Perrochia's students, featuring the Guardians of the Mediterranean Sea
+- Access [*Mare Nostrum, le réveil des guardiens*](https://www.pearltrees.com/club_mare_nostrum_college_segurane_nice/item718041493), the audiobook recorded by Ludovic Perrochia's students, featuring the Guardians of the Mediterranean Sea
 - Stay informed, join our newsletter (scroll below!)

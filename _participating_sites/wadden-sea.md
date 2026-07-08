@@ -1,9 +1,9 @@
 ---
 layout: site-page
-title: "Wadden Sea World Heritage Site"
+title: "Wadden Sea"
 lang: en
 
-site_title: "Wadden Sea World Heritage Site"
+site_title: "Wadden Sea"
 map_label: "Wadden Sea"
 country: "Denmark, Germany, Netherlands"
 sort_name: "Wadden Sea"

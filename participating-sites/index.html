@@ -186,35 +186,153 @@ lang: en
     iconAnchor: [5, 5],
   });
 
+  const LABEL_GAP = 0.5;
+  // Cardinal directions are tried first (cleanest look); the 4 diagonals are
+  // fallbacks for tight clusters where no cardinal placement stays clear.
+  const LABEL_DIRECTIONS = ['right', 'top', 'bottom', 'left', 'top-right', 'bottom-right', 'top-left', 'bottom-left'];
+
+  // Leaflet's tooltip `direction` option only understands the 4 cardinal
+  // values; a diagonal is rendered as a cardinal anchor (right/left) plus a
+  // perpendicular offset that pushes it up or down past the label's own half-height.
+  function baseLeafletDirection(direction) {
+    if (direction === 'top-right' || direction === 'bottom-right') return 'right';
+    if (direction === 'top-left' || direction === 'bottom-left') return 'left';
+    return direction;
+  }
+
+  // Extra slack added around every predicted box (on top of LABEL_GAP) purely
+  // for the collision check, to absorb any small drift between this math and
+  // Leaflet's actual internal anchor calculation — verified empirically against
+  // real rendered positions. Keeps the check a bit conservative rather than exact.
+  const PREDICT_PAD = 8;
+
+  function getOffsetForDirection(direction, height) {
+    const diagonalShift = height / 2 + LABEL_GAP;
+    switch (direction) {
+      case 'right': return [LABEL_GAP, 0];
+      case 'left': return [-LABEL_GAP, 0];
+      case 'top': return [0, -LABEL_GAP];
+      case 'bottom': return [0, LABEL_GAP];
+      case 'top-right': return [LABEL_GAP, -diagonalShift];
+      case 'bottom-right': return [LABEL_GAP, diagonalShift];
+      case 'top-left': return [-LABEL_GAP, -diagonalShift];
+      case 'bottom-left': return [-LABEL_GAP, diagonalShift];
+    }
+  }
+
+  // Mirrors Leaflet's own Tooltip._setPosition math (subX/subY per cardinal
+  // direction), padded by PREDICT_PAD so small drift from the real rendered
+  // position still resolves to a safe (non-overlapping) decision.
+  function getLabelBox(point, width, height, direction) {
+    const base = baseLeafletDirection(direction);
+    const [dx, dy] = getOffsetForDirection(direction, height);
+    const subX = base === 'left' ? width : base === 'top' || base === 'bottom' ? width / 2 : 0;
+    const subY = base === 'top' ? height : base === 'bottom' ? 0 : height / 2;
+    const left = point.x + dx - subX;
+    const top = point.y + dy - subY;
+    return { left: left - PREDICT_PAD, top: top - PREDICT_PAD, right: left + width + PREDICT_PAD, bottom: top + height + PREDICT_PAD };
+  }
+
+  function getDotBox(point) {
+    return { left: point.x - PREDICT_PAD, top: point.y - PREDICT_PAD, right: point.x + PREDICT_PAD, bottom: point.y + PREDICT_PAD };
+  }
+
+  function overlapArea(a, b) {
+    const w = Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left));
+    const h = Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+    return w * h;
+  }
+
+  function bindDirectionalTooltip(marker, site, direction) {
+    const height = marker._labelHeight || 20;
+    marker.unbindTooltip();
+    marker.bindTooltip(site.title, {
+      permanent: true,
+      direction: baseLeafletDirection(direction),
+      className: 'site-pin-label',
+      offset: getOffsetForDirection(direction, height),
+    });
+    marker._direction = direction;
+
+    const tooltipEl = marker.getTooltip() && marker.getTooltip().getElement();
+    if (tooltipEl) {
+      tooltipEl.addEventListener('click', function (evt) {
+        evt.stopPropagation();
+        window.location.href = site.url;
+      });
+      marker._labelWidth = tooltipEl.offsetWidth;
+      marker._labelHeight = tooltipEl.offsetHeight;
+    }
+  }
+
   function renderMarkers() {
-    markers.forEach(marker => map.removeLayer(marker));
+    markers.forEach(entry => map.removeLayer(entry.marker));
     markers.length = 0;
 
     sitesData.forEach(site => {
       if (site.lat && site.lon && matchesFilters(site)) {
         const marker = L.marker([site.lat, site.lon], { icon: pinIcon }).addTo(map);
-        marker.bindTooltip(site.title, {
-          permanent: true,
-          direction: 'right',
-          className: 'site-pin-label',
-          offset: [3, 0],
-        });
 
         marker.on('click', function () {
           window.location.href = site.url;
         });
 
-        const tooltipEl = marker.getTooltip() && marker.getTooltip().getElement();
-        if (tooltipEl) {
-          tooltipEl.addEventListener('click', function (evt) {
-            evt.stopPropagation();
-            window.location.href = site.url;
-          });
-        }
-        markers.push(marker);
+        bindDirectionalTooltip(marker, site, 'right');
+
+        markers.push({ marker, site });
       }
     });
+
+    updateLabelPlacement();
   }
+
+  // Every site always keeps a visible label. For each marker (in sitesData's
+  // alphabetical order) we predict right/top/bottom/left and the 4 diagonals'
+  // boxes and pick whichever direction keeps the label clear of labels and
+  // dots already placed this pass (its own dot included) — otherwise a label
+  // can visually swallow a neighboring site's marker. Only rebinds a marker's
+  // tooltip when its direction actually needs to change, so repeated
+  // zoom/pan events don't churn the DOM. If every direction still overlaps
+  // something, we keep the least-overlapping one.
+  function updateLabelPlacement() {
+    const points = markers.map(entry => map.latLngToContainerPoint(entry.marker.getLatLng()));
+    const placedBoxes = points.map(getDotBox);
+
+    markers.forEach(function (entry, index) {
+      const marker = entry.marker;
+      const site = entry.site;
+      const point = points[index];
+      const width = marker._labelWidth || 0;
+      const height = marker._labelHeight || 20;
+
+      let bestDirection = LABEL_DIRECTIONS[0];
+      let bestBox = getLabelBox(point, width, height, bestDirection);
+      let bestOverlap = placedBoxes.reduce((sum, box) => sum + overlapArea(bestBox, box), 0);
+
+      for (let i = 1; i < LABEL_DIRECTIONS.length && bestOverlap > 0; i++) {
+        const direction = LABEL_DIRECTIONS[i];
+        const box = getLabelBox(point, width, height, direction);
+        const overlap = placedBoxes.reduce((sum, b) => sum + overlapArea(box, b), 0);
+        if (overlap < bestOverlap) {
+          bestDirection = direction;
+          bestBox = box;
+          bestOverlap = overlap;
+        }
+      }
+
+      if (marker._direction !== bestDirection) {
+        bindDirectionalTooltip(marker, site, bestDirection);
+      }
+      marker.openTooltip();
+      placedBoxes.push(bestBox);
+    });
+  }
+
+  map.on('zoomend moveend', updateLabelPlacement);
+  window.addEventListener('resize', function () {
+    map.invalidateSize();
+    updateLabelPlacement();
+  });
 
   document.querySelectorAll('.sites-filters input[type="checkbox"]').forEach(input => {
     input.addEventListener('change', renderMarkers);
@@ -230,5 +348,6 @@ lang: en
     fullscreenBtn.innerHTML = isFullscreen ? '&#x2715;' : '&#x26F6;';
     fullscreenBtn.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Toggle fullscreen');
     map.invalidateSize();
+    updateLabelPlacement();
   });
 </script>

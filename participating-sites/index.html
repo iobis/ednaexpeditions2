@@ -775,6 +775,7 @@
     
   ];
 
+  if (!window.matchMedia('(max-width: 767px)').matches) {
   const map = L.map('sites-map');
 
   const allCoords = sitesData.filter(s => s.lat && s.lon).map(s => [s.lat, s.lon]);
@@ -1001,6 +1002,7 @@
     map.invalidateSize();
     updateLabelPlacement();
   });
+  }
 </script>
 
   </div><!-- /.page-body -->

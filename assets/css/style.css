@@ -1065,6 +1065,12 @@ button {
     position: relative;
 }
 
+@media (max-width: 767px) {
+    .sites-map-panel {
+        display: none;
+    }
+}
+
 #sites-map {
     width: 100%;
     height: 520px;
@@ -1616,10 +1622,6 @@ input {
 
     .mission {
         font-size: 1.3em;
-    }
-
-    #sites-map {
-        height: 320px;
     }
 
     .site-hero-arrow {

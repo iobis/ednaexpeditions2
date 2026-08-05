@@ -213,13 +213,32 @@
             <span class="ugc-num">7/7</span>
             <h2 class="ugc-title">How to send<br>the pictures?</h2>
             <div class="ugc-body">
-                <p>Go to images.ednaexpeditions.org, choose your site, upload your first picture, write the caption and the name of the photographer, tick the consent box if there are people in the image, and send!</p>
+                <!-- <p>Go to images.ednaexpeditions.org, choose your site, upload your first picture, write the caption and the name of the photographer, tick the consent box if there are people in the image, and send!</p> -->
+                <p>Send your pictures by email to <span id="ugc-email"></span>, along with captions and the name of the photographer. You don't need to send the image consent forms, but remember to keep them on file!</p>
             </div>
-            <a href="https://images.ednaexpeditions.org" target="_blank" class="ugc-btn">Upload your photos</a>
+            <a href="#" id="ugc-mail-btn" class="ugc-btn" rel="nofollow">Upload your photos</a>
         </div>
     </section>
 
 </div>
+
+<script>
+(function () {
+    var user   = 'l.chmiel';
+    var domain = 'unesco.org';
+    var address = user + '@' + domain;
+
+    var link = document.getElementById('ugc-mail-btn');
+    if (link) {
+        link.setAttribute('href', 'mailto:' + address);
+    }
+
+    var label = document.getElementById('ugc-email');
+    if (label) {
+        label.textContent = address;
+    }
+})();
+</script>
 
 <script>
 (function () {

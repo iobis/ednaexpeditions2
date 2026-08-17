@@ -52,4 +52,7 @@ team:
   - name: "Loïc Sanchez"
     role: "Fieldwork and community engagement"
     image: /assets/images/sites/saltstraumen/team-6.jpg
+  - name: "Fredric Ihrsén"
+    role: "Diving Center Nord&Ne"
+    image: /assets/images/sites/saltstraumen/team-7.jpg
 ---

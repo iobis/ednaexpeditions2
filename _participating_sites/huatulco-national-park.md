@@ -34,10 +34,10 @@ team:
   - name: "Valentina Islas-Villanueva"
     role: "Scientific Lead"
     image: /assets/images/sites/huatulco-national-park/team-1.jpeg
-  - name: "Team member"
-    role: "Role to be added"
+  - name: "Cecilia Chapa Balcorta"
+    role: "Oceanographic coordinator"
     image: /assets/images/sites/huatulco-national-park/team-2.jpeg
-  - name: "Team member"
-    role: "Role to be added"
+  - name: "Eduardo Chávez Ramírez"
+    role: "Sampling coordinator"
     image: /assets/images/sites/huatulco-national-park/team-3.jpeg
 ---

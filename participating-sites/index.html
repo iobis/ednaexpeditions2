@@ -607,7 +607,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: "bottom"
     },
     
     {
@@ -620,7 +621,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -633,7 +635,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -646,7 +649,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: "left"
     },
     
     {
@@ -659,7 +663,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -672,7 +677,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -685,7 +691,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -698,7 +705,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -711,7 +719,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: "right"
     },
     
     {
@@ -724,7 +733,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -737,7 +747,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -750,7 +761,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -763,7 +775,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -776,7 +789,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -789,7 +803,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     },
     
     {
@@ -802,7 +817,8 @@
       country_type: null,
       site_type: null,
       objectives: null,
-      ecosystem_type: null
+      ecosystem_type: null,
+      label_direction: null
     }
     
   ];
@@ -989,18 +1005,22 @@
       const width = marker._labelWidth || 0;
       const height = marker._labelHeight || 20;
 
-      let bestDirection = LABEL_DIRECTIONS[0];
+      let bestDirection = site.label_direction || LABEL_DIRECTIONS[0];
       let bestBox = getLabelBox(point, width, height, bestDirection);
       let bestOverlap = placedBoxes.reduce((sum, box) => sum + overlapArea(bestBox, box), 0);
 
-      for (let i = 1; i < LABEL_DIRECTIONS.length && bestOverlap > 0; i++) {
-        const direction = LABEL_DIRECTIONS[i];
-        const box = getLabelBox(point, width, height, direction);
-        const overlap = placedBoxes.reduce((sum, b) => sum + overlapArea(box, b), 0);
-        if (overlap < bestOverlap) {
-          bestDirection = direction;
-          bestBox = box;
-          bestOverlap = overlap;
+      // A site with an explicit label_direction skips the auto-search: it keeps
+      // its forced direction even if that direction still overlaps something.
+      if (!site.label_direction) {
+        for (let i = 1; i < LABEL_DIRECTIONS.length && bestOverlap > 0; i++) {
+          const direction = LABEL_DIRECTIONS[i];
+          const box = getLabelBox(point, width, height, direction);
+          const overlap = placedBoxes.reduce((sum, b) => sum + overlapArea(box, b), 0);
+          if (overlap < bestOverlap) {
+            bestDirection = direction;
+            bestBox = box;
+            bestOverlap = overlap;
+          }
         }
       }
 

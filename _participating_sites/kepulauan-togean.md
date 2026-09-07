@@ -19,6 +19,7 @@ listing_teaser: "A remote Coral Triangle national park in Central Sulawesi, Indo
 map_lat: -0.364703
 map_lon: 121.939247
 map_zoom: 5
+map_label_direction: "right"
 
 contact_email: info@bluedna.org
 

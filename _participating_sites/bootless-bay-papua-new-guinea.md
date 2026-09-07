@@ -17,6 +17,7 @@ listing_teaser: "A diverse marine managed area near Port Moresby featuring mangr
 map_lat: -9.5225
 map_lon: 147.2845
 map_zoom: 5
+map_label_direction: "bottom"
 
 
 about_site: |

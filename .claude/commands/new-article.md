@@ -64,10 +64,15 @@ lang: en
 ## Step 4 — Write the article body
 
 ### Intro paragraph
-Open with a plain paragraph (no heading) that sets the scene and introduces the subject.
+Open with a plain paragraph (no heading) that sets the scene and introduces the subject. No heading before it, and no manual `<br>` after it — the first intertitle's own top margin creates the gap.
 
-### Q&A format
-Each question is a bold paragraph (Markdown `**Question text**`), followed by the answer as one or more regular paragraphs. The CSS adds top spacing before each question automatically via `:has(> strong:only-child)`.
+### Intertitles (section headings)
+Break the body into narrative sections with Markdown `### ` headings (renders as `.article-body h3`: bold, 1.6rem, tighter line-height). Do not add `<br>` before or after a heading — spacing is handled entirely by CSS margin (which also collapses correctly whether the heading follows a paragraph or a `<figure>`, giving it less top margin right after an image since the image already reads as a break). Write headings as short descriptive phrases ("Getting to the site: the beginning of an adventure"), not literal interview questions — fold the question into the surrounding prose or the coordinator's own words instead.
+
+Do not use the old bold-paragraph Q&A style (`**Question text**`) for new articles — it's kept in CSS only for backward compatibility with older posts.
+
+### Verbatim quotes
+Every direct quotation from a source (dialogue in the body text) is italicized: `*"Quote text,"* said **Name**.` Bold the person's name only the first time they are quoted, plain text on every subsequent mention. This italic treatment does not apply inside `<blockquote class="pull-quote">` elements — those stay unstyled/plain.
 
 ### Pull quotes
 Pick 1–2 strong quotes from the text. Insert them as:
@@ -76,7 +81,7 @@ Pick 1–2 strong quotes from the text. Insert them as:
 <blockquote class="pull-quote">"Quote text here."</blockquote>
 ```
 
-Place pull quotes at a natural pause — after a key concept lands, before the next question.
+Place pull quotes at a natural pause — after a key concept lands, before the next section.
 
 ### Body images
 Insert images as `<figure>` blocks with captions. Always use `<span class="caption-credit">` for the photo credit, inline (no line break before it):
@@ -88,9 +93,22 @@ Insert images as `<figure>` blocks with captions. Always use `<span class="capti
 </figure>
 ```
 
+For a photo that should run wider than the text column (matching the hero's width), add `class="figure-wide"` to the `<figure>` tag — use this sparingly, for standout images only:
+
+```html
+<figure class="figure-wide">
+  <img src="/assets/images/news/<slug>/<image>.jpg" alt="Brief description">
+  <figcaption>...</figcaption>
+</figure>
+```
+
 - Ship names must be in `<em>`: e.g. `<em>Statsraad Lehmkuhl</em>`
-- Spread images throughout the article — aim for one image every 2–3 questions
+- Species names must be in `<em>`, not Markdown asterisks — Markdown italics can't nest inside an already-italicized quote: e.g. `<em>Saccostrea cucullata</em>`
+- Spread images throughout the article — aim for one image every 2–3 sections
 - Portrait images stay at full content width (no special class needed)
+
+### Hero image width
+The hero image (`.article-hero`) is wider than the text column by default on desktop (≥992px): 929.5px vs. the 640px text column, centered so the text width never moves. No action needed — this is automatic from the `hero_image` front matter field.
 
 ### Closing section
 End with a `---` separator and a "Dive deeper" block:

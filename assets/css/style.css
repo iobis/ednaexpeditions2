@@ -797,11 +797,22 @@ button {
     display: block;
 }
 
+@media (min-width: 992px) {
+    /* Hero is 45% wider than the 640px text column, centered on it — text width is untouched. */
+    .article-hero,
+    .article-body figure.figure-wide {
+        width: 929.5px;
+        max-width: calc(100vw - 2rem);
+        margin-left: -144.75px;
+        margin-right: -144.75px;
+    }
+}
+
 
 
 .article-body {
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 1.65;
 }
 
 .article-body p {
@@ -838,6 +849,10 @@ button {
     margin-top: 3.5rem;
 }
 
+.article-body a {
+    text-decoration: underline;
+}
+
 .article-body h2 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
@@ -850,10 +865,16 @@ button {
 .article-body h3 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
+    font-size: 1.6rem;
     text-transform: none;
-    line-height: 1.25;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    line-height: 1.3;
+    margin-top: 3.5rem;
+    margin-bottom: 1.75rem;
+}
+
+/* An intertitle right after a figure needs less top margin: the figure already carries its own 3rem bottom margin, so the two would otherwise collapse into an oversized gap. */
+.article-body figure + h3 {
+    margin-top: 1.75rem;
 }
 
 .article-body img,
@@ -941,6 +962,16 @@ button {
 
     .article-body p:has(> strong:only-child) {
         margin-top: 2.5rem;
+    }
+
+    .article-body h3 {
+        font-size: 1.3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .article-body figure + h3 {
+        margin-top: 1.25rem;
     }
 
     .article-body figure {

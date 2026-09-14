@@ -4,7 +4,7 @@ title: "Caution, confidence and small victories: inside the first eDNA Expeditio
 date: 2026-09-14
 category: story
 hero_image: /assets/images/news/first-sampling-events-2026-2028/hero.jpg
-hero_caption: "A volunteer filling the sampling syringe from a sampling bottle held by Jeniffer Teles (the site coordinator and scientific lead, right) during the first eDNA Expeditions sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class='caption-credit'>©Jeniffer Teles</span>"
+hero_caption: "A volunteer, Lucas Santana, filling the sampling syringe from a sampling bottle held by Jeniffer Teles (the site coordinator and scientific lead, right) during the first eDNA Expeditions sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class='caption-credit'>©Jeniffer Teles</span>"
 teaser: "We give you a first-row seat at the first eDNA Expeditions 2026-2028 sampling events that took place this summer, at three sites."
 lang: en
 ---
@@ -89,7 +89,7 @@ In Cananéia–Iguape–Peruíbe, the ecological balance of the site could be th
 
 <figure>
   <img src="/assets/images/news/first-sampling-events-2026-2028/brazil-team.jpg" alt="The Cananéia–Iguape–Peruíbe sampling team posing together on the beach">
-  <figcaption>The Cananéia–Iguape–Peruíbe sampling team, Brazil, on the beach after their first sampling event, August 2026. From foreground to background: Jeniffer Teles, Prof. Giovana Bertini, and three volunteer PhD students from the São Paulo State University (UNESP), Campus of Registro<span class="caption-credit">© Jeniffer Teles</span></figcaption>
+  <figcaption>The Cananéia–Iguape–Peruíbe sampling team, Brazil, on the beach after their first sampling event, August 2026. From foreground to background: Jeniffer Teles, Prof. Giovana Bertini, and three volunteer PhD students from the São Paulo State University (UNESP), Campus of Registro: Esthephany Miranda, Lucas Santana and Johnatas Carvalho<span class="caption-credit">© Jeniffer Teles</span></figcaption>
 </figure>
 
 At Iligan, Sharon Rose Tabugo and her team focus on identifying key species in the coral reefs. *"We know there are parrotfish,"* she explained. *"But we are not sure about which particular species live there. Data from the samples will tell us the exact genus. We also hope to collect data about diatoms, phytoplankton, seahorses, and some turtles from those same reefs. And, who knows, some new species of fishes that nobody expected."* The data will also serve to educate local populations. *"Some fishermen do not understand why we are establishing the marine protected area,"* she continues. *"They think we are being selfish and not giving them the fish they need to eat. So we try to explain that we are creating safe spaces for the fish to breed and reproduce, with restored populations ultimately spilling out from the protected area into fishing grounds, creating a new resource for local populations."*

@@ -5,7 +5,7 @@ date: 2026-09-14
 category: story
 hero_image: /assets/images/news/first-sampling-events-2026-2028/hero.jpg
 hero_caption: "A volunteer filling the sampling syringe from a sampling bottle held by Jeniffer Teles (the site coordinator and scientific lead, right) during the first eDNA Expeditions sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class='caption-credit'>©Jeniffer Teles</span>"
-teaser: "Three participating sites carried out their first eDNA Expeditions 2026-2028 sampling event this summer. Their coordinators share the currents, the tides and the trembling hands behind the first litres of water filtered."
+teaser: "We give you a first-row seat at the first eDNA Expeditions 2026-2028 sampling events that took place this summer, at three sites."
 lang: en
 ---
 

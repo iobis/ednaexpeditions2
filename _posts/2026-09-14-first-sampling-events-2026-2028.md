@@ -4,7 +4,7 @@ title: "Caution, confidence and small victories: inside the first eDNA Expeditio
 date: 2026-09-14
 category: story
 hero_image: /assets/images/news/first-sampling-events-2026-2028/hero.jpg
-hero_caption: "A volunteer, Lucas Santana, filling the sampling syringe from a sampling bottle held by Jeniffer Teles (the site coordinator and scientific lead, right) during the first eDNA Expeditions sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class='caption-credit'>©Jeniffer Teles</span>"
+hero_caption: "Lucas Santana, a volunteer PhD student (left), filling a sampling syringe from a bottle held by Jeniffer Teles, the site coordinator and scientific lead (right) during the first eDNA Expeditions sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class='caption-credit'>©Jeniffer Teles</span>"
 teaser: "We give you a first-row seat at the first eDNA Expeditions 2026-2028 sampling events that took place this summer, at three sites."
 lang: en
 ---
@@ -60,7 +60,7 @@ Despite the variety in backgrounds, experience, and expertise, the three teams s
 
 <figure class="figure-wide">
   <img src="/assets/images/news/first-sampling-events-2026-2028/norway-current.jpg" alt="Swirling current in the Saltstraumen channel, seen from the dock where the team was sampling">
-  <figcaption>The changing current in the Saltstraumen channel, Norway, where the tide reverses the flow of water every six hours. <span class="caption-credit">© eDNA Expeditions</span></figcaption>
+  <figcaption>East-side view of the changing current in the Saltstraumen channel, Norway, where the tide reverses the flow of water every six hours. <span class="caption-credit">© eDNA Expeditions</span></figcaption>
 </figure>
 
 The tide also influenced the sampling day at Cananéia–Iguape–Peruíbe, but in a different way. *"We could access this particular sampling location only via a sandy lagoon, at low tide,"* explained Jeniffer Teles. *"We parked the cars, unloaded the material on the beach, and started sampling. The park manager told us that we had to leave before high tide, or we could not go back and would have to spend the night in the park. So we were keeping an eye on the sea while sampling. Time was ticking. It took us nearly two hours to organize the team, take the negative sample and the first actual sample. But we managed to beat the tide and didn't have to sleep in the park."*

@@ -564,9 +564,16 @@ button {
     padding-bottom: 60px;
 }
 
+.home-hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 0.92;
+    text-transform: none;
+}
+
 .meet-sites-link {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .meet-sites-link:hover {
     text-decoration: underline;

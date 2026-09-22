@@ -1,7 +1,7 @@
 ---
 layout: site-page
 title: "Aldabra Atoll, Seychelles"
-published: false
+published: true
 lang: en
 
 site_title: "Aldabra Atoll, Seychelles"

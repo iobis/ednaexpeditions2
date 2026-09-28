@@ -18,6 +18,7 @@ listing_teaser: "A remote Australian territory in the Indian Ocean, where eDNA w
 map_lat: -10.49142
 map_lon: 105.622937
 map_zoom: 5
+map_label_direction: "left"
 
 contact_email: Laura.Smith@DCCEEW.gov.au
 

@@ -6,6 +6,10 @@
 # Note: caption is also used as the image alt text automatically.
 
 heroes:
+  - image: /assets/images/01_Hero_main4.jpg
+    caption: Filling a sampling syringe from a sampling bottle at Cananéia–Iguape–Peruíbe, Brazil, in August 2026.
+    credit: Jeniffer Teles
+
   - image: /assets/images/01_Hero_main3.jpg
     caption: Students from Universiti Malaysia Terengganu with volunteers from the National University of Singapore and the Sarawak Forestry Corporation deploying Autonomous Reef Monitoring Structures (ARMS) in Pulau Bidong, Malaysia, in April 2026.
     credit: Sabrina Hilmy

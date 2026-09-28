@@ -17,9 +17,12 @@ navbar_class: row-light
         </p>
 
         {% if page.hero_image %}
-        <div class="article-hero">
+        <figure class="article-hero">
           <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="img-fluid">
-        </div>
+          {% if page.hero_caption %}
+          <figcaption class="article-hero-caption">{{ page.hero_caption }}</figcaption>
+          {% endif %}
+        </figure>
         {% endif %}
 
         <div class="article-body">
@@ -32,3 +35,10 @@ navbar_class: row-light
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.article-body a').forEach(function(a) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>

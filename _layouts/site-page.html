@@ -116,7 +116,8 @@ navbar_class: row-light
             <h3>Contact us</h3>
             <div class="site-contact-item">
               {% assign contact_email = page.contact_email | default: 'edna@ioc-unesco.org' %}
-              <a href="mailto:{{ contact_email }}" class="site-contact-email">{{ contact_email }}</a>
+              {% assign email_parts = contact_email | split: "@" %}
+              <a href="#" class="site-contact-email protected-email" data-u="{{ email_parts[0] }}" data-d="{{ email_parts[1] }}">Email us</a>
             </div>
           </div>
         </aside>
@@ -126,6 +127,14 @@ navbar_class: row-light
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.protected-email').forEach(function(el) {
+    var email = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
 
 <script>
   const siteMap = L.map('site-map').setView([{{ page.map_lat }}, {{ page.map_lon }}], {{ page.map_zoom | default: 5 }});

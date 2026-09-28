@@ -23,6 +23,8 @@ body {
     background-color: #020282;
     width: 100%;
     padding-bottom: .8rem;
+    position: relative;
+    z-index: 1060;
 }
 
 .ioc-top-banner__inner {
@@ -80,7 +82,8 @@ body {
 .navbar {
     background-color: var(--bg-mid);
     margin-top: 0rem;
-    padding-top: 1.8rem;
+    padding-top: 1.2rem;
+    padding-bottom: 0.4rem;
 }
 
 .navbar-collapse {
@@ -114,22 +117,49 @@ body {
 .nav-link {
     color: var(--text-blue);
     font-size: .9rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.01em;
     gap: 0.75rem;
     white-space: nowrap;
 }
 
 .navbar-toggler {
-    border-color: var(--text-blue);
+    border: none;
+    padding: 0.4rem;
+    background: transparent;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    position: relative;
+    z-index: 1051;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(2, 2, 131, 0.25);
+    box-shadow: none;
+    outline: none;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23020283' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.hamburger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-blue);
+    border-radius: 1.5px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line--top {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line--middle {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line--bottom {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 .navbar .nav-link,
@@ -308,6 +338,15 @@ a:hover {
 
 .container-wide {
     max-width: 1000px;
+}
+
+@media (max-width: 767px) {
+    /* Article pages already get this breathing room via .article-content; match it site-wide. */
+    .container:not(.article-container),
+    .container-wide:not(.article-container) {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
 }
 
 .row-light {
@@ -516,14 +555,25 @@ button {
     margin-bottom: 20px;
 }
 
+.resources-index h3 {
+    font-size: 3em;
+}
+
 .hero-inner {
     padding-top: 70px;
     padding-bottom: 60px;
 }
 
+.home-hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 0.92;
+    text-transform: none;
+}
+
 .meet-sites-link {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .meet-sites-link:hover {
     text-decoration: underline;
@@ -678,7 +728,7 @@ button {
 
 .news-card-title {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -715,9 +765,9 @@ button {
 
 .article-title {
     font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 3em;
-    line-height: 1.2em;
+    line-height: 1.05em;
     text-transform: none;
     text-align: center;
     margin-bottom: 1rem;
@@ -725,12 +775,13 @@ button {
 }
 
 .article-container {
-    max-width: 900px;
+    max-width: 860px;
 }
 
 .article-content {
-    max-width: 760px;
+    max-width: 640px;
     margin: 0 auto;
+    padding-bottom: 3rem;
 }
 
 .article-title {
@@ -753,8 +804,60 @@ button {
     display: block;
 }
 
+@media (min-width: 992px) {
+    /* Hero is 45% wider than the 640px text column, centered on it — text width is untouched. */
+    .article-hero,
+    .article-body figure.figure-wide {
+        width: 929.5px;
+        max-width: calc(100vw - 2rem);
+        margin-left: -144.75px;
+        margin-right: -144.75px;
+    }
+}
+
+
+
 .article-body {
-    line-height: 1.7;
+    font-size: 1.2rem;
+    line-height: 1.65;
+}
+
+.article-body p {
+    margin-bottom: 1.2rem;
+}
+
+.article-body blockquote.pull-quote {
+    margin: 4rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.05;
+    font-style: normal;
+    color: var(--text-blue);
+}
+
+.article-body blockquote.pull-quote::before,
+.article-body blockquote.pull-quote::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 10px;
+    background-color: var(--text-blue);
+}
+
+.article-body blockquote.pull-quote::before {
+    margin-bottom: 1.75rem;
+}
+
+.article-body blockquote.pull-quote::after {
+    margin-top: 1.75rem;
+}
+
+.article-body p:has(> strong:only-child) {
+    margin-top: 3.5rem;
+}
+
+.article-body a {
+    text-decoration: underline;
 }
 
 .article-body h2 {
@@ -769,10 +872,16 @@ button {
 .article-body h3 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
+    font-size: 1.6rem;
     text-transform: none;
-    line-height: 1.25;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    line-height: 1.3;
+    margin-top: 3.5rem;
+    margin-bottom: 1.75rem;
+}
+
+/* An intertitle right after a figure needs less top margin: the figure already carries its own 3rem bottom margin, so the two would otherwise collapse into an oversized gap. */
+.article-body figure + h3 {
+    margin-top: 1.75rem;
 }
 
 .article-body img,
@@ -790,46 +899,100 @@ button {
     height: auto;
 }
 
-.article-body .full-bleed-wrap {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-top: 8rem;
-    margin-bottom: 2.5rem;
+.article-body figure {
+    margin: 3rem 0;
 }
 
-.article-body .full-bleed-wrap img {
+.article-body figure img {
     display: block;
     width: 100%;
-    max-width: none;
     height: auto;
     margin: 0;
 }
 
-.article-body figure.full-bleed {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+.article-body figcaption,
+.article-hero-caption {
+    font-size: 0.80rem;
+    line-height: 1.35;
+    margin-top: 1rem;
+    font-weight: 600;
 }
 
-.article-body figure.full-bleed img {
-    display: block;
-    width: 100%;
-    max-width: none;
-    height: auto;
-    margin: 0;
+.caption-credit {
+    font-weight: 400;
 }
 
-.article-body figure.full-bleed figcaption {
-    max-width: 760px;
-    margin: 0 auto 0 auto;
-    font-size: 0.85rem;
-    font-weight: 700;
-    line-height: 1.4;
+.article-body ul, .article-body ol {
+    font-size: 0.9rem;
+}
+
+.article-section-kicker {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.article-body hr {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: none;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 10'%3E%3Cpath d='M0 5 Q10 0 20 5 Q30 10 40 5' fill='none' stroke='%23020283' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 40px 10px;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .article-title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .article-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .article-body {
+        font-size: 1.05rem;
+    }
+
+    .article-body blockquote.pull-quote {
+        font-size: 1.6rem;
+        margin: 2.5rem 0;
+    }
+
+    .article-body p:has(> strong:only-child) {
+        margin-top: 2.5rem;
+    }
+
+    .article-body h3 {
+        font-size: 1.3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .article-body figure + h3 {
+        margin-top: 1.25rem;
+    }
+
+    .article-body figure {
+        margin: 2rem 0;
+    }
+
+    .article-body hr {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .article-section-kicker {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -938,6 +1101,12 @@ button {
     padding: 1rem;
     margin-bottom: 1rem;
     position: relative;
+}
+
+@media (max-width: 767px) {
+    .sites-map-panel {
+        display: none;
+    }
 }
 
 #sites-map {
@@ -1070,6 +1239,12 @@ button {
     line-height: 1.35;
     margin-top: 1rem;
     margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .site-hero-caption {
+        margin-bottom: 2rem;
+    }
 }
 
 .site-hero-caption strong {
@@ -1487,14 +1662,6 @@ input {
         font-size: 1.3em;
     }
 
-    .article-title {
-        font-size: 2em;
-    }
-
-    #sites-map {
-        height: 320px;
-    }
-
     .site-hero-arrow {
         opacity: 1;
     }
@@ -1505,6 +1672,10 @@ input {
     .navbar {
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
+    }
+
+    .navbar-toggler {
+        margin-top: 0.65rem;
     }
 
     .navbar-collapse {
@@ -1523,22 +1694,43 @@ input {
     .navbar-nav--equal > .nav-item {
         justify-content: flex-start;
         width: 100%;
-        border-bottom: 1px solid rgba(2, 2, 131, 0.1);
-    }
-
-    .navbar-nav--equal > .nav-item:last-child {
-        border-bottom: none;
     }
 
     .navbar-nav--equal > .nav-item > .nav-link {
         min-height: 48px;
         justify-content: flex-start;
         width: 100%;
+        font-size: 1.125rem;
+        font-weight: 700;
     }
 
     /* Hide underline hover effect on touch */
     .navbar .nav-link:not(.dropdown-toggle)::after {
         display: none;
+    }
+
+    /* Full-screen overlay menu: fade in/out only, no height animation */
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1050;
+        background-color: var(--bg-mid);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10rem 1.5rem 2rem 2.15rem;
+        height: 100dvh !important;
+        opacity: 0;
+        transition: opacity 0.15s ease !important;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
     }
 
     /* Wallpaper: reduce scale on small screens */
@@ -1554,7 +1746,7 @@ input {
 
 .page-body--wallpaper {
     background-color: var(--bg-mid);
-    background-image: url('/assets/images/site_banner_b_white.svg');
+    background-image: url('/assets/images/site_banner_b.svg');
     background-size: 200% auto;
     background-repeat: no-repeat;
     background-position: top left;
@@ -1570,4 +1762,220 @@ input {
 
 .page-body--wallpaper .row-light {
     background-color: rgba(229, 244, 255, 0.7);
+}
+
+/* ============================================================
+   UGC Photography Guide  —  /resources/ugc-guide/
+   ============================================================ */
+
+.ugc-s {
+    min-height: 100svh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem 4rem;
+    position: relative;
+    box-sizing: border-box;
+}
+.ugc-s:first-child {
+    min-height: calc(100svh - 155px);
+    min-height: calc(100vh - 155px);
+}
+@media (max-width: 767px) {
+    .ugc-s:first-child {
+        min-height: calc(100svh - 130px);
+        min-height: calc(100vh - 130px);
+    }
+}
+
+.ugc-ice   { background: var(--bg-light); color: var(--text-blue); }
+.ugc-white { background: #fff;            color: var(--text-blue); }
+
+.ugc-inner {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Ghost section counter (e.g. "0/7") */
+.ugc-num {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(3.5rem, 13vw, 10rem);
+    line-height: 0.82;
+    margin-bottom: 0.1em;
+    letter-spacing: -0.02em;
+    color: rgba(2, 2, 130, 0.07);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Category label */
+.ugc-label {
+    display: block;
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #0075d6;
+}
+
+/* Section heading */
+.ugc-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.9rem, 6.5vw, 3.5rem);
+    line-height: 0.95em;
+    text-transform: uppercase;
+    margin: 0 0 1.4rem;
+    color: var(--text-blue);
+}
+
+/* Page subtitle (hero) */
+.ugc-subtitle {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    color: var(--text-blue);
+    margin-bottom: 0.75rem;
+}
+
+/* Navigation instruction */
+.ugc-nav-hint {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    color: var(--text-blue);
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* Body text */
+.ugc-body {
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    line-height: 1.65;
+    color: var(--text-blue);
+}
+.ugc-body p { margin-bottom: 0.85em; }
+.ugc-body p:last-child { margin-bottom: 0; }
+
+/* Inline highlight */
+.ugc-hi { color: #0075d6; font-weight: 700; }
+
+/* Numbered tips list */
+.ugc-tips {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+.ugc-tips li {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    padding: 0.8rem 0;
+    font-size: clamp(0.88rem, 2.4vw, 1rem);
+    line-height: 1.55;
+    color: var(--text-blue);
+}
+.ugc-tips li::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-blue);
+    flex-shrink: 0;
+    margin-top: 0.45em;
+}
+
+/* CTA button */
+.ugc-btn {
+    display: inline-block;
+    background: var(--text-blue);
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.96rem;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: none !important;
+    padding: 0.85rem 2rem;
+    margin-top: 1.75rem;
+    transition: background 0.15s;
+}
+.ugc-btn:hover { background: #0075d6; }
+
+/* Fixed arrows — yellow circle, navy icon, no animation */
+#ugc-arrow,
+#ugc-arrow-up {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 300;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff500;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+#ugc-arrow:hover,
+#ugc-arrow-up:hover  { opacity: 0.8; }
+#ugc-arrow.hidden,
+#ugc-arrow-up.hidden { opacity: 0; pointer-events: none; }
+
+#ugc-arrow     { bottom: 1.5rem; }
+#ugc-arrow-up  { top: 1.5rem; }
+
+#ugc-arrow svg,
+#ugc-arrow-up svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--text-blue);
+}
+
+/* Progress dots */
+#ugc-dots {
+    position: fixed;
+    right: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 0.4rem;
+}
+.ugc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid rgba(2, 2, 130, 0.35);
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s;
+    flex-shrink: 0;
+}
+.ugc-dot.active {
+    background: var(--text-blue);
+    border-color: var(--text-blue);
+    transform: scale(1.5);
+}
+
+@media (min-width: 768px) {
+    .ugc-s     { padding: 4.5rem 4rem; }
+    .ugc-inner { max-width: 700px; }
+    #ugc-dots  { right: 1.25rem; }
+}
+@media (min-width: 1200px) {
+    .ugc-s     { padding: 4.5rem 6rem; }
+    .ugc-inner { max-width: 740px; }
 }

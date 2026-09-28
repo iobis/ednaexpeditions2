@@ -32,12 +32,12 @@ what_we_plan: |
 
 team:
   - name: "Valentina Islas-Villanueva"
-    role: "Scientific Lead"
+    role: "Scientific Lead / Professor at Universidad del Mar"
     image: /assets/images/sites/huatulco-national-park/team-1.jpeg
-  - name: "Team member"
-    role: "Role to be added"
+  - name: "Cecilia Chapa Balcorta"
+    role: "Oceanographic coordinator / Professor at Universidad del Mar"
     image: /assets/images/sites/huatulco-national-park/team-2.jpeg
-  - name: "Team member"
-    role: "Role to be added"
+  - name: "Eduardo Chávez Ramírez"
+    role: "Sampling coordinator / Professor at Universidad del Mar"
     image: /assets/images/sites/huatulco-national-park/team-3.jpeg
 ---

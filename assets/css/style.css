@@ -1954,8 +1954,8 @@ input {
     padding: 0.4rem;
 }
 .ugc-dot {
-    width: 7px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: transparent;
     border: 1.5px solid rgba(2, 2, 130, 0.35);

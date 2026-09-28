@@ -10,7 +10,7 @@ hero_wallpaper: true
 
 <div class="container-fluid">
 
-    <div class="row row-mid pb-4">
+    <div class="row row-mid pb-2 hero-section">
         <div class="container hero-inner">
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -25,34 +25,44 @@ hero_wallpaper: true
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="row row-mid pt-5 pb-5 dashboard-section" id="dashboard">
-        <div class="container container-wide">
-            <div class="dashboard-grid">
-                {% for stat in site.data.dashboard_stats.stats %}
-                <div class="dashboard-card">
-                    <i class="fa-solid {{ stat.icon }} dashboard-card__icon" aria-hidden="true"></i>
-                    <div class="dashboard-card__label">{{ stat.label }}</div>
-                    <div class="dashboard-card__number">{{ stat.number }}</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <a href="#mission" class="dashboard-arrow" aria-label="Scroll to next section">
+        <a href="#dashboard" class="dashboard-arrow" aria-label="Scroll to next section">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"/>
             </svg>
         </a>
     </div>
 
-    <div class="row row-light pt-6 pb-5" id="mission">
+    <div class="row row-light pt-6 pb-5 dashboard-section" id="dashboard">
+        <div class="container">
+            <h2>eDNA Expeditions 2026-2028 in numbers</h2>
+            <p>The numbers below give you an at-a-glance update on the progress of the eDNA Expeditions. You can have more detailed insights and see the progress for each site by choosing a location <a href="{{ '/participating-sites/' | relative_url }}">here</a>.</p>
+        </div>
+        <div class="container container-wide mt-4">
+            <div class="dashboard-grid">
+                {% for stat in site.data.dashboard_stats.stats %}
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid {{ stat.icon }} dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">{{ stat.label }}</div>
+                        <div class="dashboard-card__number">{{ stat.number }}</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">{{ stat.label }}</div>
+                        <p class="dashboard-card__description">{{ stat.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-mid pt-6 pb-5" id="mission">
         <div class="container">
             <h2>The project</h2>
             <p class="mission">We aim to establish a global biomolecular observatory for marine life, helping to better understand our Ocean.</p>
         </div>
     </div>
-    <div class="row row-light pt-4">
+    <div class="row row-mid pt-4">
         <div class="container container-wide">
             <div class="row">
                 <div class="col-md-6">
@@ -68,7 +78,7 @@ hero_wallpaper: true
             </div>
         </div>
     </div>
-    <div class="row row-mid pt-5 pb-5">
+    <div class="row row-light pt-5 pb-5">
         <div class="container container-wide">
             <div class="row">
                 <div class="col-md-6">
@@ -87,7 +97,7 @@ hero_wallpaper: true
         </div>
     </div>
 
-    <div class="row row-light pt-0 pb-6">
+    <div class="row row-mid pt-5 pb-6">
         <div class="container container-wide">
             <div class="row align-items-start">
                 <div class="col-md-6">
@@ -105,12 +115,12 @@ hero_wallpaper: true
         </div>
     </div>
 
-    <div class="row row-mid pt-6 pb-3">
+    <div class="row row-light pt-6 pb-3">
         <div class="container">
             <h2>What the project delivers</h2>
         </div>
     </div>
-    <div class="row row-mid pt-4 pb-5">
+    <div class="row row-light pt-4 pb-5">
         <div class="container">
             <div class="row py-4">
                 <div class="col-12 col-md-6">
@@ -141,12 +151,12 @@ hero_wallpaper: true
         </div>
     </div>
 
-        <div class="row row-light pt-5 pb-4">
+        <div class="row row-mid pt-5 pb-4">
         <div class="container">
             <h2>Timeline</h2>
         </div>
     </div>
-    <div class="row row-light pt-4 pb-5">
+    <div class="row row-mid pt-4 pb-5">
         <div class="container container-wide timeline-section">
             <div class="timeline">
                 <div class="timeline-item is-active">

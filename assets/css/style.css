@@ -560,8 +560,13 @@ button {
 }
 
 .hero-inner {
-    padding-top: 70px;
-    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+.hero-inner img.img-fluid {
+    max-height: 340px;
+    object-fit: cover;
 }
 
 .home-hero-title {
@@ -1981,30 +1986,66 @@ input {
 }
 
 /* Home dashboard stats */
+.hero-section,
 .dashboard-section {
     position: relative;
 }
 
 .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
 }
 
+.dashboard-card {
+    position: relative;
+    flex: 1 1 100%;
+    background: var(--bg-mid);
+    border-radius: 0.75rem;
+    text-align: center;
+    color: var(--text-blue);
+    transition: background 0.2s, color 0.2s;
+}
+
 @media (min-width: 576px) {
-    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+    .dashboard-card { flex: 0 1 calc(50% - 0.75rem); }
 }
 
 @media (min-width: 992px) {
-    .dashboard-grid { grid-template-columns: repeat(4, 1fr); }
+    .dashboard-card { flex: 0 1 calc(50% - 0.75rem); }
 }
 
-.dashboard-card {
-    background: #ffffff;
-    border-radius: 0.75rem;
+.dashboard-card:hover {
+    background: var(--bg-dark);
+    color: #ffffff;
+}
+
+.dashboard-card__face,
+.dashboard-card__back {
     padding: 2rem 1.5rem;
-    text-align: center;
-    color: var(--text-blue);
+    transition: opacity 0.2s;
+}
+
+.dashboard-card__back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dashboard-card:hover .dashboard-card__face {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dashboard-card:hover .dashboard-card__back {
+    opacity: 1;
+    visibility: visible;
 }
 
 .dashboard-card__icon {
@@ -2023,15 +2064,29 @@ input {
     line-height: 1;
 }
 
+.dashboard-card__title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card__description {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
 .dashboard-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
     width: 48px;
     height: 48px;
     border-radius: 50%;
     background: var(--highlight-yellow);
-    margin: 2.5rem auto 0;
+    z-index: 10;
     transition: opacity 0.15s;
 }
 

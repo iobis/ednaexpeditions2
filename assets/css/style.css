@@ -2085,6 +2085,50 @@ input {
     margin: 0;
 }
 
+@media (max-width: 575.98px) {
+    .dashboard-card {
+        aspect-ratio: 4 / 3;
+    }
+
+    .dashboard-card__face {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .dashboard-card__icon {
+        font-size: 3.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-card__label {
+        font-size: 1.38rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .dashboard-card__number {
+        font-size: 3.9rem;
+    }
+
+    .dashboard-card__back {
+        padding: 1.75rem;
+        justify-content: center;
+    }
+
+    .dashboard-card__title {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .dashboard-card__description {
+        font-size: 0.84rem;
+        line-height: 1.35;
+    }
+}
+
 .dashboard-arrow {
     display: flex;
     align-items: center;

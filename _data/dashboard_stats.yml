@@ -1,0 +1,37 @@
+stats:
+  - label: "Active sites"
+    number: "10"
+    icon: "fa-map-location-dot"
+    description: "Marine sites currently participating in eDNA Expeditions 2026-2028."
+  - label: "Science plans"
+    number: "23"
+    icon: "fa-file-signature"
+    description: "The science plans are site-specific assets co-developed with local teams to guide sampling priorities, establish monitoring goals, and ensure that the generated data will effectively create impact."
+  - label: "Training sessions"
+    number: "34"
+    icon: "fa-chalkboard-user"
+    description: "These sessions guide local teams on how the data generated will inform local conservation actions and provide them with the skills needed to collect eDNA samples following the project's protocol."
+  - label: "Sampling participants"
+    number: "53"
+    icon: "fa-people-group"
+    description: "Scientists, rangers, students, and community members who have taken part in eDNA sampling events so far."
+  - label: "Samples collected"
+    number: "208"
+    icon: "fa-flask-vial"
+    description: "Seawater samples collected across all participating sites since the project's sampling campaigns began."
+  - spacer: true
+    width: "17.5%"
+  - label: "Species detected"
+    number: "1,610"
+    icon: "fa-fish"
+    description: "Distinct marine species detected so far through the biomolecular analysis of eDNA samples."
+    wide: true
+  - spacer: true
+    width: "15%"
+  - label: "Sequences generated"
+    number: "58,798,658"
+    icon: "fa-dna"
+    description: "DNA sequences generated from the analysis of collected samples."
+    wide: true
+  - spacer: true
+    width: "17.5%"

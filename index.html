@@ -81,6 +81,9 @@
             <a class="nav-link" href="/participating-sites">Sites</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="https://platform.ednaexpeditions.org/login/" target="_blank" rel="noopener noreferrer">Data portal</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="/news-stories">News & stories</a>
         </li>
         <li class="nav-item">
@@ -117,7 +120,7 @@
 
 <div class="container-fluid">
 
-    <div class="row row-mid pb-4">
+    <div class="row row-mid pb-2 hero-section">
         <div class="container hero-inner">
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -132,15 +135,139 @@
                 </div>
             </div>
         </div>
+        <a href="#dashboard" class="dashboard-arrow" aria-label="Scroll to next section">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+            </svg>
+        </a>
     </div>
 
-    <div class="row row-light pt-6 pb-5" id="mission">
+    <div class="row row-light pt-6 pb-5 dashboard-section" id="dashboard">
+        <div class="container">
+            <h2 class="mb-4">eDNA Expeditions 2026-2028 in numbers</h2>
+            <p>The numbers below give you an at-a-glance update on the progress of the eDNA Expeditions. You can have more detailed insights and see the progress for each site by choosing a location <a href="/participating-sites/">here</a>.</p>
+        </div>
+        <!-- Version 1: cards with background, 3 per row. -->
+        <div class="container container-wide mt-4">
+            <div class="dashboard-grid">
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-map-location-dot dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Active sites</div>
+                        <div class="dashboard-card__number">10</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Active sites</div>
+                        <p class="dashboard-card__description">Marine sites currently participating in eDNA Expeditions 2026-2028.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-file-signature dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Science plans</div>
+                        <div class="dashboard-card__number">23</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Science plans</div>
+                        <p class="dashboard-card__description">The science plans are site-specific assets co-developed with local teams to guide sampling priorities, establish monitoring goals, and ensure that the generated data will effectively create impact.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-chalkboard-user dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Training sessions</div>
+                        <div class="dashboard-card__number">34</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Training sessions</div>
+                        <p class="dashboard-card__description">These sessions guide local teams on how the data generated will inform local conservation actions and provide them with the skills needed to collect eDNA samples following the project's protocol.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-people-group dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Sampling participants</div>
+                        <div class="dashboard-card__number">53</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Sampling participants</div>
+                        <p class="dashboard-card__description">Scientists, rangers, students, and community members who have taken part in eDNA sampling events so far.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-flask-vial dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Samples collected</div>
+                        <div class="dashboard-card__number">208</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Samples collected</div>
+                        <p class="dashboard-card__description">Seawater samples collected across all participating sites since the project's sampling campaigns began.</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-fish dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Species detected</div>
+                        <div class="dashboard-card__number">1,610</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Species detected</div>
+                        <p class="dashboard-card__description">Distinct marine species detected so far through the biomolecular analysis of eDNA samples.</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-card__face">
+                        <i class="fa-solid fa-dna dashboard-card__icon" aria-hidden="true"></i>
+                        <div class="dashboard-card__label">Sequences generated</div>
+                        <div class="dashboard-card__number">58,798,658</div>
+                    </div>
+                    <div class="dashboard-card__back">
+                        <div class="dashboard-card__title">Sequences generated</div>
+                        <p class="dashboard-card__description">DNA sequences generated from the analysis of collected samples.</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="row row-mid pt-6 pb-5" id="mission">
         <div class="container">
             <h2>The project</h2>
             <p class="mission">We aim to establish a global biomolecular observatory for marine life, helping to better understand our Ocean.</p>
         </div>
     </div>
-    <div class="row row-light pt-4">
+    <div class="row row-mid pt-4">
         <div class="container container-wide">
             <div class="row">
                 <div class="col-md-6">
@@ -175,7 +302,7 @@
         </div>
     </div>
 
-    <div class="row row-light pt-0 pb-6">
+    <div class="row row-mid pt-5 pb-6">
         <div class="container container-wide">
             <div class="row align-items-start">
                 <div class="col-md-6">
@@ -193,12 +320,12 @@
         </div>
     </div>
 
-    <div class="row row-mid pt-6 pb-3">
+    <div class="row row-light pt-6 pb-3">
         <div class="container">
             <h2>What the project delivers</h2>
         </div>
     </div>
-    <div class="row row-mid pt-4 pb-5">
+    <div class="row row-light pt-4 pb-5">
         <div class="container">
             <div class="row py-4">
                 <div class="col-12 col-md-6">
@@ -229,12 +356,12 @@
         </div>
     </div>
 
-        <div class="row row-light pt-5 pb-4">
+        <div class="row row-mid pt-5 pb-4">
         <div class="container">
             <h2>Timeline</h2>
         </div>
     </div>
-    <div class="row row-light pt-4 pb-5">
+    <div class="row row-mid pt-4 pb-5">
         <div class="container container-wide timeline-section">
             <div class="timeline">
                 <div class="timeline-item is-active">

@@ -37,9 +37,11 @@ hero_wallpaper: true
             <h2 class="mb-4">eDNA Expeditions 2026-2028 in numbers</h2>
             <p>The numbers below give you an at-a-glance update on the progress of the eDNA Expeditions. You can have more detailed insights and see the progress for each site by choosing a location <a href="{{ '/participating-sites/' | relative_url }}">here</a>.</p>
         </div>
+        <!-- Version 1: cards with background, 3 per row. -->
         <div class="container container-wide mt-4">
             <div class="dashboard-grid">
                 {% for stat in site.data.dashboard_stats.stats %}
+                {% unless stat.spacer %}
                 <div class="dashboard-card">
                     <div class="dashboard-card__face">
                         <i class="fa-solid {{ stat.icon }} dashboard-card__icon" aria-hidden="true"></i>
@@ -51,9 +53,35 @@ hero_wallpaper: true
                         <p class="dashboard-card__description">{{ stat.description }}</p>
                     </div>
                 </div>
+                {% endunless %}
                 {% endfor %}
             </div>
         </div>
+
+        {% comment %}
+        Version 2: card-less blocks, 5 per row, contiguous. Kept for reference.
+        <div class="container container-wide mt-2">
+            <div class="dashboard-blocks">
+                {% for stat in site.data.dashboard_stats.stats %}
+                {% if stat.spacer %}
+                <div class="dashboard-block dashboard-block--spacer" style="flex-basis: {{ stat.width }};" aria-hidden="true"></div>
+                {% else %}
+                <div class="dashboard-block{% if stat.wide %} dashboard-block--wide{% endif %}">
+                    <div class="dashboard-block__face">
+                        <i class="fa-solid {{ stat.icon }} dashboard-block__icon" aria-hidden="true"></i>
+                        <div class="dashboard-block__label">{{ stat.label }}</div>
+                        <div class="dashboard-block__number">{{ stat.number }}</div>
+                    </div>
+                    <div class="dashboard-block__back">
+                        <div class="dashboard-block__title">{{ stat.label }}</div>
+                        <p class="dashboard-block__description">{{ stat.description }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endcomment %}
     </div>
 
     <div class="row row-mid pt-6 pb-5" id="mission">

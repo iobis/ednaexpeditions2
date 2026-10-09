@@ -1,0 +1,109 @@
+{% comment %}
+  Project timeline for a site page. Driven by front matter:
+    timeline_start: "Feb 2025"          (date shown under "Science call & science plan")
+    timeline_end:   "Dec 2028"          (optional, defaults to Dec 2028)
+    timeline:                           (steps in chronological order)
+      - type: sampling | results | interpretation | outcome
+        label: "Test sampling"          (title for sampling and outcomes; optional note for other steps)
+        value: 187                      (outcomes only, optional big number)
+        date: "Apr 2025"
+        status: done | planned
+  "Underway" is not set by hand: it is the first non-outcome step that is not done.
+{% endcomment %}
+{% assign tl_underway = -1 %}
+{% for s in page.timeline %}
+  {% if s.type != 'outcome' and s.status != 'done' and tl_underway < 0 %}{% assign tl_underway = forloop.index0 %}{% endif %}
+{% endfor %}
+
+<section class="site-timeline">
+  <div class="tl-head">
+    <div class="tl-titles">
+      <h3>Where we are in the project</h3>
+      <p class="tl-hint" hidden>Use the arrows on the right to navigate the timeline</p>
+    </div>
+    <div class="tl-arrows" hidden>
+      <button type="button" class="tl-arrow tl-arrow--prev" aria-label="Earlier steps"><i class="fa-solid fa-chevron-left"></i></button>
+      <button type="button" class="tl-arrow tl-arrow--next" aria-label="Later steps"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+  <div class="tl-viewport">
+  <div class="tl-scroll" tabindex="0" role="region" aria-label="Project timeline, scrollable">
+  <ol class="tl-list">
+    <li class="tl-item tl-item--start tl-item--done">
+      <span class="tl-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></span>
+      <span class="tl-dot"></span>
+      <span class="tl-text"><b>Science plan done</b><span class="tl-date">{{ page.timeline_start }}</span></span>
+    </li>
+
+    {% for s in page.timeline %}
+      {% if s.status == 'done' %}{% assign tl_state = 'done' %}
+      {% elsif forloop.index0 == tl_underway %}{% assign tl_state = 'underway' %}
+      {% else %}{% assign tl_state = 'planned' %}{% endif %}
+      {% case s.type %}
+        {% when 'sampling' %}{% assign tl_icon = 'fa-droplet' %}{% assign tl_title = s.label | default: 'Sampling' %}
+        {% when 'results' %}{% assign tl_icon = 'fa-dna' %}{% assign tl_title = 'Results available' %}
+        {% when 'interpretation' %}{% assign tl_icon = 'fa-chart-line' %}{% assign tl_title = 'Interpretation' %}
+        {% else %}{% assign tl_icon = 'fa-lightbulb' %}{% assign tl_title = s.label %}
+      {% endcase %}
+    <li class="tl-item tl-item--{{ tl_state }} tl-item--{{ s.type | default: 'outcome' }}">
+      <span class="tl-icon" aria-hidden="true"><i class="fa-solid {{ tl_icon }}"></i></span>
+      <span class="tl-dot"></span>
+      <span class="tl-text">
+        <b>{% if s.value %}<span class="tl-value">{{ s.value }}</span> {% endif %}{{ tl_title }}</b>
+        {% if s.type != 'outcome' and s.type != 'sampling' and s.label %}<span class="tl-qualifier">{{ s.label }}</span>{% endif %}
+        {% if s.date %}<span class="tl-date">{{ s.date }}</span>{% endif %}
+        {% if tl_state == 'underway' %}<span class="tl-badge">Underway</span>{% endif %}
+      </span>
+    </li>
+    {% endfor %}
+
+    <li class="tl-item tl-item--end">
+      <span class="tl-icon" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></span>
+      <span class="tl-dot"></span>
+      <span class="tl-text"><b>Results implemented</b><span class="tl-date">{{ page.timeline_end | default: 'Dec 2028' }}</span></span>
+    </li>
+  </ol>
+  </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var view = document.querySelector('.tl-viewport');
+  if (!view) return;
+  var scroller = view.querySelector('.tl-scroll');
+  var head = document.querySelector('.tl-arrows');
+  var hint = document.querySelector('.tl-hint');
+  var prev = head.querySelector('.tl-arrow--prev');
+  var next = head.querySelector('.tl-arrow--next');
+
+  function update() {
+    var max = scroller.scrollWidth - scroller.clientWidth;
+    var scrollable = max > 2;
+    head.hidden = hint.hidden = !scrollable;
+    prev.disabled = scroller.scrollLeft <= 2;
+    next.disabled = scroller.scrollLeft >= max - 2;
+    view.classList.toggle('can-scroll-left', !prev.disabled);
+    view.classList.toggle('can-scroll-right', !next.disabled);
+  }
+
+  function step(dir) {
+    scroller.scrollBy({ left: dir * scroller.clientWidth * 0.8, behavior: 'smooth' });
+  }
+  prev.addEventListener('click', function () { step(-1); });
+  next.addEventListener('click', function () { step(1); });
+  scroller.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+
+  // open on the step that is underway (or the last finished one)
+  var focus = scroller.querySelector('.tl-item--underway');
+  if (!focus) {
+    var done = scroller.querySelectorAll('.tl-item--done');
+    focus = done[done.length - 1];
+  }
+  if (focus && scroller.scrollWidth > scroller.clientWidth) {
+    scroller.scrollLeft = focus.offsetLeft - (scroller.clientWidth - focus.offsetWidth) / 2;
+  }
+  update();
+}());
+</script>

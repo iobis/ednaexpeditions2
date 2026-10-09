@@ -16,7 +16,7 @@ navbar_class: row-light
     </div>
   </div>
 
-  <div class="row row-light{% unless page.show_stats %} pb-5{% endunless %}">
+  <div class="row row-light{% if page.timeline or page.show_stats == nil %} pb-5{% endif %}">
     <div class="container container-wide">
       {% if page.gallery %}
         {% assign gallery_size = page.gallery | size %}
@@ -46,6 +46,14 @@ navbar_class: row-light
       {% endif %}
     </div>
   </div>
+
+  {% if page.timeline %}
+  <div class="row row-light{% unless page.show_stats %} pb-5{% endunless %}">
+    <div class="container container-wide">
+      {% include site-timeline.html %}
+    </div>
+  </div>
+  {% endif %}
 
   {% if page.show_stats %}
   <div class="row row-light pt-5 pb-5">

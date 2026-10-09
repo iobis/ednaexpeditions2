@@ -22,6 +22,116 @@ map_zoom: 5
 
 contact_email: info@sif.sc
 
+# Project timeline. PLACEHOLDER dates and values, to be replaced with real ones.
+timeline_start: "Feb 2025"
+timeline:
+  - type: sampling
+    label: "Test sampling"
+    date: "Apr 2025"
+    status: done
+  - type: results
+    date: "Jun 2025"
+    status: done
+  - type: outcome
+    label: "Biodiversity baseline established"
+    date: "Jul 2025"
+    status: done
+  - type: sampling
+    label: "Community sampling"
+    date: "Aug 2025"
+    status: done
+  - type: results
+    date: "Oct 2025"
+    status: done
+  - type: outcome
+    label: "species detected"
+    value: 187
+    date: "Nov 2025"
+    status: done
+  - type: sampling
+    label: "Kids sampling"
+    date: "Dec 2025"
+    status: done
+  - type: results
+    date: "Feb 2026"
+    status: done
+  - type: outcome
+    label: "Cryptic species detected"
+    date: "Mar 2026"
+    status: done
+  - type: sampling
+    label: "Summer sampling"
+    date: "Apr 2026"
+    status: done
+  - type: results
+    date: "Jun 2026"
+    status: done
+  - type: outcome
+    label: "species detected"
+    value: 231
+    date: "Jul 2026"
+    status: done
+  - type: sampling
+    label: "Winter sampling"
+    date: "Aug 2026"
+    status: done
+  - type: results
+    date: "Oct 2026"
+    status: planned
+  - type: outcome
+    label: "Threatened species detected"
+    date: "Nov 2026"
+    status: planned
+  - type: sampling
+    label: "Wet season sampling"
+    date: "Dec 2026"
+    status: planned
+  - type: results
+    date: "Feb 2027"
+    status: planned
+  - type: outcome
+    label: "species detected"
+    value: 264
+    date: "Mar 2027"
+    status: planned
+  - type: sampling
+    label: "Dry season sampling"
+    date: "Apr 2027"
+    status: planned
+  - type: results
+    date: "Jun 2027"
+    status: planned
+  - type: outcome
+    label: "Invasive species detected"
+    date: "Jul 2027"
+    status: planned
+  - type: sampling
+    label: "Follow-up sampling 1"
+    date: "Aug 2027"
+    status: planned
+  - type: results
+    date: "Oct 2027"
+    status: planned
+  - type: outcome
+    label: "species detected"
+    value: 290
+    date: "Nov 2027"
+    status: planned
+  - type: sampling
+    label: "Follow-up sampling 2"
+    date: "Dec 2027"
+    status: planned
+  - type: results
+    date: "Feb 2028"
+    status: planned
+  - type: outcome
+    label: "Final species inventory complete"
+    date: "Mar 2028"
+    status: planned
+  - type: interpretation
+    date: "Jun 2028"
+    status: planned
+
 about_site: |
   Aldabra Atoll is the second-largest in the world and the biggest of the Seychelles Islands. The atoll lies more than 1000 km southwest of Mahé in the Western Indian Ocean. It consists of 46 islands representing 155 km² of land. Its geographical remoteness and high level of endemism maintain it as a prehistoric relic, as it remains relatively untouched by humans.
 

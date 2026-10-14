@@ -21,6 +21,25 @@ map_zoom: 5
 
 contact_email: jenifferteles94@gmail.com
 
+at_stake: |
+  The largest and best-preserved coastal system in Brazil, this UNESCO biosphere reserve within the Atlantic Forest stretches more than 100 kilometres and holds the largest mangrove in São Paulo State. A living mosaic of beaches, rivers, islands and mangroves where fresh water meets the sea, it sustains estuarine dolphins, red-tailed parrots and sea turtles amid tides and salinity that shift by the hour. Despite decades of conservation, no molecular biodiversity survey has ever been carried out here.
+
+communities: |
+  Three traditional fishing and mussel-harvesting communities, including Prelado and Baía Una, shape the sampling through their knowledge of species, seasons and tides, with before-and-after surveys tracking how their view of local biodiversity changes. A local third-grade class joins through its teacher, supported by a local team spanning molecular ecology, water quality, genetics and State Park management.
+
+science_plan: |
+  **Main scientific question:** What is the baseline biodiversity across estuarine, mangrove and coastal habitats, how does it vary in space, time and with environmental gradients, and how does eDNA compare with conventional surveys?
+
+  **Localities sampled (4):** Prelado rocky shore (P1), Juréia Beach (P2), Ilha Comprida (P3), Mar Pequeno estuary (P4)
+
+  **Why there:** Spans a low-disturbance reference, an estuarine transition, a marine site with more tourism, and an urban estuary used for Blue Schools outreach
+
+  **Sampling dates:** Every 3–4 months: Jul–Aug, late Nov–early Dec, Feb, Apr–May
+
+  **Why then:** One campaign per season. Temperature, salinity, turbidity, freshwater input and pH are expected to drive community change. A forecast El Niño in late 2026 may alter crustacean communities, as seen in earlier events.
+
+site_quote: "Protecting this place means protecting both nature and people together."
+
 about_site: |
   The Cananéia–Iguape–Peruíbe Environmental Protection Area, located on the southern coast of São Paulo State, Brazil, is one of the most important coastal ecosystems in the country. This protected area encompasses a vast and highly connected estuarine–lagoon–coastal system, including extensive mangroves, estuaries, coastal waters, and strong influence from the Atlantic Forest, one of the most biodiverse and threatened biomes in the world.
 

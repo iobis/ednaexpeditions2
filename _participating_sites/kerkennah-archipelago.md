@@ -23,6 +23,14 @@ map_zoom: 5
 
 contact_email: amcp.kerkennah@gmail.com
 
+at_stake: |
+  Climate change and human pressures are eroding the Posidonia oceanica meadows that shield the Kerkennah Islands from coastal erosion and serve as a nursery for the species sustaining local communities. Establishing DNA-derived biodiversity baselines here would strengthen policy, support enforcement against illegal bottom trawling and reinforce the islands' sustainable fishing traditions.
+
+communities: |
+  Traditional Charfia fishers
+
+site_quote: "eDNA Expeditions will combine science with traditional knowledge, turning locals into fishermen-biologists protecting Kerkennah's Posidonia meadows."
+
 about_site: |
   The Kerkennah islands are located on the eastern coast of Tunisia, in the heart of the Mediterranean, surrounded by an assortment of shallow waters, sandy bottoms, rocky habitats and widespread seagrass meadows. Unlike much of the Mediterranean, the sea here is particularly shallow and calm, creating a very exceptional interface between land and water where traditional life still follows the rhythm of the tides, the moon and the seasons.
 

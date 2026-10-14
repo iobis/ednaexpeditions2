@@ -22,6 +22,14 @@ map_zoom: 5
 
 contact_email: s.wambua@pu.ac.ke
 
+at_stake: |
+  A biosphere reserve on Kenya's north coast, MWAS links two marine protected areas with the ancient Arabuko Sokoke forest in a mosaic of coral reefs, lagoons, seagrass beds, rocky shores and mangrove creeks. It shelters threatened reef fish, vital nursery habitat and one of East Africa's most diverse mangrove systems, all along major cetacean migration routes. The seascape is increasingly exposed to marine heatwaves, coral bleaching, sedimentation and pollution.
+
+communities: |
+  Citizen scientists from Beach Management Units, youth groups and community conservation teams
+
+site_quote: "We will build a community-led eDNA 'sentinel' programme to monitor biodiversity across the Malindi-Watamu-Arabuko Sokoke seascape and rapidly share decision-ready results with managers and OBIS."
+
 about_site: |
   The Malindi–Watamu–Arabuko Sokoke Biosphere Reserve lies on Kenya's north coast around Malindi and Watamu, linking two marine protected areas with the ancient Arabuko Sokoke coastal forest. It is an exceptional mosaic of coral reefs, reef-protected lagoons, seagrass beds, rocky shore habitats and mangrove creeks, alongside one of East Africa's most important remaining tracts of coastal forest.
 

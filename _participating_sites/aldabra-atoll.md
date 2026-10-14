@@ -22,6 +22,17 @@ map_zoom: 5
 
 contact_email: info@sif.sc
 
+at_stake: |
+  The second largest atoll in the world, Aldabra is a near-pristine, prehistoric relic whose remoteness and high endemism earned it UNESCO World Heritage status in 1982. It holds the largest Red-footed booby population in the Indian Ocean and the only known breeding habitat of the remaining Seychelles dugong. Yet after decades of research, the genetic richness of its native and endemic marine species remains unexplored.
+
+communities: |
+  Schoolchildren from neighbouring communities, who already took part in sampling events during the pilot phase of the project.
+
+science_plan: |
+  The science plan is still being finalised. Sampling is currently being considered at two intertidal locations and two mangrove locations.
+
+site_quote: "The eDNA expedition will provide valuable data for understanding species distribution across ecosystems and seasons, improving the management and conservation of Aldabra Atoll."
+
 about_site: |
   Aldabra Atoll is the second-largest in the world and the biggest of the Seychelles Islands. The atoll lies more than 1000 km southwest of Mahé in the Western Indian Ocean. It consists of 46 islands representing 155 km² of land. Its geographical remoteness and high level of endemism maintain it as a prehistoric relic, as it remains relatively untouched by humans.
 

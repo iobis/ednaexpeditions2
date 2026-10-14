@@ -22,6 +22,14 @@ map_zoom: 5
 
 contact_email: edna@ioc-unesco.org
 
+at_stake: |
+  A biological stepping stone in the Eastern Tropical Pacific corridor between the Galápagos, Coco Island and Revillagigedo, Gorgona is one of Colombia's most biodiverse marine zones and also one of its least observed. Past civil unrest left biodiversity records fluctuating and incomplete, making this stretch of the Coastal Pacific a true data desert waiting to be filled.
+
+communities: |
+  Guapi fisherwomen and fishermen, with local schools joining and receiving species booklets.
+
+site_quote: "Protecting biodiversity at Gorgona will have an impact on species up to the Galapagos, the Coco Islands and beyond."
+
 about_site: |
   From 1960 to 1984, Gorgona was a maximum-security prison, an island so remote that its currents and sharks were considered escape enough. When the prison closed in 1984, the island was returned to nature and became a national park.
 

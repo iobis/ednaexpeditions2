@@ -21,6 +21,25 @@ map_zoom: 5
 
 contact_email: stefaniaklayn@yahoo.com
 
+at_stake: |
+  One of the largest marine protected areas in the Bulgarian Black Sea and part of the Natura 2000 network, Ropotamo combines rocky reefs, brown macroalgal forests, black mussel beds, soft sediments and seagrass meadows. Shielded by an adjoining strict nature reserve, it harbours many rare and vulnerable species and offers a glimpse of the Black Sea in its most natural state, though summer tourism and fishing bring mounting pressure.
+
+communities: |
+  Schoolchildren from Sozopol and the LessPlastic initiative, with a sampling coordinator dedicated to community engagement in the site team.
+
+science_plan: |
+  **Main scientific question:** What is the current biodiversity of the protected coastal habitats compared with historical data, can eDNA give early warning of non-indigenous species, and how do commercial species use these nursery habitats?
+
+  **Localities sampled (3):** Arkutino (sandy beach), Ropotamo-seagrass, Ropotamo-brown algae (rocky reef)
+
+  **Why there:** One site per key protected habitat, all at 3–5 m depth and typical of the Bulgarian Black Sea coast
+
+  **Sampling dates:** Feb–Mar, Jun–Jul, Sep–Oct
+
+  **Why then:** Seasonal patterns here are poorly known, so this is exploratory. February–March is just before the spring plankton bloom, June–July is peak recruitment and faunal activity, and September–October is the second recruitment pulse. Commercial fish also move inshore in spring and autumn.
+
+site_quote: "Regular eDNA surveys will enrich our knowledge of coastal ecology and strengthen the case for strict protection of this site under the EU Biodiversity Strategy 2030."
+
 about_site: |
   Ropotamo is one of the largest marine protected areas in the Bulgarian Black Sea – part of the country's Natura 2000 ecological network. The site hosts very diverse coastal habitats and communities: rocky reefs with brown macroalgal forests and black mussels, soft sediments, seagrass meadows, and is home to many rare and vulnerable marine species – from invertebrates to fish, marine mammals and birds.
 

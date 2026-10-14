@@ -1330,6 +1330,79 @@ button {
     margin-bottom: 2em;
 }
 
+.site-facts {
+    padding: 0;
+}
+
+.site-fact {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.site-fact:first-child {
+    padding-top: 0;
+}
+
+.site-fact + .site-fact {
+    border-top: 1px solid rgba(2, 2, 131, 0.3);
+}
+
+.site-fact h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--bg-light);
+    justify-self: start;
+    align-self: start;
+    background: var(--bg-dark);
+    padding: 0 0.3rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.site-fact-body p {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.site-fact-body p:last-child {
+    margin-bottom: 0;
+}
+
+.site-quote {
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 65ch;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    font-style: normal;
+    color: var(--text-blue);
+}
+
+.site-quote::before,
+.site-quote::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 10px;
+    background-color: var(--text-blue);
+}
+
+.site-quote::before {
+    margin-bottom: 1.5rem;
+}
+
+.site-quote::after {
+    margin-top: 1.5rem;
+}
+
 .site-copy-block + .site-copy-block {
     margin-top: 3rem;
 }
@@ -1484,6 +1557,25 @@ button {
     .site-copy-block p {
         max-width: none;
     }
+
+    .site-fact {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    /* Single column: map first, then the three fact blocks, then the rest */
+    .site-main-content,
+    .site-sidebar {
+        display: contents;
+    }
+
+    .site-map-card { order: 1; }
+    .site-facts { order: 2; }
+    .site-copy-block--about { order: 3; }
+    .site-quote { order: 4; }
+    .site-copy-block--plan { order: 5; }
+    .site-team-card { order: 6; }
+    .site-contact-card { order: 7; }
 }
 
 .edna-footer{

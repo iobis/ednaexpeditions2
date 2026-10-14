@@ -22,6 +22,14 @@ map_zoom: 5
 
 contact_email: info@ammco.org
 
+at_stake: |
+  Established in 2021 on Cameroon's south-eastern coast, this marine and coastal park stretches 44 kilometres across more than 110,000 hectares of territorial waters. Interconnected mangroves, estuaries, turtle nesting beaches, seagrass beds and reefs support marine megafauna, including humpback and sperm whales, the critically endangered Atlantic humpback dolphin and the African manatee, along with some forty shark and ray species. Its biodiversity baselines remain largely undocumented.
+
+communities: |
+  Local fishers and community members, already active in ecological surveys, invasive species management and ecotourism, lead sample collection and field support, with field and community engagement officers in the AMMCO-led team and capacity-building for long-term scientific autonomy in the park.
+
+site_quote: "eDNA Expeditions will help us establish baseline biodiversity data for long-term monitoring in a data-poor, recently established marine protected area."
+
 about_site: |
   The Manyangue na Elombo-Campo Marine Park is a marine and coastal protected area established in 2021, located on the southeast coast of Cameroon. It stretches 44 km and occupies 110,300 ha of territorial waters contiguous to the maritime border of Equatorial Guinea. The park's diverse and interconnected ecosystems include coastal mangroves, estuaries, sea turtle nesting beaches, seagrass beds, rocky reefs, and kelp forests. Together, they support rich biodiversity and provide essential ecosystem services such as coastal protection for surrounding indigenous communities.
 

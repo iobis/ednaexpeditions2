@@ -21,6 +21,25 @@ map_zoom: 5
 
 contact_email: sharonrose.tabugo@g.msuiit.edu.ph
 
+at_stake: |
+  Set in Mindanao in the southern Philippines, Iligan Bay and Camiguin Island lie in a region of exceptional marine biodiversity, home to seven of the world's nine giant clam species, sea turtles, seahorses and passing whale sharks. Long overlooked by both science and tourism, the area remains largely accessible yet little explored, and decades of under-observation have left its rich marine biodiversity unmonitored.
+
+communities: |
+  The Bantay Dagat ("sea wardens"), a brigade of over 50 volunteers, mostly former fishers who patrol and monitor the area
+
+science_plan: |
+  **Main scientific question:** How does species composition differ between the Amihan and Habagat monsoons, and can eDNA detect conservation-concern and invasive species and identify biodiversity hotspots for fisheries and Blue Economy planning?
+
+  **Localities sampled (4 named; text says six):** Dalipuga and Buru-un sanctuaries (Iligan Bay); Sunken Cemetery MPA and Giant Clam Sanctuary (Camiguin)
+
+  **Why there:** Protected sanctuaries with reefs and seagrass, under varying levels of human influence
+
+  **Sampling dates:** Jan–Mar (Amihan) and Jul–Sep (Habagat)
+
+  **Why then:** The two monsoons bring different rainfall, currents and freshwater input. They expect different species composition and eDNA detection rates between them. Habagat also brings rougher seas and typhoon delays.
+
+site_quote: "Mindanao is a hidden biodiversity gem, full of charismatic marine species. eDNA will help us map them, give hope to future generations, and show them what we need to protect."
+
 about_site: |
   The study encompasses selected sites in Iligan Bay and in Camiguin Island (Sunken Cemetery in Catarman, and the Giant Clam Sanctuary in Guinsiliban). These areas represent ecologically important coastal and marine ecosystems in Northern Mindanao that support rich biodiversity and provide essential ecosystem services for fisheries, tourism, coastal protection, and local livelihoods.
 

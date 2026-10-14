@@ -24,6 +24,25 @@ map_zoom: 5
 
 contact_email: gestion@peninsulavaldes.org.ar
 
+at_stake: |
+  A UNESCO World Heritage Site, Biosphere Reserve and Ramsar Site on the Patagonian coast, Península Valdés is a coastal, marine and terrestrial protected area of exceptional value, recognized internationally for its shorebirds and bird life. Across its full ecosystem, from large marine mammals and fish to invertebrates and microorganisms, marine biodiversity still lacks a long-term time series.
+
+communities: |
+  Local coastal stakeholders engaged, coordinated by a dedicated community engagement lead in the site team, taking part through education and non-invasive, low-impact techniques, with CESIMAR-CONICET scientists.
+
+science_plan: |
+  **Main scientific question:** How does eDNA-detected biodiversity vary across habitats, seasons and years, and can it detect rare, cryptic, migratory or threatened species and early signals of climate or human-driven change?
+
+  **Localities sampled (4):** Doradillo, Riacho, Caleta Valdés, San Lorenzo
+
+  **Why there:** Stratified to cover the main habitat types, environmental gradients, conservation priorities and levels of human influence
+
+  **Sampling dates:** July, October, January, April, 2026–2028
+
+  **Why then:** One campaign per season. Southern right whales arrive in early austral autumn and leave in late spring, and migratory seabirds pass through, so species composition should shift through the year.
+
+site_quote: "Getting the genetic fingerprint of the ocean will help us to protect the natural wealth of Península Valdés."
+
 about_site: |
   In recognition of its exceptional values, Península Valdés has received major international, regional and national designations, including “Natural World Heritage” and “Biosphere Reserve” by UNESCO, “RAMSAR Site” under the Convention on Wetlands, a Site of Regional Importance within the Western Hemisphere Shorebird Reserve Network (WHSRN), and an Important Bird Area by BirdLife International.
 

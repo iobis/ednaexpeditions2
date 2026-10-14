@@ -21,6 +21,25 @@ map_zoom: 5
 
 contact_email: edna@ioc-unesco.org
 
+at_stake: |
+  A World Natural Heritage adjacent area in the subtropical north-western Pacific, northern Okinawa combines coral reefs, rocky shores and sandy beaches with offshore humpback whale habitat and sea turtle nesting. Drawing some three million visitors a year, it is a place where tourism coexists with well-preserved nature and a culture historically shaped by skipjack fishing, offering valuable reference data for island coastal ecosystems across the region.
+
+communities: |
+  Local educational institutions engage through an Education Consortium, supported by the Urashima Laboratory and community groups across the area, with a dedicated community engagement lead in the site team.
+
+science_plan: |
+  **Main scientific question:** Does fish species composition differ among coral reef, sandy beach and urban-adjacent rocky shore habitats?
+
+  **Localities sampled (3):** Sesoko (beach), Bise (coral reef), Yamakawa (rocky shore in a populated area)
+
+  **Why there:** One per habitat type, to test whether fish communities differ between them
+
+  **Sampling dates:** June–July (typhoons may cancel)
+
+  **Why then:** Early summer is the peak of biological activity: Mizun fish school nearshore, Acropora coral spawns, and hermit and coconut crabs release juveniles. They want to compare this with less active seasons, but only the June–July window is specified.
+
+site_quote: "The three-year surveys will support documenting changes in the richness and distribution of tropical fishes at Motobu Reef, and help us better understand the impacts of ocean warming on local coastal ecosystems."
+
 about_site: |
   Motobu is located in the northern part of Okinawa Island in the subtropical northwestern Pacific and has a variety of coastal environments including coral reefs, rocky shores, and sandy beaches. Offshore waters serve as seasonal habitat for migrating humpback whales during winter, while well-developed coral reefs occur along the coast and sea turtles nest on sandy beaches. These conditions provide opportunities to observe diverse marine species.
 

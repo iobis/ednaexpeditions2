@@ -78,12 +78,39 @@ navbar_class: row-light
       <div class="site-main-grid">
 
         <div class="site-main-content">
-          <section class="site-copy-block">
+          {% if page.at_stake or page.communities or page.science_plan %}
+          <div class="site-facts">
+            {% if page.at_stake %}
+            <section class="site-fact">
+              <h3>What's at stake?</h3>
+              <div class="site-fact-body">{{ page.at_stake | markdownify }}</div>
+            </section>
+            {% endif %}
+            {% if page.communities %}
+            <section class="site-fact">
+              <h3>Communities involved</h3>
+              <div class="site-fact-body">{{ page.communities | markdownify }}</div>
+            </section>
+            {% endif %}
+            {% if page.science_plan %}
+            <section class="site-fact">
+              <h3>Science plan summary</h3>
+              <div class="site-fact-body">{{ page.science_plan | markdownify }}</div>
+            </section>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          <section class="site-copy-block site-copy-block--about">
             <h3>About our site</h3>
             {{ page.about_site | markdownify }}
           </section>
 
-          <section class="site-copy-block">
+          {% if page.site_quote %}
+          <blockquote class="site-quote">{{ page.site_quote }}</blockquote>
+          {% endif %}
+
+          <section class="site-copy-block site-copy-block--plan">
             <h3>What we plan to achieve</h3>
             {{ page.what_we_plan | markdownify }}
           </section>

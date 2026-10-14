@@ -19,6 +19,25 @@ map_lon: 14.41
 map_zoom: 5
 
 
+at_stake: |
+  Home to one of the world's strongest tidal currents, Saltstraumen forces immense volumes of seawater through a narrow strait every six hours, driving whirlpools and deep mixing that build hard-bottom habitats for anemones, sponges and soft corals. The 2013 marine protected area safeguards only the seabed, leaving fishing, aquaculture, mining and hydropower to add pressure. Sitting near the Arctic transition, the site is acutely sensitive to polar warming.
+
+communities: |
+  Residents of Bodø municipality and local schoolchildren, with a connection to documenting species of traditional importance to the Sami, the Indigenous people of northern Europe.
+
+science_plan: |
+  **Main scientific question:** What eDNA signals flow through the tidal current at different tidal phases and seasons (local vs regional diversity), and what does this say about harvested, invasive and threatened species?
+
+  **Localities sampled (2):** Nord&Ne jetty and Oksbåsen, on opposite sides of the channel
+
+  **Why there:** Both lie inside the tidal channel; Oksbåsen is an upwelling area, so it should give more benthic signal
+
+  **Sampling dates:** Year-round, at incoming and turning tide about 3 hours apart, 6 replicates per location
+
+  **Why then:** At 67°N, light ranges from a month of polar night to midnight sun, so they suspect strong seasonality in biodiversity. Tidal timing is there to separate local from regional diversity, not seasonal change.
+
+site_quote: "By comparing biodiversity inside and outside the marine protected area, we aim to understand the benefits of its protection and to advocate for tighter restrictions."
+
 about_site: |
   Saltstraumen in northern Norway is one of the world’s strongest tidal currents. Every six hours, immense volumes of seawater surge through a narrow strait connecting two fjords. This powerful flow creates massive whirlpools and drives intense deep-water mixing, which prevents sediment buildup and facilitates the formation of hard-bottom habitats that host unique communities of sea anemones, sponges and soft corals.
 

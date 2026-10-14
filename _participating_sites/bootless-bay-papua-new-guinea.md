@@ -20,6 +20,14 @@ map_zoom: 5
 map_label_direction: "bottom"
 
 
+at_stake: |
+  Ringed entirely by mangrove coastline and sheltered by barrier and fringing reefs, Bootless Bay forms a uniquely productive shallow ecosystem on which three to four coastal villages depend for their primary source of protein. Over the past decade, encroaching settlements have accelerated mangrove loss and tuna numbers are visibly falling. The bay is locally protected but not enforced, and no biodiversity baseline exists to define what is being safeguarded or to track its change.
+
+communities: |
+  Three coastal villages take part, with schoolchildren as the main entry point, so sampling skills pass down to the village. University of Papua New Guinea students train in eDNA alongside villagers, in active collaboration with PNG CEPA and local researchers, grounded in a relational ethic central to acceptance of the results.
+
+site_quote: "We do not know the full richness of our waters. eDNA will give us in-depth information we need, to protect what we have."
+
 about_site: |
   Bootless Bay is a marine managed area located 15 km south east of Papua New Guinea’s capital, Port Moresby. Ecosystems in Bootless Bay include mangroves, seagrass beds, fringing reefs, reef flats, barrier reefs, estuaries and lagoons, sandy and muddy shelves, and neritic and oceanic pelagic zones. The coast and islands are composed of savannah and monsoon woodland vegetation.
 

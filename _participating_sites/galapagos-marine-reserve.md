@@ -18,6 +18,7 @@ listing_teaser: "One of the world's most iconic marine reserves in the Eastern T
 map_lat: 0.189907
 map_lon: -90.735934
 map_zoom: 5
+map_label_direction: "bottom"
 
 contact_email: inti.keith@fcdarwin.org
 

@@ -58,15 +58,20 @@ team:
   - name: "Masayu Rahmia Anwar Putri"
     role: "Lead; Permitting Coordinator"
     image: /assets/images/sites/kepulauan-togean/team-1.jpg
+    image_position: top
   - name: "Muji Mujiyanto"
     role: "Field Operations Coordinator"
     image: /assets/images/sites/kepulauan-togean/team-2.jpg
   - name: "Andria Ansri Utama"
     role: "Research Coordination"
     image: /assets/images/sites/kepulauan-togean/team-3.jpg
+    image_position: top
   - name: "Andhika Prima Prasetyo"
     role: "eDNA Sampling Lead"
     image: /assets/images/sites/kepulauan-togean/team-4.jpg
+    image_position: top
+  - name: "Arofah Lyla Nurhayati"
+    role: "Field eDNA Sampling Coordinator"
   - name: "Christina Biggs"
     role: "Project Manager"
     image: /assets/images/sites/kepulauan-togean/team-5.jpg

@@ -129,7 +129,7 @@ navbar_class: row-light
             <div class="site-team-list">
               {% for member in page.team %}
               <div class="site-team-member">
-                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}" loading="lazy">
+                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}" loading="lazy"{% if member.image_position %} style="object-position: {{ member.image_position }};"{% endif %}>
                 <div>
                   <p class="site-team-name">{{ member.name }}</p>
                   <p class="site-team-role">{{ member.role }}</p>

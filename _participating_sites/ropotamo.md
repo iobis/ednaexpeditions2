@@ -7,7 +7,7 @@ site_title: "Ropotamo Marine Protected Area"
 map_label: "Ropotamo MPA"
 country: "Bulgaria"
 sort_name: "Ropotamo"
-site_subtitle: "Together, we will discover hidden biodiversity and track climate-driven shifts of marine organisms."
+site_subtitle: "Uncovering hidden biodiversity and tracking climate-driven shifts in marine organisms."
 
 hero_image: /assets/images/sites/ropotamo/hero.jpg
 hero_caption: "Aerial view of Ropotamo MPA in Bulgaria showing Ropotamo river mouth and coast, and typical habitats at the site: rocky reefs with macroalgae and mussels, seagrasses."

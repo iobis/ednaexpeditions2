@@ -7,7 +7,7 @@ site_title: "Iligan Bay and Camiguin Island, Mindanao, Philippines"
 map_label: "Iligan Bay and Camiguin Island"
 country: "Philippines"
 sort_name: "Iligan Bay Camiguin Island"
-site_subtitle: "Together, we will showcase the biodiversity of Iligan Bay and Camiguin Island and empower local communities to become citizen scientists, advancing conservation and science-driven management of marine ecosystems."
+site_subtitle: "Showcasing the biodiversity of Iligan Bay and Camiguin Island, and turning local communities into citizen scientists."
 
 hero_image: /assets/images/sites/iligan-bay-camiguin/hero.jpg
 hero_caption: "Dalipuga, Iligan City, Phils. and Guinsiliban, Camiguin Island, Phils."

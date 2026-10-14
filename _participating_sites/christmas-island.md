@@ -7,7 +7,7 @@ site_title: "Christmas Island, Indian Ocean Territories, Australia"
 map_label: "Christmas Island"
 country: "Australia"
 sort_name: "Christmas Island"
-site_subtitle: "We will build marine biodiversity baselines and monitor ecological change in the waters surrounding one of the most remote island communities in the world."
+site_subtitle: "Marine biodiversity baselines and ecological monitoring for the waters of one of the world's most remote island communities."
 
 hero_image: /assets/images/sites/christmas-island/hero.jpg
 hero_caption: "Remarkable above and below the water, Christmas Island is a dramatic seamount rising from thousands of metres of depth in the Indian Ocean."

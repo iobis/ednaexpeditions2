@@ -6,7 +6,7 @@ lang: en
 site_title: "Bootless Bay"
 country: "Papua New Guinea"
 sort_name: "Bootless Bay"
-site_subtitle: "To establish and compare biodiversity detected by eDNA sampling in and around Bootless Bay, Central Province, Papua New Guinea."
+site_subtitle: "What lives in and around Bootless Bay? eDNA sampling will establish and compare the biodiversity of its waters."
 
 hero_image: /assets/images/sites/bootless-bay-papua-new-guinea/hero.jpg
 hero_caption: "Bootless Bay, Central Province, Papua New Guinea"

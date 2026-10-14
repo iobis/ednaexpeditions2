@@ -7,7 +7,7 @@ site_title: "Pulau Bidong and Pulau Yu, Terengganu"
 map_label: "Pulau Bidong and Pulau Yu"
 country: "Malaysia"
 sort_name: "Pulau Bidong"
-site_subtitle: "Revealing cryptic biodiversity in tropical, typhoon-impacted reefs across MPA and non-MPA systems using eDNA"
+site_subtitle: "Revealing cryptic biodiversity on typhoon-impacted tropical reefs, inside and outside marine protected areas."
 
 hero_image: /assets/images/sites/pulau-bidong-pulau-yu/hero.jpg
 hero_caption: "Pulau Bidong and surroundings"

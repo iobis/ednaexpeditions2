@@ -8,7 +8,7 @@ site_title: "Manyangue na Elombo-Campo Marine Park"
 map_label: "Manyangue na Elombo"
 country: "Cameroon"
 sort_name: "Manyangue na Elombo"
-site_subtitle: "Using eDNA to establish baseline biodiversity data for long-term monitoring in a data-poor, recently established, marine protected area."
+site_subtitle: "Baseline biodiversity data for a data-poor, newly established marine protected area, to underpin long-term monitoring."
 
 hero_image: /assets/images/sites/manyangue-na-elombo/hero.jpg
 hero_caption: "A section of the remote coastline within Manyangue na Elombo-Campo Marine Park."

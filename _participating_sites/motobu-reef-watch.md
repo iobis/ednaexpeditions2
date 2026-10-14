@@ -7,7 +7,7 @@ site_title: "Motobu Reef Watch Site, Okinawa"
 map_label: "Motobu Reef Watch Site"
 country: "Japan"
 sort_name: "Motobu"
-site_subtitle: "This project monitors fish assemblages at the Motobu site in Okinawa, compares biological communities across different habitats within the site, and contributes to understanding of local biodiversity changes driven by long-term environmental change."
+site_subtitle: "Monitoring fish communities across habitats at Motobu, Okinawa, to understand how local biodiversity responds to long-term environmental change."
 
 hero_image: /assets/images/sites/motobu-reef-watch/hero.jpg
 hero_caption: "View of the Motobu coast from Okinawa Churaumi Aquarium, Japan"

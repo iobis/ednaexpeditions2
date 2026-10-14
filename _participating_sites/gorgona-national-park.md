@@ -8,7 +8,7 @@ site_title: "Gorgona National Park, Colombia"
 map_label: "Gorgona National Park"
 country: "Colombia"
 sort_name: "Gorgona"
-site_subtitle: "Through environmental DNA, we will reveal the species moving through the Eastern Tropical Pacific corridor and reconnect coastal communities to Gorgona, a vital stepping-stone between the Galapagos and Coco Island."
+site_subtitle: "A stepping-stone between the Galapagos and Coco Island: eDNA will reveal the species moving through Gorgona and reconnect coastal communities to it."
 
 hero_image: /assets/images/sites/gorgona-national-park/hero.jpg
 hero_caption: "Gorgona Island, in the Colombian Pacific. This National Nature Park is a former high-security prison that, once returned to nature, blossomed as one of the richest marine ecosystems in the Eastern Tropical Pacific."

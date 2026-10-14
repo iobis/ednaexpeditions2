@@ -8,7 +8,7 @@ site_title: "Malindi-Watamu-Arabuko Sokoke Biosphere Reserve"
 map_label: "MWAS Biosphere Reserve"
 country: "Kenya"
 sort_name: "Malindi-Watamu"
-site_subtitle: "We will build a community-led eDNA \"sentinel\" program to monitor biodiversity across the Malindi–Watamu–Arabuko Sokoke seascape and rapidly share decision-ready results with managers and OBIS."
+site_subtitle: "A community-led eDNA 'sentinel' programme for the Malindi–Watamu–Arabuko Sokoke seascape, feeding decision-ready results to managers and OBIS."
 
 hero_image: /assets/images/sites/malindi-watamu/hero.jpg
 hero_caption: "Shallow tidal lagoons and mangrove-fringed channels at Mida Creek, Watamu (Kenya's coast), showing the creek's intertidal mosaic of water, sand flats, and mangrove vegetation"

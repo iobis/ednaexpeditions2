@@ -7,7 +7,7 @@ site_title: "iSimangaliso Marine Protected Area"
 map_label: "iSimangaliso"
 country: "South Africa"
 sort_name: "Isimangaliso"
-site_subtitle: "Together, we will use eDNA and citizen science to monitor biodiversity across estuarine, coastal and marine ecosystems in iSimangaliso Wetland Park."
+site_subtitle: "Citizen science meets eDNA to track biodiversity from estuaries to open sea in iSimangaliso Wetland Park."
 
 hero_image: /assets/images/sites/isimangaliso/hero.jpg
 hero_caption: "View of the St Lucia Estuary within iSimangaliso Wetland Park, one of the key systems included in the eDNA citizen science monitoring programme."

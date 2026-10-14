@@ -7,7 +7,7 @@ site_title: "Wadden Sea"
 map_label: "Wadden Sea"
 country: "Denmark, Germany, Netherlands"
 sort_name: "Wadden Sea"
-site_subtitle: "We aim at advancing eDNA for reliable monitoring while strengthening science, cooperation, and inclusive public engagement."
+site_subtitle: "Advancing eDNA for reliable monitoring, while strengthening science, cooperation and inclusive public engagement."
 
 hero_image: /assets/images/sites/wadden-sea/hero.jpg
 hero_caption: "Saltmarsh aerial view"

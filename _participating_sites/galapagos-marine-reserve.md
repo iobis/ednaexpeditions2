@@ -7,7 +7,7 @@ site_title: "Galapagos Marine Reserve"
 map_label: "Galápagos Marine Reserve"
 country: "Ecuador"
 sort_name: "Galapagos Marine Reserve"
-site_subtitle: "Using environmental DNA (eDNA), we will reveal, monitor, and protect Galápagos biodiversity by detecting species, tracking ecosystem change, and strengthening early warning systems for conservation."
+site_subtitle: "Revealing Galápagos biodiversity with eDNA, tracking ecosystem change and strengthening early warnings for conservation."
 
 hero_image: /assets/images/sites/galapagos-marine-reserve/hero.jpg
 hero_caption: "Galápagos sea lion navigating a rocky reef in the Galápagos Marine Reserve, highlighting one of the archipelago's iconic endemic marine mammals and the rich biodiversity supported by its underwater ecosystems."

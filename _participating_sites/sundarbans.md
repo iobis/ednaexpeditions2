@@ -7,7 +7,7 @@ site_title: "Sundarbans"
 map_label: "Sundarbans"
 country: "Bangladesh"
 sort_name: "Sundarbans"
-site_subtitle: "Together, we will establish eDNA-based monitoring to track aquatic biodiversity changes in the climate-vulnerable Sundarbans and support science-based conservation."
+site_subtitle: "eDNA-based monitoring to track aquatic biodiversity change in the climate-vulnerable Sundarbans and support science-based conservation."
 
 hero_image: /assets/images/sites/sundarbans/hero.jpg
 hero_caption: "Sundarbans"

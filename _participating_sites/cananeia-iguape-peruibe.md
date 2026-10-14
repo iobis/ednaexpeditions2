@@ -7,7 +7,7 @@ site_title: "Cananéia–Iguape–Peruíbe Environmental Protection Area"
 map_label: "Cananéia–Iguape–Peruíbe"
 country: "Brazil"
 sort_name: "Cananeia"
-site_subtitle: "Together, we will monitor biodiversity and provide early detection of rare and invasive species to support conservation and management."
+site_subtitle: "Monitoring biodiversity and spotting rare and invasive species early, to support conservation and management."
 
 hero_image: /assets/images/sites/cananeia-iguape-peruibe/hero.jpg
 hero_caption: "Rio Batista flowing into the Atlantic Ocean near Barra do Una, Iguape (São Paulo, Brazil), within the Cananéia–Iguape–Peruíbe Environmental Protection Area."

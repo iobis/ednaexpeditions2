@@ -8,7 +8,7 @@ site_title: "Gorgona National Park, Colombia"
 map_label: "Gorgona National Park"
 country: "Colombia"
 sort_name: "Gorgona"
-site_subtitle: "Through environmental DNA, we will create the first community-driven biodiversity dataset for the Colombian Pacific, reconnecting coastal communities to Gorgona and giving its managers the evidence to protect a vital stepping-stone of the Eastern Tropical Pacific."
+site_subtitle: "Through environmental DNA, we will reveal the species moving through the Eastern Tropical Pacific corridor and reconnect coastal communities to Gorgona, a vital stepping-stone between the Galapagos and Coco Island."
 
 hero_image: /assets/images/sites/gorgona-national-park/hero.jpg
 hero_caption: "Gorgona Island, in the Colombian Pacific. This National Nature Park is a former high-security prison that, once returned to nature, blossomed as one of the richest marine ecosystems in the Eastern Tropical Pacific."
@@ -23,7 +23,9 @@ map_zoom: 5
 contact_email: edna@ioc-unesco.org
 
 about_site: |
-  Gorgona is an almost pristine, uninhabited island in the Colombian Pacific, about 9 kilometres long and 3 kilometres wide, forested and surrounded by open ocean, an hour and a half to two hours by boat from the coast at Guapi. It is a national park and a UNESCO-protected area, and the waters around it form a marine protected area.
+  From 1960 to 1984, Gorgona was a maximum-security prison, an island so remote that its currents and sharks were considered escape enough. When the prison closed in 1984, the island was returned to nature and became a national park.
+
+  Today it is an almost pristine, uninhabited island in the Colombian Pacific, about 9 kilometres long and 3 kilometres wide, forested and surrounded by open ocean, an hour and a half to two hours by boat from the coast at Guapi. It is also a UNESCO-protected area, and the waters around it form a marine protected area.
 
   The park matters because it sits as an intermediate island in the Eastern Tropical Pacific corridor, the most coastal of a chain that links the Galapagos, Coco Island, Malpelo and Revillagigedo. That position brings a high presence of whales and dolphins, and many sharks, including smaller endangered species. Whales can be seen in front of the island throughout the year, and especially during the mating season.
 

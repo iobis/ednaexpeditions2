@@ -284,19 +284,19 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-weight: 800;
     font-size: 3.5em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 h2 {
     font-weight: 800;
     font-size: 3em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 h4 {
     font-weight: 750;
     font-size: 1.5em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .carousel h2 {
@@ -1935,7 +1935,7 @@ input {
     font-weight: 800;
     font-size: clamp(1.9rem, 6.5vw, 3.5rem);
     line-height: 0.95em;
-    text-transform: uppercase;
+    text-transform: none;
     margin: 0 0 1.4rem;
     color: var(--text-blue);
 }
@@ -2343,4 +2343,44 @@ input {
     width: 1.5rem;
     height: 1.5rem;
     color: var(--text-blue);
+}
+
+/* Photo gallery (/images/): width/height attributes on each <img> reserve space, so lazy-loaded photos don't shift the page. */
+.gallery {
+    margin-top: 0;
+}
+
+.gallery figcaption a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Back-to-top block under the last gallery photo: yellow circle arrow (same as the home page one) + label, in the page flow. */
+.gallery-top-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 4rem auto 3rem;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.gallery-top-arrow:hover { opacity: 0.8; color: inherit; }
+
+.gallery-top-arrow svg {
+    box-sizing: content-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 12px;
+    border-radius: 50%;
+    background: var(--highlight-yellow);
+    color: var(--text-blue);
+}
+
+.gallery-top-label {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }

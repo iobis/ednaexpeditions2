@@ -1,0 +1,43 @@
+---
+layout: default
+title: Images
+navbar_class: row-light
+lang: en
+---
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>Immerse yourself in eDNA Expeditions 2026-2028!</h2>
+      <p class="mission site-page-subtitle">We have gathered photos taken by the participants at various sites around the world. Take a seat and dive into the project and travel from one sampling location to another!</p>
+    </div>
+  </div>
+
+  <div class="row row-light pt-4 pb-5">
+    <div class="container article-container">
+
+      <div class="article-content">
+
+        <div class="article-body gallery">
+          {% for img in site.data.gallery %}
+          <figure{% if img.width > img.height %} class="figure-wide"{% endif %}>
+            <img src="{{ img.image | relative_url }}" alt="{{ img.alt | default: img.caption | markdownify | strip_html | strip | escape }}"{% if img.width and img.height %} width="{{ img.width }}" height="{{ img.height }}"{% endif %} {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+            <figcaption>{{ img.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% if img.credit %} <span class="caption-credit">{{ img.credit }}</span>{% endif %}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+
+        <a href="#" class="gallery-top-arrow" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 15 12 9 18 15"/>
+          </svg>
+          <span class="gallery-top-label">Back to top</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

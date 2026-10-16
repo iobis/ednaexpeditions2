@@ -22,6 +22,8 @@ map_zoom: 5
 
 contact_email: s.wambua@pu.ac.ke
 
+timeline_site: MWA
+
 about_site: |
   The Malindi–Watamu–Arabuko Sokoke Biosphere Reserve lies on Kenya's north coast around Malindi and Watamu, linking two marine protected areas with the ancient Arabuko Sokoke coastal forest. It is an exceptional mosaic of coral reefs, reef-protected lagoons, seagrass beds, rocky shore habitats and mangrove creeks, alongside one of East Africa's most important remaining tracts of coastal forest.
 

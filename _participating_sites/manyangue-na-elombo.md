@@ -22,6 +22,8 @@ map_zoom: 5
 
 contact_email: info@ammco.org
 
+timeline_site: MNE
+
 about_site: |
   The Manyangue na Elombo-Campo Marine Park is a marine and coastal protected area established in 2021, located on the southeast coast of Cameroon. It stretches 44 km and occupies 110,300 ha of territorial waters contiguous to the maritime border of Equatorial Guinea. The park's diverse and interconnected ecosystems include coastal mangroves, estuaries, sea turtle nesting beaches, seagrass beds, rocky reefs, and kelp forests. Together, they support rich biodiversity and provide essential ecosystem services such as coastal protection for surrounding indigenous communities.
 

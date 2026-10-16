@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: habibka@sau.edu.bd
 
+timeline_site: SUM
+
 about_site: |
   The Sundarbans World Heritage Site is the world’s largest contiguous mangrove forest, located in the delta formed by the Ganges, Brahmaputra, and Meghna rivers along the northern coast of the Bay of Bengal. Spanning parts of Bangladesh and India, this unique tidal ecosystem consists of dense mangrove forests, mudflats, tidal waterways, and estuaries that support exceptionally rich biodiversity.
 

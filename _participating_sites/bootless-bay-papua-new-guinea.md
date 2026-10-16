@@ -20,6 +20,8 @@ map_zoom: 5
 map_label_direction: "bottom"
 
 
+timeline_site: MIR
+
 about_site: |
   Bootless Bay is a marine managed area located 15 km south east of Papua New Guinea’s capital, Port Moresby. Ecosystems in Bootless Bay include mangroves, seagrass beds, fringing reefs, reef flats, barrier reefs, estuaries and lagoons, sandy and muddy shelves, and neritic and oceanic pelagic zones. The coast and islands are composed of savannah and monsoon woodland vegetation.
 

@@ -23,6 +23,8 @@ map_label_direction: "right"
 
 contact_email: info@bluedna.org
 
+timeline_site: KTM
+
 about_site: |
   Kepulauan Togean National Park is a remote marine protected area in Central Sulawesi, Indonesia, located within the Coral Triangle, the global center of marine biodiversity. The park encompasses coral reefs, seagrass beds, mangroves, and small island ecosystems that support exceptionally high marine diversity and sustain the livelihoods and cultural traditions of the Bajau communities who have lived closely connected to these waters for generations.
 

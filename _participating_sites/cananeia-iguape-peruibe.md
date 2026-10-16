@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: jenifferteles94@gmail.com
 
+timeline_site: CCA
+
 about_site: |
   The Cananéia–Iguape–Peruíbe Environmental Protection Area, located on the southern coast of São Paulo State, Brazil, is one of the most important coastal ecosystems in the country. This protected area encompasses a vast and highly connected estuarine–lagoon–coastal system, including extensive mangroves, estuaries, coastal waters, and strong influence from the Atlantic Forest, one of the most biodiverse and threatened biomes in the world.
 

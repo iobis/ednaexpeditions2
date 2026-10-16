@@ -32,6 +32,5 @@ collections:
   participating_sites:
     output: true
     permalink: /participating-sites/:name/
-# Site timeline: where each site's events are fetched from. {site} = timeline_site in the page front matter.
-# Currently a local mock; replace with the real endpoint, e.g. "https://.../sites/{site}/timeline".
-timeline_api: "/assets/mock/timeline-{site}.json"
+# Site timeline: where each site's events are fetched from. {site} = timeline_site (the site code) in the page front matter.
+timeline_api: "https://platform.ednaexpeditions.org/api/v1/sites/{site}/timeline/"

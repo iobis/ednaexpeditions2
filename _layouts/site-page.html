@@ -48,7 +48,7 @@ navbar_class: row-light
   </div>
 
   {% if page.timeline or page.timeline_site %}
-  <div class="row row-light{% unless page.show_stats %} pb-5{% endunless %}">
+  <div class="row row-light site-timeline-row{% unless page.show_stats %} pb-5{% endunless %}"{% unless page.timeline %} hidden{% endunless %}>
     <div class="container container-wide">
       {% include site-timeline.html %}
     </div>

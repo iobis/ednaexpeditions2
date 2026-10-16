@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: stefaniaklayn@yahoo.com
 
+timeline_site: NRO
+
 about_site: |
   Ropotamo is one of the largest marine protected areas in the Bulgarian Black Sea – part of the country's Natura 2000 ecological network. The site hosts very diverse coastal habitats and communities: rocky reefs with brown macroalgal forests and black mussels, soft sediments, seagrass meadows, and is home to many rare and vulnerable marine species – from invertebrates to fish, marine mammals and birds.
 

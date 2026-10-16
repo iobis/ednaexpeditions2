@@ -6,17 +6,19 @@
  *
  * Event -> step mapping (see timelineFromEvents):
  *   milestone / science_plan_made                 -> start date
- *   science_plan / sampling_event                 -> sampling (Test / Community / Sampling n)
+ *   activity *_sampling (test, standard, planned)  -> sampling ("Test sampling", "Sampling 1", ...)
+ *   science_plan / sampling_event                 -> sampling, only if the site has no sampling activity
  *   activity with type results_available          -> results
  *   activity with type interpretation             -> interpretation
  *   activity with type outcome (or "timeline")    -> outcome, text from description, optional value
- *   everything else (kits, planned_sampling, ...) -> ignored
- * Status comes from the dates (done / underway / planned), unless an event carries a status.
+ *   everything else (kits, first_sampling_held, ...) -> ignored
+ * Status comes from the dates (done / planned), unless an event carries a status.
  */
 (function () {
   var section = document.querySelector('.site-timeline');
   if (!section) return;
 
+  var row = section.closest('.site-timeline-row');
   var list = section.querySelector('.tl-list');
   var scroller = section.querySelector('.tl-scroll');
   var view = section.querySelector('.tl-viewport');
@@ -38,11 +40,8 @@
   }
 
   function centreOnCurrent() {
-    var focus = list.querySelector('.tl-item--underway');
-    if (!focus) {
-      var done = list.querySelectorAll('.tl-item--done');
-      focus = done[done.length - 1];
-    }
+    var done = list.querySelectorAll('.tl-item--done');
+    var focus = done[done.length - 1];
     if (focus && scroller.scrollWidth > scroller.clientWidth) {
       scroller.scrollLeft = focus.offsetLeft - (scroller.clientWidth - focus.offsetWidth) / 2;
     }
@@ -58,6 +57,8 @@
   window.addEventListener('resize', update);
 
   /* ---------- events -> steps ---------- */
+
+  var FALLBACK_START = '2026-08-01'; // science plan date when the data has samplings but no science_plan_made event
 
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -81,6 +82,12 @@
     var start = null;
     var steps = [];
 
+    // Samplings come from the sampling activities. The science-plan sampling events duplicate them
+    // (often with different dates), so they are only used when a site has no sampling activity.
+    var hasSamplingActivity = events.some(function (ev) {
+      return ev.source === 'activity' && /_sampling$/.test(ev.kind);
+    });
+
     events.forEach(function (ev, i) {
       var meta = ev.meta || {};
       var step = { order: i, date: ev.date, end: ev.date_end || null, status: ev.status || meta.status || null };
@@ -90,13 +97,17 @@
         return;
       }
       if (ev.source === 'science_plan' && ev.kind === 'sampling_event') {
+        if (hasSamplingActivity) return;
         step.type = 'sampling';
-        step.label = meta.is_test ? 'Test sampling'
-          : meta.community_involved ? 'Community sampling'
-          : 'Sampling' + (meta.index ? ' ' + meta.index : '');
+        step.label = meta.is_test ? 'Test sampling' : meta.community_involved ? 'Community sampling' : null;
       } else if (ev.source === 'activity') {
         var t = activityType(ev);
-        if (t === 'results_available') {
+        if (/_sampling$/.test(t)) {
+          step.type = 'sampling';
+          if (t === 'test_sampling') step.label = 'Test sampling';
+          else if (t === 'standard_sampling' || t === 'planned_sampling') step.label = null; // numbered below
+          else step.label = ev.title; // community_sampling, kids_sampling, ...
+        } else if (t === 'results_available') {
           step.type = 'results';
         } else if (t === 'interpretation') {
           step.type = 'interpretation';
@@ -107,15 +118,24 @@
         } else {
           return;
         }
-        if (step.type !== 'outcome' && ev.description) step.label = ev.description;
+        if (step.type === 'results' || step.type === 'interpretation') step.label = ev.description || null;
       } else {
         return;
       }
       steps.push(step);
     });
 
+    // samplings only exist once a science plan was made: without the milestone, assume the fallback date
+    if (!start && steps.length) start = FALLBACK_START;
+
     steps.sort(function (a, b) {
       return (parseDate(a.date) - parseDate(b.date)) || (a.order - b.order);
+    });
+
+    // unnamed samplings are numbered in date order: Sampling 1, Sampling 2, ...
+    var n = 0;
+    steps.forEach(function (s) {
+      if (s.type === 'sampling' && !s.label) s.label = 'Sampling ' + (++n);
     });
 
     // a results step belongs to the sampling before it: "Sampling 1 results available"
@@ -125,25 +145,12 @@
       if (s.type === 'results' && lastSampling) s.title = lastSampling + ' results available';
     });
 
-    // dates -> status
+    // dates -> status (unless the data says so): started or past = done, otherwise planned
     var today = new Date();
     today.setHours(0, 0, 0, 0);
-    var inProgress = -1;
-    steps.forEach(function (s, i) {
-      var from = parseDate(s.date);
-      var to = parseDate(s.end) || from;
-      if (!s.status) s.status = to < today || (!s.end && from <= today) ? 'done' : 'planned';
-      if (s.status !== 'done' && s.end && from <= today && today <= to && inProgress < 0) inProgress = i;
+    steps.forEach(function (s) {
+      if (!s.status) s.status = parseDate(s.date) <= today ? 'done' : 'planned';
     });
-
-    // underway: a sampling happening today, otherwise the first unfinished non-outcome step
-    var underway = inProgress;
-    if (underway < 0) {
-      for (var i = 0; i < steps.length; i++) {
-        if (steps[i].type !== 'outcome' && steps[i].status !== 'done') { underway = i; break; }
-      }
-    }
-    steps.forEach(function (s, i) { if (i === underway) s.status = 'underway'; });
 
     return { start: start, steps: steps };
   }
@@ -172,7 +179,6 @@
     text.appendChild(b);
     if (opts.qualifier) text.appendChild(el('span', 'tl-qualifier', opts.qualifier));
     if (opts.date) text.appendChild(el('span', 'tl-date', opts.date));
-    if (state === 'underway') text.appendChild(el('span', 'tl-badge', 'Underway'));
     li.appendChild(ic);
     li.appendChild(el('span', 'tl-dot'));
     li.appendChild(text);
@@ -190,7 +196,7 @@
     });
     list.appendChild(item('', 'end', 'fa-flag-checkered', 'Results implemented', { date: endDate }));
     list.lastChild.className = 'tl-item tl-item--end';
-    section.hidden = false;
+    row.hidden = false;
     centreOnCurrent();
   }
 
@@ -202,7 +208,10 @@
   if (api && window.fetch) {
     fetch(api, { headers: { Accept: 'application/json' } })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (data) { render(timelineFromEvents(data.events || [])); })
+      .then(function (data) {
+        var tl = timelineFromEvents(data.events || []);
+        if (tl.steps.length) render(tl); // no data: keep the fallback, or stay hidden
+      })
       .catch(function (err) { if (window.console) console.warn('Timeline: using fallback', err); });
   }
 }());

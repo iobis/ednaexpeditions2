@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: sharonrose.tabugo@g.msuiit.edu.ph
 
+timeline_site: IBC
+
 about_site: |
   The study encompasses selected sites in Iligan Bay and in Camiguin Island (Sunken Cemetery in Catarman, and the Giant Clam Sanctuary in Guinsiliban). These areas represent ecologically important coastal and marine ecosystems in Northern Mindanao that support rich biodiversity and provide essential ecosystem services for fisheries, tourism, coastal protection, and local livelihoods.
 

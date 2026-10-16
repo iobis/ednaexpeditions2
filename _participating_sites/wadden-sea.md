@@ -19,6 +19,8 @@ map_lat: 54.11538
 map_lon: 7.59196
 map_zoom: 5
 
+timeline_site: WSW
+
 about_site: |
   The Wadden Sea World Heritage is the largest tidal flat system in the world, where natural processes proceed largely undisturbed. It encompasses almost the entire Wadden Sea in Denmark, Germany and the Netherlands: an area of nearly 11,500 square kilometres along a coastal strip of about 500 kilometres.
 

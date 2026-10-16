@@ -8,17 +8,12 @@
         value: 187                      (outcomes only, optional big number)
         date: "Apr 2025"
         status: done | planned
-  Live data: set `timeline_site: 428` and the timeline is fetched from site.timeline_api (_config.yml),
-  where {site} is replaced by that id. The front matter above stays as the fallback if the fetch fails.
-  "Underway" is not set by hand: it is the first non-outcome step that is not done.
+  Live data: set `timeline_site: NPC` and the timeline is fetched from site.timeline_api (_config.yml),
+  where {site} is replaced by that site code. The front matter above stays as the fallback if the fetch fails.
+  Steps are either done or planned; the timeline opens on the last done step.
 {% endcomment %}
-{% assign tl_underway = -1 %}
-{% for s in page.timeline %}
-  {% if s.type != 'outcome' and s.status != 'done' and tl_underway < 0 %}{% assign tl_underway = forloop.index0 %}{% endif %}
-{% endfor %}
-
 {% assign tl_api = site.timeline_api | replace: '{site}', page.timeline_site %}
-<section class="site-timeline"{% if page.timeline_site and site.timeline_api %} data-api="{{ tl_api | relative_url }}"{% endif %} data-end="{{ page.timeline_end | default: 'Dec 2028' }}"{% unless page.timeline %} hidden{% endunless %}>
+<section class="site-timeline"{% if page.timeline_site and site.timeline_api %} data-api="{% if tl_api contains '://' %}{{ tl_api }}{% else %}{{ tl_api | relative_url }}{% endif %}"{% endif %} data-end="{{ page.timeline_end | default: 'Dec 2028' }}">
   <div class="tl-head">
     <div class="tl-titles">
       <h3>Local timeline</h3>
@@ -40,9 +35,7 @@
 
     {% assign tl_last_sampling = nil %}
     {% for s in page.timeline %}
-      {% if s.status == 'done' %}{% assign tl_state = 'done' %}
-      {% elsif forloop.index0 == tl_underway %}{% assign tl_state = 'underway' %}
-      {% else %}{% assign tl_state = 'planned' %}{% endif %}
+      {% if s.status == 'done' %}{% assign tl_state = 'done' %}{% else %}{% assign tl_state = 'planned' %}{% endif %}
       {% case s.type %}
         {% when 'sampling' %}{% assign tl_icon = 'fa-droplet' %}{% assign tl_title = s.label | default: 'Sampling' %}{% assign tl_last_sampling = tl_title %}
         {% when 'results' %}{% assign tl_icon = 'fa-dna' %}{% if tl_last_sampling %}{% assign tl_title = tl_last_sampling | append: ' results available' %}{% else %}{% assign tl_title = 'Results available' %}{% endif %}
@@ -56,7 +49,6 @@
         <b>{% if s.value %}<span class="tl-value">{{ s.value }}</span> {% endif %}{{ tl_title }}</b>
         {% if s.type != 'outcome' and s.type != 'sampling' and s.label %}<span class="tl-qualifier">{{ s.label }}</span>{% endif %}
         {% if s.date %}<span class="tl-date">{{ s.date }}</span>{% endif %}
-        {% if tl_state == 'underway' %}<span class="tl-badge">Underway</span>{% endif %}
       </span>
     </li>
     {% endfor %}

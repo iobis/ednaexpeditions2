@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: edna@ioc-unesco.org
 
+timeline_site: NOI
+
 about_site: |
   Motobu is located in the northern part of Okinawa Island in the subtropical northwestern Pacific and has a variety of coastal environments including coral reefs, rocky shores, and sandy beaches. Offshore waters serve as seasonal habitat for migrating humpback whales during winter, while well-developed coral reefs occur along the coast and sea turtles nest on sandy beaches. These conditions provide opportunities to observe diverse marine species.
 

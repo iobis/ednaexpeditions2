@@ -2365,7 +2365,6 @@ input {
 
 .tl-item--start { --tl-a: transparent; }
 .tl-item--end { --tl-b: transparent; --tl-a: var(--tl-faded); }
-.tl-item--underway { --tl-b: var(--tl-faded); }
 .tl-item--start:has(+ .tl-item--planned) { --tl-b: var(--tl-faded); }
 .tl-item--done + .tl-item--end { --tl-a: var(--text-blue); }
 
@@ -2381,8 +2380,6 @@ input {
     box-sizing: border-box;
 }
 
-.tl-item--underway .tl-icon { background: var(--highlight-yellow); }
-
 .tl-dot {
     position: relative;
     z-index: 1;
@@ -2397,7 +2394,6 @@ input {
 
 .tl-item--done .tl-dot,
 .tl-item--start .tl-dot { background: var(--text-blue); }
-.tl-item--underway .tl-dot { background: var(--highlight-yellow); }
 
 .tl-text {
     margin-top: 0.7rem;
@@ -2412,16 +2408,6 @@ input {
 .tl-value { font-family: "Barlow", sans-serif; font-weight: 800; font-size: 1.1em; }
 .tl-qualifier { font-weight: 400; }
 .tl-date { font-size: 0.64rem; opacity: 0.8; order: -1; margin-bottom: 0.2rem; }
-
-.tl-badge {
-    align-self: center;
-    margin-top: 0.25rem;
-    padding: 0.1rem 0.5rem;
-    background: var(--highlight-yellow);
-    border-radius: 1rem;
-    font-size: 0.62rem;
-    font-weight: 700;
-}
 
 /* planned: everything at 30% */
 .tl-item--planned { opacity: 0.3; }
@@ -2457,5 +2443,4 @@ input {
     .tl-text { order: 3; margin-top: 0.3rem; font-size: 0.8rem; }
 
     .tl-date { order: 0; margin-bottom: 0; }
-    .tl-badge { align-self: flex-start; }
 }

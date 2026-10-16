@@ -29,7 +29,7 @@ stats:
   - spacer: true
     width: "15%"
   - label: "Sequences generated"
-    number: "58,798,658"
+    number: "58.8M"
     icon: "fa-dna"
     description: "DNA sequences generated from the analysis of collected samples."
     wide: true

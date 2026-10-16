@@ -1,8 +1,8 @@
 /*
  * Site page timeline.
  *
- * The server-rendered markup (from front matter, see _includes/site-timeline.html) is the fallback.
- * When the section has a data-api URL, the events are fetched from there and the list is rebuilt.
+ * The markup is an empty shell (see _includes/site-timeline.html). The events are fetched from the section's
+ * data-api URL and the list is built here. With no data, or if the request fails, the row stays hidden.
  *
  * Event -> step mapping (see timelineFromEvents):
  *   milestone / science_plan_made                 -> start date
@@ -210,8 +210,8 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (data) {
         var tl = timelineFromEvents(data.events || []);
-        if (tl.steps.length) render(tl); // no data: keep the fallback, or stay hidden
+        if (tl.steps.length) render(tl); // no data: the row stays hidden
       })
-      .catch(function (err) { if (window.console) console.warn('Timeline: using fallback', err); });
+      .catch(function (err) { if (window.console) console.warn('Timeline: not shown', err); });
   }
 }());

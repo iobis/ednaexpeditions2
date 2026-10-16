@@ -1,19 +1,11 @@
 {% comment %}
-  Project timeline for a site page. Driven by front matter:
-    timeline_start: "Feb 2025"          (date shown under "Science call & science plan")
-    timeline_end:   "Dec 2028"          (optional, defaults to Dec 2028)
-    timeline:                           (steps in chronological order)
-      - type: sampling | results | interpretation | outcome
-        label: "Test sampling"          (title for sampling and outcomes; optional note for other steps)
-        value: 187                      (outcomes only, optional big number)
-        date: "Apr 2025"
-        status: done | planned
-  Live data: set `timeline_site: NPC` and the timeline is fetched from site.timeline_api (_config.yml),
-  where {site} is replaced by that site code. The front matter above stays as the fallback if the fetch fails.
-  Steps are either done or planned; the timeline opens on the last done step.
+  Project timeline for a site page. It is drawn by assets/js/site-timeline.js from the events the API returns.
+  Set `timeline_site: NPC` (the site code) in the page front matter; the URL comes from site.timeline_api (_config.yml),
+  where {site} is replaced by that code. Optional: `timeline_end: "Dec 2028"` (the default).
+  If the site has no data, the whole row stays hidden.
 {% endcomment %}
 {% assign tl_api = site.timeline_api | replace: '{site}', page.timeline_site %}
-<section class="site-timeline"{% if page.timeline_site and site.timeline_api %} data-api="{% if tl_api contains '://' %}{{ tl_api }}{% else %}{{ tl_api | relative_url }}{% endif %}"{% endif %} data-end="{{ page.timeline_end | default: 'Dec 2028' }}">
+<section class="site-timeline" data-api="{% if tl_api contains '://' %}{{ tl_api }}{% else %}{{ tl_api | relative_url }}{% endif %}" data-end="{{ page.timeline_end | default: 'Dec 2028' }}">
   <div class="tl-head">
     <div class="tl-titles">
       <h3>Local timeline</h3>
@@ -25,41 +17,9 @@
     </div>
   </div>
   <div class="tl-viewport">
-  <div class="tl-scroll" tabindex="0" role="region" aria-label="Project timeline, scrollable">
-  <ol class="tl-list">
-    <li class="tl-item tl-item--start tl-item--done">
-      <span class="tl-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></span>
-      <span class="tl-dot"></span>
-      <span class="tl-text"><b>Science plan</b><span class="tl-date">{{ page.timeline_start }}</span></span>
-    </li>
-
-    {% assign tl_last_sampling = nil %}
-    {% for s in page.timeline %}
-      {% if s.status == 'done' %}{% assign tl_state = 'done' %}{% else %}{% assign tl_state = 'planned' %}{% endif %}
-      {% case s.type %}
-        {% when 'sampling' %}{% assign tl_icon = 'fa-droplet' %}{% assign tl_title = s.label | default: 'Sampling' %}{% assign tl_last_sampling = tl_title %}
-        {% when 'results' %}{% assign tl_icon = 'fa-dna' %}{% if tl_last_sampling %}{% assign tl_title = tl_last_sampling | append: ' results available' %}{% else %}{% assign tl_title = 'Results available' %}{% endif %}
-        {% when 'interpretation' %}{% assign tl_icon = 'fa-chart-line' %}{% assign tl_title = 'Interpretation' %}
-        {% else %}{% assign tl_icon = 'fa-lightbulb' %}{% assign tl_title = s.label %}
-      {% endcase %}
-    <li class="tl-item tl-item--{{ tl_state }} tl-item--{{ s.type | default: 'outcome' }}">
-      <span class="tl-icon" aria-hidden="true"><i class="fa-solid {{ tl_icon }}"></i></span>
-      <span class="tl-dot"></span>
-      <span class="tl-text">
-        <b>{% if s.value %}<span class="tl-value">{{ s.value }}</span> {% endif %}{{ tl_title }}</b>
-        {% if s.type != 'outcome' and s.type != 'sampling' and s.label %}<span class="tl-qualifier">{{ s.label }}</span>{% endif %}
-        {% if s.date %}<span class="tl-date">{{ s.date }}</span>{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-
-    <li class="tl-item tl-item--end">
-      <span class="tl-icon" aria-hidden="true"><i class="fa-solid fa-flag-checkered"></i></span>
-      <span class="tl-dot"></span>
-      <span class="tl-text"><b>Results implemented</b><span class="tl-date">{{ page.timeline_end | default: 'Dec 2028' }}</span></span>
-    </li>
-  </ol>
-  </div>
+    <div class="tl-scroll" tabindex="0" role="region" aria-label="Project timeline, scrollable">
+      <ol class="tl-list"></ol>
+    </div>
   </div>
 </section>
 

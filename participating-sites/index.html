@@ -76,6 +76,18 @@ lang: en
     </div>
   </div>
 
+  <div class="row row-light pb-5 upcoming-row" hidden>
+    <div class="container container-wide">
+      <section class="upcoming" data-api="{% if site.timeline_api contains '://' %}{{ site.timeline_api }}{% else %}{{ site.timeline_api | relative_url }}{% endif %}">
+        <h3 class="upcoming-tag">Upcoming samplings</h3>
+        <div class="upcoming-months"></div>
+      </section>
+      <script type="application/json" id="upcoming-sites">
+        [{% assign upcoming_sites = site.participating_sites | where_exp: "s", "s.timeline_site" | sort: "sort_name" %}{% for s in upcoming_sites %}{"code": {{ s.timeline_site | jsonify }}, "title": {{ s.site_title | jsonify }}, "url": {{ s.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+      </script>
+    </div>
+  </div>
+
   <div class="row row-light pb-5">
     <div class="container container-wide">
       <div class="sites-grid">
@@ -358,3 +370,5 @@ lang: en
   });
   }
 </script>
+
+<script src="{{ '/assets/js/upcoming-samplings.js' | relative_url }}"></script>

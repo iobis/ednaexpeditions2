@@ -4,7 +4,7 @@ title: "Aldabra Atoll, Seychelles"
 published: true
 lang: en
 
-site_title: "Aldabra Atoll, Seychelles"
+site_title: "Aldabra Atoll"
 map_label: "Aldabra Atoll"
 country: "Seychelles"
 sort_name: "Aldabra Atoll"

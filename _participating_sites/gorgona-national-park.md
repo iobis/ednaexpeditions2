@@ -4,7 +4,7 @@ title: "Gorgona National Park, Colombia"
 published: true
 lang: en
 
-site_title: "Gorgona National Park, Colombia"
+site_title: "Gorgona National Park"
 map_label: "Gorgona National Park"
 country: "Colombia"
 sort_name: "Gorgona"

@@ -3,7 +3,7 @@ layout: site-page
 title: "Iligan Bay and Camiguin Island, Mindanao, Philippines"
 lang: en
 
-site_title: "Iligan Bay and Camiguin Island, Mindanao, Philippines"
+site_title: "Iligan Bay and Camiguin Island"
 map_label: "Iligan Bay and Camiguin Island"
 country: "Philippines"
 sort_name: "Iligan Bay Camiguin Island"

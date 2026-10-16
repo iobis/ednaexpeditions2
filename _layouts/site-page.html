@@ -12,6 +12,7 @@ navbar_class: row-light
   <div class="row row-light pt-5 pb-4">
     <div class="container">
       <h2>{{ page.site_title }}</h2>
+      {% if page.country %}<p class="site-page-country">{{ page.country }}</p>{% endif %}
       <p class="mission site-page-subtitle">{{ page.site_subtitle }}</p>
     </div>
   </div>

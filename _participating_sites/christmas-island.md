@@ -3,7 +3,7 @@ layout: site-page
 title: "Christmas Island, Indian Ocean Territories, Australia"
 lang: en
 
-site_title: "Christmas Island, Indian Ocean Territories, Australia"
+site_title: "Christmas Island"
 map_label: "Christmas Island"
 country: "Australia"
 sort_name: "Christmas Island"

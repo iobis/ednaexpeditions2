@@ -310,6 +310,17 @@ h4 {
     line-height: 1.2em;
 }
 
+.site-page-country {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-weight: 300;
+    margin: 0.25rem 0 0;
+}
+
+.site-page-country + .site-page-subtitle {
+    margin-top: 1.5rem;
+}
+
 .site-page-subtitle {
     margin-top: 3rem;
 }

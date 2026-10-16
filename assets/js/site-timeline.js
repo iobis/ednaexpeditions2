@@ -188,7 +188,7 @@
   function render(tl) {
     var endDate = section.getAttribute('data-end') || 'Dec 2028';
     list.textContent = '';
-    list.appendChild(item('done', 'start', 'fa-clipboard-check', 'Science plan done', { date: formatDate(tl.start) }));
+    list.appendChild(item('done', 'start', 'fa-clipboard-check', 'Science plan', { date: formatDate(tl.start) }));
     tl.steps.forEach(function (s) {
       var title = s.type === 'sampling' || s.type === 'outcome' ? s.label : (s.title || TITLES[s.type]);
       var qualifier = s.type === 'results' || s.type === 'interpretation' ? s.label : null;

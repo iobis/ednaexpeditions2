@@ -295,6 +295,18 @@
     </div>
   </div>
 
+  <div class="row row-light pb-5 upcoming-row" hidden>
+    <div class="container container-wide">
+      <section class="upcoming" data-api="https://platform.ednaexpeditions.org/api/v1/sites/{site}/timeline/">
+        <h3 class="upcoming-tag">Upcoming samplings</h3>
+        <div class="upcoming-months"></div>
+      </section>
+      <script type="application/json" id="upcoming-sites">
+        [{"code": "AAU", "title": "Aldabra Atoll", "url": "/participating-sites/aldabra-atoll/"},{"code": "MIR", "title": "Bootless Bay", "url": "/participating-sites/bootless-bay-papua-new-guinea/"},{"code": "NPC", "title": "Calanques National Park", "url": "/participating-sites/calanques-national-park/"},{"code": "CCA", "title": "Cananéia–Iguape–Peruíbe Environmental Protection Area", "url": "/participating-sites/cananeia-iguape-peruibe/"},{"code": "CIC", "title": "Christmas Island", "url": "/participating-sites/christmas-island/"},{"code": "GMR", "title": "Galapagos Marine Reserve", "url": "/participating-sites/galapagos-marine-reserve/"},{"code": "GNP", "title": "Gorgona National Park", "url": "/participating-sites/gorgona-national-park/"},{"code": "PNH", "title": "Huatulco National Park", "url": "/participating-sites/huatulco-national-park/"},{"code": "IBC", "title": "Iligan Bay and Camiguin Island", "url": "/participating-sites/iligan-bay-camiguin/"},{"code": "IMP", "title": "iSimangaliso Marine Protected Area", "url": "/participating-sites/isimangaliso/"},{"code": "KTM", "title": "Kepulauan Togean National Park", "url": "/participating-sites/kepulauan-togean/"},{"code": "NOI", "title": "Motobu Reef Watch Site, Okinawa", "url": "/participating-sites/motobu-reef-watch/"},{"code": "PVN", "title": "Península Valdés Natural Protected Area", "url": "/participating-sites/peninsula-valdes/"},{"code": "PRM", "title": "Pulau Bidong and Pulau Yu, Terengganu", "url": "/participating-sites/pulau-bidong-pulau-yu/"},{"code": "NRO", "title": "Ropotamo Marine Protected Area", "url": "/participating-sites/ropotamo/"},{"code": "SSS", "title": "Saltstraumen", "url": "/participating-sites/saltstraumen/"},{"code": "SUM", "title": "Sundarbans", "url": "/participating-sites/sundarbans/"},{"code": "WSW", "title": "Wadden Sea", "url": "/participating-sites/wadden-sea/"}]
+      </script>
+    </div>
+  </div>
+
   <div class="row row-light pb-5">
     <div class="container container-wide">
       <div class="sites-grid">
@@ -1138,6 +1150,9 @@
   });
   }
 </script>
+
+<script src="/assets/js/upcoming-samplings.js"></script>
+
 
   </div><!-- /.page-body -->
 

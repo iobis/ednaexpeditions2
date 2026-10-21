@@ -7,7 +7,7 @@ site_title: "Pulau Bidong and Pulau Yu, Terengganu"
 map_label: "Pulau Bidong and Pulau Yu"
 country: "Malaysia"
 sort_name: "Pulau Bidong"
-site_subtitle: "Revealing cryptic biodiversity in tropical, typhoon-impacted reefs across MPA and non-MPA systems using eDNA"
+site_subtitle: "Revealing cryptic biodiversity on typhoon-impacted tropical reefs, inside and outside marine protected areas."
 
 hero_image: /assets/images/sites/pulau-bidong-pulau-yu/hero.jpg
 hero_caption: "Pulau Bidong and surroundings"
@@ -20,6 +20,25 @@ map_lon: 103.010448
 map_zoom: 5
 
 contact_email: hborhan@umt.edu.my
+
+at_stake: |
+  In a small area, Bidong Island concentrates a rare diversity of reef types, from branching corals to submerged, boulder and wall reefs, while the fully protected Yu Island offers an undisturbed natural baseline. In January 2019, Tropical Storm Pabuk destroyed up to 70 per cent of Bidong's reefs overnight. Recovery is under way, but without an eDNA baseline neither this diversity nor its recovery can be tracked.
+
+communities: |
+  Dive centres and local fishing communities will collect samples, with schoolchildren and neighbouring villages as later-stage partners.
+
+science_plan: |
+  **Main scientific question:** How do reef cryptofauna and fish communities recover after monsoon disturbance, and how do the protected (Pulau Yu) and unprotected (Pulau Bidong) reefs differ, using ARMS and eDNA together?
+
+  **Localities sampled (2 islands):** Pulau Bidong and Pulau Yu, each with sheltered and exposed zones
+
+  **Why there:** Bidong is the unprotected, storm-battered site; Yu is the protected, pristine baseline
+
+  **Sampling dates:** April, July, October (seven events over three years)
+
+  **Why then:** Sampling spans before, during and after the Northeast Monsoon (Oct–Mar). Bidong is expected to show storm-driven species loss and fast turnover by rapid colonisers, with sheltered zones as refuges. Yu is expected to stay stable.
+
+site_quote: "In 2019, Tropical Storm Pabuk destroyed almost 70% of the Bidong coral reef area. eDNA Expeditions will allow us to learn more about the ongoing recovery process and have a complete overview of the marine biodiversity in the area."
 
 timeline_site: PRM
 

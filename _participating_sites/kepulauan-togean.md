@@ -23,6 +23,25 @@ map_label_direction: "right"
 
 contact_email: info@bluedna.org
 
+at_stake: |
+  A remote marine protected area in Central Sulawesi, within the Coral Triangle at the global centre of marine biodiversity, Kepulauan Togean holds coral reefs, seagrass beds, mangroves and small-island ecosystems. Its waters sustain the livelihoods and traditions of the Bajau communities long connected to them. Yet it is one of the least documented MPAs in the region, with no comprehensive survey since 2002 and lasting pressure from destructive fishing.
+
+communities: |
+  Engagement and training with the Bajau communities are built into field activities, with graduate students leading sampling and analysis, and a focus on local capacity for future biodiversity monitoring.
+
+science_plan: |
+  **Main scientific question:** How has biodiversity changed relative to historical records and why, how does it vary with the wet and dry monsoons, and how does eDNA complement visual surveys?
+
+  **Localities sampled (number not stated):** Sites near the last confirmed Hippocampus waleananus record, plus a range of reef habitats and depths; one extra site near Kadidiri if the village wants to take part
+
+  **Why there:** Supports partner surveys and community participation
+
+  **Sampling dates:** Every 3–4 months, aligned with partner surveys (no fixed months)
+
+  **Why then:** Wet and dry monsoons change rainfall, runoff, salinity, turbidity and circulation, and many reef fish spawn and recruit seasonally. The team also expects seasonal effects on how eDNA is transported and detected. The northwest monsoon (Nov–Feb) can limit boat access.
+
+site_quote: "The eDNA Expeditions project will establish long-term eDNA monitoring in one of the Coral Triangle’s least documented marine protected areas, detecting species that traditional methods overlook and building the data to guide conservation."
+
 timeline_site: KTM
 
 about_site: |
@@ -41,15 +60,20 @@ team:
   - name: "Masayu Rahmia Anwar Putri"
     role: "Lead; Permitting Coordinator"
     image: /assets/images/sites/kepulauan-togean/team-1.jpg
+    image_position: top
   - name: "Muji Mujiyanto"
     role: "Field Operations Coordinator"
     image: /assets/images/sites/kepulauan-togean/team-2.jpg
   - name: "Andria Ansri Utama"
     role: "Research Coordination"
     image: /assets/images/sites/kepulauan-togean/team-3.jpg
+    image_position: top
   - name: "Andhika Prima Prasetyo"
     role: "eDNA Sampling Lead"
     image: /assets/images/sites/kepulauan-togean/team-4.jpg
+    image_position: top
+  - name: "Arofah Lyla Nurhayati"
+    role: "Field eDNA Sampling Coordinator"
   - name: "Christina Biggs"
     role: "Project Manager"
     image: /assets/images/sites/kepulauan-togean/team-5.jpg

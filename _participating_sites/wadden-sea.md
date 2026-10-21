@@ -7,7 +7,7 @@ site_title: "Wadden Sea"
 map_label: "Wadden Sea"
 country: "Denmark, Germany, Netherlands"
 sort_name: "Wadden Sea"
-site_subtitle: "We aim at advancing eDNA for reliable monitoring while strengthening science, cooperation, and inclusive public engagement."
+site_subtitle: "Advancing eDNA for reliable monitoring, while strengthening science, cooperation and inclusive public engagement."
 
 hero_image: /assets/images/sites/wadden-sea/hero.jpg
 hero_caption: "Saltmarsh aerial view"
@@ -18,6 +18,25 @@ listing_teaser: "The world's largest tidal flat system spanning Denmark, Germany
 map_lat: 54.11538
 map_lon: 7.59196
 map_zoom: 5
+
+at_stake: |
+  The largest tidal flat system on Earth, this UNESCO World Heritage Site stretches nearly 11,500 km2 across Denmark, Germany and the Netherlands, where natural processes still unfold largely undisturbed. Its islands, tidal flats, salt marshes and dunes host thousands of plant and animal species and support up to 10 to 12 million migratory birds each year, giving the site global significance.
+
+communities: |
+  High school students and local politicians with a focus on inclusive public engagement
+
+science_plan: |
+  **Main scientific question:** What are the spatial and seasonal patterns of fish biodiversity (threatened, invasive, elasmobranchs), and how does eDNA compare with and complement conventional monitoring?
+
+  **Localities sampled (5 sites, 4 areas named):** Vidå sluice (Denmark); near the seed mussel culture (Schleswig-Holstein); Hamburg boat landing, or up to five points at Scharhörn and Neuwerk; NIOZ Jetty, Texel (Netherlands)
+
+  **Why there:** Different sediment types and brackish water, each near existing monitoring stations (such as the Texel fyke net) for comparison with conventional data
+
+  **Sampling dates:** Every 3–4 months; first rounds 21–25 Sep and 30 Nov–4 Dec 2026, then set by research vessel availability
+
+  **Why then:** Lampreys, sea trout, dogfish and rays use the Wadden Sea only at certain life stages. The ross worm, European lobster and some non-native species have pelagic larvae before settling, so sampling across the year lets them compare eDNA detection of larvae and adults.
+
+site_quote: "eDNA Expeditions will help close key gaps in species detection, distribution, and responses to climate change, ultimately improving fish community monitoring and management in the Wadden Sea."
 
 timeline_site: WSW
 

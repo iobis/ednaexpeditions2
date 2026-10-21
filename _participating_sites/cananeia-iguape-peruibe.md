@@ -7,7 +7,7 @@ site_title: "Cananéia–Iguape–Peruíbe Environmental Protection Area"
 map_label: "Cananéia–Iguape–Peruíbe"
 country: "Brazil"
 sort_name: "Cananeia"
-site_subtitle: "Together, we will monitor biodiversity and provide early detection of rare and invasive species to support conservation and management."
+site_subtitle: "Monitoring biodiversity and spotting rare and invasive species early, to support conservation and management."
 
 hero_image: /assets/images/sites/cananeia-iguape-peruibe/hero.jpg
 hero_caption: "Rio Batista flowing into the Atlantic Ocean near Barra do Una, Iguape (São Paulo, Brazil), within the Cananéia–Iguape–Peruíbe Environmental Protection Area."
@@ -20,6 +20,25 @@ map_lon: -47.8681
 map_zoom: 5
 
 contact_email: jenifferteles94@gmail.com
+
+at_stake: |
+  The largest and best-preserved coastal system in Brazil, this UNESCO biosphere reserve within the Atlantic Forest stretches more than 100 kilometres and holds the largest mangrove in São Paulo State. A living mosaic of beaches, rivers, islands and mangroves where fresh water meets the sea, it sustains estuarine dolphins, red-tailed parrots and sea turtles amid tides and salinity that shift by the hour. Despite decades of conservation, no molecular biodiversity survey has ever been carried out here.
+
+communities: |
+  Three traditional fishing and mussel-harvesting communities, including Prelado and Baía Una, shape the sampling through their knowledge of species, seasons and tides, with before-and-after surveys tracking how their view of local biodiversity changes. A local third-grade class joins through its teacher, supported by a local team spanning molecular ecology, water quality, genetics and State Park management.
+
+science_plan: |
+  **Main scientific question:** What is the baseline biodiversity across estuarine, mangrove and coastal habitats, how does it vary in space, time and with environmental gradients, and how does eDNA compare with conventional surveys?
+
+  **Localities sampled (4):** Prelado rocky shore (P1), Juréia Beach (P2), Ilha Comprida (P3), Mar Pequeno estuary (P4)
+
+  **Why there:** Spans a low-disturbance reference, an estuarine transition, a marine site with more tourism, and an urban estuary used for Blue Schools outreach
+
+  **Sampling dates:** Every 3–4 months: Jul–Aug, late Nov–early Dec, Feb, Apr–May
+
+  **Why then:** One campaign per season. Temperature, salinity, turbidity, freshwater input and pH are expected to drive community change. A forecast El Niño in late 2026 may alter crustacean communities, as seen in earlier events.
+
+site_quote: "Protecting this place means protecting both nature and people together."
 
 timeline_site: CCA
 

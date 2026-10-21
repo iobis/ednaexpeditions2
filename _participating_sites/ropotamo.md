@@ -7,7 +7,7 @@ site_title: "Ropotamo Marine Protected Area"
 map_label: "Ropotamo MPA"
 country: "Bulgaria"
 sort_name: "Ropotamo"
-site_subtitle: "Together, we will discover hidden biodiversity and track climate-driven shifts of marine organisms."
+site_subtitle: "Uncovering hidden biodiversity and tracking climate-driven shifts in marine organisms."
 
 hero_image: /assets/images/sites/ropotamo/hero.jpg
 hero_caption: "Aerial view of Ropotamo MPA in Bulgaria showing Ropotamo river mouth and coast, and typical habitats at the site: rocky reefs with macroalgae and mussels, seagrasses."
@@ -20,6 +20,25 @@ map_lon: 27.9341
 map_zoom: 5
 
 contact_email: stefaniaklayn@yahoo.com
+
+at_stake: |
+  One of the largest marine protected areas in the Bulgarian Black Sea and part of the Natura 2000 network, Ropotamo combines rocky reefs, brown macroalgal forests, black mussel beds, soft sediments and seagrass meadows. Shielded by an adjoining strict nature reserve, it harbours many rare and vulnerable species and offers a glimpse of the Black Sea in its most natural state, though summer tourism and fishing bring mounting pressure.
+
+communities: |
+  Schoolchildren from Sozopol and the LessPlastic initiative, with a sampling coordinator dedicated to community engagement in the site team.
+
+science_plan: |
+  **Main scientific question:** What is the current biodiversity of the protected coastal habitats compared with historical data, can eDNA give early warning of non-indigenous species, and how do commercial species use these nursery habitats?
+
+  **Localities sampled (3):** Arkutino (sandy beach), Ropotamo-seagrass, Ropotamo-brown algae (rocky reef)
+
+  **Why there:** One site per key protected habitat, all at 3–5 m depth and typical of the Bulgarian Black Sea coast
+
+  **Sampling dates:** Feb–Mar, Jun–Jul, Sep–Oct
+
+  **Why then:** Seasonal patterns here are poorly known, so this is exploratory. February–March is just before the spring plankton bloom, June–July is peak recruitment and faunal activity, and September–October is the second recruitment pulse. Commercial fish also move inshore in spring and autumn.
+
+site_quote: "Regular eDNA surveys will enrich our knowledge of coastal ecology and strengthen the case for strict protection of this site under the EU Biodiversity Strategy 2030."
 
 timeline_site: NRO
 

@@ -1,0 +1,148 @@
+# Photo gallery (/images/). NEWEST FIRST: add new photos at the TOP of the list.
+# Prepare each photo with:  python3 tools/prepare_gallery_image.py path/to/photo.jpg  (resizes, compresses, prints the entry)
+# Landscape photos (width > height) display wide, like "figure-wide" in articles; portrait/square ones use the text column width.
+# Captions accept Markdown, e.g. links to site pages: [Gorgona](/participating-sites/gorgona-national-park/)
+#
+# - image: /assets/images/gallery/example.jpg
+#   width: 1600
+#   height: 1067
+#   alt: "Short description of the photo for screen readers"
+#   caption: "Sampling at [Gorgona National Park](/participating-sites/gorgona-national-park/), Colombia, October 2026."
+#   credit: "© Photographer name"
+
+- image: /assets/images/gallery/img-9576.jpg
+  width: 1800
+  height: 1350
+  caption: "Coast Guard and volunteers taking part in a citizen science sampling event at the Dalipuga Marine Protected Area. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-20260813-wa0047.jpg
+  width: 1012
+  height: 1800
+  caption: "Preparing sampling bottles and equipment before the sampling event. [Saltstraumen](/participating-sites/saltstraumen/), Norway, August 2026."
+  credit: "© eDNA Expeditions"
+
+- image: /assets/images/gallery/img-8436.jpg
+  width: 1800
+  height: 1350
+  caption: "Sharon Rose Tabugo, the eDNA Expeditions site coordinator for the Philippines, is recording the temperature of a sample. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Reove Caneos"
+
+- image: /assets/images/gallery/malaysia-img-2194.jpg
+  width: 1800
+  height: 1350
+  caption: "Under intense heat and a scorching sun, two participants fill a sampling syringe from a sampling bottle, preparing for eDNA filtering. [Terengganu](/participating-sites/pulau-bidong-pulau-yu/), Malaysia, September 2026."
+
+- image: /assets/images/gallery/img-8418.jpg
+  width: 1800
+  height: 1350
+  caption: "The eDNA Expeditions 2026-2028 team for the Philippines poses with Bantay Dagat at the Giant Clam Sanctuary. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Reove Caneos"
+
+- image: /assets/images/gallery/img-20260813-wa0033.jpg
+  width: 1800
+  height: 1013
+  caption: "Pumping water with the peristaltic pump from the Saltstraumen channel, where tide changes the current direction every six hours. [Saltstraumen](/participating-sites/saltstraumen/), Norway, August 2026."
+  credit: "© eDNA Expeditions"
+
+- image: /assets/images/gallery/img-8408.jpg
+  width: 1350
+  height: 1800
+  caption: "Sampling in shallow waters at the Giant Clam Sanctuary under the expert seamanship of a Bantay Dagat. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/malaysia-terengganu-2.jpg
+  width: 1800
+  height: 1350
+  caption: "One of the Terengganu sampling team and its equipment in coastal waters. [Terengganu](/participating-sites/pulau-bidong-pulau-yu/), Malaysia, September 2026."
+  credit: "© Muhammad Hafiz Bin Borkhanuddin & Mohammad Aiman Syahmi Bin Mikli"
+
+- image: /assets/images/gallery/img-9540.jpg
+  width: 1350
+  height: 1800
+  caption: "On-boat water sampling aboard a \"bangka\", a traditional Southeast Asian outrigger vessel that can be propelled by a small gasoline- or diesel-powered engine, a single-cylinder water pump engine, or even a repurposed automobile engine. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-20260813-wa0023.jpg
+  width: 1800
+  height: 1013
+  caption: "Sampling water from the pier in front of the diving club, on the South bank of the Saltstraumen channel. The currents here are so strong that only a handful of divers and swimmers can enter in the water. [Saltstraumen](/participating-sites/saltstraumen/), Norway, August 2026."
+  credit: "© eDNA Expeditions"
+
+- image: /assets/images/gallery/img-8304.jpg
+  width: 1350
+  height: 1800
+  caption: "On-site filtering using the pump at the Sunken Cemetery. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-9524.jpg
+  width: 1350
+  height: 1800
+  caption: "A bangka, ready to go sampling at sea in the Dalipuga Marine Protected Area, surrounded by Bantay Dagat. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/malaysia-terengganu-1.jpg
+  width: 1350
+  height: 1800
+  caption: "Filtering a water sample with a syringe. [Terengganu](/participating-sites/pulau-bidong-pulau-yu/), Malaysia, September 2026."
+  credit: "© Muhammad Hafiz Bin Borkhanuddin & Mohammad Aiman Syahmi Bin Mikli"
+
+- image: /assets/images/gallery/img-9522.jpg
+  width: 1800
+  height: 1350
+  caption: "Citizen Science event and sample training at the Dalipuga Marine Protected Area. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Claudine Nakila"
+
+- image: /assets/images/gallery/img-8285.jpg
+  width: 1350
+  height: 1800
+  caption: "On-site filtering using the syringe at the Sunken Cemetery. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-91.jpg
+  width: 1350
+  height: 1800
+  caption: "Filtering samples to capture environmental DNA. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, August 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-8250.jpg
+  width: 1350
+  height: 1800
+  caption: "On-site filtering using the pump at Sunken Cemetery. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-48.jpg
+  width: 1012
+  height: 1800
+  caption: "On-site filtering using the peristaltic pump. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, August 2026."
+  credit: "© Sharon Rose Tabugo"
+
+- image: /assets/images/gallery/img-8198.jpg
+  width: 1350
+  height: 1800
+  caption: "Water sampling under the expert glance of a Bantay Dagat at Sunken Cemetery. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/img-9514.jpg
+  width: 1350
+  height: 1800
+  caption: "Water sampling off the coast of the Dalipuga Marine Protected Area. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Tricksie Balatero"
+
+- image: /assets/images/gallery/20260812-113953.jpg
+  width: 1800
+  height: 1013
+  caption: "Preparing sampling bottles and equipment before the sampling event. [Saltstraumen](/participating-sites/saltstraumen/), Norway, August 2026."
+  credit: "© eDNA Expeditions"
+
+- image: /assets/images/gallery/img-10.jpg
+  width: 1800
+  height: 1350
+  caption: "Team training and demonstration prior to sampling. [Iligan Bay](/participating-sites/iligan-bay-camiguin/), Philippines, August 2026."
+  credit: "© Ayoub El Bounaoui"
+
+- image: /assets/images/gallery/img-8167.jpg
+  width: 1800
+  height: 1350
+  caption: "A picture taken by a Bantay Dagat in his bangka showing three members of the Iligan Bay team en route for sampling at sea along the Sunken Cemetery. [Camiguin Island](/participating-sites/iligan-bay-camiguin/), Philippines, September 2026."
+  credit: "© Bantay Dagat"

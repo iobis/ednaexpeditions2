@@ -8,7 +8,7 @@ site_title: "Manyangue na Elombo-Campo Marine Park"
 map_label: "Manyangue na Elombo"
 country: "Cameroon"
 sort_name: "Manyangue na Elombo"
-site_subtitle: "Using eDNA to establish baseline biodiversity data for long-term monitoring in a data-poor, recently established, marine protected area."
+site_subtitle: "Baseline biodiversity data for a data-poor, newly established marine protected area, to underpin long-term monitoring."
 
 hero_image: /assets/images/sites/manyangue-na-elombo/hero.jpg
 hero_caption: "A section of the remote coastline within Manyangue na Elombo-Campo Marine Park."
@@ -21,6 +21,14 @@ map_lon: 9.7786
 map_zoom: 5
 
 contact_email: info@ammco.org
+
+at_stake: |
+  Established in 2021 on Cameroon's south-eastern coast, this marine and coastal park stretches 44 kilometres across more than 110,000 hectares of territorial waters. Interconnected mangroves, estuaries, turtle nesting beaches, seagrass beds and reefs support marine megafauna, including humpback and sperm whales, the critically endangered Atlantic humpback dolphin and the African manatee, along with some forty shark and ray species. Its biodiversity baselines remain largely undocumented.
+
+communities: |
+  Local fishers and community members, already active in ecological surveys, invasive species management and ecotourism, lead sample collection and field support, with field and community engagement officers in the AMMCO-led team and capacity-building for long-term scientific autonomy in the park.
+
+site_quote: "eDNA Expeditions will help us establish baseline biodiversity data for long-term monitoring in a data-poor, recently established marine protected area."
 
 timeline_site: MNE
 
@@ -62,3 +70,4 @@ team:
     role: "Fieldwork & Community Engagement Officer"
     image: /assets/images/sites/manyangue-na-elombo/team-6.jpg
 ---
+published: false

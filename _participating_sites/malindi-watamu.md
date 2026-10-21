@@ -8,7 +8,7 @@ site_title: "Malindi-Watamu-Arabuko Sokoke Biosphere Reserve"
 map_label: "MWAS Biosphere Reserve"
 country: "Kenya"
 sort_name: "Malindi-Watamu"
-site_subtitle: "We will build a community-led eDNA \"sentinel\" program to monitor biodiversity across the Malindi–Watamu–Arabuko Sokoke seascape and rapidly share decision-ready results with managers and OBIS."
+site_subtitle: "A community-led eDNA 'sentinel' programme for the Malindi–Watamu–Arabuko Sokoke seascape, feeding decision-ready results to managers and OBIS."
 
 hero_image: /assets/images/sites/malindi-watamu/hero.jpg
 hero_caption: "Shallow tidal lagoons and mangrove-fringed channels at Mida Creek, Watamu (Kenya's coast), showing the creek's intertidal mosaic of water, sand flats, and mangrove vegetation"
@@ -21,6 +21,14 @@ map_lon: 39.8914
 map_zoom: 5
 
 contact_email: s.wambua@pu.ac.ke
+
+at_stake: |
+  A biosphere reserve on Kenya's north coast, MWAS links two marine protected areas with the ancient Arabuko Sokoke forest in a mosaic of coral reefs, lagoons, seagrass beds, rocky shores and mangrove creeks. It shelters threatened reef fish, vital nursery habitat and one of East Africa's most diverse mangrove systems, all along major cetacean migration routes. The seascape is increasingly exposed to marine heatwaves, coral bleaching, sedimentation and pollution.
+
+communities: |
+  Citizen scientists from Beach Management Units, youth groups and community conservation teams
+
+site_quote: "We will build a community-led eDNA 'sentinel' programme to monitor biodiversity across the Malindi-Watamu-Arabuko Sokoke seascape and rapidly share decision-ready results with managers and OBIS."
 
 timeline_site: MWA
 
@@ -56,3 +64,4 @@ team:
     role: "Bioinformatician"
     image: /assets/images/sites/malindi-watamu/team-4.jpg
 ---
+published: false

@@ -284,19 +284,19 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-weight: 800;
     font-size: 3.5em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 h2 {
     font-weight: 800;
     font-size: 3em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 h4 {
     font-weight: 750;
     font-size: 1.5em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .carousel h2 {
@@ -308,6 +308,17 @@ h4 {
     font-weight: 500;
     font-size: 1.8em;
     line-height: 1.2em;
+}
+
+.site-page-country {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-weight: 300;
+    margin: 0.25rem 0 0;
+}
+
+.site-page-country + .site-page-subtitle {
+    margin-top: 1.5rem;
 }
 
 .site-page-subtitle {
@@ -1330,6 +1341,83 @@ button {
     margin-bottom: 2em;
 }
 
+.site-facts {
+    padding: 0;
+}
+
+.site-fact {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.site-fact:last-child {
+    border-bottom: 1px solid rgba(2, 2, 131, 0.3);
+}
+
+.site-fact:first-child {
+    padding-top: 0;
+}
+
+.site-fact + .site-fact {
+    border-top: 1px solid rgba(2, 2, 131, 0.3);
+}
+
+.site-fact h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--bg-light);
+    justify-self: start;
+    align-self: start;
+    background: var(--bg-dark);
+    padding: 0 0.3rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.site-fact-body p {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.site-fact-body p:last-child {
+    margin-bottom: 0;
+}
+
+.site-quote {
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 65ch;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    font-style: normal;
+    color: var(--text-blue);
+}
+
+.site-quote::before,
+.site-quote::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 10px;
+    background-color: var(--text-blue);
+}
+
+.site-quote::before {
+    margin-bottom: 1.5rem;
+}
+
+.site-quote::after {
+    margin-top: 1.5rem;
+}
+
 .site-copy-block + .site-copy-block {
     margin-top: 3rem;
 }
@@ -1484,6 +1572,25 @@ button {
     .site-copy-block p {
         max-width: none;
     }
+
+    .site-fact {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    /* Single column: map first, then the three fact blocks, then the rest */
+    .site-main-content,
+    .site-sidebar {
+        display: contents;
+    }
+
+    .site-map-card { order: 1; }
+    .site-facts { order: 2; }
+    .site-copy-block--about { order: 3; }
+    .site-quote { order: 4; }
+    .site-copy-block--plan { order: 5; }
+    .site-team-card { order: 6; }
+    .site-contact-card { order: 7; }
 }
 
 .edna-footer{
@@ -1839,7 +1946,7 @@ input {
     font-weight: 800;
     font-size: clamp(1.9rem, 6.5vw, 3.5rem);
     line-height: 0.95em;
-    text-transform: uppercase;
+    text-transform: none;
     margin: 0 0 1.4rem;
     color: var(--text-blue);
 }
@@ -2068,7 +2175,7 @@ input {
 }
 
 .dashboard-card__number {
-    font-size: 1.6rem;
+    font-size: 3.2rem;
     font-weight: 900;
     line-height: 1;
 }
@@ -2110,7 +2217,7 @@ input {
     }
 
     .dashboard-card__number {
-        font-size: 3.9rem;
+        font-size: 7.8rem;
     }
 
     .dashboard-card__back {
@@ -2226,7 +2333,7 @@ input {
 }
 
 .dashboard-block__number {
-    font-size: 2.1rem;
+    font-size: 4.2rem;
     font-weight: 900;
     line-height: 1;
 }
@@ -2247,6 +2354,46 @@ input {
     width: 1.5rem;
     height: 1.5rem;
     color: var(--text-blue);
+}
+
+/* Photo gallery (/images/): width/height attributes on each <img> reserve space, so lazy-loaded photos don't shift the page. */
+.gallery {
+    margin-top: 0;
+}
+
+.gallery figcaption a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Back-to-top block under the last gallery photo: yellow circle arrow (same as the home page one) + label, in the page flow. */
+.gallery-top-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 4rem auto 3rem;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.gallery-top-arrow:hover { opacity: 0.8; color: inherit; }
+
+.gallery-top-arrow svg {
+    box-sizing: content-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 12px;
+    border-radius: 50%;
+    background: var(--highlight-yellow);
+    color: var(--text-blue);
+}
+
+.gallery-top-label {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 /* Site page: project timeline */

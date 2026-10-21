@@ -3,11 +3,11 @@ layout: site-page
 title: "Christmas Island, Indian Ocean Territories, Australia"
 lang: en
 
-site_title: "Christmas Island, Indian Ocean Territories, Australia"
+site_title: "Christmas Island"
 map_label: "Christmas Island"
 country: "Australia"
 sort_name: "Christmas Island"
-site_subtitle: "We will build marine biodiversity baselines and monitor ecological change in the waters surrounding one of the most remote island communities in the world."
+site_subtitle: "Marine biodiversity baselines and ecological monitoring for the waters of one of the world's most remote island communities."
 
 hero_image: /assets/images/sites/christmas-island/hero.jpg
 hero_caption: "Remarkable above and below the water, Christmas Island is a dramatic seamount rising from thousands of metres of depth in the Indian Ocean."
@@ -21,6 +21,14 @@ map_zoom: 5
 map_label_direction: "left"
 
 contact_email: Laura.Smith@DCCEEW.gov.au
+
+at_stake: |
+  A remote Australian island in the eastern Indian Ocean, Christmas Island rises as a seamount from the deep, ringed by steep karst-limestone drop-offs, clear waters and vibrant reefs. Where Indian and Pacific currents and species meet, it becomes a globally significant hybridization hotspot and an epicentre of evolution, with high endemism meaning species lost here are lost worldwide. Its vast new marine park, more than 277,000 km2, far outstrips the resources available to monitor its wide baseline gaps.
+
+communities: |
+  Residents, citizen scientists and volunteers take part, building on the island's strong marine connection, with school engagement through the Junior Rangers and Crab Cadets programmes.
+
+site_quote: "If species like this are lost from here, they are lost from the entire globe."
 
 timeline_site: CIC
 

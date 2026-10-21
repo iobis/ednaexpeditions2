@@ -12,6 +12,7 @@ navbar_class: row-light
   <div class="row row-light pt-5 pb-4">
     <div class="container">
       <h2>{{ page.site_title }}</h2>
+      {% if page.country %}<p class="site-page-country">{{ page.country }}</p>{% endif %}
       <p class="mission site-page-subtitle">{{ page.site_subtitle }}</p>
     </div>
   </div>
@@ -86,12 +87,39 @@ navbar_class: row-light
       <div class="site-main-grid">
 
         <div class="site-main-content">
-          <section class="site-copy-block">
+          {% if page.at_stake or page.communities or page.science_plan %}
+          <div class="site-facts">
+            {% if page.at_stake %}
+            <section class="site-fact">
+              <h3>What's at stake?</h3>
+              <div class="site-fact-body">{{ page.at_stake | markdownify }}</div>
+            </section>
+            {% endif %}
+            {% if page.communities %}
+            <section class="site-fact">
+              <h3>Communities involved</h3>
+              <div class="site-fact-body">{{ page.communities | markdownify }}</div>
+            </section>
+            {% endif %}
+            {% if page.science_plan %}
+            <section class="site-fact">
+              <h3>Science plan summary</h3>
+              <div class="site-fact-body">{{ page.science_plan | markdownify }}</div>
+            </section>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          <section class="site-copy-block site-copy-block--about">
             <h3>About our site</h3>
             {{ page.about_site | markdownify }}
           </section>
 
-          <section class="site-copy-block">
+          {% if page.site_quote %}
+          <blockquote class="site-quote">“{{ page.site_quote }}”</blockquote>
+          {% endif %}
+
+          <section class="site-copy-block site-copy-block--plan">
             <h3>What we plan to achieve</h3>
             {{ page.what_we_plan | markdownify }}
           </section>
@@ -110,7 +138,7 @@ navbar_class: row-light
             <div class="site-team-list">
               {% for member in page.team %}
               <div class="site-team-member">
-                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}" loading="lazy">
+                <img src="{{ member.image | default: '/assets/images/team-placeholder.svg' | relative_url }}" alt="{{ member.name }}" loading="lazy"{% if member.image_position %} style="object-position: {{ member.image_position }};"{% endif %}>
                 <div>
                   <p class="site-team-name">{{ member.name }}</p>
                   <p class="site-team-role">{{ member.role }}</p>

@@ -7,7 +7,7 @@ site_title: "Motobu Reef Watch Site, Okinawa"
 map_label: "Motobu Reef Watch Site"
 country: "Japan"
 sort_name: "Motobu"
-site_subtitle: "This project monitors fish assemblages at the Motobu site in Okinawa, compares biological communities across different habitats within the site, and contributes to understanding of local biodiversity changes driven by long-term environmental change."
+site_subtitle: "Monitoring fish communities across habitats at Motobu, Okinawa, to understand how local biodiversity responds to long-term environmental change."
 
 hero_image: /assets/images/sites/motobu-reef-watch/hero.jpg
 hero_caption: "View of the Motobu coast from Okinawa Churaumi Aquarium, Japan"
@@ -20,6 +20,25 @@ map_lon: 127.835
 map_zoom: 5
 
 contact_email: edna@ioc-unesco.org
+
+at_stake: |
+  A World Natural Heritage adjacent area in the subtropical north-western Pacific, northern Okinawa combines coral reefs, rocky shores and sandy beaches with offshore humpback whale habitat and sea turtle nesting. Drawing some three million visitors a year, it is a place where tourism coexists with well-preserved nature and a culture historically shaped by skipjack fishing, offering valuable reference data for island coastal ecosystems across the region.
+
+communities: |
+  Local educational institutions engage through an Education Consortium, supported by the Urashima Laboratory and community groups across the area, with a dedicated community engagement lead in the site team.
+
+science_plan: |
+  **Main scientific question:** Does fish species composition differ among coral reef, sandy beach and urban-adjacent rocky shore habitats?
+
+  **Localities sampled (3):** Sesoko (beach), Bise (coral reef), Yamakawa (rocky shore in a populated area)
+
+  **Why there:** One per habitat type, to test whether fish communities differ between them
+
+  **Sampling dates:** June–July (typhoons may cancel)
+
+  **Why then:** Early summer is the peak of biological activity: Mizun fish school nearshore, Acropora coral spawns, and hermit and coconut crabs release juveniles. They want to compare this with less active seasons, but only the June–July window is specified.
+
+site_quote: "The three-year surveys will support documenting changes in the richness and distribution of tropical fishes at Motobu Reef, and help us better understand the impacts of ocean warming on local coastal ecosystems."
 
 timeline_site: NOI
 

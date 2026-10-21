@@ -20,6 +20,25 @@ map_zoom: 9
 
 contact_email: edna@ioc-unesco.org
 
+at_stake: |
+  On a wild stretch of the Mexican Pacific off Oaxaca, an unusually narrow continental shelf brings pelagic life close to shore, from calving humpback whales to orcas, blue whales and large pods of spinner dolphins. Sheltered bays hold coral reefs that grow in rough, current-swept water, making them resilient but hard to study. Under intensifying marine heatwaves, accelerating coastal development and rising shipping traffic, the coast still has no biodiversity baseline, and its marine microorganisms remain almost unknown.
+
+communities: |
+  Indigenous communities of the Oaxaca coast join as knowledge holders. Older artisanal fishers add irreplaceable historical records of shifting distributions to biomolecular insights.
+
+science_plan: |
+  **Main scientific question:** Are coral reef communities recovering after the heatwave-driven mass mortality, and which habitats, taxa and bays are more resilient or vulnerable?
+
+  **Localities sampled (3):** Chachacual, Maguey and Cacaluta bays
+
+  **Why there:** Reef bays with long-term monitoring that were hit by the marine heatwave, to compare recovery
+
+  **Sampling dates:** Twice in the rainy season (May–Oct) and twice in the dry season (Nov–Apr), preferably at the start and end of each; start depends on kit arrival
+
+  **Why then:** The two seasons differ in freshwater input, salinity, turbidity, nutrients and productivity. They also want to document El Niño and La Niña effects, such as warming, bleaching and changes in upwelling.
+
+site_quote: "We are losing species we do not even know existed."
+
 timeline_site: PNH
 
 about_site: |

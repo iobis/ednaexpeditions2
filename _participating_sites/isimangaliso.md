@@ -7,7 +7,7 @@ site_title: "iSimangaliso Marine Protected Area"
 map_label: "iSimangaliso"
 country: "South Africa"
 sort_name: "Isimangaliso"
-site_subtitle: "Together, we will use eDNA and citizen science to monitor biodiversity across estuarine, coastal and marine ecosystems in iSimangaliso Wetland Park."
+site_subtitle: "Citizen science meets eDNA to track biodiversity from estuaries to open sea in iSimangaliso Wetland Park."
 
 hero_image: /assets/images/sites/isimangaliso/hero.jpg
 hero_caption: "View of the St Lucia Estuary within iSimangaliso Wetland Park, one of the key systems included in the eDNA citizen science monitoring programme."
@@ -20,6 +20,25 @@ map_lon: 32.62182
 map_zoom: 5
 
 contact_email: wetlandauthority@isimangaliso.com
+
+at_stake: |
+  On the north-eastern coast of KwaZulu-Natal, this UNESCO World Heritage Site protects an exceptional mosaic of estuary, coastal lake systems, forests, wetlands and marine protected areas. These connected habitats sustain critical nursery grounds, migratory species, turtles, fish and birds, alongside culturally significant coastal communities. Conservation here is well established, but long-term monitoring of aquatic biodiversity still needs strengthening.
+
+communities: |
+  Local youth, schools, and communities around the site.
+
+science_plan: |
+  **Main scientific question:** How does biodiversity vary across the four localities and with distance, how does the Agulhas Current shape seasonal diversity and connectivity, and how effective is citizen-science eDNA collection?
+
+  **Localities sampled (4):** St Lucia estuary mouth, Sodwana Bay, Bhanga Nek, Kosi Bay estuary mouth
+
+  **Why there:** Covers the north–south distance and the estuarine-to-marine gradient; St Lucia and Kosi Bay are Ramsar sites, and Sodwana has long-term reef monitoring
+
+  **Sampling dates:** Quarterly: Jul/Aug, Oct/Nov, Jan/Feb, Apr/May
+
+  **Why then:** The Agulhas Current is stronger in summer (Sep–Mar) and weaker in winter (Apr–Aug). In summer they expect more similar communities across sites and more frequent detection of tropical species. In winter they expect more differences between sites.
+
+site_quote: "We mobilize eDNA and citizen science to monitor biodiversity across estuarine, coastal and marine ecosystems in iSimangaliso Wetland Park."
 
 timeline_site: IMP
 

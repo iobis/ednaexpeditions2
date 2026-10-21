@@ -7,7 +7,7 @@ site_title: "Galapagos Marine Reserve"
 map_label: "Galápagos Marine Reserve"
 country: "Ecuador"
 sort_name: "Galapagos Marine Reserve"
-site_subtitle: "Using environmental DNA (eDNA), we will reveal, monitor, and protect Galápagos biodiversity by detecting species, tracking ecosystem change, and strengthening early warning systems for conservation."
+site_subtitle: "Revealing Galápagos biodiversity with eDNA, tracking ecosystem change and strengthening early warnings for conservation."
 
 hero_image: /assets/images/sites/galapagos-marine-reserve/hero.jpg
 hero_caption: "Galápagos sea lion navigating a rocky reef in the Galápagos Marine Reserve, highlighting one of the archipelago's iconic endemic marine mammals and the rich biodiversity supported by its underwater ecosystems."
@@ -18,8 +18,28 @@ listing_teaser: "One of the world's most iconic marine reserves in the Eastern T
 map_lat: 0.189907
 map_lon: -90.735934
 map_zoom: 5
+map_label_direction: "bottom"
 
 contact_email: inti.keith@fcdarwin.org
+
+at_stake: |
+  The Galápagos and Hermandad Marine Reserves protect one of the most extraordinary marine ecosystems on Earth, spanning vast areas of the Eastern Tropical Pacific with exceptional biodiversity, high endemism and globally important migratory corridors. Habitats range from coastal reefs and mangroves to largely unexplored deep-sea environments, where the sheer scale leaves many species poorly understood as climate change and invasive species intensify pressure.
+
+communities: |
+  Local schools engage through a citizen science programme, junior scientists are trained within the project team, and partnerships run with the Galápagos National Park Directorate, the Biosecurity Agency of Galápagos and academic institutions.
+
+science_plan: |
+  **Main scientific question:** How do vertebrate, invertebrate and microbial communities change through time in response to seasonal upwelling, El Niño and local human pressure, and can eDNA complement long-term monitoring?
+
+  **Localities sampled (5):** Wreck Bay, San Cristóbal (Muelle de Pescadores, La Lobería); western bioregion (Tagus Cove, Punta Vicente Roca, Punta Espinoza)
+
+  **Why there:** Wreck Bay gives a gradient of human pressure (urban and fishing vs less impacted). The western sites are minimally disturbed and strongly upwelling-driven, and Tagus Cove has 20+ years of monitoring.
+
+  **Sampling dates:** Up to four events a year (two in Jul–Dec, two in Jan–Jun) until Sep 2028
+
+  **Why then:** The cool-dry season (Jun–Dec) brings cold, nutrient-rich, highly productive water. The warm-wet season (Jan–May) brings warmer water, weaker upwelling and shifts in species abundance. A forecast El Niño should cause larger changes, so they want data before, during and after it.
+
+site_quote: "Using environmental DNA, we will reveal, monitor and protect Galápagos biodiversity by detecting species, tracking ecosystem change, and strengthening early warning systems for conservation."
 
 timeline_site: GMR
 

@@ -39,6 +39,8 @@ science_plan: |
 
 site_quote: "We are losing species we do not even know existed."
 
+timeline_site: PNH
+
 about_site: |
   Huatulco National Park is located along the southern Pacific coast of Mexico, in the state of Oaxaca, and protects an exceptional mosaic of marine and coastal ecosystems. Its nine bays encompass coral reefs, mangroves, sandy beaches, and tropical dry forests, creating diverse habitats that support high biodiversity, from invertebrates and reef fishes to sea turtles and marine mammals. The region is particularly significant due to the proximity of deep waters to the coast, which promotes the presence of oceanic species and unique ecological processes. Beyond its biological richness, Huatulco holds strong cultural and social value, as local communities depend on these ecosystems for livelihoods such as fisheries, tourism, and recreation.
 

@@ -42,6 +42,8 @@ science_plan: |
 
 site_quote: "The eDNA Expeditions project will establish long-term eDNA monitoring in one of the Coral Triangle’s least documented marine protected areas, detecting species that traditional methods overlook and building the data to guide conservation."
 
+timeline_site: KTM
+
 about_site: |
   Kepulauan Togean National Park is a remote marine protected area in Central Sulawesi, Indonesia, located within the Coral Triangle, the global center of marine biodiversity. The park encompasses coral reefs, seagrass beds, mangroves, and small island ecosystems that support exceptionally high marine diversity and sustain the livelihoods and cultural traditions of the Bajau communities who have lived closely connected to these waters for generations.
 

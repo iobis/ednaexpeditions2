@@ -38,6 +38,8 @@ science_plan: |
 
 site_quote: "By comparing biodiversity inside and outside the marine protected area, we aim to understand the benefits of its protection and to advocate for tighter restrictions."
 
+timeline_site: SSS
+
 about_site: |
   Saltstraumen in northern Norway is one of the world’s strongest tidal currents. Every six hours, immense volumes of seawater surge through a narrow strait connecting two fjords. This powerful flow creates massive whirlpools and drives intense deep-water mixing, which prevents sediment buildup and facilitates the formation of hard-bottom habitats that host unique communities of sea anemones, sponges and soft corals.
 

@@ -31,6 +31,8 @@ communities: |
 
 site_quote: "eDNA Expeditions will combine science with traditional knowledge, turning locals into fishermen-biologists protecting Kerkennah's Posidonia meadows."
 
+timeline_site: NIK
+
 about_site: |
   The Kerkennah islands are located on the eastern coast of Tunisia, in the heart of the Mediterranean, surrounded by an assortment of shallow waters, sandy bottoms, rocky habitats and widespread seagrass meadows. Unlike much of the Mediterranean, the sea here is particularly shallow and calm, creating a very exceptional interface between land and water where traditional life still follows the rhythm of the tides, the moon and the seasons.
 

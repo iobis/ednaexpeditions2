@@ -41,6 +41,8 @@ science_plan: |
 
 site_quote: "Using environmental DNA, we will reveal, monitor and protect Galápagos biodiversity by detecting species, tracking ecosystem change, and strengthening early warning systems for conservation."
 
+timeline_site: GMR
+
 about_site: |
   The Galápagos Marine Reserve and the Hermandad Marine Reserve protect one of the most extraordinary marine ecosystems on Earth, spanning vast areas of the Eastern Tropical Pacific and supporting exceptional biodiversity, high levels of endemism, and globally important migratory corridors for sharks, turtles, marine mammals, seabirds, and other marine life. These waters connect diverse habitats ranging from coastal reefs and mangroves to deep-sea environments that remain largely unexplored.
 

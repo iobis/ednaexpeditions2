@@ -40,6 +40,8 @@ science_plan: |
 
 site_quote: "Mindanao is a hidden biodiversity gem, full of charismatic marine species. eDNA will help us map them, give hope to future generations, and show them what we need to protect."
 
+timeline_site: IBC
+
 about_site: |
   The study encompasses selected sites in Iligan Bay and in Camiguin Island (Sunken Cemetery in Catarman, and the Giant Clam Sanctuary in Guinsiliban). These areas represent ecologically important coastal and marine ecosystems in Northern Mindanao that support rich biodiversity and provide essential ecosystem services for fisheries, tourism, coastal protection, and local livelihoods.
 

@@ -40,6 +40,8 @@ science_plan: |
 
 site_quote: "In 2019, Tropical Storm Pabuk destroyed almost 70% of the Bidong coral reef area. eDNA Expeditions will allow us to learn more about the ongoing recovery process and have a complete overview of the marine biodiversity in the area."
 
+timeline_site: PRM
+
 about_site: |
   Pulau Bidong and Pulau Yu, located off the east coast of Terengganu in Malaysia, represent two contrasting yet ecologically linked tropical reef systems shaped by both natural disturbance and human history. Pulau Bidong, a non-marine protected area (non-MPA), is historically known as “Little Saigon” for its role as a major Vietnamese refugee settlement during the late 1970s following the Vietnam War. Today, the island is sparsely inhabited, hosting a research station and basic tourism infrastructure within a recently gazetted state park. Its surrounding reefs, periodically impacted by strong monsoonal and storm-driven conditions, range from branching coral assemblages to boulder-dominated and submerged reef structures, creating a heterogeneous and dynamic benthic landscape.
 

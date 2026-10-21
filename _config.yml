@@ -32,3 +32,5 @@ collections:
   participating_sites:
     output: true
     permalink: /participating-sites/:name/
+# Site timeline: where each site's events are fetched from. {site} = timeline_site (the site code) in the page front matter.
+timeline_api: "https://platform.ednaexpeditions.org/api/v1/sites/{site}/timeline/"

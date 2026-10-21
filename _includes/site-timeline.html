@@ -1,0 +1,26 @@
+{% comment %}
+  Project timeline for a site page. It is drawn by assets/js/site-timeline.js from the events the API returns.
+  Set `timeline_site: NPC` (the site code) in the page front matter; the URL comes from site.timeline_api (_config.yml),
+  where {site} is replaced by that code. Optional: `timeline_end: "Dec 2028"` (the default).
+  If the site has no data, the whole row stays hidden.
+{% endcomment %}
+{% assign tl_api = site.timeline_api | replace: '{site}', page.timeline_site %}
+<section class="site-timeline" data-api="{% if tl_api contains '://' %}{{ tl_api }}{% else %}{{ tl_api | relative_url }}{% endif %}" data-end="{{ page.timeline_end | default: 'Dec 2028' }}">
+  <div class="tl-head">
+    <div class="tl-titles">
+      <h3>Local timeline</h3>
+      <p class="tl-hint" hidden>Use the arrows on the right to navigate the timeline</p>
+    </div>
+    <div class="tl-arrows" hidden>
+      <button type="button" class="tl-arrow tl-arrow--prev" aria-label="Earlier steps"><i class="fa-solid fa-chevron-left"></i></button>
+      <button type="button" class="tl-arrow tl-arrow--next" aria-label="Later steps"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+  <div class="tl-viewport">
+    <div class="tl-scroll" tabindex="0" role="region" aria-label="Project timeline, scrollable">
+      <ol class="tl-list"></ol>
+    </div>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/site-timeline.js' | relative_url }}"></script>

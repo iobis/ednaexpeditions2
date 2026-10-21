@@ -33,6 +33,8 @@ science_plan: |
 
 site_quote: "The eDNA expedition will provide valuable data for understanding species distribution across ecosystems and seasons, improving the management and conservation of Aldabra Atoll."
 
+timeline_site: AAU
+
 about_site: |
   Aldabra Atoll is the second-largest in the world and the biggest of the Seychelles Islands. The atoll lies more than 1000 km southwest of Mahé in the Western Indian Ocean. It consists of 46 islands representing 155 km² of land. Its geographical remoteness and high level of endemism maintain it as a prehistoric relic, as it remains relatively untouched by humans.
 

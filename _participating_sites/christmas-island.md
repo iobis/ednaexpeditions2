@@ -30,6 +30,8 @@ communities: |
 
 site_quote: "If species like this are lost from here, they are lost from the entire globe."
 
+timeline_site: CIC
+
 about_site: |
   Christmas Island lies in the eastern Indian Ocean, a remote Australian territory renowned for its dramatic cliffs, clear waters, and extraordinary marine biodiversity. A seamount surrounded by deep ocean and fringing coral reefs, the island supports a unique mix of species, including reef and pelagic fishes, sharks, turtles, and seasonal visitors such as whale sharks. Its isolation has fostered high levels of endemism.
 

@@ -40,6 +40,8 @@ science_plan: |
 
 site_quote: "We need the data to better understand the impact of pressures such as anchoring and fishing on local biodiversity, and embark local communities in that journey."
 
+timeline_site: NPC
+
 about_site: |
   Located in the south of France near Marseille, the second biggest city of the country, in the northern part of the Mediterranean Sea, the Calanques National Park is emblematic for its cultural and environmental richness. All the marine ecosystems are inside this MPA, from the abyss with spectacular underwater canyon through the well-known Posidonia meadow. The Calanques National Park is also home to beautiful coralligenous habitats. Underwater landscapes are unique and rich in biodiversity.
 

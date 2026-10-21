@@ -43,6 +43,8 @@ science_plan: |
 
 site_quote: "Getting the genetic fingerprint of the ocean will help us to protect the natural wealth of Península Valdés."
 
+timeline_site: PVN
+
 about_site: |
   In recognition of its exceptional values, Península Valdés has received major international, regional and national designations, including “Natural World Heritage” and “Biosphere Reserve” by UNESCO, “RAMSAR Site” under the Convention on Wetlands, a Site of Regional Importance within the Western Hemisphere Shorebird Reserve Network (WHSRN), and an Important Bird Area by BirdLife International.
 

@@ -38,6 +38,8 @@ science_plan: |
 
 site_quote: "eDNA Expeditions will help close key gaps in species detection, distribution, and responses to climate change, ultimately improving fish community monitoring and management in the Wadden Sea."
 
+timeline_site: WSW
+
 about_site: |
   The Wadden Sea World Heritage is the largest tidal flat system in the world, where natural processes proceed largely undisturbed. It encompasses almost the entire Wadden Sea in Denmark, Germany and the Netherlands: an area of nearly 11,500 square kilometres along a coastal strip of about 500 kilometres.
 

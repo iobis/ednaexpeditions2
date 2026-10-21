@@ -40,6 +40,8 @@ science_plan: |
 
 site_quote: "We mobilize eDNA and citizen science to monitor biodiversity across estuarine, coastal and marine ecosystems in iSimangaliso Wetland Park."
 
+timeline_site: IMP
+
 about_site: |
   iSimangaliso Wetland Park is a UNESCO World Heritage Site located on the north-eastern coast of KwaZulu-Natal, South Africa. The Park protects an exceptional mosaic of ecosystems, including the St Lucia Estuary, Kosi Bay lake system, coastal forests, beaches, wetlands, freshwater lakes and marine protected areas. These connected landscapes and seascapes support high biodiversity, important nursery habitats, migratory species, turtles, fish, birds and culturally significant coastal communities.
 

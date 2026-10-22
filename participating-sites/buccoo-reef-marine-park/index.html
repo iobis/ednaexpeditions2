@@ -1,0 +1,556 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDNA Expeditions 2026-2028</title>
+    <meta name="description" content="eDNA Expeditions Phase II">
+    
+    
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:4000/participating-sites/buccoo-reef-marine-park/" />
+    <link rel="alternate" hreflang="fr" href="http://127.0.0.1:4000/fr/participating-sites/buccoo-reef-marine-park/" />
+    <link rel="alternate" hreflang="es" href="http://127.0.0.1:4000/es/participating-sites/buccoo-reef-marine-park/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:4000/participating-sites/buccoo-reef-marine-park/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15E5134R60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-15E5134R60');
+    </script>
+</head>
+<body>
+
+    <div class="ioc-top-banner">
+        <div class="container container-wide ioc-top-banner__inner">
+            <a href="/" class="ioc-top-banner__brand" aria-label="eDNA Expeditions home">
+                <span class="ioc-top-banner__brand-text">eDNA Expeditions 2026-2028</span>
+            </a>
+            <a href="https://www.ioc.unesco.org/en" target="_blank" rel="noopener noreferrer" aria-label="IOC UNESCO website">
+                <img
+                    src="/assets/images/00_logo_IOC_w.svg"
+                    alt="IOC"
+                    class="ioc-top-banner__logo"
+                >
+            </a>
+        </div>
+    </div>
+
+  <div class="page-body">
+  <nav class="navbar navbar-expand-lg navbar-transparent row-light">
+    <div class="container container-wide">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger-line hamburger-line--top"></span>
+            <span class="hamburger-line hamburger-line--middle"></span>
+            <span class="hamburger-line hamburger-line--bottom"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav--equal mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/whoweare">Who we are</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/participating-sites">Sites</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://platform.ednaexpeditions.org" target="_blank" rel="noopener noreferrer">Data portal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/news-stories">News & stories</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/images">Images</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Language switcher hidden: site English-only for now -->
+    <!-- <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                
+                <li><a class="dropdown-item active" href="/participating-sites/buccoo-reef-marine-park/">English</a></li>
+                <li><a class="dropdown-item" href="/fr/participating-sites/buccoo-reef-marine-park/">Français</a></li>
+                <li><a class="dropdown-item" href="/es/participating-sites/buccoo-reef-marine-park/">Español</a></li>
+            </ul>
+        </li>
+    </ul> -->
+</div>
+
+    </div>
+</nav>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row row-light pt-5 pb-4">
+    <div class="container">
+      <h2>Buccoo Reef Marine Park</h2>
+      <p class="site-page-country">Trinidad and Tobago</p>
+      <p class="mission site-page-subtitle">Biomolecular data on the species living across reef, seagrass and mangrove can strengthen the protection of Trinidad and Tobago's oldest marine protected area.</p>
+    </div>
+  </div>
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      
+        <div class="site-hero-wrap">
+          <img src="/assets/images/sites/buccoo-reef-marine-park/hero.jpg" alt="Buccoo Reef Marine Park" class="site-hero-image">
+        </div>
+        
+        <p class="site-hero-caption"><strong>A mangrove and coastal forest fringe meets the turquoise shallows of Buccoo Reef Marine Park, on the south-western coast of Tobago.</strong> <span class="site-hero-credit">Photo: Paula Funnell (CC BY-NC-ND 2.0)</span></p>
+        
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  <div class="row row-light pb-5">
+    <div class="container container-wide">
+      <div class="site-main-grid">
+
+        <div class="site-main-content">
+          
+          <div class="site-facts">
+            
+            <section class="site-fact">
+              <h3>What's at stake?</h3>
+              <div class="site-fact-body"><p>Tobago’s most extensive coral, seagrass and mangrove complex, a nursery ground and biodiversity hotspot protected since 1973, where a sheltered lagoon grades from mangrove fringe to fringing reef. It holds the island’s largest turtle grass meadow (124 hectares) and one of its largest boulder star coral colonies, but the 2024 mass bleaching killed many lagoon corals and staghorn coral is feared locally extinct in Tobago. Decades of monitoring here have centred on the seabed, leaving the fish, mobile and microbial communities that move between inshore and offshore waters largely unseen.</p>
+</div>
+            </section>
+            
+            
+            <section class="site-fact">
+              <h3>Communities involved</h3>
+              <div class="site-fact-body"><p>Workshops and sampling engage the Buccoo and Bon Accord communities, marine park users, fisherfolk, NGOs and secondary school students, coordinated through the Institute of Marine Affairs and its Marine Resilience Network of more than 300 members. The Tobago House of Assembly and the Division of Environment, Climate Resilience and Energy are partners, with glass-bottom boats used to bring participants to the lagoon for water collection and eDNA demonstrations.</p>
+</div>
+            </section>
+            
+            
+            <section class="site-fact">
+              <h3>Science plan summary</h3>
+              <div class="site-fact-body"><p><strong>Main scientific question:</strong> Which cryptic or transient species do current methods miss, how do mobile and microbial communities differ among habitats and seasons, and can eDNA give early warning of introduced species?</p>
+
+<p><strong>Localities sampled (4):</strong> Inner lagoon (mangrove), outer lagoon (seagrass), coral forereef, and an offshore site 1.5 km north outside the park</p>
+
+<p><strong>Why there:</strong> One per habitat along the inshore-to-offshore gradient; the offshore site is the most likely to pick up transient and pelagic species</p>
+
+<p><strong>Sampling dates:</strong> Five rounds: Nov–Dec 2026, Jan–Mar 2027, Apr–Jun 2027, Jul–Sep 2027, Oct–Dec 2027</p>
+
+<p><strong>Why then:</strong> The dry season (Jan–May) and wet season (Jun–Dec) differ in rainfall, runoff and temperature. Coral spawning, reproduction and recruitment peak in the wet season, when new recruits and transient species may arrive from nearby reefs, and the dry season may bring different seasonal migrants.</p>
+</div>
+            </section>
+            
+          </div>
+          
+
+          <section class="site-copy-block site-copy-block--about">
+            <h3>About our site</h3>
+            <p>Buccoo Reef Marine Park sits on the south-western shoulder of Tobago, in the Southern Caribbean where the Caribbean Sea meets the Atlantic. Seasonally fed by the Orinoco outflow and the Guiana Current, these mixing waters give Trinidad and Tobago a rich and distinctive marine life, and make Buccoo Reef the country’s most extensive coral, seagrass and mangrove complex.</p>
+
+<p>The park holds three connected habitats. A red mangrove fringe, roughly 0.9 square kilometres, lines the landward edge. A well-flushed lagoon, around two metres deep, holds the largest surviving turtle grass meadow in Tobago, some 124 hectares, a nursery for grunts, snappers and lobsters. Patch reefs in the outer lagoon include Coral Gardens, home to one of the island’s largest boulder star coral colonies and a mainstay of glass-bottom-boat tourism, alongside rarer elkhorn and staghorn corals.</p>
+
+<p>The reef is under pressure. The 2024 mass bleaching killed many lagoon colonies, and staghorn coral may now be locally extinct in Tobago. Although protected, the park carries heavy tourism and some recreational fishing, and faces land-based pollution and coastal squeeze as development presses against its edge.</p>
+
+          </section>
+
+          
+          <blockquote class="site-quote">“Buccoo Reef holds our most extensive coral, seagrass and mangrove complex, and it is our only protected marine area. Environmental DNA will complement decades of our monitoring, revealing the micro and mobile communities we have not been able to see, and strengthening the case for protecting this reef.”</blockquote>
+          
+
+          <section class="site-copy-block site-copy-block--plan">
+            <h3>What we plan to achieve</h3>
+            <p>A fuller picture of the life inside the park, reaching the cryptic, transient and microbial communities that visual surveys and seabed monitoring miss, from gobies and blennies to the micro-organisms that signal environmental pressure.</p>
+
+<p>A reading of how biodiversity shifts from inshore to offshore and from season to season, and early indications of connectivity across the reef system, tracked against rainfall, temperature and tidal conditions.</p>
+
+<p>Early detection of invasive or introduced species, fitting for a site that sits at the nexus between the Caribbean and South America.</p>
+
+<p>Evidence that complements the Institute’s long-term monitoring and feeds directly into management of the park, strengthening the case for protection and deepening community ownership of a reef central to Tobago’s livelihoods and recreation.</p>
+
+          </section>
+        </div>
+
+        <aside class="site-sidebar">
+          <div class="site-map-card">
+                <div class="site-map-frame">
+                <div id="site-map"></div>
+            </div>
+        </div>
+
+          <div class="site-team-card">
+            <h3>Meet our local team</h3>
+
+            <div class="site-team-list">
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Lanya Fanovich" loading="lazy">
+                <div>
+                  <p class="site-team-name">Lanya Fanovich</p>
+                  <p class="site-team-role">Project Manager, Marine Resilience Initiative (coordination), Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Dr Anjani Ganase" loading="lazy">
+                <div>
+                  <p class="site-team-name">Dr Anjani Ganase</p>
+                  <p class="site-team-role">Senior Research Officer, Coral Reef Ecology (site lead), Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Farahnaz Solomon" loading="lazy">
+                <div>
+                  <p class="site-team-name">Farahnaz Solomon</p>
+                  <p class="site-team-role">Senior Research Officer, Fish Biology, Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Attish Kanhai" loading="lazy">
+                <div>
+                  <p class="site-team-name">Attish Kanhai</p>
+                  <p class="site-team-role">Research Officer, Benthic Ecology, Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Sheldon Ramoutar" loading="lazy">
+                <div>
+                  <p class="site-team-name">Sheldon Ramoutar</p>
+                  <p class="site-team-role">Research Officer, Microbiology, Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Hannah Lochan" loading="lazy">
+                <div>
+                  <p class="site-team-name">Hannah Lochan</p>
+                  <p class="site-team-role">Research Officer, Coral Reef Ecology, Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Alana Jute" loading="lazy">
+                <div>
+                  <p class="site-team-name">Alana Jute</p>
+                  <p class="site-team-role">Research Officer, Taxonomy, Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Dr Rahanna Juman" loading="lazy">
+                <div>
+                  <p class="site-team-name">Dr Rahanna Juman</p>
+                  <p class="site-team-role">Deputy Director Research (management), Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Kathryn Audroing" loading="lazy">
+                <div>
+                  <p class="site-team-name">Kathryn Audroing</p>
+                  <p class="site-team-role">Research Officer, Environmental Sociology (outreach), Institute of Marine Affairs</p>
+                </div>
+              </div>
+              
+              <div class="site-team-member">
+                <img src="/assets/images/team-placeholder.svg" alt="Barry Lovelace" loading="lazy">
+                <div>
+                  <p class="site-team-name">Barry Lovelace</p>
+                  <p class="site-team-role">Collaborator, Department of Environment, Climate Resilience and Energy</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="site-contact-card">
+            <h3>Contact us</h3>
+            <div class="site-contact-item">
+              
+              
+              <a href="#" class="site-contact-email protected-email" data-u="edna" data-d="ioc-unesco.org">Email us</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.protected-email').forEach(function(el) {
+    var email = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
+
+<script>
+  const siteMap = L.map('site-map').setView([11.17524, -60.82636], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(siteMap);
+
+  L.marker([11.17524, -60.82636]).addTo(siteMap);
+</script>
+
+<script>
+(function () {
+  var gallery = document.querySelector('.site-hero-gallery');
+  if (!gallery) return;
+
+  var slides = gallery.querySelectorAll('.site-hero-slide');
+  if (slides.length <= 1) return;
+
+  var caption = document.querySelector('.js-gallery-caption');
+  var current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+
+    if (caption) {
+      var slide = slides[current];
+      var cap = slide.dataset.caption || '';
+      var credit = slide.dataset.credit || '';
+
+      caption.innerHTML = '';
+      var strong = document.createElement('strong');
+      strong.textContent = cap;
+      caption.appendChild(strong);
+
+      if (credit) {
+        caption.appendChild(document.createTextNode(' '));
+        var span = document.createElement('span');
+        span.className = 'site-hero-credit';
+        span.textContent = 'Photo: ' + credit;
+        caption.appendChild(span);
+      }
+    }
+  }
+
+  gallery.querySelector('.site-hero-arrow--prev').addEventListener('click', function () {
+    goTo(current - 1);
+  });
+
+  gallery.querySelector('.site-hero-arrow--next').addEventListener('click', function () {
+    goTo(current + 1);
+  });
+}());
+</script>
+
+  </div><!-- /.page-body -->
+
+<footer class="edna-footer" role="contentinfo">
+  <div class="container container-wide pb-5" style="padding-top: 100px;">
+
+    <div class="edna-footer__grid">
+
+      <div class="edna-footer__left">
+        <a href="/" class="edna-footer__brand" aria-label="eDNA Expeditions home">
+          <span class="edna-footer__brand-text">eDNA<br>Expeditions<br>2026-2028</span>
+        </a>
+        <nav class="edna-footer__nav" style="margin-top: 3rem;">
+          <a href="/" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Home</a>
+          <a href="/whoweare" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Who we are</a>
+          <a href="/participating-sites" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Sites</a>
+          <a href="/news-stories" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; News & stories</a>
+          <a href="/resources" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; Resources</a>
+          <a href="/faq" style="color:#ffffff; display:block; margin-bottom:0.5rem; font-weight:normal; font-size:0.85rem;">&gt; FAQ</a>
+          <a href="/contact" style="color:#ffffff; display:block; font-weight:normal; font-size:0.85rem;">&gt; Contact</a>
+        </nav>
+      </div>
+
+      <div class="edna-footer__right">
+
+        <div class="edna-footer__top">
+          <div class="edna-footer__kicker">
+            Stay informed,<br>join our monthly newsletter
+          </div>
+
+         <form
+  class="edna-footer__newsletter validate"
+  action="https://unesco.us15.list-manage.com/subscribe/post-json?u=75c69bf185fb2be069850f6ee&id=6cf9d87141&f_id=005a0ae0f0"
+  method="post"
+  id="mc-embedded-subscribe-form"
+  name="mc-embedded-subscribe-form"
+  target="_self"
+  novalidate>
+  <div class="input-group edna-footer__input-group">
+    <input
+      type="email"
+      name="EMAIL"
+      id="mce-EMAIL"
+      class="form-control edna-footer__input required email"
+      aria-label="Email address"
+      required>
+
+    <input type="hidden" name="tags" value="2806613">
+
+    <!-- Required hidden anti-bot field — do not remove -->
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input type="text" name="b_75c69bf185fb2be069850f6ee_6cf9d87141" tabindex="-1" value="">
+    </div>
+
+    <button class="btn edna-footer__button" type="submit" name="subscribe" id="mc-embedded-subscribe">
+      Subscribe
+    </button>
+  </div>
+</form>
+          
+        </div>
+
+        <div class="edna-footer__middle">
+          <div class="edna-footer__desc pt-3 pb-3">
+            eDNA Expeditions 2026-2028 is powered by the Intergovernmental Oceanographic Commission (IOC) of UNESCO's Ocean Biodiversity Information System (OBIS), and supported by Minderoo Foundation, in collaboration with Wilderlab.
+          </div>
+
+          <div class="edna-footer__logos3">
+            <a href="https://www.obis.org/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo_IOC-OBIS_w.svg"
+                alt="IOC-OBIS"
+                class="edna-footer__footer-logo edna-footer__footer-logo--ioc"
+                loading="lazy"
+              >
+            </a>
+            <a href="https://www.minderoo.org/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo-mf-pin_w.svg"
+                alt="Minderoo Foundation"
+                class="edna-footer__footer-logo edna-footer__footer-logo--mf"
+                loading="lazy"
+              >
+            </a>
+            <a href="https://wilderlab.co/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/images/00_logo_Wilderlab.png"
+                alt="Wilderlab"
+                class="edna-footer__footer-logo edna-footer__footer-logo--wilderlab"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="edna-footer__middle pt-4">
+            <div class="edna-footer__desc pb-3">
+            eDNA Expeditions 2026-2028 is a project endorsed by the UN Decade of Ocean Science for Sustainable Development 2021–2030.
+            </div>
+
+            <div class="edna-footer__logos3 pb-5">
+            <a href="https://oceandecade.org/" target="_blank" rel="noopener noreferrer">
+              <img
+              src="/assets/images/00_logo_ioc_decade_EN_white.svg"
+              alt="UN Decade of Ocean Science for Sustainable Development 2021–2030"
+              class="edna-footer__footer-logo edna-footer__footer-logo--decade">
+            </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  var btn  = document.getElementById('mc-embedded-subscribe');
+  if (!form || !btn) return;
+
+  var originalLabel = btn.textContent;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var params = new URLSearchParams(new FormData(form));
+    var cbName = 'mc_cb_' + Date.now();
+
+    window[cbName] = function (data) {
+      delete window[cbName];
+      var s = document.getElementById('mc-jsonp');
+      if (s) s.parentNode.removeChild(s);
+
+      if (data.result === 'success') {
+        btn.textContent = '✓';
+        document.getElementById('mce-EMAIL').value = '';
+        setTimeout(function () {
+          window.location.href = '/newsletter_sub';
+        }, 1000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+        setTimeout(function () { btn.textContent = originalLabel; }, 3000);
+      }
+    };
+
+    var script = document.createElement('script');
+    script.id  = 'mc-jsonp';
+    script.src = form.action + '&' + params.toString() + '&c=' + cbName;
+    document.body.appendChild(script);
+  });
+}());
+</script>
+
+</body>
+</html>

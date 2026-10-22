@@ -4,6 +4,7 @@ title: "Huatulco National Park"
 lang: en
 
 site_title: "Huatulco National Park"
+map_label: "Huatulco"
 country: "Mexico"
 sort_name: "Huatulco"
 site_subtitle: "Working together to track the impacts of marine heatwaves on coastal biodiversity."
@@ -17,6 +18,7 @@ listing_teaser: "A mosaic of coral reefs, mangroves, and tropical bays on Mexico
 map_lat: 15.76
 map_lon: -96.26
 map_zoom: 9
+map_label_direction: "right"
 
 contact_email: edna@ioc-unesco.org
 

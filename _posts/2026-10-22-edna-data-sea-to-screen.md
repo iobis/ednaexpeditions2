@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "From sea to screen: how eDNA Expeditions data earns your trust"
+title: "From sea to screen: how eDNA Expeditions generates data you can trust"
 date: 2026-10-22
 category: story
 hero_image: /assets/images/news/edna-data-sea-to-screen/hero.jpg

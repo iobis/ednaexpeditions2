@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: hborhan@umt.edu.my
 
+data_portal_id: 338
+
 at_stake: |
   In a small area, Bidong Island concentrates a rare diversity of reef types, from branching corals to submerged, boulder and wall reefs, while the fully protected Yu Island offers an undisturbed natural baseline. In January 2019, Tropical Storm Pabuk destroyed up to 70 per cent of Bidong's reefs overnight. Recovery is under way, but without an eDNA baseline neither this diversity nor its recovery can be tracked.
 

@@ -22,6 +22,8 @@ map_label_direction: "bottom"
 
 contact_email: inti.keith@fcdarwin.org
 
+data_portal_id: 356
+
 at_stake: |
   The Galápagos and Hermandad Marine Reserves protect one of the most extraordinary marine ecosystems on Earth, spanning vast areas of the Eastern Tropical Pacific with exceptional biodiversity, high endemism and globally important migratory corridors. Habitats range from coastal reefs and mangroves to largely unexplored deep-sea environments, where the sheer scale leaves many species poorly understood as climate change and invasive species intensify pressure.
 

@@ -20,6 +20,8 @@ map_zoom: 5
 map_label_direction: "bottom"
 
 
+data_portal_id: 231
+
 at_stake: |
   Ringed entirely by mangrove coastline and sheltered by barrier and fringing reefs, Bootless Bay forms a uniquely productive shallow ecosystem on which three to four coastal villages depend for their primary source of protein. Over the past decade, encroaching settlements have accelerated mangrove loss and tuna numbers are visibly falling. The bay is locally protected but not enforced, and no biodiversity baseline exists to define what is being safeguarded or to track its change.
 

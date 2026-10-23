@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: habibka@sau.edu.bd
 
+data_portal_id: 4
+
 at_stake: |
   The world's largest contiguous mangrove forest and a UNESCO World Heritage Site, the Sundarbans spread across the Ganges-Brahmaputra-Meghna delta on the Bay of Bengal. Dense mangroves, mudflats and tidal waterways form a nursery and feeding ground for fish, crustaceans and threatened wildlife, while shielding coastal communities from cyclones, storm surges and erosion. Despite this importance, its aquatic biodiversity has seen little long-term monitoring.
 

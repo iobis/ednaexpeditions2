@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: jenifferteles94@gmail.com
 
+data_portal_id: 363
+
 at_stake: |
   The largest and best-preserved coastal system in Brazil, this UNESCO biosphere reserve within the Atlantic Forest stretches more than 100 kilometres and holds the largest mangrove in São Paulo State. A living mosaic of beaches, rivers, islands and mangroves where fresh water meets the sea, it sustains estuarine dolphins, red-tailed parrots and sea turtles amid tides and salinity that shift by the hour. Despite decades of conservation, no molecular biodiversity survey has ever been carried out here.
 

@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: edna@ioc-unesco.org
 
+data_portal_id: 365
+
 at_stake: |
   A World Natural Heritage adjacent area in the subtropical north-western Pacific, northern Okinawa combines coral reefs, rocky shores and sandy beaches with offshore humpback whale habitat and sea turtle nesting. Drawing some three million visitors a year, it is a place where tourism coexists with well-preserved nature and a culture historically shaped by skipjack fishing, offering valuable reference data for island coastal ecosystems across the region.
 

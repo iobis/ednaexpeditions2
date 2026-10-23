@@ -22,6 +22,8 @@ map_zoom: 5
 
 contact_email: info@ammco.org
 
+data_portal_id: 600
+
 at_stake: |
   Established in 2021 on Cameroon's south-eastern coast, this marine and coastal park stretches 44 kilometres across more than 110,000 hectares of territorial waters. Interconnected mangroves, estuaries, turtle nesting beaches, seagrass beds and reefs support marine megafauna, including humpback and sperm whales, the critically endangered Atlantic humpback dolphin and the African manatee, along with some forty shark and ray species. Its biodiversity baselines remain largely undocumented.
 

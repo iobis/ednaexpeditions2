@@ -19,6 +19,8 @@ map_lat: 54.11538
 map_lon: 7.59196
 map_zoom: 5
 
+data_portal_id: 443
+
 at_stake: |
   The largest tidal flat system on Earth, this UNESCO World Heritage Site stretches nearly 11,500 km2 across Denmark, Germany and the Netherlands, where natural processes still unfold largely undisturbed. Its islands, tidal flats, salt marshes and dunes host thousands of plant and animal species and support up to 10 to 12 million migratory birds each year, giving the site global significance.
 

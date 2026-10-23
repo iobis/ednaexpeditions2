@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: contact@calanques-parcnational.fr
 
+data_portal_id: 428
+
 at_stake: |
   An emblematic land and sea park in the northern Mediterranean near Marseille, the Calanques hold the region's full range of marine ecosystems, from dramatic underwater canyons to Posidonia meadows and coralligenous reefs. With seven no-take zones created in 2012, it carries one of the Mediterranean's highest levels of protection, yet its biodiversity-rich seascapes remain under pressure from anchoring, fishing and other activities.
 

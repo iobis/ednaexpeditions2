@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: sharonrose.tabugo@g.msuiit.edu.ph
 
+data_portal_id: 194
+
 at_stake: |
   Set in Mindanao in the southern Philippines, Iligan Bay and Camiguin Island lie in a region of exceptional marine biodiversity, home to seven of the world's nine giant clam species, sea turtles, seahorses and passing whale sharks. Long overlooked by both science and tourism, the area remains largely accessible yet little explored, and decades of under-observation have left its rich marine biodiversity unmonitored.
 

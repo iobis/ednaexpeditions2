@@ -22,6 +22,8 @@ map_zoom: 5
 
 contact_email: investigacion.gorgona@parquesnacionales.gov.co
 
+data_portal_id: 8
+
 at_stake: |
   A biological stepping stone in the Eastern Tropical Pacific corridor between the Galápagos, Coco Island and Revillagigedo, Gorgona is one of Colombia's most biodiverse marine zones and also one of its least observed. Past civil unrest left biodiversity records fluctuating and incomplete, making this stretch of the Coastal Pacific a true data desert waiting to be filled.
 

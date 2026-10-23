@@ -1380,6 +1380,21 @@ button {
     -webkit-box-decoration-break: clone;
 }
 
+.site-fact h3.site-fact-tag--live {
+    background: var(--highlight-yellow);
+    color: var(--text-blue);
+    font-weight: 700;
+}
+
+.site-fact h3.site-fact-tag--live a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-fact h3.site-fact-tag--live a:hover {
+    color: #005be2;
+}
+
 .site-fact-body p {
     margin: 0 0 0.75rem;
     font-size: 0.8rem;

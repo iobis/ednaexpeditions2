@@ -87,7 +87,7 @@ navbar_class: row-light
       <div class="site-main-grid">
 
         <div class="site-main-content">
-          {% if page.at_stake or page.communities or page.science_plan %}
+          {% if page.at_stake or page.communities or page.science_plan or page.data_portal_id %}
           <div class="site-facts">
             {% if page.at_stake %}
             <section class="site-fact">
@@ -105,6 +105,14 @@ navbar_class: row-light
             <section class="site-fact">
               <h3>Science plan summary</h3>
               <div class="site-fact-body">{{ page.science_plan | markdownify }}</div>
+            </section>
+            {% endif %}
+            {% if page.data_portal_id %}
+            <section class="site-fact">
+              <h3 class="site-fact-tag--live"><a href="https://platform.ednaexpeditions.org/sites/{{ page.data_portal_id }}/" target="_blank" rel="noopener">See the live results</a></h3>
+              <div class="site-fact-body">
+                <p>Visualize the live results from sampling events at this site on our <a href="https://platform.ednaexpeditions.org/sites/{{ page.data_portal_id }}/" target="_blank" rel="noopener">data portal</a>.</p>
+              </div>
             </section>
             {% endif %}
           </div>

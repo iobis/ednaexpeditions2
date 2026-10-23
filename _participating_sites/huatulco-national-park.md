@@ -22,6 +22,8 @@ map_label_direction: "right"
 
 contact_email: edna@ioc-unesco.org
 
+data_portal_id: 527
+
 at_stake: |
   On a wild stretch of the Mexican Pacific off Oaxaca, an unusually narrow continental shelf brings pelagic life close to shore, from calving humpback whales to orcas, blue whales and large pods of spinner dolphins. Sheltered bays hold coral reefs that grow in rough, current-swept water, making them resilient but hard to study. Under intensifying marine heatwaves, accelerating coastal development and rising shipping traffic, the coast still has no biodiversity baseline, and its marine microorganisms remain almost unknown.
 

@@ -20,6 +20,8 @@ map_lat: 11.17524
 map_lon: -60.82636
 map_zoom: 9
 
+data_portal_id: 383
+
 at_stake: |
   Tobago's most extensive coral, seagrass and mangrove complex, a nursery ground and biodiversity hotspot protected since 1973, where a sheltered lagoon grades from mangrove fringe to fringing reef. It holds the island's largest turtle grass meadow (124 hectares) and one of its largest boulder star coral colonies, but the 2024 mass bleaching killed many lagoon corals and staghorn coral is feared locally extinct in Tobago. Decades of monitoring here have centred on the seabed, leaving the fish, mobile and microbial communities that move between inshore and offshore waters largely unseen.
 

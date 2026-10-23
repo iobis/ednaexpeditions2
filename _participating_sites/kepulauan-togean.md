@@ -23,6 +23,8 @@ map_label_direction: "right"
 
 contact_email: info@bluedna.org
 
+data_portal_id: 190
+
 at_stake: |
   A remote marine protected area in Central Sulawesi, within the Coral Triangle at the global centre of marine biodiversity, Kepulauan Togean holds coral reefs, seagrass beds, mangroves and small-island ecosystems. Its waters sustain the livelihoods and traditions of the Bajau communities long connected to them. Yet it is one of the least documented MPAs in the region, with no comprehensive survey since 2002 and lasting pressure from destructive fishing.
 

@@ -24,6 +24,8 @@ map_zoom: 5
 
 contact_email: gestion@peninsulavaldes.org.ar
 
+data_portal_id: 395
+
 at_stake: |
   A UNESCO World Heritage Site, Biosphere Reserve and Ramsar Site on the Patagonian coast, Península Valdés is a coastal, marine and terrestrial protected area of exceptional value, recognized internationally for its shorebirds and bird life. Across its full ecosystem, from large marine mammals and fish to invertebrates and microorganisms, marine biodiversity still lacks a long-term time series.
 

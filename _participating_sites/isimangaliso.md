@@ -21,6 +21,8 @@ map_zoom: 5
 
 contact_email: wetlandauthority@isimangaliso.com
 
+data_portal_id: 650
+
 at_stake: |
   On the north-eastern coast of KwaZulu-Natal, this UNESCO World Heritage Site protects an exceptional mosaic of estuary, coastal lake systems, forests, wetlands and marine protected areas. These connected habitats sustain critical nursery grounds, migratory species, turtles, fish and birds, alongside culturally significant coastal communities. Conservation here is well established, but long-term monitoring of aquatic biodiversity still needs strengthening.
 

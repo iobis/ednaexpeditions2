@@ -19,6 +19,8 @@ map_lon: 14.41
 map_zoom: 5
 
 
+data_portal_id: 614
+
 at_stake: |
   Home to one of the world's strongest tidal currents, Saltstraumen forces immense volumes of seawater through a narrow strait every six hours, driving whirlpools and deep mixing that build hard-bottom habitats for anemones, sponges and soft corals. The 2013 marine protected area safeguards only the seabed, leaving fishing, aquaculture, mining and hydropower to add pressure. Sitting near the Arctic transition, the site is acutely sensitive to polar warming.
 

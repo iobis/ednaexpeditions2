@@ -22,6 +22,8 @@ map_zoom: 5
 
 contact_email: s.wambua@pu.ac.ke
 
+data_portal_id: 262
+
 at_stake: |
   A biosphere reserve on Kenya's north coast, MWAS links two marine protected areas with the ancient Arabuko Sokoke forest in a mosaic of coral reefs, lagoons, seagrass beds, rocky shores and mangrove creeks. It shelters threatened reef fish, vital nursery habitat and one of East Africa's most diverse mangrove systems, all along major cetacean migration routes. The seascape is increasingly exposed to marine heatwaves, coral bleaching, sedimentation and pollution.
 

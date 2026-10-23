@@ -22,6 +22,8 @@ map_label_direction: "left"
 
 contact_email: Laura.Smith@DCCEEW.gov.au
 
+data_portal_id: 264
+
 at_stake: |
   A remote Australian island in the eastern Indian Ocean, Christmas Island rises as a seamount from the deep, ringed by steep karst-limestone drop-offs, clear waters and vibrant reefs. Where Indian and Pacific currents and species meet, it becomes a globally significant hybridization hotspot and an epicentre of evolution, with high endemism meaning species lost here are lost worldwide. Its vast new marine park, more than 277,000 km2, far outstrips the resources available to monitor its wide baseline gaps.
 

@@ -2693,11 +2693,15 @@ input {
 .article-body .wf-track::before {
     content: "";
     position: absolute;
-    left: 1.45rem;
+    left: calc(1.5rem - 0.5px);
     top: 1rem;
     bottom: 1rem;
-    width: 4px;
+    width: 1px;
     background: var(--bg-dark);
+}
+.article-body .wf-section {
+    margin: 2.5rem 0 1.5rem;
+    padding-left: 1.25rem;
 }
 .article-body .wf-step {
     position: relative;
@@ -2722,6 +2726,12 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.article-body .wf-step figure {
+    margin: 1.25rem 0 0;
+}
+.article-body .wf-step figure.wf-figure-portrait {
+    max-width: 24rem;
 }
 .article-body .wf-step h4 {
     font-size: 1.2rem;
@@ -2818,7 +2828,7 @@ input {
         padding-left: 3.4rem;
     }
     .article-body .wf-track::before {
-        left: 1rem;
+        left: calc(1.1rem - 0.5px);
     }
     .article-body .wf-step::before {
         left: -3.4rem;

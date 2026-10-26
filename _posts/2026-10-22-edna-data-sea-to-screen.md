@@ -18,25 +18,37 @@ Each identified sequence must be assigned a valid species name and quality-contr
 <div class="wf-track">
   <div class="wf-step" data-n="1">
     <h4>Sampling for eDNA</h4>
-    <p>Local teams sample water to capture environmental DNA (eDNA), the genetic material left by marine organisms in their environment. This is where the whole data chain starts, so the quality of the sample, and the absence of contamination, is crucial. The sampling protocol, the training material, the guidance from eDNA Expeditions experts and the field-tested kit from Wilderlab all work towards an optimal sample.</p>
+    <p>Local teams sample water to capture environmental DNA (eDNA), the genetic material left by marine organisms in their environment. This is where the whole data chain starts, so the quality of the sample, and the absence of contamination, is crucial. The <a href="https://ednaexpeditions.org/assets/documents/sampling_booklet_RGB_v7.pdf" target="_blank" rel="noopener">sampling protocol</a>, the <a href="https://www.youtube.com/watch?v=KJV2HFgQbdc" target="_blank" rel="noopener">training material</a>, the guidance from eDNA Expeditions experts and the field-tested kit from Wilderlab all work towards an optimal sample.</p>
+    <figure class="wf-figure-portrait">
+      <img src="/assets/images/news/edna-data-sea-to-screen/step1.jpg" alt="Hands in blue gloves removing an air bubble from a syringe filter on a beach">
+      <figcaption>Removing an air bubble from a filter during a sampling event at Cananéia–Iguape–Peruíbe, Brazil, in August 2026. <span class="caption-credit">© Jeniffer Teles</span></figcaption>
+    </figure>
   </div>
   <div class="wf-step" data-n="2">
     <h4>Identify the sample</h4>
     <p>Each Wilderlab sampling kit comes with an identification number. Once a sample is completed, the team uploads its information to the dedicated eDNA Expeditions app, which automatically records the time, location and other properties of the sample along with the unique ID of the kit. Provenance is tracked from the source.</p>
+    <figure class="wf-figure-portrait">
+      <img src="/assets/images/news/edna-data-sea-to-screen/step2.jpg" alt="A Wilderlab sampling kit bag with its unique identification number (UID) printed at the bottom">
+      <figcaption>A view of the unique identification number on a Wilderlab kit. <span class="caption-credit">© Jeniffer Teles</span></figcaption>
+    </figure>
   </div>
   <div class="wf-step" data-n="3">
     <h4>Persistent ID assignment</h4>
     <p>The app sends each sample record to the data management platform, where it is registered under a <strong>persistent ID</strong>: a unique number forever attached to that sample. The record follows the sample and is updated at every stage.</p>
+    <figure>
+      <a href="https://platform.ednaexpeditions.org/" target="_blank" rel="noopener"><img src="/assets/images/news/edna-data-sea-to-screen/step3.png" alt="Table of samples in the eDNA Expeditions data portal, each with a sample ID, site, locality, date and filtering details"></a>
+      <figcaption>A view of the eDNA Expeditions data portal showing the unique identification number from the kits integrated in the data workflow.</figcaption>
+    </figure>
   </div>
-</div>
-
-### Putting a name on every sequence
-
-<div class="wf-track">
+  <h3 class="wf-section">Putting a name on every sequence</h3>
   <div class="wf-step" data-n="4">
     <h4>The metabarcoding workflow</h4>
-    <p>Identifying species reliably means comparing the collected DNA to reference information: known DNA sequences from characterised specimens, publicly shared through the International Nucleotide Sequence Database Collaboration (INSDC). Once sequence data reaches the platform, the OBIS team runs an open-source metabarcoding workflow, nf-core/ampliseq, which cleans the raw data and creates Amplicon Sequence Variants (ASVs), the distinct DNA sequences found in each sample.</p>
-    <p>Each ASV is then compared against the same reference databases using <strong>two methods</strong>, each with a different objective.</p>
+    <p>Identifying species reliably means comparing the collected DNA to reference information: known DNA sequences from characterised specimens, publicly shared through the International Nucleotide Sequence Database Collaboration (INSDC). Once sequence data reaches the platform, the OBIS team runs an open-source metabarcoding workflow, <a href="https://nf-co.re/ampliseq/2.6.1/" target="_blank" rel="noopener">nf-core/ampliseq</a>, which cleans the raw data and creates Amplicon Sequence Variants (ASVs), the distinct DNA sequences found in each sample.</p>
+    <p>Each ASV is then compared against the same reference databases using <strong>two methods</strong>, SINTAX and VSEARCH, each with a different objective.</p>
+    <figure>
+      <a href="https://nf-co.re/ampliseq/2.6.1/" target="_blank" rel="noopener"><img src="/assets/images/news/edna-data-sea-to-screen/step4.png" alt="Diagram of the nf-core/ampliseq pipeline: quality control, inferring ASVs, taxonomic classification, filtering, visualisation and reporting"></a>
+      <figcaption>Overview of the nf-core/ampliseq pipeline, which turns raw sequencing reads into amplicon sequence variants (ASVs) and assigns taxonomy to them. <span class="caption-credit">© nf-core/ampliseq (CC BY 4.0, design by Zandra Fagernäs)</span></figcaption>
+    </figure>
   </div>
   <div class="wf-step" data-n="5">
     <h4>SINTAX: the broad view</h4>
@@ -56,11 +68,7 @@ Each identified sequence must be assigned a valid species name and quality-contr
     <h4>Final name alignment</h4>
     <p>Assigned names are automatically aligned to the taxonomy of the World Register of Marine Species (WoRMS).</p>
   </div>
-</div>
-
-### Quality control: a combination of automation and human expertise
-
-<div class="wf-track">
+  <h3 class="wf-section">Quality control: a combination of automation and human expertise</h3>
   <div class="wf-step" data-n="9">
     <h4>Automatic quality control</h4>
     <p>An automated tool assesses every identified record, and every identification receives a score based on two categories:</p>
@@ -69,16 +77,20 @@ Each identified sequence must be assigned a valid species name and quality-contr
       <div><b>Thermal range</b>The range of temperatures in which the species is known to live.</div>
     </div>
     <p>If a species is identified outside its known living area, or if the site temperature is outside its suitable range, the identification gets a low score and is highlighted on the list. A low score might mean a misidentification, or it could be a real discovery: a newly arrived invader, a species expanding its habitat, or a species thought to be locally extinct.</p>
+    <figure>
+      <img src="/assets/images/news/edna-data-sea-to-screen/step9.png" alt="Example of a dataset quality profile plotting agreement with known distribution against temperature suitability">
+      <figcaption>Example of a dataset quality profile. The X axis represents the agreement with the known distribution of the species, the Y axis represents how well detections align with the known temperature preference of the species. Identifications in the lower left corner are usually low quality. Detections in the top left corner do not correspond well to the currently known distribution, but could be explained by range expansions or incomplete reference data.</figcaption>
+    </figure>
   </div>
   <div class="wf-step" data-n="10">
     <h4>Manual quality control</h4>
     <p>Local experts support the review of flagged records. They can <strong>confirm</strong>, <strong>question</strong> or <strong>correct</strong> each identification. Their decisions carry through to the data published on OBIS and are recorded in the <em>identificationRemarks</em> field. The data is then delivered in Darwin Core format, ready for publication.</p>
+    <figure>
+      <img src="/assets/images/news/edna-data-sea-to-screen/step10.png" alt="Quality control view of a suspect identification of Agelas sventres, with a density map showing records in the Caribbean and the detection in the Philippines">
+      <figcaption>Example of a suspect identification. While the identification scores reasonably well on temperature suitability, its location (Philippines) does not at all correspond to the known distribution of the species (Caribbean). Further investigation of the reference sequence revealed that it was obtained from Malaysia, so it may have been misidentified by the submitter.</figcaption>
+    </figure>
   </div>
-</div>
-
-### On screen: data that anyone can use
-
-<div class="wf-track">
+  <h3 class="wf-section">On screen: data that anyone can use</h3>
   <div class="wf-step" data-n="11">
     <h4>Making the data available</h4>
     <p>The data is standardized under Darwin Core, a community-validated format that allows comparison and interoperability. A sample taken in Cameroon can be compared with one taken in the Philippines, and the data is ready to use on large biodiversity platforms such as OBIS and GBIF.</p>

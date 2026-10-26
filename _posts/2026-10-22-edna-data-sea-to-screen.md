@@ -66,7 +66,7 @@ Each identified sequence must be assigned a valid species name and quality-contr
   </div>
   <div class="wf-step" data-n="8">
     <h4>Final name alignment</h4>
-    <p>Assigned names are automatically aligned to the taxonomy of the World Register of Marine Species (WoRMS).</p>
+    <p>Assigned names are automatically aligned to the taxonomy of the <a href="https://www.marinespecies.org/" target="_blank" rel="noopener">World Register of Marine Species</a> (WoRMS).</p>
   </div>
   <h3 class="wf-section">Quality control: a combination of automation and human expertise</h3>
   <div class="wf-step" data-n="9">

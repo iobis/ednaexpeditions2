@@ -1,5 +1,5 @@
 /*
- * Sites grid page: the sampling events scheduled over the next three months, all sites together.
+ * Sites grid page: the sampling events scheduled over the next six months, all sites together.
  * Each site's events come from the same endpoint as the site page timeline (site.timeline_api).
  * Only sampling activities (test_sampling, standard_sampling, planned_sampling, ...) dated from today on are used.
  */
@@ -11,6 +11,7 @@
   var row = section.closest('.upcoming-row');
   var container = section.querySelector('.upcoming-months');
   var sites = JSON.parse(sitesTag.textContent || '[]');
+  var SPAN = 6; // months shown, starting with the current one
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -21,10 +22,10 @@
 
   var today = new Date();
   today.setHours(0, 0, 0, 0);
-  var months = [0, 1, 2].map(function (i) {
+  var months = Array.from({ length: SPAN }, function (_, i) {
     return { start: new Date(today.getFullYear(), today.getMonth() + i, 1), items: [] };
   });
-  var windowEnd = new Date(today.getFullYear(), today.getMonth() + 3, 1);
+  var windowEnd = new Date(today.getFullYear(), today.getMonth() + SPAN, 1);
 
   function fetchSite(site) {
     var url = section.getAttribute('data-api').replace('{site}', encodeURIComponent(site.code));
@@ -37,7 +38,7 @@
           var d = parseDate(ev.date);
           if (d < today || d >= windowEnd) return;
           months.forEach(function (m, i) {
-            var next = i < 2 ? months[i + 1].start : windowEnd;
+            var next = i < SPAN - 1 ? months[i + 1].start : windowEnd;
             if (d >= m.start && d < next) m.items.push({ date: d, site: site });
           });
         });
@@ -53,7 +54,7 @@
 
   function render() {
     var any = months.some(function (m) { return m.items.length; });
-    if (!any) return; // nothing scheduled in the next three months: leave the block hidden
+    if (!any) return; // nothing scheduled in the next six months: leave the block hidden
 
     months.forEach(function (m) {
       var block = el('div', 'upcoming-month');

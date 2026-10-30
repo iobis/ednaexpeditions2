@@ -76,6 +76,8 @@ team:
     image_position: top
   - name: "Arofah Lyla Nurhayati"
     role: "Field eDNA Sampling Coordinator"
+    image: /assets/images/sites/kepulauan-togean/team-6.jpg
+    image_position: top
   - name: "Christina Biggs"
     role: "Project Manager"
     image: /assets/images/sites/kepulauan-togean/team-5.jpg
